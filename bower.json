@@ -1,0 +1,20 @@
+{
+  "name": "vayam",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "font-awesome": "fontawesome#^4.7.0",
+    "angular": "^1.6.6",
+    "angular-route": "^1.6.6"
+  }
+}

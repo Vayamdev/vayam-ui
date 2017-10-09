@@ -1,0 +1,21 @@
+@import "customVariables";
+@import "bootstrap";
+@import "../scss/font-awesome/font-awesome";
+@import "home";
+
+div.vayammainview {
+    margin: 0px;
+    padding: 0px;
+}
+
+// fotter
+footer {
+  .fa {
+      font-size: 2em;
+      padding: 0.4em 0.4em 0.5em 0.4em;
+  }
+
+  div.links a {
+      padding: 1em;
+  }
+}

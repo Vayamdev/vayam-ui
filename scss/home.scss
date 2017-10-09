@@ -1,0 +1,14 @@
+div.hometab {
+
+    div.row {
+        margin: 15px;
+        padding: 5px;
+    }
+
+    // forcing temporary image dimentions this will change
+    // once production images are finalized.
+    div.item > img.slide {
+        height: 400px !important;
+        width: 100% !important;
+    }
+}

@@ -1,0 +1,75 @@
+{
+  "events": [
+      {
+          "eventname": "Sculpture Workshop",
+          "id": 1,
+          "shortdescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt",
+          "longdescription": "",
+          "image": "event1.jpg"
+      },
+      {
+          "eventname": "Holi celebrations",
+          "id": 2,
+          "shortdescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt",
+          "longdescription": "",
+          "image": "event2.jpg"
+      },
+      {
+          "eventname": "Skill development",
+          "id": 3,
+          "shortdescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt",
+          "longdescription": "",
+          "image": "event3.jpg"
+      }
+  ],
+  "team": [
+      {
+          "name": "Sanket Joshi",
+          "Project": "obscure Latin",
+          "Post": "Contrary to popular"
+      },
+      {
+          "name": "Pooja Jain",
+          "Project": "obscure Latin",
+          "Post": "Contrary to popular"
+      },
+      {
+          "name": "Milind Sane",
+          "Project": "obscure Latin",
+          "Post": "Contrary to popular"
+      },
+      {
+          "name": "Gaurav Awale",
+          "Project": "obscure Latin",
+          "Post": "Contrary to popular"
+      },
+      {
+          "name": "Milind Sane",
+          "Project": "obscure Latin",
+          "Post": "Contrary to popular"
+      },
+      {
+          "name": "Gaurav Awale",
+          "Project": "obscure Latin",
+          "Post": "Contrary to popular"
+      }
+  ],
+  "testimonials": [
+      {
+          "name": "Rahul Bajaj",
+          "say": "Pleased him another was settled for. Moreover end horrible endeavor entrance any families. Income appear extent on of thrown in admire. Stanhill on we if vicinity material in. Saw him smallest you provided ecstatic supplied. Garret wanted expect remain as mr. Covered parlors concern we express in visited to do. Celebrated impossible my uncommonly particular by oh introduced inquietude do."
+      },
+      {
+          "name": "Nikhil Sane",
+          "say": "Pleased him another was settled for. Moreover end horrible endeavor entrance any families. Income appear extent on of thrown in admire. Stanhill on we if vicinity material in. Saw him smallest you provided ecstatic supplied. Garret wanted expect remain as mr. Covered parlors concern we express in visited to do. Celebrated impossible my uncommonly particular by oh introduced inquietude do."
+      },
+      {
+          "name": "Prakash Ambedkar",
+          "say": "Pleased him another was settled for. Moreover end horrible endeavor entrance any families. Income appear extent on of thrown in admire. Stanhill on we if vicinity material in. Saw him smallest you provided ecstatic supplied. Garret wanted expect remain as mr. Covered parlors concern we express in visited to do. Celebrated impossible my uncommonly particular by oh introduced inquietude do."
+      },
+      {
+          "name": "Surya Shinde",
+          "say": "Pleased him another was settled for. Moreover end horrible endeavor entrance any families. Income appear extent on of thrown in admire. Stanhill on we if vicinity material in. Saw him smallest you provided ecstatic supplied. Garret wanted expect remain as mr. Covered parlors concern we express in visited to do. Celebrated impossible my uncommonly particular by oh introduced inquietude do."
+      }
+  ]
+}

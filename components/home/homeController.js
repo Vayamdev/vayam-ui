@@ -1,12 +1,8 @@
-var home = angular.module('home', []);
+rootModule.controller('homeController', ['$scope', 'homeService', function($scope, homeService) {
 
-home.controller('homeController', ['$scope', 'homeService', function($scope, homeService) {
-    $scope.events;
-
-    // display thumbnails for latest three evenets
-    function DisplayThumbnails(events) {
-        $scope.events = events;
-    }
-
-    homeService.getThreeEvents(DisplayThumbnails);
+    homeService.getThumbnails().then(function(response) {
+        $scope.events = response.data;
+    }, function() {
+        console.log('Error during event data fetching!');
+    });
 }]);

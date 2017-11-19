@@ -51,11 +51,19 @@
 - https://shermandigital.com/blog/bootstrap-project-with-bower-and-grunt/
 
 
-
-
 - Slack (vayam-dev)
   - Slack invitation for vayam-devs - https://join.slack.com/t/vayam-dev/shared_invite/enQtMjQzMDI3MjM2NzQyLTcwM2Y0ODUwMDU3YmYzMWMxMGEwZWQ2ZjU0NDkzOWExNWNmMGRkNDRkZWI0ZmU4NmZlNDAzZWJjNThjNjg3Yjc
 
 - Cloud folder
   - It has been linked to google account vayamdevindia@gmail.com/vayamindia
   - Use to share project resources
+
+- JSON server 
+  - json-server --watch db.json
+
+- Image place holder
+  - http://placehold.it/200x560
+
+- Git vayam
+- uname - vayamdevindia
+- pwd - vayamdevindia@121

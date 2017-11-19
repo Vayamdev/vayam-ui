@@ -1,56 +1,17 @@
-var home = angular.module('home', []);
-
-home.controller('homeController', ['$scope', 'homeService', function($scope, homeService) {
-    $scope.events;
-
-    // display thumbnails for latest three evenets
-    function DisplayThumbnails(events) {
-        $scope.events = events;
-    }
-
-    homeService.getThreeEvents(DisplayThumbnails);
-}]);
-
-
-
-home.service('homeService', ['$http', function($http) {
-
-    // get the event data from backend 
-    this.getThreeEvents = function(onsuccess) {
-        $http({
-            method: 'GET',
-            url: 'http://localhost:3000/events'
-        }).then(function(response){
-            onsuccess(response.data);
-        }, function(error){
-            console.log('Error during data fetching!');
-        });
-    };
-}]);
-
-
-
-var aboutus = angular.module('aboutus', []);
-
-aboutus.controller('aboutusController', ['$scope', function($scope) {
-}]);
-
-
-
-var contactus = angular.module('contactus', []);
-contactus.controller('contactusController', ['$scope', function($scope) {
-
-}]);
-
-
+/* 
+This file should only hold global declarations and global setting
+related to app.
+*/
 
 var rootModule = angular.module('rootModule', [
-    'ngRoute',
-    'home',
-    'aboutus',
-    'contactus'
+    'ngRoute'
 ]);
 
+
+
+/* 
+This file should only hold routing settings for app
+*/
 
 
 rootModule.config(["$routeProvider", function($routeProvider) {
@@ -60,9 +21,23 @@ rootModule.config(["$routeProvider", function($routeProvider) {
         controller: "homeController",
         activetab: 'home'
     })
-    .when("/aboutus", {
-        templateUrl: "components/aboutus/aboutusView.html",
-        controller: "aboutusController",
+    .when("/whatweare", {
+        templateUrl: "components/aboutus/whatweare/whatweareView.html",
+        controller: "whatweareController",
+        activetab: 'aboutus'
+    })
+    .when("/journey", {
+        templateUrl: "components/aboutus/journey/journeyView.html",
+        activetab: 'aboutus'
+    })
+    .when("/team", {
+        templateUrl: "components/aboutus/team/teamView.html",
+        controller: "teamController",
+        activetab: 'aboutus'
+    })
+    .when("/testimonials", {
+        templateUrl: "components/aboutus/testimonials/testimonialsView.html",
+        controller: "testimonialsController",
         activetab: 'aboutus'
     })
     .when("/contactus", {
@@ -70,11 +45,99 @@ rootModule.config(["$routeProvider", function($routeProvider) {
         controller: "contactusController",
         activetab: 'contactus'
     })
+    .when("/donate", {
+        templateUrl: "components/donate/donateView.html",
+        controller: "donateController",
+        activetab: 'donate'
+    })
     .otherwise({
         redirectTo: "/home"
     });
 }]);
 
+
+
+rootModule.controller('homeController', ['$scope', 'homeService', function($scope, homeService) {
+
+    homeService.getThumbnails().then(function(response) {
+        $scope.events = response.data;
+    }, function() {
+        console.log('Error during event data fetching!');
+    });
+}]);
+
+
+
+rootModule.controller('teamController', ['$scope', 'teamService', function($scope, teamService) {    
+    $scope.teamgroup = {};
+    teamService.getStaff().then(function(response) {
+            var teamdata = response.data;
+            var key = 0;
+            while(teamdata.length > 0) {
+                ++key;
+                $scope.teamgroup[key.toString()] = teamdata.splice(0, 4);
+            }
+        }, function() {
+            console.log('Error during team data fetching!');
+        })
+}]);
+
+
+
+rootModule.controller('whatweareController', ['$scope', function($scope) {
+}]);
+
+
+
+rootModule.controller('testimonialsController', ['$scope', 'testimonialsService', function($scope, testimonials) {
+    $scope.testimonials;
+    testimonials.getTestimonials().then(function(response) {
+        $scope.testimonials = response.data;
+        }, function() {
+            console.log('Error during team data fetching!');
+        })
+}]);
+
+
+
+rootModule.controller('contactusController', ['$scope', function($scope) {
+}]);
+
+
+
+rootModule.controller('donateController', ['$scope', function($scope) {
+}]);
+
+
+
+rootModule.service('homeService', ['$http', function($http) {
+
+    // get the event data from backend
+    this.getThumbnails = function() {
+       return $http.get('http://localhost:3000/events');
+    };
+}]);
+
+
+
+rootModule.service('teamService', ['$http', function($http) {
+    
+    // get the event data from backend
+    this.getStaff = function() {
+        return $http.get('http://localhost:3000/team');
+    };
+}]);
+    
+
+
+rootModule.service('testimonialsService', ['$http', function($http) {
+    
+    // get the event data from backend
+    this.getTestimonials = function() {
+        return $http.get('http://localhost:3000/testimonials');
+    };
+}]);
+    
 
 
 rootModule.directive('vayamHeader', function(){

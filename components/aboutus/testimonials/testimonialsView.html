@@ -1,0 +1,25 @@
+<div class="teams">
+    <div vayam-header></div>
+
+    <div class="imagebanner">
+        <img src="/assets/slide2.jpg"></img>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <h1>Testimonies</h1>
+        </div>
+
+        <div class="row well" ng-repeat="data in testimonials">
+            <div class="col-md-6">
+                <img src="http://placehold.it/300x200" class="img-rounded group"></img>
+            </div>
+
+            <div class="col-md-6">
+                <h3>{{data.name}}</h3>
+                <p>{{data.say}}</p>
+            </div>
+        </div>
+    </div>
+    <div vayam-footer></div>
+</div>

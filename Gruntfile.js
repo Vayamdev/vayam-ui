@@ -80,12 +80,17 @@ module.exports = function (grunt) {
           },
           dist: {
             src: [
-                'components/home/homeController.js',
-                'components/home/homeService.js',
-                'components/aboutus/aboutusController.js',
-                'components/contactus/contactusController.js',
                 'app.module.js',
                 'app.config.js',
+                'components/home/homeController.js',
+                'components/aboutus/team/teamController.js',
+                'components/aboutus/whatweare/whatweareController.js',
+                'components/aboutus/testimonials/testimonialsController.js',
+                'components/contactus/contactusController.js',
+                'components/donate/donateController.js',
+                'components/home/homeService.js',
+                'components/aboutus/team/teamService.js',
+                'components/aboutus/testimonials/testimonialsService.js',
                 'shared/header/headerDirective.js',
                 'shared/footer/footerDirective.js',
                 'shared/googlemap/mapDirective.js'

@@ -1,21 +1,95 @@
 @import "customVariables";
 @import "bootstrap";
 @import "../scss/font-awesome/font-awesome";
+
+// view specific files will override app styles
 @import "home";
+@import "contactus";
+@import "whatweare";
+@import "journey";
+@import "teams";
+@import "testimonials";
 
-div.vayammainview {
-    margin: 0px;
-    padding: 0px;
-}
+html {
+    height: 100%;
 
-// fotter
-footer {
-  .fa {
-      font-size: 2em;
-      padding: 0.4em 0.4em 0.5em 0.4em;
-  }
+    body {
+        font-size: 16px;
+        font-family: "Times New Roman", Times, serif;
+        height: 100%;
 
-  div.links a {
-      padding: 1em;
-  }
+        // for views
+        div.vayamviews {
+            height: 100%;
+            margin: 0px;
+            padding: 0px;
+
+            // for navlinks in header and footer
+            .nav-links:hover {
+                box-shadow: 1px 1px 1px 1px;
+            }
+
+            .nav-links:hover {
+                box-shadow: 2px 2px 2px 2px;
+            }
+
+            // for image banner of every page.
+            div.imagebanner img {
+                width: 100%;
+                height: 450px;
+            }
+
+            .row div.thumbnail {
+                /* Add shadows to create the "card" effect */
+                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+                transition: 0.3s;
+            }
+        
+            /* On mouse-over, add a deeper shadow */
+            .row div.thumbnail:hover {
+                box-shadow: 0 16px 24px 0 rgba(0,0,0,0.2);
+            }
+                       
+            // for content row of every page.
+            div.row {
+                height: 100%;
+                margin: 15px;
+                padding: 5px;
+            }
+
+            // for page footer
+            footer {
+                background-color: $ivory;
+
+                div.footer-pane {
+                    padding: 1em;
+                }
+
+                .fa {
+                    font-size: 1em;
+                    padding-right: 1em;
+                    padding-left: 1em;
+                    margin: 5px;
+                }
+
+                .fa-facebook {
+                    color: $fullwhite;
+                }
+
+                .fa-twitter {
+                    color: $darkblue;
+                }
+
+                .fa-youtube-play {
+                    color: $darkred;
+                }
+
+                div.links a {
+                    padding-left: 1em;
+                    padding-right: 1em;
+                    color: $fullwhite;
+                }
+            }
+        }
+    }
 }

@@ -1,0 +1,16 @@
+<div class="vayam-modal">
+    <div class="modal-header">
+        <h3>{{header}}</h3>
+    </div>
+    <div class="modal-body" id="modal-body">
+        <div class="thumbnail">
+            <img class="thumbnail-image img-rounded" ng-src="/assets/{{image}}">
+            <div class="caption">
+            <p>{{description}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary lg" ng-click="cancel()">{{canceltext}}</button>
+    </div>
+</div>

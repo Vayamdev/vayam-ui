@@ -1,0 +1,25 @@
+<div class="impacttab">
+	<image-banner></image-banner>
+	
+	<div class="row">
+		<div class="well well-lg col-xs-12">
+			<h2>Impact</h2>
+			<p class="text-justify">Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content. It's also called placeholder (or filler) text. It's a convenient tool for mock-ups. It helps to outline the visual elements of a document or presentation, eg typography, font, or layout. Lorem ipsum is mostly a part of a Latin text by the classical author and philosopher Cicero. Its words and letters have been changed by addition or removal, so to deliberately render its content nonsensical; it's not genuine, correct, or comprehensible Latin anymore.</p>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-4 col-md-4" ng-repeat="impact in impacts">
+				<div class="thumbnail">
+				  <img class="thumbnail-image img-rounded" ng-src="/assets/{{impact.image}}">
+				  <div class="caption">
+					<h3>{{impact.name}}</h3>
+					<p>{{impact.oneliner}}</p>
+					<p><a href="" class="btn btn-primary" role="button" ng-click="open(impact)">Read Full Story</a></p>
+				  </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -31,6 +31,12 @@ module.exports = function (grunt) {
                         src: ['**/*.js', '**/*.map'],
                         dest: 'scripts/angular-route/'
                     },
+                    {
+                        expand: true,
+                        cwd: 'bower_components/angular-bootstrap/',
+                        src: ['**/*.js', '**/*.map'],
+                        dest: 'scripts/angular-bootstrap/'
+                    },                    
                     // Fonts.
                     {
                         expand: true,
@@ -78,25 +84,41 @@ module.exports = function (grunt) {
           options: {
             separator: '\n\n\n',
           },
-          dist: {
+          venderscripts: {
+            src: [
+                'scripts/jquery/jquery.min.js',
+                'scripts/bootstrap-sass/bootstrap.min.js',
+                'scripts/angular/angular.min.js',
+                'scripts/angular-route/angular-route.min.js',
+                'scripts/angular-bootstrap/ui-bootstrap-tpls.min.js'
+            ],
+            dest: 'scripts/vender.js',
+          },        
+          codescripts: {
             src: [
                 'app.module.js',
                 'app.config.js',
                 'components/home/homeController.js',
+                'components/impact/impactController.js',
                 'components/aboutus/team/teamController.js',
                 'components/aboutus/whatweare/whatweareController.js',
                 'components/aboutus/testimonials/testimonialsController.js',
+                'components/aboutus/journey/journeyController.js',
                 'components/contactus/contactusController.js',
                 'components/donate/donateController.js',
                 'components/home/homeService.js',
+                'components/impact/impactService.js',
                 'components/aboutus/team/teamService.js',
                 'components/aboutus/testimonials/testimonialsService.js',
+                'components/aboutus/journey/journeyService.js',
                 'shared/header/headerDirective.js',
                 'shared/footer/footerDirective.js',
-                'shared/googlemap/mapDirective.js'
+                'shared/googlemap/mapDirective.js',
+                'shared/imagebanner/imagebannerDirective.js',
+                'shared/globalfactory/globalFactory.js'
             ],
             dest: 'scripts/app.js',
-          },
+          }
         },
         // Watch these files and notify of changes.
         watch: {

@@ -4,5 +4,9 @@ related to app.
 */
 
 var rootModule = angular.module('rootModule', [
-    'ngRoute'
+    'ngRoute',
+    'ui.bootstrap'
 ]);
+
+// constant for base URL. Change this on production server
+rootModule.constant('baseUrl', 'http://localhost:3000');

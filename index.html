@@ -7,16 +7,16 @@
 
     <body ng-app="rootModule">
 
-        <div class="vayamviews container-fluid" ng-view autoscroll="true"></div>
-
-        <script src='/scripts/jquery/jquery.min.js'></script>
-        <script src='/scripts/bootstrap-sass/bootstrap.min.js'></script>
-
-        <script src='/scripts/angular/angular.min.js'></script>
-        <script src='/scripts/angular-route/angular-route.min.js'></script>
+        <div class="fluid-container">
+            <div vayam-header></div>
+            <div class="vayamviews container-fluid" ng-view autoscroll="true"></div>
+            <div vayam-footer></div>
+        </div>
 
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvEdya0Ms-p3F-nryuU1OoFFMyQHmDf8k"></script>
-
+        
+        <script src='/scripts/vender.js'></script>
         <script src='/scripts/app.js'></script>
+        
 	</body>
 </html>

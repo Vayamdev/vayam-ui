@@ -9,6 +9,8 @@
 @import "journey";
 @import "teams";
 @import "testimonials";
+@import "impact";
+@import "modal";
 
 html {
     height: 100%;
@@ -18,36 +20,41 @@ html {
         font-family: "Times New Roman", Times, serif;
         height: 100%;
 
+        // for navlinks in header
+        .nav-links:hover {
+            box-shadow: 1px 1px 1px 1px;
+        }
+
+        .nav-links:hover {
+            box-shadow: 2px 2px 2px 2px;
+        }
+
         // for views
         div.vayamviews {
             height: 100%;
             margin: 0px;
             padding: 0px;
 
-            // for navlinks in header and footer
-            .nav-links:hover {
-                box-shadow: 1px 1px 1px 1px;
-            }
-
-            .nav-links:hover {
-                box-shadow: 2px 2px 2px 2px;
-            }
 
             // for image banner of every page.
             div.imagebanner img {
                 width: 100%;
-                height: 450px;
+                height: 350px;
             }
 
+            // Add shadows to create the "card" effect
             .row div.thumbnail {
-                /* Add shadows to create the "card" effect */
                 box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
                 transition: 0.3s;
             }
         
-            /* On mouse-over, add a deeper shadow */
+            // On mouse-over, add a deeper shadow
             .row div.thumbnail:hover {
                 box-shadow: 0 16px 24px 0 rgba(0,0,0,0.2);
+            }
+
+            .btn-primary:hover {
+                color: $sunshine;
             }
                        
             // for content row of every page.
@@ -56,39 +63,95 @@ html {
                 margin: 15px;
                 padding: 5px;
             }
+        }
 
-            // for page footer
-            footer {
-                background-color: $ivory;
+        // for page footer
+        footer {
+            background-color: $ivory;
 
-                div.footer-pane {
-                    padding: 1em;
-                }
+            div.footer-pane {
+                padding: 1em;
+            }
 
-                .fa {
-                    font-size: 1em;
-                    padding-right: 1em;
-                    padding-left: 1em;
-                    margin: 5px;
-                }
+            div.links a {
+                padding-left: 1em;
+                padding-right: 1em;
+                color: $fullwhite;
+            }
 
-                .fa-facebook {
-                    color: $fullwhite;
-                }
 
-                .fa-twitter {
-                    color: $darkblue;
-                }
+            /* footer social icons */
+            ul.social-network {
+                list-style: none;
+                display: inline;
+                margin-left:0 !important;
+                padding: 0;
+            }
+            ul.social-network li {
+                display: inline;
+                margin: 0 5px;
+            }
 
-                .fa-youtube-play {
-                    color: $darkred;
-                }
+            .social-network a.icoFacebook:hover {
+                background-color:#3B5998;
+            }
+            .social-network a.icoTwitter:hover {
+                background-color:#33ccff;
+            }
 
-                div.links a {
-                    padding-left: 1em;
-                    padding-right: 1em;
-                    color: $fullwhite;
-                }
+            .social-network a.icoYoutube:hover {
+                background-color:#cc181e;
+            }
+
+            .social-network a.icoRss:hover i, .social-network a.icoFacebook:hover i, .social-network a.icoTwitter:hover i,
+            .social-network a.icoGoogle:hover i, .social-network a.icoVimeo:hover i, .social-network a.icoLinkedin:hover i {
+                color:#fff;
+            }
+            a.socialIcon:hover, .socialHoverClass {
+                color:#44BCDD;
+            }
+
+            .social-circle li a {
+                display:inline-block;
+                position:relative;
+                margin:0 auto 0 auto;
+                -moz-border-radius:50%;
+                -webkit-border-radius:50%;
+                border-radius:50%;
+                text-align:center;
+                width: 50px;
+                height: 50px;
+                font-size:20px;
+            }
+            .social-circle li i {
+                margin:0;
+                line-height:50px;
+                text-align: center;
+            }
+
+            .social-circle li a:hover i, .triggeredHover {
+                -moz-transform: rotate(360deg);
+                -webkit-transform: rotate(360deg);
+                -ms--transform: rotate(360deg);
+                transform: rotate(360deg);
+                -webkit-transition: all 0.2s;
+                -moz-transition: all 0.2s;
+                -o-transition: all 0.2s;
+                -ms-transition: all 0.2s;
+                transition: all 0.2s;
+            }
+
+            .social-circle i {
+                color: #fff;
+                -webkit-transition: all 0.8s;
+                -moz-transition: all 0.8s;
+                -o-transition: all 0.8s;
+                -ms-transition: all 0.8s;
+                transition: all 0.8s;
+            }
+
+            a.foot-links:hover {
+                color: $sunshine;
             }
         }
     }

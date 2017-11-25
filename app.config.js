@@ -10,6 +10,11 @@ rootModule.config(["$routeProvider", function($routeProvider) {
         controller: "homeController",
         activetab: 'home'
     })
+    .when("/impact", {
+        templateUrl: "components/impact/impactView.html",
+        controller: "impactController",
+        activetab: 'impact'
+    })    
     .when("/whatweare", {
         templateUrl: "components/aboutus/whatweare/whatweareView.html",
         controller: "whatweareController",
@@ -17,6 +22,7 @@ rootModule.config(["$routeProvider", function($routeProvider) {
     })
     .when("/journey", {
         templateUrl: "components/aboutus/journey/journeyView.html",
+        controller: "journeyController",
         activetab: 'aboutus'
     })
     .when("/team", {

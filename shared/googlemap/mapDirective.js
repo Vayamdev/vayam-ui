@@ -6,7 +6,10 @@ rootModule.directive('vayamMap', function(){
 		transclude : true,
 		scope: true,
 		controller: ['$scope', 'contactUsService', function ($scope, contactUsService) {
+			console.log('Hello 11');
 			contactUsService.getLocations().then(function(response) {
+				console.log('Hello');
+				console.log(response);
 				var locations = response.data;
 				$scope.locations = locations;
 

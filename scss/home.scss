@@ -103,7 +103,7 @@ div.hometab {
     .progress.firstload .progress-right .progress-bar {
         animation: loading-1 1.5s linear forwards 1.8s;
     }
- 
+
     .progress.firstload .progress-left .progress-bar {
         animation: loading-2 1.5s linear forwards 3.3s;
     }
@@ -115,18 +115,18 @@ div.hometab {
     .progress.secondload .progress-right .progress-bar {
         animation: loading-3 1.5s linear forwards 1.8s;
     }
- 
+
     .progress.secondload .progress-left .progress-bar {
         animation: loading-4 1.5s linear forwards 3.3s;
     }
-    
+
     .progress.thirdload .progress-bar {
         border-color: $highlightercolor;
     }
     .progress.thirdload .progress-right .progress-bar {
         animation: loading-5 1.5s linear forwards 1.8s;
     }
- 
+
     .progress.thirdload .progress-left .progress-bar {
         animation: loading-6 1.5s linear forwards 3.3s;
     }
@@ -174,7 +174,7 @@ div.hometab {
             transform: rotate(15deg);
         }
     }
-    
+
     @keyframes loading-5 {
         0%{
             -webkit-transform: rotate(0deg);
@@ -195,7 +195,7 @@ div.hometab {
             -webkit-transform: rotate(162deg);
             transform: rotate(162deg);
         }
-    }    
+    }
 
 
     @media only screen and (max-width: 990px){
@@ -222,7 +222,7 @@ div.hometab {
         }
 
         .project-icon {
-            padding-right: 0.5em; 
+            padding-right: 0.5em;
             font-size: 2em;
         }
     }
@@ -248,6 +248,6 @@ div.hometab {
     }
 
     .thumbnail {
-       
+
     }
 }

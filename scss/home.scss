@@ -215,6 +215,7 @@ div.hometab {
 
     .thumbnail > .panel-heading {
         background-color: white;
+        margin-top: 0px;
 
         .project-name {
             width: 15em;
@@ -224,30 +225,22 @@ div.hometab {
         .project-icon {
             padding-right: 0.5em;
             font-size: 2em;
+            color: black;
         }
     }
 
     .hover-div {
-        margin:0 auto;
-        max-width:350px;
-        margin-top:30px;
+        margin: 0 auto;
+        max-width: 350px;
+        margin-top: 30px;
         border-bottom: 3px solid $secondarycolor;
         position: relative;
         overflow: hidden;
     }
 
-    .hover-div {
-        width:100%;
-        transition:all ease-in-out .5s;
-    }
-
     .hover-div:hover {
-        transition:all ease-in-out .5s;
-        transform: scale(1.2);
+        transition: all ease-in-out .6s;
+        transform: scale(1.1);
         cursor: pointer;
-    }
-
-    .thumbnail {
-
     }
 }

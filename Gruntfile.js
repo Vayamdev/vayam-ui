@@ -115,7 +115,8 @@ module.exports = function (grunt) {
                 'shared/footer/footerDirective.js',
                 'shared/googlemap/mapDirective.js',
                 'shared/imagebanner/imagebannerDirective.js',
-                'shared/globalfactory/globalFactory.js'
+                'shared/globalfactory/globalFactory.js',
+                'components/contactus/contactUsService.js'
             ],
             dest: 'scripts/app.js',
           }

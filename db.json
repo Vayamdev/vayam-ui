@@ -277,5 +277,29 @@
             "para3": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
             "displayimageUrl": ""
         }                        
+    ],
+    "locations": [
+        {
+            "name": "Viman Nagar",
+            "address": "34, Blue Bell, Neco Gardens, Viman nagar, Pune",
+            "pincode": "411014",
+            "state": "Maharashtra",
+            "country": "India",
+            "coordinates": {
+                "latitude": 18.5626609,
+                "longitude": 73.9115729
+            }
+        },
+        {
+            "name": "Bibwewadi",
+            "address": "12, xxx, xxxx, xxxxxx, pune",
+            "pincode": "111111",
+            "state": "Maharashtra",
+            "country": "India",
+            "coordinates": {
+                "latitude": 18.4709449,
+                "longitude": 73.8582213
+            }
+        }
     ]
 }

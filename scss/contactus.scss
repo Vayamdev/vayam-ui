@@ -2,6 +2,33 @@ div.contactustab {
 
     div.googleMap {
         width: 100%;
+        .addresscontainer {
+            float: left;
+            hr {
+                margin: 8px 0px;
+            }
+            h3 {
+                margin: 0;
+            }
+        }
+    }
+
+    #map {
         height: 300px;
+    }
+
+    address {
+        margin: 0;
+        border-bottom: 1px solid $gray-lighter;
+    }
+    div[co-ordinates] {
+        cursor: pointer;
+        h4 {
+            padding: 10px 0px 5px 0px;
+            margin: 0;
+        }
+        &:hover {
+            background-color: $gray-lighter;
+        }
     }
 }

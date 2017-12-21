@@ -45,6 +45,10 @@ rootModule.config(["$routeProvider", function($routeProvider) {
         controller: "donateController",
         activetab: 'donate'
     })
+    .when("/project/:projectid", {
+        templateUrl: "components/project/projectView.html",
+        controller: "projectController",
+    })    
     .otherwise({
         redirectTo: "/home"
     });

@@ -42,13 +42,14 @@
 				<h2>Our Approach</h2>
 			</div>
 		</div>
+
 		<div class="row hover-effect">
 			<div class="col-xs-12 col-sm-12 col-md-4" ng-repeat="project in projects">
 				<div class="thumbnail project-panel">
 					<div class="panel-heading hover-div">
 						<span class="{{project.icon}} project-icon"></span>
 						<span class="panel-title project-name">
-							<a href="#">{{project.name}}</a>
+							<a href="#!/project/{{project.id}}">{{project.name}}</a>
 						</span>
 					</div>
 					<div class="panel-body">
@@ -59,13 +60,13 @@
 		</div>
 
 		<div class="row">
-			<div class="col-sm-6 col-md-4" ng-repeat="event in events">
+			<div class="col-xs-12 col-sm-12 col-md-4" ng-repeat="event in events">
 				<div class="thumbnail">
 				  <img class="thumbnail-image img-rounded" ng-src="/assets/{{event.image}}" alt="...">
 				  <div class="caption">
 					<h3>{{event.eventname}}</h3>
 					<p>{{event.shortdescription}}</p>
-					<p><a href="" class="btn btn-primary btn-lg" role="button" ng-click="open(event)">View More</a></p>
+					<p><a href="" class="btn btn-primary" role="button" ng-click="open(event)">View More</a></p>
 				  </div>
 				</div>
 			</div>

@@ -15,18 +15,6 @@
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav">
-				<li ng-class="(selected === 'home') ? 'active nav-links' : 'nav-links'">
-                    <a href="#!/home" class="fa fa-home fa-lg"></a>
-                </li>
-
-                <li class="nav-links">
-                    <a href="#!/idea">Idea</a>
-                </li>
-
-                <li class="nav-links">
-                    <a href="#!/impact">Impact</a>
-                </li>
-
 				<li ng-class="(selected === 'donate') ? 'active dropdown nav-links' : 'dropdown nav-links'">
                     <a class="dropdown-toggle" data-toggle="dropdown">
 						About us
@@ -38,6 +26,10 @@
                 		<li><a class="dropdown-item nav-links" href="#!/team">Team</a></li>
 						<li><a class="dropdown-item nav-links" href="#!/testimonials">Testimonials</a></li>
               		</ul>
+                </li>
+
+                <li class="nav-links">
+                    <a href="#!/impact">Impact</a>
                 </li>
 
 				<li ng-class="(selected === 'donate') ? 'active nav-links' : 'nav-links'">

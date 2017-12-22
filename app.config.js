@@ -48,6 +48,7 @@ rootModule.config(["$routeProvider", function($routeProvider) {
     .when("/project/:projectid", {
         templateUrl: "components/project/projectView.html",
         controller: "projectController",
+        activetab: 'project'
     })    
     .otherwise({
         redirectTo: "/home"

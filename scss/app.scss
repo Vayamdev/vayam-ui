@@ -24,20 +24,18 @@ html {
         position: relative;
 
         // for navlinks in header
-        .nav-links:hover {
-            box-shadow: 1px 1px 1px 1px;
+        .nav .dropdown:hover {
+            cursor: pointer;
         }
 
-        .nav-links:hover {
-            box-shadow: 2px 2px 2px 2px;
-        }
 
         // for views
         div.vayamviews {
             height: 100%;
-            margin: 0px;
+            margin: 0em;
+            padding-left: 0em;
+            padding-right: 0em;
             padding-bottom: 60px;
-
 
             // for image banner of every page.
             div.imagebanner img {

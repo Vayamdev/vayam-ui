@@ -50,10 +50,17 @@ rootModule.config(["$routeProvider", function($routeProvider) {
         controller: "projectController",
         activetab: 'project'
     })
+<<<<<<< Updated upstream
     .when("/news", {
         templateUrl: "components/news/newsView.html",
         controller: "newsController",
         activetab: 'news'
+=======
+    .when("/gallery", {
+        templateUrl: "components/gallery/galleryView.html",
+        controller: "galleryController",
+        activetab: 'gallery'
+>>>>>>> Stashed changes
     })
     .otherwise({
         redirectTo: "/home"

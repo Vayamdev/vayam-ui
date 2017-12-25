@@ -90,7 +90,8 @@ module.exports = function (grunt) {
                 'scripts/bootstrap-sass/bootstrap.min.js',
                 'scripts/angular/angular.min.js',
                 'scripts/angular-route/angular-route.min.js',
-                'scripts/angular-bootstrap/ui-bootstrap-tpls.min.js'
+                'scripts/angular-bootstrap/ui-bootstrap-tpls.min.js',
+                'scripts/jQuerybsPhotoGallery.js'
             ],
             dest: 'scripts/vender.js',
           },        
@@ -108,6 +109,7 @@ module.exports = function (grunt) {
                 'components/donate/donateController.js',
                 'components/news/newsController.js',
                 'components/project/projectController.js',
+                'components/gallery/galleryController.js',
                 'components/home/homeService.js',
                 'components/impact/impactService.js',
                 'components/news/newsService.js',
@@ -115,6 +117,7 @@ module.exports = function (grunt) {
                 'components/aboutus/testimonials/testimonialsService.js',
                 'components/aboutus/journey/journeyService.js',
                 'components/project/projectService.js',
+                'components/gallery/galleryService.js',
                 'shared/header/headerDirective.js',
                 'shared/footer/footerDirective.js',
                 'shared/googlemap/mapDirective.js',
@@ -123,6 +126,13 @@ module.exports = function (grunt) {
                 'components/contactus/contactUsService.js'
             ],
             dest: 'scripts/app.js',
+          },
+          thirdpartycss: {
+            src: [
+                'css/thirdparty/bootstrap_photo_gallery.css',
+                'css/app.css'
+            ],
+            dest: 'css/app.css',
           }
         },
         // Watch these files and notify of changes.

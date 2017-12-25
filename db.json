@@ -302,6 +302,7 @@
             }
         }
     ],
+<<<<<<< Updated upstream
     "news": [
         {
             "imagename": "news1",
@@ -337,6 +338,28 @@
             "shortdescription": "eeee eeee eeee eeee eeee",
             "longdescription": "eeee eeee eeee eeee eeee eee.............",
             "date": "25/12/2017"
+=======
+    "gallery": [
+        {
+            "imagename" : "Rocking the night away",
+            "url": "gallery_image_1.jpg",
+            "caption": "Contrary to popular belief, Lorem Ipsum is not"
+        },
+        {
+            "imagename" : "Yellow sign",
+            "url": "gallery_image_1.jpg",
+            "caption": "simply random text. It has roots in a piece of classical Latin literature from 45 BC, making"
+        },
+        {
+            "imagename" : "Colors",
+            "url": "gallery_image_1.jpg",
+            "caption": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old."
+        },
+        {
+            "imagename" : "Retro party",
+            "url": "gallery_image_1.jpg",
+            "caption": "Lorem, do eiusmod tempor incid Ut enim ad minim veniam"
+>>>>>>> Stashed changes
         }
     ]
 }

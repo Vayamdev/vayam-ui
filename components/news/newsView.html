@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-md-8 col-sm-12">
+            <!-- begin panel group -->
+            <!-- Top five news to be shown-->
+            <div id="myCarousel" class="vayam-carousel">
+                <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+                    <div uib-slide ng-repeat="item in news" index="$index">
+                        <img ng-src="assets/{{item.url}}" style="width: 100%">
+                        <div class="carousel-caption">
+                            <p>{{item.shortdescription}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- /col-md-4 -->
+
+        <div class="col-lg-4 col-md-4 col-sm-12">
+            <div class="news-list">
+                <div class="list-group-item" ng-repeat="item in news">
+                    <a>
+                        <div class="newsimage col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        <img ng-src="assets/{{item.url}}" />
+                            </div>
+                        <div class="newdescription col-lg-8 col-md-8 col-sm-8 col-xs-8">{{item.shortdescription}}</div>
+                    </a>
+                </div>
+            </div>
+        </div> <!-- / .col-md-8 -->
+    </div> <!--/ .row -->
+</div> <!-- end sidetab container -->

@@ -12,8 +12,4 @@ rootModule.service('homeService', ['$http', 'baseUrl', function($http, baseUrl) 
     this.getProjects = function() {
         return $http.get(baseUrl + '/projects');
     }
-    this.getStaticData = function() {
-        return $http.get('staticData.json');
-    }
-
 }]);

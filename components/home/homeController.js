@@ -6,13 +6,13 @@ rootModule.controller('homeController', ['$scope', 'homeService', 'globalFactory
     $scope.conceptnote = [];
     $scope.projects = [];
 
-    homeService.getThumbnails().then(function(response) {
-        _truncateData(response.data, 'shortdescription', 200);
-        $scope.events = response.data;
-    }, function() {
-        console.log('Error during event data fetching!');
+    // fetch static data for this page. 
+    globalFactory.getStaticData(function(response) {
+        $scope.crisis = response.crisis;
+        $scope.conceptnote = response.conceptnote;      
     });
-
+   
+    // get other page details
     homeService.getSlides().then(function(response) {
         $scope.slides = response.data;
     }, function() {
@@ -20,18 +20,18 @@ rootModule.controller('homeController', ['$scope', 'homeService', 'globalFactory
     });
 
     homeService.getProjects().then(function(response) {
-        _truncateData(response.data, 'shortdescription', 300);
+        globalFactory.truncateData(response.data, 'shortdescription', 250);
         $scope.projects = response.data;
     }, function() {
         console.log('Error during projects data fetching!');
     });    
 
-    homeService.getStaticData().then(function(response) {
-        $scope.crisis = response.data.crisis;
-        $scope.conceptnote = response.data.conceptnote;
+    homeService.getThumbnails().then(function(response) {
+        globalFactory.truncateData(response.data, 'shortdescription', 120);
+        $scope.events = response.data;
     }, function() {
-        console.log('Error during static data fetching!');
-    });    
+        console.log('Error during event data fetching!');
+    });
 
     $scope.open = function (event) {
         globalFactory.modalOpen({
@@ -41,13 +41,6 @@ rootModule.controller('homeController', ['$scope', 'homeService', 'globalFactory
         });
     }
 
-    // if description is too long this function will take care of truncation.
-    function _truncateData(data, trunckey, charlen) {
-        for (var i=0; i< data.length; i++) {
-            if (data[i][trunckey].length > charlen) {
-                data[i][trunckey] = data[i][trunckey].slice(0, charlen) + ' ...';
-            }
-        }
-    }
+
 
 }]);

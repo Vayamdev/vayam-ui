@@ -1,5 +1,7 @@
-rootModule.factory('globalFactory', ['$uibModal', function($uibModal) {
+rootModule.factory('globalFactory', ['$uibModal', '$http', function($uibModal, $http) {
 
+   var staticData = null;
+   
    return { 
         modalOpen: function(options) {
             let modalInstance = $uibModal.open({
@@ -17,6 +19,30 @@ rootModule.factory('globalFactory', ['$uibModal', function($uibModal) {
                 backdrop: 'static',
                 templateUrl: options.templateurl ? options.templateUrl : 'shared/globalfactory/templates/ModalView.html'
             });
+        },
+        
+        // if description is too long this function will take care of truncation.
+        truncateData(data, trunckey, charlen) {
+            for (var i=0; i< data.length; i++) {
+                if (data[i][trunckey].length > charlen) {
+                    data[i][trunckey] = data[i][trunckey].slice(0, charlen) + ' ...';
+                }
+            }
+        },
+
+        // return static data for application.
+        getStaticData(callback) {
+            if (!staticData) {
+                $http.get('staticData.json').then(function(response) {
+                    staticData = response.data;
+                    callback(staticData);
+                }, function() {
+                    console.log('Error during static data fetching!');
+                });
+            }
+            else {
+                callback(staticData);
+            }
         }
    };
 }]);

@@ -79,13 +79,13 @@ rootModule.controller('homeController', ['$scope', 'homeService', 'globalFactory
     $scope.conceptnote = [];
     $scope.projects = [];
 
-    homeService.getThumbnails().then(function(response) {
-        _truncateData(response.data, 'shortdescription', 200);
-        $scope.events = response.data;
-    }, function() {
-        console.log('Error during event data fetching!');
+    // fetch static data for this page. 
+    globalFactory.getStaticData(function(response) {
+        $scope.crisis = response.crisis;
+        $scope.conceptnote = response.conceptnote;      
     });
-
+   
+    // get other page details
     homeService.getSlides().then(function(response) {
         $scope.slides = response.data;
     }, function() {
@@ -93,18 +93,18 @@ rootModule.controller('homeController', ['$scope', 'homeService', 'globalFactory
     });
 
     homeService.getProjects().then(function(response) {
-        _truncateData(response.data, 'shortdescription', 300);
+        globalFactory.truncateData(response.data, 'shortdescription', 250);
         $scope.projects = response.data;
     }, function() {
         console.log('Error during projects data fetching!');
     });    
 
-    homeService.getStaticData().then(function(response) {
-        $scope.crisis = response.data.crisis;
-        $scope.conceptnote = response.data.conceptnote;
+    homeService.getThumbnails().then(function(response) {
+        globalFactory.truncateData(response.data, 'shortdescription', 120);
+        $scope.events = response.data;
     }, function() {
-        console.log('Error during static data fetching!');
-    });    
+        console.log('Error during event data fetching!');
+    });
 
     $scope.open = function (event) {
         globalFactory.modalOpen({
@@ -114,14 +114,7 @@ rootModule.controller('homeController', ['$scope', 'homeService', 'globalFactory
         });
     }
 
-    // if description is too long this function will take care of truncation.
-    function _truncateData(data, trunckey, charlen) {
-        for (var i=0; i< data.length; i++) {
-            if (data[i][trunckey].length > charlen) {
-                data[i][trunckey] = data[i][trunckey].slice(0, charlen) + ' ...';
-            }
-        }
-    }
+
 
 }]);
 
@@ -129,7 +122,15 @@ rootModule.controller('homeController', ['$scope', 'homeService', 'globalFactory
 
 rootModule.controller('impactController', ['$scope', 'impactService', 'globalFactory', function($scope, impactService, globalFactory) {
     $scope.bannerUrl = 'http://placehold.it/1146x400';
+    $scope.bannertext;
+
+    // fetch static data for this page. 
+    globalFactory.getStaticData(function(response) {
+        $scope.bannertext = response.impactbannertext;
+    });
+
     impactService.getImpactThumbnails().then(function(response) {
+        globalFactory.truncateData(response.data, 'oneliner', 120);
         $scope.impacts = response.data;
     }, function() {
         console.log('Error during event data fetching!');
@@ -146,9 +147,16 @@ rootModule.controller('impactController', ['$scope', 'impactService', 'globalFac
 
 
 
-rootModule.controller('teamController', ['$scope', 'teamService', function($scope, teamService) {    
+rootModule.controller('teamController', ['$scope', 'teamService', 'globalFactory', function($scope, teamService, globalFactory) {    
     $scope.teamgroup = {};
     $scope.bannerUrl = 'http://placehold.it/1146x400';
+    $scope.bannertext = '';
+
+    // fetch static data for this page. 
+    globalFactory.getStaticData(function(response) {
+        $scope.bannertext = response.teambannertext;  
+    });    
+    
     teamService.getStaff().then(function(response) {
             var teamdata = response.data;
             var key = 0;
@@ -158,20 +166,38 @@ rootModule.controller('teamController', ['$scope', 'teamService', function($scop
             }
         }, function() {
             console.log('Error during team data fetching!');
-        })
+    });
 }]);
 
 
 
-rootModule.controller('whatweareController', ['$scope', function($scope) {
+rootModule.controller('whatweareController', ['$scope', 'globalFactory', function($scope, globalFactory) {
     $scope.bannerUrl = 'http://placehold.it/1146x400';
+    $scope.bannertext = '';
+    $scope.vision = '';
+    $scope.mission = '';
+
+    // fetch static data for this page. 
+    globalFactory.getStaticData(function(response) {
+        $scope.bannertext = response.whatweare.bannertext;
+        $scope.vision = response.whatweare.vision;
+        $scope.mission = response.whatweare.mission;    
+    });
+
 }]);
 
 
 
-rootModule.controller('testimonialsController', ['$scope', 'testimonialsService', function($scope, testimonials) {
+rootModule.controller('testimonialsController', ['$scope', 'testimonialsService', 'globalFactory', function($scope, testimonials, globalFactory) {
     $scope.testimonials;
     $scope.bannerUrl = 'http://placehold.it/1146x400';
+    $scope.bannertext = '';
+
+    // fetch static data for this page. 
+    globalFactory.getStaticData(function(response) {
+        $scope.bannertext = response.testimonialsbannertext;
+    });    
+
     testimonials.getTestimonials().then(function(response) {
         $scope.testimonials = response.data;
         }, function() {
@@ -181,9 +207,16 @@ rootModule.controller('testimonialsController', ['$scope', 'testimonialsService'
 
 
 
-rootModule.controller('journeyController', ['$scope', 'journeyService', function($scope, journeyService) {
+rootModule.controller('journeyController', ['$scope', 'journeyService', 'globalFactory', function($scope, journeyService, globalFactory) {
     $scope.milestones = [];
     $scope.bannerUrl = 'http://placehold.it/1146x400';
+    $scope.bannertext = '';
+
+    // fetch static data for this page. 
+    globalFactory.getStaticData(function(response) {
+        $scope.bannertext = response.journeybannertext;
+    });
+
     journeyService.getMilestone().then(function(response) {
         $scope.milestones = response.data;
     }, function() {
@@ -194,7 +227,7 @@ rootModule.controller('journeyController', ['$scope', 'journeyService', function
 
 
 rootModule.controller('contactusController', ['$scope', function($scope) {
-    $scope.bannerUrl = "https://qph.ec.quoracdn.net/main-qimg-e00f420f552a955b5ca55f5d89285530-c";
+    $scope.bannerUrl = "http://placehold.it/1146x400";
 }]);
 
 
@@ -244,10 +277,6 @@ rootModule.service('homeService', ['$http', 'baseUrl', function($http, baseUrl) 
     this.getProjects = function() {
         return $http.get(baseUrl + '/projects');
     }
-    this.getStaticData = function() {
-        return $http.get('staticData.json');
-    }
-
 }]);
 
 
@@ -391,8 +420,10 @@ rootModule.directive('imageBanner', function(){
 });
 
 
-rootModule.factory('globalFactory', ['$uibModal', function($uibModal) {
+rootModule.factory('globalFactory', ['$uibModal', '$http', function($uibModal, $http) {
 
+   var staticData = null;
+   
    return { 
         modalOpen: function(options) {
             let modalInstance = $uibModal.open({
@@ -410,6 +441,30 @@ rootModule.factory('globalFactory', ['$uibModal', function($uibModal) {
                 backdrop: 'static',
                 templateUrl: options.templateurl ? options.templateUrl : 'shared/globalfactory/templates/ModalView.html'
             });
+        },
+        
+        // if description is too long this function will take care of truncation.
+        truncateData(data, trunckey, charlen) {
+            for (var i=0; i< data.length; i++) {
+                if (data[i][trunckey].length > charlen) {
+                    data[i][trunckey] = data[i][trunckey].slice(0, charlen) + ' ...';
+                }
+            }
+        },
+
+        // return static data for application.
+        getStaticData(callback) {
+            if (!staticData) {
+                $http.get('staticData.json').then(function(response) {
+                    staticData = response.data;
+                    callback(staticData);
+                }, function() {
+                    console.log('Error during static data fetching!');
+                });
+            }
+            else {
+                callback(staticData);
+            }
         }
    };
 }]);

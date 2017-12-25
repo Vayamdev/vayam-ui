@@ -28,6 +28,21 @@ html {
             cursor: pointer;
         }
 
+        .donate-link {
+            position: fixed;
+            z-index: 10;
+            right: 0;
+            bottom: 10rem;
+            padding: 0.5rem;
+            cursor: pointer;
+            background-color: #1c7ab4;
+            transform: rotate(-90deg) translate(50%, 75%);
+            letter-spacing: 0.1rem;
+            a {
+                color: $fullwhite;
+            }
+        }
+
 
         // for views
         div.vayamviews {
@@ -77,13 +92,14 @@ html {
             background-color: $ivory;
 
             div.footer-pane {
-                padding: 1em;
             }
 
             div.links a {
-                padding-left: 1em;
-                padding-right: 1em;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                padding-top: 1.3rem;
                 color: $fullwhite;
+                display: inline-block;
             }
 
 
@@ -126,8 +142,8 @@ html {
                 -webkit-border-radius:50%;
                 border-radius:50%;
                 text-align:center;
-                width: 50px;
-                height: 50px;
+                width: 5rem;
+                height: 5rem;
                 font-size:20px;
             }
             .social-circle li i {

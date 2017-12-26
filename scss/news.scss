@@ -1,26 +1,49 @@
-.news-list {
-    //position: absolute;
-    width:100%;
-    height: 45rem;
-    overflow: hidden;
-    > div {
-        //position:absolute;
-        width:100%;
-        margin-bottom: 2rem;
-        height: 20%;
-        a {
-            width: 100%;
-            div.newsimage {
-                padding: 0;
-                img {
-                    width: 100%;
-                    height: auto;
-                }
-            }
+.newspage {
 
-            div.newdescription{
-                padding-left: 1rem;
-            }
+    .glyphicon
+    {
+        margin-right:4px !important; /*override*/
+    }
+
+    .pagination .glyphicon
+    {
+        margin-right:0px !important; /*override*/
+    }
+
+    .pagination a
+    {
+        color:#555;
+    }
+
+    .panel {
+        max-height: 47rem;
+        overflow: hidden;
+        .panel-body {
+            padding-left: 0;
         }
+        ul {
+            padding:0px;
+            margin:0px;
+            list-style:none;
+        }
+        .row {
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+        .news-shortdescription {
+            padding-left: 1rem;
+        }
+    }
+
+
+    .news-item
+    {
+        padding:4px 4px;
+        margin:0px;
+        border-bottom:1px dotted #555;
+    }
+
+    #myCarousel {
+        padding-bottom: 2rem;
     }
 }

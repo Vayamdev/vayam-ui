@@ -49,6 +49,7 @@
 
 +++ Referances
 - https://shermandigital.com/blog/bootstrap-project-with-bower-and-grunt/
+- for news tickler - http://www.iamrohit.in/jquery-bootstrap-based-responsive-news-ticker-plugin/
 
 
 - Slack (vayam-dev)

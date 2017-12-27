@@ -90,7 +90,8 @@ module.exports = function (grunt) {
                 'scripts/bootstrap-sass/bootstrap.min.js',
                 'scripts/angular/angular.min.js',
                 'scripts/angular-route/angular-route.min.js',
-                'scripts/angular-bootstrap/ui-bootstrap-tpls.min.js'
+                'scripts/angular-bootstrap/ui-bootstrap-tpls.min.js',
+                'scripts/plugins/jquery.bootstrap.newsbox.min.js'
             ],
             dest: 'scripts/vender.js',
           },        

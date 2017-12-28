@@ -1,4 +1,6 @@
-rootModule.controller('newsController', ['$scope', 'newsService', '$timeout', function($scope, newsService, $timeout) {
+rootModule.controller('newsController', ['$scope', 'newsService', '$timeout', 'Pagination', function($scope, newsService, $timeout, Pagination) {
+    $scope.pagination = Pagination.getNew(2);
+    $scope.pagination.numPages = 3;
     newsService.getNews().then(function(response) {
         $scope.news = response.data;
     }, function() {
@@ -17,4 +19,5 @@ rootModule.controller('newsController', ['$scope', 'newsService', '$timeout', fu
             }
         });
     });
+
 }]);

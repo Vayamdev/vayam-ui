@@ -36,7 +36,13 @@ module.exports = function (grunt) {
                         cwd: 'bower_components/angular-bootstrap/',
                         src: ['**/*.js', '**/*.map'],
                         dest: 'scripts/angular-bootstrap/'
-                    },                    
+                    },
+                    {
+                        expand: true,
+                        cwd: 'bower_components/ng-simplePagination/',
+                        src: ['**/*.js', '**/*.map'],
+                        dest: 'scripts/ng-simplePagination/'
+                    },
                     // Fonts.
                     {
                         expand: true,
@@ -91,6 +97,7 @@ module.exports = function (grunt) {
                 'scripts/angular/angular.min.js',
                 'scripts/angular-route/angular-route.min.js',
                 'scripts/angular-bootstrap/ui-bootstrap-tpls.min.js',
+                'scripts/ng-simplePagination/simplePagination.js',
                 'scripts/plugins/jquery.bootstrap.newsbox.min.js'
             ],
             dest: 'scripts/vender.js',

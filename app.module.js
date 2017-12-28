@@ -5,7 +5,8 @@ related to app.
 
 var rootModule = angular.module('rootModule', [
     'ngRoute',
-    'ui.bootstrap'
+    'ui.bootstrap',
+    'simplePagination'
 ]);
 
 // constant for base URL. Change this on production server

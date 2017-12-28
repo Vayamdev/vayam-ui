@@ -1,5 +1,19 @@
 .newspage {
 
+    .news-wrapper {
+        border: 1px solid rgb(233, 233, 233);
+        border-radius: $border-radius-small;
+        margin-bottom: 4rem;
+        .news-image {
+            img {
+                width: 100%
+            }
+        }
+        .news-content {
+
+        }
+    }
+
     .glyphicon
     {
         margin-right:4px !important; /*override*/
@@ -35,15 +49,10 @@
         }
     }
 
-
     .news-item
     {
         padding:4px 4px;
         margin:0px;
         border-bottom:1px dotted #555;
-    }
-
-    #myCarousel {
-        padding-bottom: 2rem;
     }
 }

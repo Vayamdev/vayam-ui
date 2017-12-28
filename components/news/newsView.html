@@ -5,10 +5,10 @@
             <!-- Top five news to be shown-->
             <div class='news-wrapper' ng-repeat="item in news | startFrom: pagination.page * pagination.perPage | limitTo: pagination.perPage">
                 <div class="news-image">
-                <img ng-src="assets/{{item.url}}" style="width: 100%">
+                <img ng-src="assets/{{item.imageurl}}" style="width: 100%">
                     </div>
                 <div>
-                    <h3>{{item.imagename}}</h3>
+                    <h3>{{item.newsheading}}</h3>
                     <p>{{item.shortdescription}}</p>
                 </div>
             </div>
@@ -33,7 +33,7 @@
                                 <li class="news-item" ng-repeat="item in news">
                                     <table cellpadding="4">
                                         <tr>
-                                            <td><img ng-src="assets/{{item.url}}" width="60" /></td>
+                                            <td><img ng-src="assets/{{item.imageurl}}" width="60" /></td>
                                             <td class="news-shortdescription">{{item.shortdescription}}</td>
                                         </tr>
                                     </table>

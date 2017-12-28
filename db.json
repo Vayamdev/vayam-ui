@@ -304,36 +304,36 @@
     ],
     "news": [
         {
-            "imagename": "news1",
-            "url": "slide1.jpg",
+            "newsheading": "news1",
+            "imageurl": "slide1.jpg",
             "shortdescription": "aaaa aaaa aaaa aaaa",
             "longdescription": "aaaa aaaa aaaa aaaa aaaa aaa.............",
             "date": "25/12/2017"
         },
         {
-            "imagename": "news2",
-            "url": "slide2.jpg",
+            "newsheading": "news2",
+            "imageurl": "slide2.jpg",
             "shortdescription": "bbbb bbbb bbbb bbbb",
             "longdescription": "bbbb bbbb bbbb bbbb bbbb bbb.............",
             "date": "25/12/2017"
         },
         {
-            "imagename": "news3",
-            "url": "slide3.jpg",
+            "newsheading": "news3",
+            "imageurl": "slide3.jpg",
             "shortdescription": "cccc cccc cccc cccc",
             "longdescription": "ccc cccc cccc cccc cccc cccc.............",
             "date": "25/12/2017"
         },
         {
-            "imagename": "news4",
-            "url": "slide1.jpg",
+            "newsheading": "news4",
+            "imageurl": "slide1.jpg",
             "shortdescription": "dddd ddddd ddddd ddddd",
             "longdescription": "dddd dddd dddd dddd dddd ddd.............",
             "date": "25/12/2017"
         },
         {
-            "imagename": "news5",
-            "url": "slide2.jpg",
+            "newsheading": "news5",
+            "imageurl": "slide2.jpg",
             "shortdescription": "eeee eeee eeee eeee eeee",
             "longdescription": "eeee eeee eeee eeee eeee eee.............",
             "date": "25/12/2017"

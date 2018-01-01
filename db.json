@@ -302,7 +302,6 @@
             }
         }
     ],
-<<<<<<< Updated upstream
     "news": [
         {
             "imagename": "news1",
@@ -338,7 +337,8 @@
             "shortdescription": "eeee eeee eeee eeee eeee",
             "longdescription": "eeee eeee eeee eeee eeee eee.............",
             "date": "25/12/2017"
-=======
+        }
+    ],
     "gallery": [
         {
             "imagename" : "Rocking the night away",
@@ -359,7 +359,6 @@
             "imagename" : "Retro party",
             "url": "gallery_image_1.jpg",
             "caption": "Lorem, do eiusmod tempor incid Ut enim ad minim veniam"
->>>>>>> Stashed changes
         }
     ]
 }

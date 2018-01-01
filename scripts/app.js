@@ -63,7 +63,19 @@ rootModule.config(["$routeProvider", function($routeProvider) {
         templateUrl: "components/project/projectView.html",
         controller: "projectController",
         activetab: 'project'
-    })    
+    })
+<<<<<<< Updated upstream
+    .when("/news", {
+        templateUrl: "components/news/newsView.html",
+        controller: "newsController",
+        activetab: 'news'
+=======
+    .when("/gallery", {
+        templateUrl: "components/gallery/galleryView.html",
+        controller: "galleryController",
+        activetab: 'gallery'
+>>>>>>> Stashed changes
+    })
     .otherwise({
         redirectTo: "/home"
     });
@@ -237,6 +249,42 @@ rootModule.controller('donateController', ['$scope', function($scope) {
 
 
 
+rootModule.controller('newsController', ['$scope', 'newsService', '$timeout', function($scope, newsService, $timeout) {
+    newsService.getNews().then(function(response) {
+        $scope.news = response.data;
+    }, function() {
+        console.log('Error during event data fetching!');
+    });
+
+    $timeout(function() {
+        var i = 0;
+        var len = $(".news-list > div").length;
+        $(".news-list > div").each(function () {
+            //$(this).css("top", i);
+            //i += 80;
+            animatescroll($(this), len);
+        });
+    })
+
+
+    var animatescroll = function($elem, len) {
+        var top = parseInt($elem.css("top"));
+        var temp = -1 * parseInt(len) * ($('.news-list > div').height() + 30);
+        console.log(top);
+        console.log(temp);
+        if(top < temp) {
+            top = $('.news-list').height();
+            $elem.css("top", top);
+        }
+
+        $elem.animate({ top: (parseInt(top)-60) }, 1000, function () {
+            animatescroll(jQuery(this), len)
+        });
+    };
+}]);
+
+
+
 rootModule.controller('projectController', ['$scope', '$routeParams', 'projectService', function($scope, $routeParams, projectService) {
     $scope.bannerUrl = 'http://placehold.it/1146x400';
     $scope.project;
@@ -259,6 +307,18 @@ rootModule.controller('projectController', ['$scope', '$routeParams', 'projectSe
         console.log('Error during project data fetching!');
     });
 
+}]);
+
+
+
+rootModule.controller('galleryController', ['$scope', 'galleryService', function($scope, galleryService) {
+    $scope.gallery = [];
+    galleryService.getGallery().then(function(response) {
+        console.log(response);
+        $scope.gallery = response.data;
+    }, function() {
+        console.log('Error during gallery data fetching!');
+    });
 }]);
 
 
@@ -289,6 +349,19 @@ rootModule.service('impactService', ['$http', 'baseUrl', function($http, baseUrl
     };
 }]);
 
+
+
+/**
+ * Created by awaleg on 24/12/17.
+ */
+rootModule.service('newsService', ['$http', 'baseUrl', function($http, baseUrl) {
+
+    // get the event data from backend
+    this.getNews = function() {
+        return $http.get(baseUrl + '/news');
+    };
+
+}]);
 
 
 rootModule.service('teamService', ['$http', function($http) {
@@ -330,6 +403,16 @@ rootModule.service('projectService', ['$http', 'baseUrl', function($http, baseUr
     }
 }]);
 
+
+
+rootModule.service('galleryService', ['$http', 'baseUrl', function($http, baseUrl) {
+
+    // get the event data from backend
+    this.getGallery = function() {
+        return $http.get(baseUrl + '/gallery');
+    }
+}]);
+    
 
 
 rootModule.directive('vayamHeader', function(){

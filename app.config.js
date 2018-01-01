@@ -55,6 +55,11 @@ rootModule.config(["$routeProvider", function($routeProvider) {
         controller: "newsController",
         activetab: 'news'
     })
+    .when("/gallery", {
+        templateUrl: "components/gallery/galleryView.html",
+        controller: "galleryController",
+        activetab: 'gallery'
+    })
     .when("/news/:newsid", {
         templateUrl: "components/news/newsdetails/newsDetailsView.html",
         controller: "newsController",

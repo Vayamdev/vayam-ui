@@ -304,6 +304,7 @@
     ],
     "news": [
         {
+            "id": 1,
             "newsheading": "news1",
             "imageurl": "slide1.jpg",
             "shortdescription": "aaaa aaaa aaaa aaaa",
@@ -311,6 +312,7 @@
             "date": "25/12/2017"
         },
         {
+            "id": 2,
             "newsheading": "news2",
             "imageurl": "slide2.jpg",
             "shortdescription": "bbbb bbbb bbbb bbbb",
@@ -318,6 +320,7 @@
             "date": "25/12/2017"
         },
         {
+            "id": 3,
             "newsheading": "news3",
             "imageurl": "slide3.jpg",
             "shortdescription": "cccc cccc cccc cccc",
@@ -325,6 +328,7 @@
             "date": "25/12/2017"
         },
         {
+            "id": 4,
             "newsheading": "news4",
             "imageurl": "slide1.jpg",
             "shortdescription": "dddd ddddd ddddd ddddd",
@@ -332,6 +336,7 @@
             "date": "25/12/2017"
         },
         {
+            "id": 5,
             "newsheading": "news5",
             "imageurl": "slide2.jpg",
             "shortdescription": "eeee eeee eeee eeee eeee",

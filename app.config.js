@@ -55,6 +55,11 @@ rootModule.config(["$routeProvider", function($routeProvider) {
         controller: "newsController",
         activetab: 'news'
     })
+    .when("/news/:newsid", {
+        templateUrl: "components/news/newsdetails/newsDetailsView.html",
+        controller: "newsController",
+        activetab: 'news'
+    })
     .otherwise({
         redirectTo: "/home"
     });

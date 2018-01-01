@@ -97,9 +97,8 @@ module.exports = function (grunt) {
                 'scripts/angular/angular.min.js',
                 'scripts/angular-route/angular-route.min.js',
                 'scripts/angular-bootstrap/ui-bootstrap-tpls.min.js',
-                'scripts/jQuerybsPhotoGallery.js',
                 'scripts/ng-simplePagination/simplePagination.js',
-                'scripts/plugins/jquery.bootstrap.newsbox.min.js'
+                'scripts/plugins/jquery.bootstrap.newsbox.min.js',
             ],
             dest: 'scripts/vender.js',
           },        

@@ -1,30 +1,49 @@
-<div class="container">
+<div class="container newspage">
     <div class="row">
         <div class="col-lg-8 col-md-8 col-sm-12">
             <!-- begin panel group -->
             <!-- Top five news to be shown-->
-            <div id="myCarousel" class="vayam-carousel">
-                <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
-                    <div uib-slide ng-repeat="item in news" index="$index">
-                        <img ng-src="assets/{{item.url}}" style="width: 100%">
-                        <div class="carousel-caption">
-                            <p>{{item.shortdescription}}</p>
-                        </div>
+            <div class='news-wrapper' ng-repeat="item in news | startFrom: pagination.page * pagination.perPage | limitTo: pagination.perPage">
+                <div class="news-image">
+                <img ng-src="assets/{{item.imageurl}}" style="width: 100%">
                     </div>
+                <div>
+                    <h3>{{item.newsheading}}</h3>
+                    <p>{{item.shortdescription}}</p>
                 </div>
             </div>
+            <ul class="pagination">
+                <li><a href="" ng-click="pagination.prevPage()">&laquo;</a></li>
+                <li ng-repeat="n in [] | range: pagination.numPages" ng-class="{active: n == pagination.page}">
+                    <a href="" ng-click="pagination.toPageId(n)">{{n + 1}}</a>
+                </li>
+                <li><a href="" ng-click="pagination.nextPage()">&raquo;</a></li>
+            </ul>
 
         </div><!-- /col-md-4 -->
 
-        <div class="col-lg-4 col-md-4 col-sm-12">
-            <div class="news-list">
-                <div class="list-group-item" ng-repeat="item in news">
-                    <a>
-                        <div class="newsimage col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                        <img ng-src="assets/{{item.url}}" />
-                            </div>
-                        <div class="newdescription col-lg-8 col-md-8 col-sm-8 col-xs-8">{{item.shortdescription}}</div>
-                    </a>
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <span class="glyphicon glyphicon-list-alt"></span><b>News</b></div>
+                <div class="panel-body">
+                    <div>
+                        <div class="col-xs-12">
+                            <ul class="news-item-list">
+                                <li class="news-item" ng-repeat="item in news">
+                                    <table cellpadding="4">
+                                        <tr>
+                                            <td><img ng-src="assets/{{item.imageurl}}" width="60" /></td>
+                                            <td class="news-shortdescription">{{item.shortdescription}}</td>
+                                        </tr>
+                                    </table>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer">
+
                 </div>
             </div>
         </div> <!-- / .col-md-8 -->

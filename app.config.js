@@ -60,6 +60,11 @@ rootModule.config(["$routeProvider", function($routeProvider) {
         controller: "galleryController",
         activetab: 'gallery'
     })
+    .when("/news/:newsid", {
+        templateUrl: "components/news/newsdetails/newsDetailsView.html",
+        controller: "newsController",
+        activetab: 'news'
+    })
     .otherwise({
         redirectTo: "/home"
     });

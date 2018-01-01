@@ -1,4 +1,4 @@
-rootModule.controller('newsController', ['$scope', 'newsService', '$timeout', 'Pagination', function($scope, newsService, $timeout, Pagination) {
+rootModule.controller('newsController', ['$scope', '$routeParams', 'newsService', '$timeout', 'Pagination', function($scope, $routeParams, newsService, $timeout, Pagination) {
     newsService.getNews().then(function(response) {
         $scope.news = response.data;
         $scope.pagination = Pagination.getNew(5);
@@ -15,6 +15,14 @@ rootModule.controller('newsController', ['$scope', 'newsService', '$timeout', 'P
                 }
             });
         }, 100);
+
+        if ($routeParams.newsid) {
+            console.log('Hello');
+            $scope.bannerUrl = 'http://placehold.it/1146x400';
+            $scope.selectedNews = $scope.news.find(function(item) {
+               return item.id == parseInt($routeParams.newsid, 10);
+            });
+        }
     }, function() {
         console.log('Error during event data fetching!');
     });

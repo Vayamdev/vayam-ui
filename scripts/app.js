@@ -5,7 +5,8 @@ related to app.
 
 var rootModule = angular.module('rootModule', [
     'ngRoute',
-    'ui.bootstrap'
+    'ui.bootstrap',
+    'simplePagination'
 ]);
 
 // constant for base URL. Change this on production server
@@ -64,17 +65,20 @@ rootModule.config(["$routeProvider", function($routeProvider) {
         controller: "projectController",
         activetab: 'project'
     })
-<<<<<<< Updated upstream
     .when("/news", {
         templateUrl: "components/news/newsView.html",
         controller: "newsController",
         activetab: 'news'
-=======
+    })
     .when("/gallery", {
         templateUrl: "components/gallery/galleryView.html",
         controller: "galleryController",
         activetab: 'gallery'
->>>>>>> Stashed changes
+    })
+    .when("/news/:newsid", {
+        templateUrl: "components/news/newsdetails/newsDetailsView.html",
+        controller: "newsController",
+        activetab: 'news'
     })
     .otherwise({
         redirectTo: "/home"
@@ -249,38 +253,34 @@ rootModule.controller('donateController', ['$scope', function($scope) {
 
 
 
-rootModule.controller('newsController', ['$scope', 'newsService', '$timeout', function($scope, newsService, $timeout) {
+rootModule.controller('newsController', ['$scope', '$routeParams', 'newsService', '$timeout', 'Pagination', function($scope, $routeParams, newsService, $timeout, Pagination) {
+    $scope.bannerUrl = 'http://placehold.it/1146x400';
     newsService.getNews().then(function(response) {
         $scope.news = response.data;
+        $scope.pagination = Pagination.getNew(5);
+        $scope.pagination.numPages = Math.ceil($scope.news.length/$scope.pagination.perPage);
+        $timeout(function() {
+            $(".news-item-list").bootstrapNews({
+                newsPerPage: 11,
+                autoplay: true,
+                pauseOnHover:true,
+                direction: 'up',
+                newsTickerInterval: 4000,
+                onToDo: function () {
+                    //console.log(this);
+                }
+            });
+        }, 100);
+
+        if ($routeParams.newsid) {
+            $scope.selectedNews = $scope.news.find(function(item) {
+               return item.id == parseInt($routeParams.newsid, 10);
+            });
+        }
     }, function() {
         console.log('Error during event data fetching!');
     });
 
-    $timeout(function() {
-        var i = 0;
-        var len = $(".news-list > div").length;
-        $(".news-list > div").each(function () {
-            //$(this).css("top", i);
-            //i += 80;
-            animatescroll($(this), len);
-        });
-    })
-
-
-    var animatescroll = function($elem, len) {
-        var top = parseInt($elem.css("top"));
-        var temp = -1 * parseInt(len) * ($('.news-list > div').height() + 30);
-        console.log(top);
-        console.log(temp);
-        if(top < temp) {
-            top = $('.news-list').height();
-            $elem.css("top", top);
-        }
-
-        $elem.animate({ top: (parseInt(top)-60) }, 1000, function () {
-            animatescroll(jQuery(this), len)
-        });
-    };
 }]);
 
 
@@ -311,13 +311,23 @@ rootModule.controller('projectController', ['$scope', '$routeParams', 'projectSe
 
 
 
-rootModule.controller('galleryController', ['$scope', 'galleryService', function($scope, galleryService) {
-    $scope.gallery = [];
+rootModule.controller('galleryController', ['$scope', 'galleryService', '$timeout', function($scope, galleryService, $timeout) {
+     $scope.gallery = [];
     galleryService.getGallery().then(function(response) {
         console.log(response);
         $scope.gallery = response.data;
     }, function() {
         console.log('Error during gallery data fetching!');
+    });
+
+    $timeout(function() {
+        $('.thumbnail').click(function(){
+            $('.modal-body').empty();
+          var title = $(this).parent('a').attr("title");
+          $('.modal-title').html(title);
+          $($(this).parents('div').html()).appendTo('.modal-body');
+          $('#myModal').modal({show:true});
+      });
     });
 }]);
 

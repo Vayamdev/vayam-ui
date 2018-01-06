@@ -3,13 +3,16 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel='stylesheet' href='/css/app.css'></link>
+        <title>Vayam India</title>
 	</head>
 
     <body ng-app="rootModule">
 
         <div class="fluid-container">
             <div vayam-header></div>
-            <div class="donate-link"><a href="#!/donate"> DONATE </a></div>
+            <div class="donate-link">
+                <a href="#!/donate" class="btn btn-primary btn-lg">DONATE</a>
+            </div>
             <div class="vayamviews container-fluid" ng-view autoscroll="true"></div>
             <div vayam-footer></div>
         </div>

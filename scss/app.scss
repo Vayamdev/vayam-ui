@@ -36,11 +36,14 @@ html {
             bottom: 10rem;
             padding: 0.5rem;
             cursor: pointer;
-            background-color: #1c7ab4;
             transform: rotate(-90deg) translate(50%, 75%);
             letter-spacing: 0.1rem;
             a {
-                color: $fullwhite;
+                background-color: $secondarycolor;
+                color: $milk;
+                &:hover {
+                    color: $highlightercolor;
+                }
             }
         }
 

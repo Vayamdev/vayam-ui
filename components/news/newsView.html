@@ -13,13 +13,15 @@
                             <div class="col-xs-12">
                                 <ul class="news-item-list">
                                     <li class="news-item" ng-repeat="item in news">
-                                        <table cellpadding="4">
+                                        <table>
                                             <tr>
                                                 <td class="news-item-image">
                                                     <img ng-src="{{item.imageurl}}" width="60" />
-                                                    <span class="news-date">{{item.date}}</span>
                                                 </td>
-                                                <td class="news-shortdescription">{{item.shortdescription}}</td>
+                                                <td class="news-shortdescription">
+                                                    {{item.newsheading}}
+                                                    <span class="news-date">- <i>{{item.date}}</i></span>
+                                                </td>
                                             </tr>
                                         </table>
                                     </li>
@@ -36,12 +38,14 @@
                 <!-- begin panel group -->
                 <!-- Top five news to be shown-->
                 <div class='news-wrapper well col-xs-12' ng-repeat="item in news | startFrom: pagination.page * pagination.perPage | limitTo: pagination.perPage">
-                    <a href="#!/news/{{item.id}}">     
+ 
                         <div class="news-image col-xs-12 col-md-7">
                             <img ng-src="{{item.imageurl}}" style="width: 100%">
                         </div>
                         <div class="col-xs-12 col-md-5">
-                            <h3>{{item.newsheading}}</h3> 
+                            <a href="#!/news/{{item.id}}">
+                                <h3>{{item.newsheading}}</h3>
+                            </a>
                             <em class="news-date">{{item.date}}</em>
                             <p>{{item.shortdescription}}</p>
                         </div>

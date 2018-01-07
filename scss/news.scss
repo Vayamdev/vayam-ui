@@ -57,11 +57,14 @@
             list-style:none;
         }
         .row {
-            margin-left: -15px;
+            margin-left: -15px; 
             margin-right: -15px;
         }
         .news-shortdescription {
             padding-left: 1rem;
+            p {
+                text-align: left;
+            }
         }
     }
 
@@ -75,6 +78,7 @@
         }
         .news-date {
             font-size: 12px;
+            font-weight: bold;
         }
     }
 }

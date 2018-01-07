@@ -6,6 +6,9 @@ div.vayam-modal {
 
     div.modal-footer {
         background-color: $milk;
+        button:hover {
+            color: $highlightercolor;
+        }
     }
 
     div.thumbnail {

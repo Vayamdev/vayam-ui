@@ -345,7 +345,47 @@
             "shortdescription": "The standard chunk of Lorem Ipsum used since the 1500s",
             "longdescription": "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy",
             "date": "11/11/2017"
-        }
+        },
+        {
+            "id": 1,
+            "newsheading": "Lorem Ipsum is not simply random text",
+            "imageurl": "http://placehold.it/400x300",
+            "shortdescription": "Contrary to popular belief, Lorem Ipsum is not simply random text",
+            "longdescription": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",
+            "date": "25/01/2017"
+        },
+        {
+            "id": 2,
+            "newsheading": "It is a long established fact",
+            "imageurl": "http://placehold.it/400x300",
+            "shortdescription": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout",
+            "longdescription": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+            "date": "25/04/2017"
+        },
+        {
+            "id": 3,
+            "newsheading": "There are many variations of passages",
+            "imageurl": "http://placehold.it/400x300",
+            "shortdescription": "There are many variations of passages of Lorem Ipsum available",
+            "longdescription": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
+            "date": "05/02/2017"
+        },
+        {
+            "id": 4,
+            "newsheading": "Sections 1.10.32 and 1.10.33 from",
+            "imageurl": "http://placehold.it/400x300",
+            "shortdescription": "There are many variations of pass      ages of Lorem Ipsum available",
+            "longdescription": "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from",
+            "date": "15/09/2017"
+        },
+        {
+            "id": 5,
+            "newsheading": "Many desktop publishing packages and web page editors",
+            "imageurl": "http://placehold.it/400x300",
+            "shortdescription": "The standard chunk of Lorem Ipsum used since the 1500s",
+            "longdescription": "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy",
+            "date": "11/11/2017"
+        }      
     ],
     "gallery": [
         {

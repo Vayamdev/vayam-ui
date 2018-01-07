@@ -281,10 +281,12 @@
     "locations": [
         {
             "name": "Viman Nagar",
-            "address": "34, Blue Bell, Neco Gardens, Viman nagar, Pune",
+            "address": "34, Blue Bell, Neco Gardens, Viman nagar, pune ",
             "pincode": "411014",
             "state": "Maharashtra",
             "country": "India",
+            "number": "(+91)-7567065254",
+            "email": "gondhiyahardik6610@gmail.com",
             "coordinates": {
                 "latitude": 18.5626609,
                 "longitude": 73.9115729
@@ -292,10 +294,11 @@
         },
         {
             "name": "Bibwewadi",
-            "address": "12, xxx, xxxx, xxxxxx, pune",
-            "pincode": "111111",
+            "address": "F, Chintamani nagar phase 3, bibwewadi, pune ",
+            "pincode": "411037",
             "state": "Maharashtra",
             "country": "India",
+            "number": "(+91)-9624XXXXX",
             "coordinates": {
                 "latitude": 18.4709449,
                 "longitude": 73.8582213

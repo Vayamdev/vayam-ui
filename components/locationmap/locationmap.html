@@ -4,10 +4,11 @@
         <hr>
         <div ng-repeat="location in locations" co-ordinates="{{location.coordinates}}" ng-click="openMapInfoWindow($index)">
             <h4>{{location.name}}</h4>
-            <address>
+            <address ng-if="showaddress">
                 {{location.address}}
                 {{location.pincode}}
             </address>
+            <hr ng-if="showaddress">
         </div>
     </div>
     <div id="map" class="col-xs-12 col-md-9"></div>

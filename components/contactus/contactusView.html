@@ -34,11 +34,9 @@
 						<div class="image"><i class="fa fa-envelope" aria-hidden="true"></i></div>
 						<div class="info">
 							<h3 class="title">MAIL & WEBSITE</h3>
-							<p>
-								<i class="fa fa-envelope" aria-hidden="true"></i> &nbsp gondhiyahardik6610@gmail.com
+							<p ng-repeat="location in locations" ng-if="location.email">
+								<i class="fa fa-envelope" aria-hidden="true"></i> {{location.email}}
 								<br>
-								<br>
-								<i class="fa fa-globe" aria-hidden="true"></i> &nbsp www.hardikgondhiya.com
 							</p>
 						
 						</div>
@@ -53,11 +51,9 @@
 						<div class="image"><i class="fa fa-mobile" aria-hidden="true"></i></div>
 						<div class="info">
 							<h3 class="title">CONTACT</h3>
-							<p>
-								<i class="fa fa-mobile" aria-hidden="true"></i> &nbsp (+91)-9624XXXXX
+							<p ng-repeat="location in locations" ng-if="location.number">
+								<i class="fa fa-mobile" aria-hidden="true"></i> {{location.number}}
 								<br>
-								<br>
-								<i class="fa fa-mobile" aria-hidden="true"></i> &nbsp  (+91)-7567065254 
 							</p>
 						</div>
 					</div>
@@ -71,9 +67,8 @@
 						<div class="image"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
 						<div class="info">
 							<h3 class="title">ADDRESS</h3>
-							<p>
-								 <i class="fa fa-map-marker" aria-hidden="true"></i> &nbsp 15/3 Junction Plot 
-								 "Shree Krishna Krupa", Rajkot - 360001.
+							<p ng-repeat="location in locations">
+								 <i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp; {{location.address}}{{location.pincode}}
 							</p>
 						</div>
 					</div>

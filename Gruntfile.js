@@ -37,11 +37,18 @@ module.exports = function (grunt) {
                         src: ['**/*.js', '**/*.map'],
                         dest: 'scripts/angular-bootstrap/'
                     },
+                    // Third party plugins
                     {
                         expand: true,
                         cwd: 'bower_components/ng-simplePagination/',
                         src: ['**/*.js', '**/*.map'],
                         dest: 'scripts/ng-simplePagination/'
+                    },
+                    {
+                        expand: true,
+                        cwd: 'bower_components/blueimp-gallery/',
+                        src: ['**/*.js'],
+                        dest: 'scripts/plugins/blueimp-gallery/'
                     },
                     // Fonts.
                     {
@@ -66,7 +73,13 @@ module.exports = function (grunt) {
                         cwd: 'bower_components/bootstrap-sass/assets/stylesheets/',
                         src: ['**/*.scss'],
                         dest: 'scss/'
-                    }
+                    },
+                    {
+                        expand: true,
+                        cwd: 'bower_components/blueimp-gallery/',
+                        src: ['**/*.css'],
+                        dest: 'css/blueimp-gallery/'
+                    },
                 ]
             },
         },
@@ -99,6 +112,7 @@ module.exports = function (grunt) {
                 'scripts/angular-bootstrap/ui-bootstrap-tpls.min.js',
                 'scripts/ng-simplePagination/simplePagination.js',
                 'scripts/plugins/jquery.bootstrap.newsbox.min.js',
+                'scripts/plugins/blueimp-gallery/js/blueimp-gallery.min.js'
             ],
             dest: 'scripts/vender.js',
           },        
@@ -136,7 +150,7 @@ module.exports = function (grunt) {
           },
           thirdpartycss: {
             src: [
-                'css/thirdparty/bootstrap_photo_gallery.css',
+                'css/blueimp-gallery/css/blueimp-gallery.min.css',
                 'css/app.css'
             ],
             dest: 'css/app.css',

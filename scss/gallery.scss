@@ -1,0 +1,15 @@
+div.gallerytab {
+  .blueimp-gallery {
+    & > .play-pause {
+      background-image: url(../assets/play-pause.svg);
+    }
+  }
+
+  #links {
+    text-align: center;
+    img {
+      width: 15%;
+      margin-bottom: 0.2rem;
+    }
+  }
+}

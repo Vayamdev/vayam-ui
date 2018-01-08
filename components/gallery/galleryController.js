@@ -7,13 +7,12 @@ rootModule.controller('galleryController', ['$scope', 'galleryService', '$timeou
         console.log('Error during gallery data fetching!');
     });
 
-    $timeout(function() {
-        $('.thumbnail').click(function(){
-            $('.modal-body').empty();
-          var title = $(this).parent('a').attr("title");
-          $('.modal-title').html(title);
-          $($(this).parents('div').html()).appendTo('.modal-body');
-          $('#myModal').modal({show:true});
-      });
-    });
+    jQuery('body').on('click', '#links', function(event) {
+        event = event || window.event;
+        var target = event.target || event.srcElement,
+            link = target.src ? target.parentNode : target,
+            options = {index: link, event: event},
+            links = this.getElementsByTagName('a');
+        blueimp.Gallery(links, options);
+    })
 }]);

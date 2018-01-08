@@ -390,22 +390,82 @@
     "gallery": [
         {
             "imagename" : "Rocking the night away",
-            "url": "gallery_image_1.jpg",
+            "url": "http://placehold.it/400x300",
             "caption": "Contrary to popular belief, Lorem Ipsum is not"
         },
         {
             "imagename" : "Yellow sign",
-            "url": "gallery_image_1.jpg",
+            "url": "http://placehold.it/400x300",
             "caption": "simply random text. It has roots in a piece of classical Latin literature from 45 BC, making"
         },
         {
             "imagename" : "Colors",
-            "url": "gallery_image_1.jpg",
+            "url": "http://placehold.it/400x300",
             "caption": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old."
         },
         {
             "imagename" : "Retro party",
-            "url": "gallery_image_1.jpg",
+            "url": "http://placehold.it/400x300",
+            "caption": "Lorem, do eiusmod tempor incid Ut enim ad minim veniam"
+        },
+        {
+            "imagename" : "Rocking the night away",
+            "url": "http://placehold.it/400x300",
+            "caption": "Contrary to popular belief, Lorem Ipsum is not"
+        },
+        {
+            "imagename" : "Yellow sign",
+            "url": "http://placehold.it/400x300",
+            "caption": "simply random text. It has roots in a piece of classical Latin literature from 45 BC, making"
+        },
+        {
+            "imagename" : "Colors",
+            "url": "http://placehold.it/400x300",
+            "caption": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old."
+        },
+        {
+            "imagename" : "Retro party",
+            "url": "http://placehold.it/400x300",
+            "caption": "Lorem, do eiusmod tempor incid Ut enim ad minim veniam"
+        },
+        {
+            "imagename" : "Rocking the night away",
+            "url": "http://placehold.it/400x300",
+            "caption": "Contrary to popular belief, Lorem Ipsum is not"
+        },
+        {
+            "imagename" : "Yellow sign",
+            "url": "http://placehold.it/400x300",
+            "caption": "simply random text. It has roots in a piece of classical Latin literature from 45 BC, making"
+        },
+        {
+            "imagename" : "Colors",
+            "url": "http://placehold.it/400x300",
+            "caption": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old."
+        },
+        {
+            "imagename" : "Retro party",
+            "url": "http://placehold.it/400x300",
+            "caption": "Lorem, do eiusmod tempor incid Ut enim ad minim veniam"
+        },
+        {
+            "imagename" : "Rocking the night away",
+            "url": "http://placehold.it/400x300",
+            "caption": "Contrary to popular belief, Lorem Ipsum is not"
+        },
+        {
+            "imagename" : "Yellow sign",
+            "url": "http://placehold.it/400x300",
+            "caption": "simply random text. It has roots in a piece of classical Latin literature from 45 BC, making"
+        },
+        {
+            "imagename" : "Colors",
+            "url": "http://placehold.it/400x300",
+            "caption": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old."
+        },
+        {
+            "imagename" : "Retro party",
+            "url": "http://placehold.it/400x300",
             "caption": "Lorem, do eiusmod tempor incid Ut enim ad minim veniam"
         }
     ]    

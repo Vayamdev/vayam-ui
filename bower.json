@@ -17,6 +17,7 @@
     "angular": "^1.6.6",
     "angular-route": "^1.6.6",
     "angular-bootstrap": "^2.5.0",
-    "ng-simplePagination": "^1.0.3"
+    "ng-simplePagination": "^1.0.3",
+    "blueimp-gallery": "^2.29.0"
   }
 }

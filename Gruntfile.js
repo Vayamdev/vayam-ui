@@ -139,6 +139,7 @@ module.exports = function (grunt) {
                 'components/aboutus/journey/journeyService.js',
                 'components/project/projectService.js',
                 'components/gallery/galleryService.js',
+                'shared/donatelink/donatelinkDirective.js',
                 'shared/header/headerDirective.js',
                 'shared/footer/footerDirective.js',
                 'shared/googlemap/mapDirective.js',

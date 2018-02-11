@@ -22,7 +22,7 @@ rootModule.factory('globalFactory', ['$uibModal', '$http', function($uibModal, $
         },
         
         // if description is too long this function will take care of truncation.
-        truncateData(data, trunckey, charlen) {
+        truncateData: function(data, trunckey, charlen) {
             for (var i=0; i< data.length; i++) {
                 if (data[i][trunckey].length > charlen) {
                     data[i][trunckey] = data[i][trunckey].slice(0, charlen) + ' ...';
@@ -31,7 +31,7 @@ rootModule.factory('globalFactory', ['$uibModal', '$http', function($uibModal, $
         },
 
         // return static data for application.
-        getStaticData(callback) {
+        getStaticData: function(callback) {
             if (!staticData) {
                 $http.get('staticData.json').then(function(response) {
                     staticData = response.data;

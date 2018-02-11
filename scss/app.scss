@@ -30,6 +30,10 @@ html {
             cursor: pointer;
         }
 
+        .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus {
+            background-color: transparent;
+        }
+
         .donate-link {
             position: fixed;
             z-index: 10;

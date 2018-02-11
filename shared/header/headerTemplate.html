@@ -15,7 +15,7 @@
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav">
-				<li class="dropdown nav-links">
+				<li ng-class="(selected === 'aboutus') ? 'active dropdown nav-links' : 'dropdown nav-links'">
                     <a class="dropdown-toggle" data-toggle="dropdown">
 						About us
 						<span class="caret"></span>
@@ -29,18 +29,17 @@
               		</ul>
                 </li>
 
-                <li class="nav-links">
+				<li ng-class="(selected === 'impact') ? 'active nav-links' : 'nav-links'">
                     <a href="#!/impact">Impact</a>
 				</li>
 				
-				<li class="nav-links">
+				<li ng-class="(selected === 'news') ? 'active nav-links' : 'nav-links'">
                     <a href="#!/news">News</a>
                 </li>
 				
 				<li ng-class="(selected === 'contactus') ? 'active nav-links' : 'nav-links'">
                     <a href="#!/contactus" class="fa fa-phone"> Contact us </a>
                 </li>
-
 		  	</ul>
 		</div><!-- /.navbar-collapse -->
 	</div>

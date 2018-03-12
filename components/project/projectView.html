@@ -9,17 +9,40 @@
 		</div>
 	</div>
 
-<div class="container">
+	<div ng-if="project.childprojects.length == 0" class="container-fluid">
 		<div class="detail">
 			<div class="col-md-6">
-				<p>{{project.para1}}</p>
-
-				<p>{{project.para2}}</p>
-
-				<p>{{project.para3}}</p>
+				<p>{{project.projectdetail}}</p>
 			</div>
 			<div class="col-md-6">
-				<img src="http://placehold.it/500x300" class="img-responsive" alt="image" />
+				<img src="{{project.displayimageUrl}}" class="img-responsive" alt="image" />
+			</div>
+		</div>
+	</div>
+
+	<div ng-if="project.childprojects.length" class="container-fluid sub-projects">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="tabbable">
+					<ul class="nav nav-tabs">
+						<li ng-repeat="subproject in project.childprojects" ng-class="{active: $index === 0}">
+							<a  data-target="#subproject_{{$index}}" data-toggle="tab">{{subproject.name}}</a>
+						</li>
+					</ul>
+					<div class="tab-content">
+						<div ng-repeat="subprojectdetail in project.childprojects" id="subproject_{{$index}}" ng-class="{'tab-pane active': $index === 0, 'tab-pane': $index !== 0}">                
+							<div class="detail">							
+								<div class="col-md-6">
+									<h3>{{subprojectdetail.name}}</h3>
+									<p ng-repeat="para in subprojectdetail.shortdescription">{{para}}</p>
+								</div>
+								<div class="col-md-6">
+									<img src="{{subprojectdetail.displayimageUrl}}" class="img-responsive" alt="image" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

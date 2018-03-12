@@ -3,4 +3,54 @@ div.projecttab {
     .project-icon {
         font-size: 50px;
     }
+
+    .details {
+      margin: 0rem;
+    }
+
+    .sub-projects .row {
+      margin: 0rem;
+      padding: 0rem;
+    }
+    
+    .tab-content {
+      margin-top: 3rem;
+    }
+     
+    .nav-tabs {
+      border: 0;
+    }  
+  
+  .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover { 
+    border-width: 0; 
+  }
+  
+  .nav-tabs > li > a { 
+    border: none; 
+    color: #666; 
+    margin: 0.5rem;
+  }
+  
+  .nav-tabs > li.active > a, .nav-tabs > li > a:hover { 
+    border: none; 
+    color: $highlightercolor !important; 
+    background: transparent;
+    cursor: pointer; 
+  }
+  
+  .nav-tabs > li > a::after { 
+    content: ""; 
+    background: $secondarycolor; 
+    height: 2px; 
+    position: absolute; 
+    width: 100%; 
+    left: 0px; 
+    bottom: -1px; 
+    transition: all 250ms ease 0s; 
+    transform: scale(0); 
+  }
+  
+  .nav-tabs > li.active > a::after, .nav-tabs > li:hover > a::after { 
+    transform: scale(1); 
+  }      
 }

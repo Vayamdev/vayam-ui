@@ -17,68 +17,153 @@
             "text": "simply random text. It has roots in a piece of classical Latin literature from 45 BC, making "
         }
     ],    
-    "projects": [
-        {
-            "name": "Lorem Ipsum",
-            "id": "1",
-            "icon": "fa fa-child",
-            "shortdescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.",
-            "para1": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
-            "para2": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
-            "para3": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
-            "displayimageUrl": ""
-        },
-        {
-            "name": "Lorem Ipsum Lorem Ipsum",
-            "id": "2",
-            "icon": "fa fa-retweet",
-            "shortdescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. cing elit. Aenean commodo ligul",
-            "para1": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
-            "para2": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
-            "para3": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
-            "displayimageUrl": ""
-        },
-        {
-            "name": "Lorem",
-            "id": "3",
-            "icon": "fa fa-medkit",
-            "shortdescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut",
-            "para1": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
-            "para2": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
-            "para3": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
-            "displayimageUrl": ""                       
-        },
-        {
-            "name": "Lorem Ipsum Lorem Ipsum.",
-            "id": "4",
-            "icon": "fa fa-book",
-            "shortdescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.",
-            "para1": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
-            "para2": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
-            "para3": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
-            "displayimageUrl": ""
-        },
-        {
-            "name": "Lorem Ipsum Lorem Ipsum",
-            "id": "5",
-            "icon": "fa fa-tripadvisor",
-            "shortdescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vu.",
-            "para1": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
-            "para2": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
-            "para3": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
-            "displayimageUrl": ""
-        },
-        {
-            "name": "Lorem",
-            "id": "6",
-            "icon": "fa fa-bus ",
-            "shortdescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet.",
-            "para1": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
-            "para2": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
-            "para3": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
-            "displayimageUrl": ""
-        }                        
-    ],
+    "projects": [{
+		"name": "Strengthening democracy at its roots",
+		"id": "1",
+		"icon": "fa fa-child",
+		"shortdescription": "The constitution of India in its Schedule VI has given special rights to scheduled tribe areas. The Panchayats Extension to Scheduled Areas (PESA) Act has brought democracy to the remotest tribal hamlets. It has converged the traditional tribal practices of self-governance and the democratic rights bestowed by the constitution. But this empowerment has not percolated to the bottom of pyramid. Vayam is actively empowering tribal village assemblies in this mode of self-government – by constant training and hand-holding. These villages shall be self-reliant in terms of governance of natural resources (viz. water, forest, minor minerals). This will result in sustainable management of resources and also in mitigation of exploitation through control over resources.",
+		"childprojects": [
+            {
+				"name": "Youth leaders’ training in democratic rights",
+				"shortdescription": [
+					"Vayam’s leadership initiative focuses on developing strong-informed-sensitive leaders in tribal villages.  We conduct ‘Youth leadership development camps’. The youth learn laws important for empowerment and development planning at village level; e.g. FRA, NREGA, GP Act, RTI, and PESA. They chart out development priorities for their community. The youth leaders are also empowered to lobby and elicit cooperation from the local government administration."
+                ],
+				"displayimageUrl": "http://placehold.it/500x300"
+			},
+			{
+				"name": "Capacity building of village assemblies",
+				"shortdescription": [
+					"The Panchayat Raj envisioned by the constitution can become effective only if there are funds, functions, and functionaries at the village Panchayat level. The central government initiated a program called GPDP (Gram Panchayat Development Plan) insisting on participatory planning at village level using the funds from Finance Commission. The percolation is a real challenge in our country with bureaucratic and socio-political bottlenecks.Vayam conducts training for village Panchayat members, village youth and women, and the local government staff.  Youth from Vayam team served as master trainers in GPDP reaching out to Gram Panchayats."
+				],
+				"displayimageUrl": "http://placehold.it/500x300"
+			},
+			{
+				"name": "Zero migration through NREGA",
+				"shortdescription": [
+					"The tribal areas are known for seasonal distress migration. The lack of irrigation and absence of job opportunities result in majority of young people migrating in search of unskilled labour work. NREGA (National Rural Employment Guarantee Act) has on one hand assured the villages of unskilled employment in the village and on the other hand it holds huge potential for improving the natural resources. If NREGA is implemented in its true spirit, the lands, the water, the forest shall improve and in the long run – villagers will neither migrate nor ask government to provide work. For their rivers and ponds will have enough water to irrigate the farms throughout the year. This will provide self-reliant and sustainable employment to all the people skilled in farming (mistakenly called unskilled).",
+					"Vayam has worked consistently on NREGA educating villagers and empowering them to get things done from the bureaucracy. Villagers in Dhadhri and Hateri have done wonders with this empowering support. Both villages had migration reduced by 80%. Vayam team is currently working on replicating this in 100 villages."
+				],
+				"displayimageUrl": "http://placehold.it/500x300"
+			}
+		]
+	},
+	{
+		"name": "आदि शक्ती",
+		"id": "2",
+		"icon": "fa fa-retweet",
+		"shortdescription": "The government has introduced 50% reservation for women in all local government bodies.Maharashtra has about 3,000 Gram Panchayats in tribal areas. The low literacy levels, disguised un-education, poor road and internet connectivity, and degradation of natural resources (water and forest) are major destabilizing factors. Considering these challenges, utilizing government funds effectively at local level becomes ultra-crucial. This is in the hands of persons elected as Gram Panchayat members and Sarpanch and 50% of these are women.",
+		"childprojects": [{
+				"name": "Gram Lakshmi",
+				"shortdescription": [
+					"This has created windows of opportunity for women to enter the arena of governance and politics. On the flip side, the opportunity is also a challenge for women to make their place in this male-dominated sector. The challenge is even bigger in the tribal areas of the state. The tribal women are new in the arena of running a local government. Given adequate training and handholding support, they can make a mark in governance at village level.",
+					"This change in the confidence and knowledge base of women in governance will bring about a positive change in the villages. The prosperity of villages will get a positive flip. Hence we have named this project – Gram Lakshmi.",
+					 "This project focuses on training the tribal women from Jawhar and Vikramgad blocks. This includes training on Gram Panchayat Law, PESA (Panchayats Extension to Scheduled Areas), Finance Commission grants, tax collection, Development planning, communication skills, public speaking, community mobilisation, expenditure management etc"
+				],
+				"displayimageUrl": "http://placehold.it/500x300"
+			},
+			{
+				"name": "Training SHGs about citizen’s rights",
+				"shortdescription": [
+					 "Aspiring women in tribal villages need both: capacity building inputs as well as peer support.  In tribal context SHGs being self-governed can play an efficient role for planning the development areas of village; based on the resources.",
+					 "Vayam conducts these training programs  on RTI, NREGA, FRA etc. for SHGs. Women in SHGs learn how to get right to work and how to file complaints."
+				],
+				"displayimageUrl": "http://placehold.it/500x300"
+			},
+			{
+				"name": "Using used clothes as seed capital",
+				"shortdescription": [
+					 "A dollar gets a dollar but how to earn the first dollar?. Vayam started an initiative for SHGs in 2016 where civic population give used clothes in a good condition; SHGs (Jawhar) buy those clothes and sell in their respective villages and make profit out of it. This profit  becomes their seed capital for future endeavours"
+				],
+				"displayimageUrl": "http://placehold.it/500x300"
+			},
+			{
+				"name": "Forest food festival",
+				"shortdescription": [
+					 "Tribal women from villages of Jawhar are supported by Vayam to organise a ‘Ranbhaji Mahotsav’ (forest food festival) bringing rich delicacies made from wild vegetable species. Government officers and our friends-wellwishers from cities grace the occasion relishing the taste of these rare forest foods. Women earn a sense of honour by organising this ‘big event’ and by being the cynosure. The forest dwelling tribes have rich and independent sources of nutrition. The key to reducing the modern problem of malnutrition is within the forest not in charities from government and NGOs – this feeling rises through the program"
+				],
+				"displayimageUrl": "http://placehold.it/500x300"
+			},
+			{
+				"name": "Reaching markets",
+				"shortdescription": [
+					 "SHGs from Jawhar and Vikramgad blocks participate in various exhibitions selling products made of farm and forest; e.g. honey, dried fruit, Nagli/Ragi flour, dried vegetables, salted forest fruit etc",
+					 "More than two hundred women from SHGs were represented under Aadi Shakti banner in Bhimthadi Jatra, Pune. ( Year 2016). These stalls had thirty one products made from farm and forest food  which are exclusive to tribal"
+				],
+				"displayimageUrl": "http://placehold.it/500x300"
+			}
+		]
+	},
+	{
+		"name": "जन वन समृद्धी",
+		"id": "3",
+		"icon": "fa fa-medkit",
+		"shortdescription": "The forest plays vital role in tribal culture. It not only provides food with rich variety of nutritious tubers, fruits, mushrooms, roots, and leaves but also generates ample forest produce like fruits, medicine, fodder, honey, gum etc. throughout the year. Hence forest is an indivisible part of tribal community’s living and its conservation ultimately helps them create new livelihood opportunities",
+		"childprojects": [{
+				"name": "Legal recognition and conservation of community forest",
+				"shortdescription": [
+					 "Tribal people have been dependent on forest resources since centuries, but they had no right over it and consequently no responsibility for conserving it. Their forced alienation from the forest had disastrous effects for both forest and tribals. The new law in 2008 changed this and sought to end the ‘historical injustice’ of deprivation from forest rights. The enactment of law alone did not ensure the people exercising the rights. Vayam – after a hard struggle of 3 years – won the first CFR (Community Forest Rights) for four villages; viz. Kokanpada (22 ha.), Doyachapada (150 ha.), Dhadhri (284 ha.), and Ambyachapada (60 ha.). There are about 100 more villages in this tribal belt that are yet to get these rights. Vayam’s four have humbly paved the way",
+					 "Villagers from these four villages have initiated their drives towards community forest conservation. Villagers are abided by  Kulhadi-bandh and charai-bandh under CFRMC ( village committee). They designed their own watershed plan for village, built trenches, check dams etc."
+				],
+				"displayimageUrl": "http://placehold.it/500x300"
+			},
+			{
+				"name": "Conservation and Livelihood",
+				"shortdescription": [
+					 "The conservation has opened door to enough livelihood opportunities. The community is getting mobilized and has formulated its rules of judicious extraction from the forest. The extraction when coupled with processing will fetch a better value and income for the people. Commonly seen phenomenon is that of destruction being profitable than conservation. The idea of processing centre is to reverse this scene. People conserving the forest must prosper along with it.",
+					 "The processing centre coming up in village doyapada has oil expeller (for Mahua seed edible oil), solar conduction dryers (for forest fruit, leafs, and flowers), pulveriser for making powder of dried products, leaf-plate and leaf-bowl making machine , an eco-friendly low-carbon-footprint building to house all machines, solar energy for powering all machines. Farmers also adopted Treadle Pump technology. This has saved people’s money, diesel, and water. The JFMC has bought 10 solar conduction dryers. The dryers are being utilized to dry farm and forest produce."
+				],
+				"displayimageUrl": "http://placehold.it/500x300"
+			}
+		]
+	},
+	{
+		"name": "Educating beyond books",
+		"id": "4",
+		"icon": "fa fa-book",
+		"shortdescription": "Learning is a very substantial and natural process. A child learns so many things from very beginning of her life. Same way it happens later in her life. Every child learns her own way to deal with the outside world.  In practice on the contrary we think that learning happens in schools. Schools and teachers  might accelerate the process but can’t be responsible for it.This natural process of learning ends when they are asked to write and read. Their self-earned knowledge has no value in schooling system. Hence Vayam has come up with education solutions that are beyond books and framed schools.",
+		"childprojects": [{
+				"name": "Jeevan Shikshan – Life skills for 9th Std",
+				"shortdescription": [
+					 "This program includes learning about: banking and basic bank transactions, Gram Panchayat and its services, seed selection and processing, making organic insect repellents, preventing and treating animal diseases, about calculating cubic meters of a labour’s work and so on. These are the things the village young need to know for improving daily life. Vayam’s Life Skills Curriculum is ensuring that 9th standard students from the remote villages acquire these life skills at the right age."
+				],
+				"displayimageUrl": "http://placehold.it/500x300"
+			},
+			{
+				"name": "Bin-booka Ya-shika – Self learning for children",
+				"shortdescription": [
+					 "Bin booka Ya Shika has 10 centres in the villages of Jawhar. Each centre has kit of toys. The children govern this kit as a common resource; they elect their representatives, and form rules of use. These children – who have never seen expensive toys, successfully keep this kit in a good condition. We believe if the children learn to govern a community resource, they will surely govern and conserve their forests and rivers in future",
+					 "Along with this toys kit; a  local youth conducts an hour long activity at BIBUYASHI centre for five days in a week.  An yearly syllabus contains various modules .These modules have been designed which will cater to different aspects of learning through drawing, reading, craft, sculpture, theatre, painting, songs etc. "
+				],
+				"displayimageUrl": "http://placehold.it/500x300"
+			},
+			{
+				"name": "Dhadpad Prayogshala",
+				"shortdescription": [
+					 "The objective of this project is to ensure that the children understand science while experimenting with their hands. They can touch the microscope and they care for the test tubes, because they own these labs. The Lab is a mix of market-produced and self-produced apparatus which is assembled from scratch.  ",
+					 "The lab kit is in sync with syllabus of science textbooks. This would help children understand the fundamental concepts of science as in their curriculum."
+				],
+				"displayimageUrl": "http://placehold.it/500x300"
+			}
+		]
+	},
+	{
+		"name": "Lorem Ipsum Lorem Ipsum",
+		"id": "5",
+		"icon": "fa fa-tripadvisor",
+		"shortdescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vu.",
+		"childprojects": [],
+		"displayimageUrl": "http://placehold.it/500x300",
+		"projectdetail": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vu."
+	},
+	{
+		"name": "Lorem",
+		"id": "6",
+		"icon": "fa fa-bus ",
+		"shortdescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet.",
+		"childprojects": [],
+		"displayimageUrl": "http://placehold.it/500x300",
+		"projectdetail": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vu."
+	}],
     "events": [
         {
             "eventname": "Sculpture Workshop",
@@ -226,9 +311,9 @@
     ],        
     "team": [
         {
-            "name": "Sanket Joshi",
+            "name": "Milind Thatte",
             "Project": "obscure Latin",
-            "Post": "Contrary to popular"
+            "Post": "Writer, activist, political scientist, nominated as Expert Member onthe State Tribal Advisory Council by the Governor of Maharashtra State"
         },
         {
             "name": "Pooja Jain",

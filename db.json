@@ -312,33 +312,39 @@
     "team": [
         {
             "name": "Milind Thatte",
-            "Project": "obscure Latin",
-            "Post": "Writer, activist, political scientist, nominated as Expert Member onthe State Tribal Advisory Council by the Governor of Maharashtra State"
+            "post": "Founder",
+            "details": "Writer, activist, political scientist, nominated as Expert Member onthe State Tribal Advisory Council by the Governor of Maharashtra State",
+			"avatar": "http://placehold.it/400x400"
         },
         {
-            "name": "Pooja Jain",
-            "Project": "obscure Latin",
-            "Post": "Contrary to popular"
+            "name": "Deepali Gogate",
+            "post": "Founder",
+            "details": "Educationist, writer, expert in innovative schooling, lives in a tribal village",
+			"avatar": "http://placehold.it/400x400"
         },
         {
-            "name": "Milind Sane",
-            "Project": "obscure Latin",
-            "Post": "Contrary to popular"
+            "name": "Prakash Bhide",
+            "post": "Trustee",
+            "details": "Entrepreneur based in Nashik, Involved in many social initiatives",
+			"avatar": "http://placehold.it/400x400"
         },
         {
-            "name": "Gaurav Awale",
-            "Project": "obscure Latin",
-            "Post": "Contrary to popular"
+            "name": "Vinayak Thalkar",
+            "post": "President",
+            "details": "Born and brought up in a tribal labourer family, now a Government certified master trainer in Gram Panchayat Development Plans",
+			"avatar": "http://placehold.it/400x400"
         },
         {
-            "name": "Milind Sane",
-            "Project": "obscure Latin",
-            "Post": "Contrary to popular"
+            "name": "Prakash Baraf",
+            "post": "Secretary",
+            "details": "Born and brought up in a tribal farmer family, now an entrepreneur and president of village biodiversity committee",
+			"avatar": "http://placehold.it/400x400"
         },
         {
-            "name": "Gaurav Awale",
-            "Project": "obscure Latin",
-            "Post": "Contrary to popular"
+            "name": "Amit Tillu",
+            "post": "Member",
+            "details": "Farmer and science teacher, based in a village in Nashik district",
+			"avatar": "http://placehold.it/400x400"
         }
     ],
     "testimonials": [

@@ -207,10 +207,14 @@ div.hometab {
     div.row div.thumbnail.project-panel:hover {
         border: none;
         box-shadow: none;
+        height: 20rem;
     }
 
     div.thumbnail .panel-title {
         font-size: 18px;
+        a {
+            text-decoration: none;
+        }
     }
 
     .thumbnail > .panel-heading {

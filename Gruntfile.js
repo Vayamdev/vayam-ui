@@ -46,9 +46,9 @@ module.exports = function (grunt) {
                     },
                     {
                         expand: true,
-                        cwd: 'bower_components/blueimp-gallery/',
-                        src: ['**/*.js'],
-                        dest: 'scripts/plugins/blueimp-gallery/'
+                        cwd: 'bower_components/lightgallery.js/',
+                        src: ['**/*.js', '**/*.map'],
+                        dest: 'scripts/lightgallery.js/'
                     },
                     // Fonts.
                     {
@@ -67,6 +67,14 @@ module.exports = function (grunt) {
                         src: ['font-awesome/scss/**'],
                         dest: 'scss/font-awesome/'
                     },
+                    {
+                        expand: true,
+                        filter: 'isFile',
+                        flatten: true,
+                        cwd: 'bower_components/',
+                        src: ['lightgallery.js/dist/fonts/**'],
+                        dest: 'fonts/'
+                    },
                     // Stylesheets
                     {
                         expand: true,
@@ -76,10 +84,11 @@ module.exports = function (grunt) {
                     },
                     {
                         expand: true,
-                        cwd: 'bower_components/blueimp-gallery/',
+                        cwd: 'bower_components/lightgallery.js/',
                         src: ['**/*.css'],
-                        dest: 'css/blueimp-gallery/'
+                        dest: 'css/lightgallery.js'
                     },
+
                 ]
             },
         },
@@ -112,7 +121,7 @@ module.exports = function (grunt) {
                 'scripts/angular-bootstrap/ui-bootstrap-tpls.min.js',
                 'scripts/ng-simplePagination/simplePagination.js',
                 'scripts/plugins/jquery.bootstrap.newsbox.min.js',
-                'scripts/plugins/blueimp-gallery/js/blueimp-gallery.min.js'
+                'scripts/lightgallery.js/dist/js/lightgallery.min.js'
             ],
             dest: 'scripts/vender.js',
           },        
@@ -151,7 +160,7 @@ module.exports = function (grunt) {
           },
           thirdpartycss: {
             src: [
-                'css/blueimp-gallery/css/blueimp-gallery.min.css',
+                'css/lightgallery.js/dist/css/lightgallery.css',
                 'css/app.css'
             ],
             dest: 'css/app.css',

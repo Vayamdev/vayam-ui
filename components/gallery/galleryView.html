@@ -1,17 +1,5 @@
-<div class="gallerytab container">
-<div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
-    <div class="slides"></div>
-    <h3 class="title"></h3>
-    <a class="prev">‹</a>
-    <a class="next">›</a>
-    <a class="close">×</a>
-    <a class="play-pause"></a>
-    <ol class="indicator"></ol>
-</div>
-
-<div id="links">
-    <a ng-repeat="item in gallery" href="{{item.url}}" title="{{item.imagename}}">
-        <img ng-src="{{item.url}}" alt="{{item.imagename}}" />
+<div id="lightgallery" class="container">
+    <a ng-repeat="item in gallery" href="{{item.url}}.png" class="col-lg-3">
+        <img ng-src="{{item.url}}.png" alt="{{item.imagename}}" class="img-thumbnail">
     </a>
-</div>
 </div>

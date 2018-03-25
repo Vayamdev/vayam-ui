@@ -51,7 +51,7 @@
 - https://shermandigital.com/blog/bootstrap-project-with-bower-and-grunt/
 - for news tickler - http://www.iamrohit.in/jquery-bootstrap-based-responsive-news-ticker-plugin/
 - For pagination - http://ngmodules.org/modules/angular-SimplePagination
-- Gallery - https://blueimp.github.io/Gallery/
+- Gallery - https://www.npmjs.com/package/angular-lightgallery?activeTab=readme
 
 
 - Slack (vayam-dev)

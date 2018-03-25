@@ -73,7 +73,7 @@ rootModule.config(["$routeProvider", function($routeProvider) {
     .when("/gallery", {
         templateUrl: "components/gallery/galleryView.html",
         controller: "galleryController",
-        activetab: 'gallery'
+        activetab: 'aboutus'
     })
     .when("/news/:newsid", {
         templateUrl: "components/news/newsdetails/newsDetailsView.html",
@@ -164,7 +164,7 @@ rootModule.controller('impactController', ['$scope', 'impactService', 'globalFac
 
 
 rootModule.controller('teamController', ['$scope', 'teamService', 'globalFactory', function($scope, teamService, globalFactory) {    
-    $scope.teamgroup = {};
+    $scope.teamdata = [];
     $scope.bannerUrl = 'http://placehold.it/1146x400';
     $scope.bannertext = '';
 
@@ -174,12 +174,8 @@ rootModule.controller('teamController', ['$scope', 'teamService', 'globalFactory
     });    
     
     teamService.getStaff().then(function(response) {
-            var teamdata = response.data;
-            var key = 0;
-            while(teamdata.length > 0) {
-                ++key;
-                $scope.teamgroup[key.toString()] = teamdata.splice(0, 4);
-            }
+        console.log(response.data);
+        $scope.teamdata = response.data;
         }, function() {
             console.log('Error during team data fetching!');
     });
@@ -253,9 +249,15 @@ rootModule.controller('contactusController', ['$scope', 'contactUsService', func
 
 
 
-rootModule.controller('donateController', ['$scope', function($scope) {
-}]);
+rootModule.controller('donateController', ['$scope', 'globalFactory', function($scope, globalFactory) {
+    $scope.bannertext = '';
 
+	// Fetch static data used for this page.
+	globalFactory.getStaticData(function(response){
+		$scope.bannertext = response.donatebannertext;
+	});
+
+}]);
 
 
 rootModule.controller('newsController', ['$scope', '$routeParams', 'newsService', '$timeout', 'Pagination', function($scope, $routeParams, newsService, $timeout, Pagination) {
@@ -325,15 +327,14 @@ rootModule.controller('galleryController', ['$scope', 'galleryService', '$timeou
         console.log('Error during gallery data fetching!');
     });
 
-    $timeout(function() {
-        $('.thumbnail').click(function(){
-            $('.modal-body').empty();
-          var title = $(this).parent('a').attr("title");
-          $('.modal-title').html(title);
-          $($(this).parents('div').html()).appendTo('.modal-body');
-          $('#myModal').modal({show:true});
-      });
-    });
+    jQuery('body').on('click', '#links', function(event) {
+        event = event || window.event;
+        var target = event.target || event.srcElement,
+            link = target.src ? target.parentNode : target,
+            options = {index: link, event: event},
+            links = this.getElementsByTagName('a');
+        blueimp.Gallery(links, options);
+    })
 }]);
 
 
@@ -430,13 +431,23 @@ rootModule.service('galleryService', ['$http', 'baseUrl', function($http, baseUr
     
 
 
+rootModule.directive('donateLink', function(){
+    return {
+        restrict: 'A',
+        templateUrl: '/shared/donatelink/donatelinkTemplate.html'
+    };
+});
+
+
 rootModule.directive('vayamHeader', function(){
     return {
         restrict: 'A',
         templateUrl: '/shared/header/headerTemplate.html',
         scope: true,
         controller: ['$scope', '$route', function($scope, $route) {
-            $scope.selected = $route.current.activetab;
+            $scope.$on("$routeChangeSuccess", function(event, next, current) {
+                $scope.selected = $route.current.activetab;
+            });
         }]
     };
 });
@@ -542,7 +553,7 @@ rootModule.factory('globalFactory', ['$uibModal', '$http', function($uibModal, $
         },
         
         // if description is too long this function will take care of truncation.
-        truncateData(data, trunckey, charlen) {
+        truncateData: function(data, trunckey, charlen) {
             for (var i=0; i< data.length; i++) {
                 if (data[i][trunckey].length > charlen) {
                     data[i][trunckey] = data[i][trunckey].slice(0, charlen) + ' ...';
@@ -551,7 +562,7 @@ rootModule.factory('globalFactory', ['$uibModal', '$http', function($uibModal, $
         },
 
         // return static data for application.
-        getStaticData(callback) {
+        getStaticData: function(callback) {
             if (!staticData) {
                 $http.get('staticData.json').then(function(response) {
                     staticData = response.data;

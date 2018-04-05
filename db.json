@@ -275,39 +275,76 @@
     ],
     "milestone": [
         {
-            "name": "Idea of Vayam",
-            "description": "Pleased him anasjdkjasbndkjnak akjsdbnjkansjkd jkansjkdn other was settled for. Moreover end horrible endeavor entrance any families. Income appear extent on of thrown in admire. Stanhill on we if vicinity material in. Saw him smallest you provided ecstatic supplied. Garret wanted expect remain as mr. Covered parlors concern we express in visited to do. Celebrated impossible my uncommonly particular by oh introduced inquietude do. ",
-            "date": "22/09/2001",
+            "name": "The Beginning of Vayam",
+            "description": "3 villages put a limited trust in this new movement that said you have the power to bring change. Youth here learnt how to implement NREGA, the employment guarantee law. 3 villages got work and wages without migrating in distress. Other villages watched with awe.",
+            "date": "2008",
             "imageurl": "http://placehold.it/470x200",
             "invert": false
         },
         {
-            "name": "Inauguration of Vayam",
-            "description": "Pleased him another was settled for. Moreover end horrible endeavor entrance any families. Income appear extent on of thrown in admire. Stanhill on we if vicinity material in. Saw him smallest you provided ecstatic supplied. Garret wanted expect remain as mr. Covered parlors concern we express in visited to do. Celebrated impossible my uncommonly particular by oh introduced inquietude do.",
-            "date": "01/11/2003",
+            "name": "More Villages Join Vayam",
+            "description": "Three villages campaigned in nearby villages with conviction of a doer. Many other villages joined Vayam movement. Natural growth began.",
+            "date": "2009",
             "imageurl": "http://placehold.it/470x200",
             "invert": true
         },
         {
-            "name": "Capitalizing on crisis",
-            "description": "Pleased him another was settled for. Moreover end horrible endeavor entrance any families. Income appear extent on of thrown in admire. Stanhill on we if vicinity material in. Saw him smallest you provided ecstatic supplied. Garret wanted expect remain as mr. Covered parlors concern we express in visited to do. Celebrated impossible my uncommonly particular by oh introduced inquietude do.",
-            "date": "06/07/2006",
+            "name": "Beginning of Forest Rights Campaign",
+            "description": "Forest dwellers came forward with their woes. Forest Rights Act was passed, but rights were not recognized. Injustice prevailed. Vayam trained people in the relevant laws. People filed claims for rights.",
+            "date": "2010",
             "imageurl": "http://placehold.it/470x200",
             "invert": false
         },
         {
-            "name": "First Campaign",
-            "description": "Pleased him another was settled for. Moreover end horrible endeavor entrance any families. Income appear extent on of thrown in admire. Stanhill on we if vicinity material in. Saw him smallest you provided ecstatic supplied. Garret wanted expect remain as mr. Covered parlors concern we express in visited to do. Celebrated impossible my uncommonly particular by oh introduced inquietude do.",
-            "date": "16/12/2010",
+            "name": "Pioneering Conservation",
+            "description": "Two Villages pioneered community conservation. They prepared People’s Biodiversity Registers recording hundreds of plant and animal species and identifying the actions for conservation. Two more villages followed their steps. Some declared Kulhadi-bandh, some put a stop to chemical fishing. ",
+            "date": "2011",
             "imageurl": "http://placehold.it/470x200",
             "invert": true
         },
         {
-            "name": "Large Impact",
-            "description": "Pleased him another was settled for. Moreover end horrible endeavor entrance any families. Income appear extent on of thrown in admire. Stanhill on we if vicinity material in. Saw him smallest you provided ecstatic supplied. Garret wanted expect remain as mr. Covered parlors concern we express in visited to do. Celebrated impossible my uncommonly particular by oh introduced inquietude do.",
-            "date": "16/12/2010",
+            "name": "Expansion of Forest Rights Campaign",
+            "description": "Three villages filed claims and eventually earned recognition for Community Forest Rights. The community got its usage, management, conservation and rejuvenation rights over forest… after a century of alienation from forest rights. ",
+            "date": "2012",
+			"imageurl": "http://placehold.it/470x200",
+            "invert": false
+        },
+		{
+            "name": "RTI Satyagraha",
+            "description": "Rights to till the ancestral lands were not recognized. Despite approval by Gramsabha, the administration partially or fully rejected the forest land rights. No reasons were disclosed. 1272 tribal citizens participated in the historic RTI Satyagraha and finally succeeded in exposing the information for the entire state.",
+            "date": "2013",
+			"imageurl": "http://placehold.it/470x200",
             "invert": true
-        }  
+        },
+		{
+            "name": "Tree Plantation",
+            "description": "Government invited Vayam to support the 2-crore plantation drive. Vayam motivated many villages, farmers, and students to participate. We all planted 50,000 trees.",
+            "date": "2014-15",
+			"imageurl": "http://placehold.it/470x200",
+            "invert": false
+        },
+		{
+            "name": "Rainwater Harvesting",
+            "description": "Heavy rainfall yet no water for irrigation – that is common scene. Vayam took a squirrel share drive. We and farmers built small rainwater tanks (Jalkund) in 250 places. Farmers could water 10-15 trees for 6-7 months.",
+            "date": "2016",
+			"imageurl": "http://placehold.it/470x200",
+            "invert": true
+        },
+		{
+            "name": "RTI Appeals",
+            "description": "Forest rights were not fully recognized despite the RTI exposure. Forest right holders from 77 villages launched a Queue Satyagraha. 2051 people filed appeals in a single day. The constant dialogue and rapport that Vayam built with government helped. The review of those 2051 appeals began immediately.",
+            "date": "2017",
+			"imageurl": "http://placehold.it/470x200",
+            "invert": false
+        },
+		{
+            "name": "Gramsabha Jagran rally",
+            "description": "People from 45 villages came on streets in a ‘Gramsabha Jagran’ rally. The gathering had a dialogue with the tribal minister and the assistant collector. The villages shall soon be declared as Gramsabhas under PESA law. Democracy shall be stronger at its roots.",
+            "date": "2018",
+			"imageurl": "http://placehold.it/470x200",
+            "invert": true
+        }
+		
     ],        
     "team": [
         {

@@ -209,7 +209,7 @@ div.hometab {
     div.row div.thumbnail.project-panel:hover {
         border: none;
         box-shadow: none;
-        height: 25rem;
+        height: 30rem;
         margin-bottom: 2rem;
         text-align: center;
         text-align: justify;
@@ -240,7 +240,13 @@ div.hometab {
             padding: 0rem;
             margin: 0rem;
         }
+    }
 
+    div.read-more {
+        text-align: right;
+        a {
+            color: $secondarycolor;
+        }
     }
 
     .hover-div {

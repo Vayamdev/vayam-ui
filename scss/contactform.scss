@@ -1,6 +1,9 @@
 div.contactUsForm {
     background-color: $gray;
 
+    div {
+        padding: 0rem;
+    }
     .send-button {
         margin: 1rem;
     }
@@ -8,5 +11,9 @@ div.contactUsForm {
     address {
         margin: 0;
         border-bottom: 1px solid $gray-lighter;
+    }
+
+    .text-danger {
+        color: $secondarycolor;
     }
 }

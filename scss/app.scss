@@ -88,6 +88,10 @@ html {
             }
         }
 
+        footer {
+            padding-bottom: 1rem;
+            margin-bottom: 1rem;
+        }
         // footer social icons        
         div.footer-line {
             background-color: $standoutcolor;
@@ -149,6 +153,7 @@ html {
             padding: 2rem;
             font-size: 12px;
             font-weight: 50;
+            padding-bottom: 0.5rem;
 
             .summary-row {
                 padding-bottom: 1rem;
@@ -160,7 +165,7 @@ html {
 
             .footer-expression {
                 height: 300px;
-                width: 350px;
+                width: 100%
             }
 
             .contact {
@@ -168,6 +173,10 @@ html {
                 color: $standoutcolor;
                 margin: 0rem;
                 padding-bottom: 1rem;
+            }
+
+            #footer-form span.text-danger {
+                color: $standoutcolor;
             }
         }
     }

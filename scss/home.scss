@@ -4,13 +4,36 @@ div.hometab {
     // once production images are finalized..
     div.vayam-carousel {
         background-color: $night;
+        border-top: 0.5rem solid $secondarycolor; 
         img.slide {
             max-height: 500px;
             width: 100%;
         }
     }
 
-    div.showcase-row{
+    .banner-text-container {
+        position: absolute;
+        background-color: rgba(52, 52, 52, 0.7);
+        padding: 1rem;
+        width: 20rem;
+        border-right: 1rem solid $secondarycolor;
+        top: 8rem;
+        left: 18rem;
+        .banner-text {
+            padding-left: 0.5rem;
+            width: 100%;
+            color: $fullwhite;
+            font-weight: 200;
+            font-size: 25px;
+        }
+
+        .banner-text-highlight {
+            color: $standoutcolor;
+            font-weight: 800;
+        }
+    }
+
+    div.showcase-row {
         margin: 0rem;
         padding: 0rem;       
     }

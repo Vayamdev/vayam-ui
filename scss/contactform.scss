@@ -4,8 +4,8 @@ div.contactUsForm {
     div {
         padding: 0rem;
     }
-    .send-button {
-        margin: 1rem;
+    .send-button {  
+        margin-top: 1rem;
     }
 
     address {
@@ -14,6 +14,6 @@ div.contactUsForm {
     }
 
     .text-danger {
-        color: $secondarycolor;
+        color: orangered;
     }
 }

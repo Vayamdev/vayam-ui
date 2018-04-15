@@ -1,6 +1,6 @@
 rootModule.controller('homeController', ['$scope', 'homeService', 'globalFactory', function($scope, homeService, globalFactory) {
     var currIndex = 0;
-    $scope.myInterval = 1000;
+    $scope.myInterval = 5000;
     $scope.slides = [];
     $scope.crisis = [];
     $scope.conceptnote = [];

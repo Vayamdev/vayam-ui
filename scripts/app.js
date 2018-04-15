@@ -89,7 +89,7 @@ rootModule.config(["$routeProvider", function($routeProvider) {
 
 rootModule.controller('homeController', ['$scope', 'homeService', 'globalFactory', function($scope, homeService, globalFactory) {
     var currIndex = 0;
-    $scope.myInterval = 1000;
+    $scope.myInterval = 5000;
     $scope.slides = [];
     $scope.crisis = [];
     $scope.conceptnote = [];
@@ -319,24 +319,17 @@ rootModule.controller('projectController', ['$scope', '$routeParams', 'projectSe
 
 
 rootModule.controller('galleryController', ['$scope', 'galleryService', '$timeout', function($scope, galleryService, $timeout) {
-     $scope.gallery = [];
+    $scope.gallery = [];
     galleryService.getGallery().then(function(response) {
         console.log(response);
         $scope.gallery = response.data;
+        setTimeout(function() {
+            lightGallery(document.getElementById('lightgallery'));
+        }, 0);
     }, function() {
         console.log('Error during gallery data fetching!');
     });
-
-    jQuery('body').on('click', '#links', function(event) {
-        event = event || window.event;
-        var target = event.target || event.srcElement,
-            link = target.src ? target.parentNode : target,
-            options = {index: link, event: event},
-            links = this.getElementsByTagName('a');
-        blueimp.Gallery(links, options);
-    })
 }]);
-
 
 
 rootModule.service('homeService', ['$http', 'baseUrl', function($http, baseUrl) {
@@ -435,6 +428,14 @@ rootModule.directive('donateLink', function(){
     return {
         restrict: 'A',
         templateUrl: '/shared/donatelink/donatelinkTemplate.html'
+    };
+});
+
+
+rootModule.directive('contactForm', function(){
+    return {
+        restrict: 'E',
+        templateUrl: '/shared/contactform/contactformTemplate.html'
     };
 });
 

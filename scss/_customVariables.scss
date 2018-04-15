@@ -24,31 +24,26 @@ $brand-warning:         #f0ad4e !default;
 $brand-danger:          #d9534f !default;
 
 //root-colors
-$lavender: #6C648B;
-$limegreen: #9ed670;
-$ivory: #1d2731;
-$rose: #b6a19e;
-$sunshine: #fba100;
-$aqua: #6bbaa7;
-$milk: #f5f5f5;
-
-$milkgray: #efefef;
 $fullwhite: #fff;
-
-$darkblue: #0084b4;
-$darkred: #bb0000;
+$vayamgreen: #73a400 ;
+$vayamdarkgreen: #6a9200;
+$vayamyellow: #FAE76E;
+$vayamblack: #343434;
+$vayammilk: #F9F9F9;
 
 // color to component map
-$primarycolor: $milk;
-$secondarycolor: $lavender;
-$standoutcolor: $ivory; 
-$highlightercolor: $sunshine;
+$primarycolor: $fullwhite;
+$secondarycolor: $vayamdarkgreen;
+$standoutcolor: $vayamyellow; 
+$night: $vayamblack;
+$milk: $vayammilk;
+
 
 // basic header footer colors
-$header-bg: $primarycolor;
-$footer-bg: $standoutcolor;
+$header-bg: $fullwhite;
+$footer-bg: $vayamblack;
 $bar-link-color: $standoutcolor;
-$bar-link-color-hover: $highlightercolor;
+$bar-link-color-hover: none;
 
 
 //== Scaffolding
@@ -183,7 +178,7 @@ $btn-default-bg:                 #fff !default;
 $btn-default-border:             #ccc !default;
 
 $btn-primary-color:             $primarycolor !default;
-$btn-primary-bg:                $secondarycolor !default;
+$btn-primary-bg:                $vayamgreen !default;
 $btn-primary-border:             darken($btn-primary-bg, 5%) !default;
 
 $btn-success-color:              #fff !default;
@@ -275,11 +270,11 @@ $dropdown-fallback-border:       #ccc !default;
 $dropdown-divider-bg:            #e5e5e5 !default;
 
 //** Dropdown link text color.
-$dropdown-link-color:            $standoutcolor !default;
+$dropdown-link-color:            $night !default;
 //** Hover color for dropdown links.
 $dropdown-link-hover-color:      darken($gray-dark, 5%) !default;
 //** Hover background for dropdown links.
-$dropdown-link-hover-bg:         $highlightercolor !default;
+$dropdown-link-hover-bg:         none !default;
 
 //** Active dropdown menu item text color.
 $dropdown-link-active-color:     $component-active-color !default;
@@ -402,10 +397,10 @@ $navbar-default-color:             #777 !default;
 $navbar-default-bg:                $header-bg !default;
 
 // Navbar links
-$navbar-default-link-color:                $bar-link-color !default;
+$navbar-default-link-color:                $night !default;
 $navbar-default-link-hover-color:          $bar-link-color-hover !default;
 $navbar-default-link-hover-bg:             transparent !default;
-$navbar-default-link-active-color:         #fba100 !default;
+$navbar-default-link-active-color:         $secondarycolor !default;
 $navbar-default-link-active-bg:            darken($navbar-default-bg, 6.5%) !default;
 $navbar-default-link-disabled-color:       #ccc !default;
 $navbar-default-link-disabled-bg:          transparent !default;
@@ -747,7 +742,7 @@ $panel-footer-bg:             #f5f5f5 !default;
 
 $panel-default-text:          black !default;
 $panel-default-border:        #ddd !default;
-$panel-default-heading-bg:    $milk !default;
+$panel-default-heading-bg:    #fff !default;
 
 $panel-primary-text:          #fff !default;
 $panel-primary-border:        $brand-primary !default;

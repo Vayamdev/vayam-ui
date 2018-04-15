@@ -3,7 +3,7 @@
 	<div id="myCarousel" class="vayam-carousel">
 		<div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
 			<div uib-slide ng-repeat="slide in slides" index="$index">
-				<img ng-src="{{slide.image}}" style="margin:auto;">
+				<img class="slide" ng-src="{{slide.image}}" style="margin:auto;">
 				<div class="carousel-caption">
 					<p>{{slide.text}}</p>
 				</div>
@@ -11,66 +11,80 @@
 		</div>
 	</div>
 
-	<div class="container-fluid">
-		<div class="row jumbotron">
-			<div class="col-xs-12 col-md-12">
-				<h2>Crisis around us</h2>
-			</div>
-
-			<div class="row">
-				<div class="col-xs-12 col-md-6" ng-repeat="note in conceptnote">{{note.para}}</div>
-			</div>
-
-			<div class="row">
-				<div class="col-xs-12 col-md-4" ng-repeat="item in crisis">
-					<div class="progress" ng-class="item.positioncss">
-						<span class="progress-left">
-							<span class="progress-bar"></span>
-						</span>
-						<span class="progress-right">
-							<span class="progress-bar"></span>
-						</span>
-						<div class="progress-value">{{item.percentage}}%</div>
+	<div class="container-fluid showcase-row">
+		<div class="container-fluid concept-row">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-md-12">
+						<h2>About Vayam</h2>
 					</div>
-					<div class="text-center">{{item.name}}.</div>
-				</div>
-			</div>
-		</div>
 
-		<div class="row">
-			<div class="section-title text-center col-xs-12 col-md-4 col-md-offset-4">
-				<h2>Our Approach</h2>
-			</div>
-		</div>
-
-		<div class="row hover-effect">
-			<div class="col-xs-12 col-sm-12 col-md-4" ng-repeat="project in projects">
-				<div class="thumbnail project-panel">
-					<div class="panel-heading hover-div">
-						<span class="{{project.icon}} project-icon"></span>
-						<span class="panel-title project-name">
-							<a href="#!/project/{{project.id}}">{{project.name}}</a>
-						</span>
+					<div class="row">
+						<div class="col-xs-12 note" ng-repeat="note in conceptnote">{{note.para}}</div>
 					</div>
-					<div class="panel-body">
-						{{project.shortdescription}}
+
+					<div class="row">
+						<div class="col-xs-12 col-md-4" ng-repeat="item in crisis">
+							<div class="progress" ng-class="item.positioncss">
+								<span class="progress-left">
+									<span class="progress-bar"></span>
+								</span>
+								<span class="progress-right">
+									<span class="progress-bar"></span>
+								</span>
+								<div class="progress-value">{{item.percentage}}%</div>
+							</div>
+							<div class="text-center">{{item.name}}.</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<div class="row">
-			<div class="col-xs-12 col-sm-12 col-md-4" ng-repeat="event in events">
-				<div class="thumbnail">
-				  <img class="thumbnail-image img-rounded" ng-src="{{event.image}}" alt="...">
-				  <div class="caption">
-					<h3>{{event.eventname}}</h3>
-					<p>{{event.shortdescription}}</p>
-					<p><a href="" class="btn btn-primary" role="button" ng-click="open(event)">View More</a></p>
-				  </div>
+		<div class="container">
+			<div class="row">
+				<div class="text-center col-xs-12 col-md-4 col-md-offset-4">
+					<h2>Our Approach</h2>
+				</div>
+			</div>
+
+			<div class="row hover-effect">
+				<div class="col-xs-12 col-sm-12 col-md-4" ng-repeat="project in projects">
+					<div class="thumbnail project-panel">
+						<div class="panel-heading project-icon">
+							<div class="{{project.icon}} icon"></div>
+						</div>
+						<div class="panel-heading hover-div">
+							<span class="panel-title project-name">
+								<a href="#!/project/{{project.id}}">{{project.name}}</a>
+							</span>
+						</div>
+						<div class="panel-body">
+							{{project.shortdescription}}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container-fluid events-updates">
+			<div class="container">
+				<div class="text-center col-xs-12 col-md-4 col-md-offset-4">
+					<h2>Events and Updates</h2>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-4" ng-repeat="event in events">
+						<div class="thumbnail">
+						<img class="thumbnail-image img-rounded" ng-src="{{event.image}}" alt="...">
+						<div class="caption">
+							<h3>{{event.eventname}}</h3>
+							<p>{{event.shortdescription}}</p>
+							<p><a href="" class="btn btn-primary" role="button" ng-click="open(event)">View More</a></p>
+						</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	
 </div>

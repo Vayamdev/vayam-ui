@@ -149,6 +149,7 @@ module.exports = function (grunt) {
                 'components/project/projectService.js',
                 'components/gallery/galleryService.js',
                 'shared/donatelink/donatelinkDirective.js',
+                'shared/contactform/contactformDirective.js',
                 'shared/header/headerDirective.js',
                 'shared/footer/footerDirective.js',
                 'shared/googlemap/mapDirective.js',

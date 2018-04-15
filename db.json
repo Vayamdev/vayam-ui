@@ -1,24 +1,16 @@
 {
     "slides": [
         {
-            "image": "http://placehold.it/1146x400",
+            "image": "/assets/slide2.jpg",
             "text": "Contrary to popular belief, Lorem Ipsum is not"
         },
         {
-            "image": "http://placehold.it/1146x400",
-            "text": "simply random text. It has roots in a piece of classical Latin literature from 45 BC, making "
-        },
-        {
-            "image": "http://placehold.it/1146x400",
-            "text": "simply random text. It has roots in a piece of classical Latin literature from 45 BC, making "
-        },
-        {
-            "image": "http://placehold.it/1146x400",
+            "image": "/assets/slide1.jpg",
             "text": "simply random text. It has roots in a piece of classical Latin literature from 45 BC, making "
         }
     ],    
     "projects": [{
-		"name": "Strengthening democracy at its roots",
+		"name": "Strengthening democracy roots",
 		"id": "1",
 		"icon": "fa fa-child",
 		"shortdescription": "The constitution of India in its Schedule VI has given special rights to scheduled tribe areas. The Panchayats Extension to Scheduled Areas (PESA) Act has brought democracy to the remotest tribal hamlets. It has converged the traditional tribal practices of self-governance and the democratic rights bestowed by the constitution. But this empowerment has not percolated to the bottom of pyramid. Vayam is actively empowering tribal village assemblies in this mode of self-government – by constant training and hand-holding. These villages shall be self-reliant in terms of governance of natural resources (viz. water, forest, minor minerals). This will result in sustainable management of resources and also in mitigation of exploitation through control over resources.",
@@ -170,21 +162,21 @@
             "id": 1,
             "shortdescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
             "longdescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.",
-            "image": "http://placehold.it/600x400"
+            "image": "/assets/event1.jpg"
         },
         {
             "eventname": "Holi celebrations",
             "id": 2,
             "shortdescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus",
             "longdescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt",
-            "image": "http://placehold.it/600x400"
+            "image": "/assets/event2.jpg"
         },
         {
             "eventname": "Skill development",
             "id": 3,
             "shortdescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies",
             "longdescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt",
-            "image": "http://placehold.it/600x400"
+            "image": "/assets/event3.jpg"
         }
     ],
     "impacts": [

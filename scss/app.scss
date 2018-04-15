@@ -15,13 +15,14 @@
 @import "modal";
 @import "news";
 @import "gallery";
+@import "contactform";
 
 html {
     height: 100%;
 
     body {
         font-size: 16px;
-        font-family: "Times New Roman", Times, serif;
+        font-family: "Segoe UI", "Times New Roman", Times, serif;
         min-height: 100%;
         position: relative;
 
@@ -45,9 +46,9 @@ html {
             letter-spacing: 0.1rem;
             a {
                 background-color: $secondarycolor;
-                color: $milk;
+                color: $fullwhite;
                 &:hover {
-                    color: $highlightercolor;
+                    color: none;
                 }
             }
         }
@@ -56,10 +57,10 @@ html {
         // for views
         div.vayamviews {
             height: 100%;
-            margin: 0em;
-            padding-left: 0em;
-            padding-right: 0em;
-            padding-bottom: 60px;
+            margin: 0rem;
+            padding-left: 0rem;
+            padding-right: 0rem;
+            padding-bottom: 0rem;
 
             // for image banner of every page.
             div.imagebanner img {
@@ -78,10 +79,7 @@ html {
                 box-shadow: 0 16px 24px 0 rgba(0,0,0,0.2);
             }
 
-            .btn-primary:hover {
-                color: $sunshine;
-            }
-                       
+     
             // for content row of every page.
             div.row {
                 height: 100%;
@@ -90,57 +88,20 @@ html {
             }
         }
 
-        // for page footer
-        [vayam-footer] {
-            bottom: 0;
-            width: 100%;
-            position: absolute;
-        }
-
-        footer {
-            background-color: $ivory;
-
-            div.footer-pane {
-            }
-
-            div.links a {
-                padding-left: 1rem;
-                padding-right: 1rem;
-                padding-top: 1.3rem;
-                color: $fullwhite;
-                display: inline-block;
-            }
-
-
-            /* footer social icons */
-            ul.social-network {
+        // footer social icons        
+        div.footer-line {
+            background-color: $standoutcolor;
+            color: $night;
+            padding: 0.3rem;
+            text-align: center;
+            
+             ul.social-network {
                 list-style: none;
                 display: inline;
-                margin-left:0 !important;
-                padding: 0;
             }
             ul.social-network li {
                 display: inline;
-                margin: 0 5px;
-            }
-
-            .social-network a.icoFacebook:hover {
-                background-color:#3B5998;
-            }
-            .social-network a.icoTwitter:hover {
-                background-color:#33ccff;
-            }
-
-            .social-network a.icoYoutube:hover {
-                background-color:#cc181e;
-            }
-
-            .social-network a.icoRss:hover i, .social-network a.icoFacebook:hover i, .social-network a.icoTwitter:hover i,
-            .social-network a.icoGoogle:hover i, .social-network a.icoVimeo:hover i, .social-network a.icoLinkedin:hover i {
-                color:#fff;
-            }
-            a.socialIcon:hover, .socialHoverClass {
-                color:#44BCDD;
+                padding: 1rem;
             }
 
             .social-circle li a {
@@ -151,13 +112,12 @@ html {
                 -webkit-border-radius:50%;
                 border-radius:50%;
                 text-align:center;
-                width: 5rem;
-                height: 5rem;
+                width: 1rem;
+                height: 1rem;
                 font-size:20px;
             }
             .social-circle li i {
                 margin:0;
-                line-height:50px;
                 text-align: center;
             }
 
@@ -174,16 +134,40 @@ html {
             }
 
             .social-circle i {
-                color: #fff;
+                color: $night;;
                 -webkit-transition: all 0.8s;
                 -moz-transition: all 0.8s;
                 -o-transition: all 0.8s;
                 -ms-transition: all 0.8s;
                 transition: all 0.8s;
+            }               
+        }
+
+        div.footer-pane {
+            background-color: $night;
+            color: $fullwhite;
+            padding: 2rem;
+            font-size: 12px;
+            font-weight: 50;
+
+            .summary-row {
+                padding-bottom: 1rem;
             }
 
-            a.foot-links:hover {
-                color: $sunshine;
+            .summary-content {
+                color: darkgray;
+            }
+
+            .footer-expression {
+                height: 300px;
+                width: 350px;
+            }
+
+            .contact {
+                text-align: center;
+                color: $standoutcolor;
+                margin: 0rem;
+                padding-bottom: 1rem;
             }
         }
     }

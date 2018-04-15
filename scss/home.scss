@@ -2,32 +2,34 @@ div.hometab {
 
     // forcing temporary image dimentions this will change
     // once production images are finalized..
-    div.item > img.slide {
-        height: 500px !important;
-        width: 100% !important;
-    }
-
-    // crisis jumbotron
-    .row.jumbotron {
-        padding-bottom: 5em;
-    }
-
-    div.section-title {
-        background: $highlightercolor;
-        z-index: 2;
-        position: relative;
-        top: -4em;
-
-        h2 {
-            font-weight: bold;
+    div.vayam-carousel {
+        background-color: $night;
+        img.slide {
+            max-height: 500px;
+            width: 100%;
         }
     }
 
+    div.showcase-row{
+        margin: 0rem;
+        padding: 0rem;       
+    }
+
+    div.concept-row {
+        background-color: $standoutcolor;
+        margin: 0rem;
+        padding: 0rem;
+        div.note {
+            padding: 0rem;
+        }
+    }
+
+
     // progress circles
      .progress {
-        width: 150px;
-        height: 150px;
-        line-height: 150px;
+        width: 100px;
+        height: 100px;
+        line-height: 100px;
         background: none;
         margin: 0 auto;
         box-shadow: none;
@@ -38,7 +40,7 @@ div.hometab {
         width: 100%;
         height: 100%;
         border-radius: 50%;
-        border: 12px solid #fff;
+        border: 8px solid $night;
         position: absolute;
         top: 0;
         left: 0;
@@ -58,7 +60,7 @@ div.hometab {
         width: 100%;
         height: 100%;
         background: none;
-        border-width: 12px;
+        border-width: 8px;
         border-style: solid;
         position: absolute;
         top: 0;
@@ -89,15 +91,15 @@ div.hometab {
         border-radius: 50%;
         background: $standoutcolor;
         font-size: 24px;
-        color: #fff;
+        color: $night;
         line-height: 135px;
         text-align: center;
         position: absolute;
-        top: 5%;
-        left: 5%;
+        top: -16px;
+        left: 4px;
     }
     .progress.firstload .progress-bar {
-        border-color: $highlightercolor;
+        border-color: $secondarycolor;
     }
 
     .progress.firstload .progress-right .progress-bar {
@@ -121,7 +123,7 @@ div.hometab {
     }
 
     .progress.thirdload .progress-bar {
-        border-color: $highlightercolor;
+        border-color: $secondarycolor;
     }
     .progress.thirdload .progress-right .progress-bar {
         animation: loading-5 1.5s linear forwards 1.8s;
@@ -207,7 +209,10 @@ div.hometab {
     div.row div.thumbnail.project-panel:hover {
         border: none;
         box-shadow: none;
-        height: 20rem;
+        height: 25rem;
+        margin-bottom: 2rem;
+        text-align: center;
+        text-align: justify;
     }
 
     div.thumbnail .panel-title {
@@ -218,33 +223,36 @@ div.hometab {
     }
 
     .thumbnail > .panel-heading {
-        background-color: white;
+        color: $secondarycolor;
+        background-color: $fullwhite;
         margin-top: 0px;
+        padding: 0rem;
+        text-align: center;
+        .icon {
+            font-size: 4rem;
+            padding: 0rem;
+            margin: 0rem;
+        }
 
         .project-name {
             width: 15em;
-            color: $highlightercolor;
+            color: $night;
+            padding: 0rem;
+            margin: 0rem;
         }
 
-        .project-icon {
-            padding-right: 0.5em;
-            font-size: 2em;
-            color: black;
-        }
     }
 
     .hover-div {
         margin: 0 auto;
         max-width: 350px;
         margin-top: 30px;
-        border-bottom: 3px solid $secondarycolor;
         position: relative;
         overflow: hidden;
+        text-align: center;
     }
 
-    .hover-div:hover {
-        transition: all ease-in-out .6s;
-        transform: scale(1.1);
-        cursor: pointer;
+    .events-updates {
+        background-color: $milk;
     }
 }

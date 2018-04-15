@@ -1,13 +1,13 @@
 div.vayam-modal {
     div.modal-header {
-        background-color: $milk;
+        background-color: $fullwhite;
         color: $standoutcolor;
     }
 
     div.modal-footer {
-        background-color: $milk;
+        background-color: $fullwhite;
         button:hover {
-            color: $highlightercolor;
+            color: none;
         }
     }
 

@@ -17,14 +17,6 @@ div.contactustab {
         height: 40rem;
     }
 
-    .send-button {
-        margin: 1rem;
-    }
-
-    address {
-        margin: 0;
-        border-bottom: 1px solid $gray-lighter;
-    }
     div[co-ordinates] {
         cursor: pointer;
         h4 {
@@ -32,14 +24,14 @@ div.contactustab {
             margin: 0;
         }
         &:hover {
-            color: $highlightercolor;
+            color: none;
         }
     }
 
     // This code has been copied from somehwhere so need to clean this up.
     .box > .icon { text-align: center; position: relative; }
     .box > .icon > .image { position: relative; z-index: 2; margin: auto; width: 88px; height: 88px; border: 8px solid white; line-height: 88px; border-radius: 50%; background: $secondarycolor; vertical-align: middle; }
-    .box > .icon:hover > .image { background: $ivory; }
+    .box > .icon:hover > .image { background: $night; }
     .box > .icon > .image > i { font-size: 36px !important; color: #fff !important; }
     .box > .icon:hover > .image > i { color: white !important; }
     .box > .icon > .info { margin-top: -24px; background: rgba(0, 0, 0, 0.04); border: 1px solid #e0e0e0; padding: 15px 0 10px 0; min-height:163px;}

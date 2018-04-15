@@ -1,0 +1,12 @@
+div.contactUsForm {
+    background-color: $gray;
+
+    .send-button {
+        margin: 1rem;
+    }
+
+    address {
+        margin: 0;
+        border-bottom: 1px solid $gray-lighter;
+    }
+}

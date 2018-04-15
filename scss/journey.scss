@@ -13,7 +13,7 @@ div.journeytab {
         position: absolute;
         content: " ";
         width: 3px;
-        background-color: $lavender;
+        background-color: $secondarycolor;
         left: 50%;
         margin-left: -1.5px;
     }
@@ -145,7 +145,7 @@ div.journeytab {
     }
 
     .date {
-        color: $highlightercolor;
+        color: none;
     }
 
     .timeline-body > p,

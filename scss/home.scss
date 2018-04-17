@@ -4,21 +4,21 @@ div.hometab {
     // once production images are finalized..
     div.vayam-carousel {
         background-color: $night;
-        border-top: 0.5rem solid $secondarycolor; 
-        img.slide {
-            max-height: 500px;
-            width: 100%;
+        div.slide {
+            background-position: center;
+            background-size: cover;
+            height: 55rem;
         }
     }
 
     .banner-text-container {
-        position: absolute;
+        position: relative;
+        top: 2rem;
+        text-align: left;
         background-color: rgba(52, 52, 52, 0.7);
         padding: 1rem;
         width: 20rem;
         border-right: 1rem solid $secondarycolor;
-        top: 8rem;
-        left: 18rem;
         .banner-text {
             padding-left: 0.5rem;
             width: 100%;
@@ -31,6 +31,10 @@ div.hometab {
             color: $standoutcolor;
             font-weight: 800;
         }
+    }
+
+    .carousel-caption {
+        background-color: rgba(52, 52, 52, 0.7);
     }
 
     div.showcase-row {
@@ -49,6 +53,11 @@ div.hometab {
 
 
     // progress circles
+    .highlight-on-yellow {
+        font-weight: 900;
+        color: $secondarycolor;
+    }
+
      .progress {
         width: 100px;
         height: 100px;
@@ -257,6 +266,10 @@ div.hometab {
             margin: 0rem;
         }
 
+        a {
+            text-decoration: none;
+            color: $night;
+        }
         .project-name {
             width: 15em;
             color: $night;
@@ -283,5 +296,35 @@ div.hometab {
 
     .events-updates {
         background-color: $milk;
+        .events-updates-pane {
+            padding-right: 5rem;
+            padding-left: 5rem;
+        }
+
+        div.thumbnail {
+            max-height: 100rem;
+        }
     }
+
+    .events-carousel {
+        a.carousel-control {
+            padding: 1rem;
+            background-image: none;
+            color: $night;
+        }
+
+        .carousel-indicators {
+            bottom: -5px;
+            li {
+                border-color: $night;
+            }
+            .active {
+                background-color: $night;
+            }
+        }
+
+        p.justify {
+            text-align: justify;
+        }
+    }   
 }

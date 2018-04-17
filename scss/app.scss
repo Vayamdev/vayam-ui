@@ -27,11 +27,24 @@ html {
         position: relative;
 
         // for navlinks in header
+        .nav .dropdown-menu {
+            padding: 1rem;
+            background-color: $secondarycolor;
+            li > a {
+                font-weight: 400;
+                color: $fullwhite;
+            }
+        }
         .nav .dropdown:hover {
             cursor: pointer;
         }
 
+        .nav a#toggle {
+            background-color: white;
+        }
         .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus {
+            color: $secondarycolor;
+            font-weight: 1000;
             background-color: transparent;
         }
         
@@ -58,6 +71,7 @@ html {
         div.vayamviews {
             height: 100%;
             margin: 0rem;
+            border-top: 0.5rem solid $secondarycolor; 
             padding-left: 0rem;
             padding-right: 0rem;
             padding-bottom: 0rem;

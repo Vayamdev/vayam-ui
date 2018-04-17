@@ -1,11 +1,11 @@
 div.vayam-modal {
     div.modal-header {
-        background-color: $fullwhite;
-        color: $standoutcolor;
+        background-color: $secondarycolor;
+        color: $fullwhite;
     }
 
     div.modal-footer {
-        background-color: $fullwhite;
+        background-color: darkgray;
         button:hover {
             color: none;
         }
@@ -13,5 +13,9 @@ div.vayam-modal {
 
     div.thumbnail {
         border: none;
+        .modal-image {
+            max-width: 100%;
+            max-height: 400px;
+        }
     }
 }

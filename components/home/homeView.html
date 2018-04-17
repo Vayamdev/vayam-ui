@@ -3,7 +3,17 @@
 	<div id="myCarousel" class="vayam-carousel">
 		<div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
 			<div uib-slide ng-repeat="slide in slides" index="$index">
-				<img class="slide" ng-src="{{slide.image}}" style="margin:auto;">
+				<div class="slide" ng-style="{'background-image':'url({{slide.image}})'}">
+					<div class="banner-text-container container col-xs-offset-2">
+						<div class="banner-text">
+							We are
+						</div>
+				
+						<div class="banner-text">
+							<span class="banner-text-highlight">Vayam </span>family
+						</div>
+					</div>				
+				</div>
 				<div class="carousel-caption">
 					<p>{{slide.text}}</p>
 				</div>
@@ -11,22 +21,15 @@
 		</div>
 	</div>
 
-	<div class="banner-text-container">
-		<div class="banner-text">
-			We are
-		</div>
-
-		<div class="banner-text">
-			<span class="banner-text-highlight">Vayam </span>family
-		</div>
-	</div>
 
 	<div class="container-fluid showcase-row">
 		<div class="container-fluid concept-row">
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12 col-md-12">
-						<h2>What is Vayam</h2>
+						<h2>
+							a movement for <span class="highlight-on-yellow">D</span>evelopment, <span class="highlight-on-yellow">E</span>nvironment and <span class="highlight-on-yellow">D</span>emocracy
+						</h2>
 					</div>
 
 					<div class="row">
@@ -66,13 +69,13 @@
 						</div>
 						<div class="panel-heading hover-div">
 							<span class="panel-title project-name">
-								<h4>{{project.name}}</h4>
+								<h4><a href="#!/project/{{project.id}}">{{project.name}}</a></h4>
 							</span>
 						</div>
 						<div class="panel-body">
 							{{project.shortdescription}}
 							<div class="read-more">
-								<a  href="#!/project/{{project.id}}">Read More</a>
+								<a href="#!/project/{{project.id}}">Read More</a>
 							</div>
 						</div>
 					</div>
@@ -80,24 +83,33 @@
 			</div>
 		</div>
 
+
 		<div class="container-fluid events-updates">
-			<div class="container">
-				<div class="text-center col-xs-12 col-md-4 col-md-offset-4">
-					<h2>Events and Updates</h2>
-				</div>
-				<div class="row">
-					<div class="col-xs-12 col-sm-12 col-md-4" ng-repeat="event in events">
-						<div class="thumbnail">
-						<img class="thumbnail-image img-rounded" ng-src="{{event.image}}" alt="...">
-						<div class="caption">
-							<h3>{{event.eventname}}</h3>
-							<p>{{event.shortdescription}}</p>
-							<p><a href="" class="btn btn-primary" role="button" ng-click="open(event)">View More</a></p>
-						</div>
+			<div class="text-center col-xs-12 col-md-4 col-md-offset-4">
+				<h2>Events and Updates</h2>
+			</div>
+			
+			<div class="events-carousel">
+				<div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+					<div uib-slide ng-repeat="events in displayeventgroup" index="$index">
+						<div class="events-updates-pane container">
+							<div class="row">
+								<div class="col-xs-12 col-sm-4 col-md-4" ng-repeat="event in events">
+									<div class="thumbnail">
+										<img class="thumbnail-image img-rounded" ng-src="{{event.image}}" alt="...">
+										<div class="caption">
+											<h3>{{event.eventname}}</h3>
+											<p class="justify">{{event.shortdescription}}</p>
+											<p><a href="" class="btn btn-primary" role="button" ng-click="open(event)">View More</a></p>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+
 	</div>
 </div>

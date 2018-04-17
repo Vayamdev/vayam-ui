@@ -94,6 +94,7 @@ rootModule.controller('homeController', ['$scope', 'homeService', 'globalFactory
     $scope.crisis = [];
     $scope.conceptnote = [];
     $scope.projects = [];
+    $scope.displayeventgroup = [];
 
     // fetch static data for this page. 
     globalFactory.getStaticData(function(response) {
@@ -117,7 +118,13 @@ rootModule.controller('homeController', ['$scope', 'homeService', 'globalFactory
 
     homeService.getThumbnails().then(function(response) {
         globalFactory.truncateData(response.data, 'shortdescription', 120);
-        $scope.events = response.data;
+        var events = response.data;
+        while (events.length) {
+            var temparr = [];
+            temparr = events.splice(0, 3);
+            $scope.displayeventgroup.push(temparr);
+        }
+        console.log($scope.displayeventgroup);
     }, function() {
         console.log('Error during event data fetching!');
     });

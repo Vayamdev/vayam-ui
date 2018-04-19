@@ -46,9 +46,15 @@ module.exports = function (grunt) {
                     },
                     {
                         expand: true,
-                        cwd: 'bower_components/lightgallery.js/',
+                        cwd: 'bower_components/lightgallery/',
                         src: ['**/*.js', '**/*.map'],
-                        dest: 'scripts/lightgallery.js/'
+                        dest: 'scripts/lightgallery/'
+                    },
+                    {
+                        expand: true,
+                        cwd: '/bower_components/angular-animate/',
+                        src: ['**/*.js', '**/*.map'],
+                        dest: 'scripts/angular-animate/'
                     },
                     // Fonts.
                     {
@@ -121,10 +127,9 @@ module.exports = function (grunt) {
                 'scripts/angular-bootstrap/ui-bootstrap-tpls.min.js',
                 'scripts/ng-simplePagination/simplePagination.js',
                 'scripts/plugins/jquery.bootstrap.newsbox.min.js',
-                'scripts/lightgallery.js/dist/js/lightgallery.min.js'
             ],
             dest: 'scripts/vender.js',
-          },        
+          },
           codescripts: {
             src: [
                 'app.module.js',

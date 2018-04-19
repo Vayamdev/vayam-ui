@@ -5,6 +5,7 @@ related to app.
 
 var rootModule = angular.module('rootModule', [
     'ngRoute',
+    'ngAnimate',
     'ui.bootstrap',
     'simplePagination'
 ]);

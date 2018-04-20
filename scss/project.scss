@@ -1,8 +1,5 @@
 div.projecttab {		
-
-    .project-icon {
-        font-size: 50px;
-    }
+    margin-bottom: 3rem;
 
     .details {
       margin: 0rem;
@@ -19,28 +16,32 @@ div.projecttab {
      
     .nav-tabs {
       border: 0;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      background-color: $secondarycolor;
     }  
   
-  .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover { 
-    border-width: 0; 
-  }
+    .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover { 
+      border-width: 0; 
+    }
   
   .nav-tabs > li > a { 
     border: none; 
-    color: #666; 
+    color: $fullwhite;
+    font-weight: 600; 
     margin: 0.5rem;
   }
   
   .nav-tabs > li.active > a, .nav-tabs > li > a:hover { 
-    border: none; 
-    color: none !important; 
+    border: none;
+    color: $fullwhite;
     background: transparent;
     cursor: pointer; 
   }
   
   .nav-tabs > li > a::after { 
     content: ""; 
-    background: $secondarycolor; 
+    background: $standoutcolor; 
     height: 2px; 
     position: absolute; 
     width: 100%; 

@@ -4,8 +4,11 @@ rootModule.directive('imageBanner', function(){
         templateUrl: '/shared/imagebanner/imageBannerTemplate.html',
         scope: true,
         controller: ['$scope', '$route', function($scope, $route) {
-            $scope.selected = $route.current.activetab;
-            console.log($scope.selected);
+            $scope.bradecrume = $route.current.activepage;
+            $scope.activepage = $route.current.activetab;
+            if ($scope.bradecrume.indexOf( $scope.activepage) === -1) {
+                $scope.bradecrume = $scope.activepage + " / " + $scope.bradecrume;
+            }
         }]
     };
 });

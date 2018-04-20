@@ -70,7 +70,7 @@ html {
         div.slide {
             background-position: center;
             background-size: cover;
-            height: 55rem;
+            height: 45rem;
         }
 
         // banner text style
@@ -211,6 +211,12 @@ html {
 
             .summary-content {
                 color: darkgray;
+            }
+            
+            .summarytext a {
+                text-decoration: none;
+                cursor: pointer;
+                color: $fullwhite;
             }
 
             .footer-expression {

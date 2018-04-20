@@ -4,33 +4,6 @@ div.hometab {
     // once production images are finalized..
     div.vayam-carousel {
         background-color: $night;
-        div.slide {
-            background-position: center;
-            background-size: cover;
-            height: 55rem;
-        }
-    }
-
-    .banner-text-container {
-        position: relative;
-        top: 2rem;
-        text-align: left;
-        background-color: rgba(52, 52, 52, 0.7);
-        padding: 1rem;
-        width: 20rem;
-        border-right: 1rem solid $secondarycolor;
-        .banner-text {
-            padding-left: 0.5rem;
-            width: 100%;
-            color: $fullwhite;
-            font-weight: 200;
-            font-size: 25px;
-        }
-
-        .banner-text-highlight {
-            color: $standoutcolor;
-            font-weight: 800;
-        }
     }
 
     .carousel-caption {

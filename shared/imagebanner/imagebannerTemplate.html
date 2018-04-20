@@ -1,3 +1,11 @@
 <div class="imagebanner">
-    <img ng-src="{{bannerUrl}}"></img>
+    <div class="slide" ng-style="{'background-image':'url({{bannerUrl}})'}">
+        <div class="banner-text-container container col-xs-offset-2">
+                <div class="banner-text">
+                    {{selected}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="brade-crum container"><h5>Home / {{selected}}</h5></div>
 </div>

@@ -1,10 +1,11 @@
 rootModule.controller('impactController', ['$scope', 'impactService', 'globalFactory', function($scope, impactService, globalFactory) {
-    $scope.bannerUrl = 'http://placehold.it/1146x400';
+    $scope.bannerUrl;
     $scope.bannertext;
 
     // fetch static data for this page. 
     globalFactory.getStaticData(function(response) {
-        $scope.bannertext = response.impactbannertext;
+        $scope.bannerUrl = response.impact.bannerimage;
+        $scope.bannertext = response.impact.bannertext;
     });
 
     impactService.getImpactThumbnails().then(function(response) {

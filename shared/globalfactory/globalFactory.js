@@ -13,7 +13,7 @@ rootModule.factory('globalFactory', ['$uibModal', '$http', function($uibModal, $
                     $scope.canceltext = options.canceltext ? options.canceltext : 'Cancel';
                     $scope.cancel = function() {
                         modalInstance.close();
-                    };                   
+                    };
                 }],
                 size: 'lg',
                 backdrop: 'static',

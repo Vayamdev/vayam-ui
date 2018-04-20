@@ -52,7 +52,7 @@ module.exports = function (grunt) {
                     },
                     {
                         expand: true,
-                        cwd: '/bower_components/angular-animate/',
+                        cwd: 'bower_components/angular-animate/',
                         src: ['**/*.js', '**/*.map'],
                         dest: 'scripts/angular-animate/'
                     },

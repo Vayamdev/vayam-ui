@@ -6,10 +6,6 @@ div.impacttab {
 		transition: filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);
 	}
 
-	.page-heading {
-		color: $secondarycolor;
-	}
-
 	div.thumbnail:hover .thumbnail-image {
 		-webkit-filter: contrast(100%);
 		filter: contrast(100%);

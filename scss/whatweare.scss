@@ -1,2 +1,35 @@
 div.whatweare {
+    .page-heading {
+		color: $secondarycolor;
+    }
+    .vayam-img {
+        float: right;
+        height: 200px;
+        width: 200px;
+        border: 1px solid black;
+    }
+    .dark-bg {
+        background-color: $gray-lighter;
+        border-right: 1rem solid $secondarycolor;
+    }
+    .row-eq-height {
+        display: flex;
+        .dark-bg:nth-child(2) {
+            margin-left: 25px;
+        }
+    }
+    .teams {
+        margin-top: 30px;
+        background-color: $milk;
+        width: 100%;
+
+        .row {
+            width: 85%;
+            margin: 0px auto;
+        }
+    }
+    .frontside .card .card-title,
+    .backside .card .card-title {
+        color: $secondarycolor;
+    }
 }

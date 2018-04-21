@@ -1,5 +1,4 @@
 div.teams {
-
     .row div {
         justify-content:center;
     }
@@ -104,16 +103,11 @@ div.teams {
 
     .frontside .card,
     .backside .card {
-        min-height: 312px;
+        min-height: 230px;
     }
 
     .backside .card a {
         font-size: 18px;
-        color: #007b5e !important;
-    }
-
-    .frontside .card .card-title,
-    .backside .card .card-title {
         color: #007b5e !important;
     }
 
@@ -122,5 +116,4 @@ div.teams {
         height: 120px;
         border-radius: 50%;
     }
-
 }

@@ -204,7 +204,7 @@ rootModule.controller('teamController', ['$scope', 'teamService', 'globalFactory
 
 
 
-rootModule.controller('whatweareController', ['$scope', 'globalFactory', function($scope, globalFactory) {
+rootModule.controller('whatweareController', ['$scope', 'teamService','globalFactory', function($scope, teamService, globalFactory) {
     $scope.bannerUrl = 'http://placehold.it/1146x400';
     $scope.bannertext = '';
     $scope.vision = '';
@@ -217,6 +217,12 @@ rootModule.controller('whatweareController', ['$scope', 'globalFactory', functio
         $scope.mission = response.whatweare.mission;    
     });
 
+    teamService.getStaff().then(function(response) {
+        console.log(response.data);
+        $scope.teamdata = response.data;
+        }, function() {
+            console.log('Error during team data fetching!');
+    });
 }]);
 
 

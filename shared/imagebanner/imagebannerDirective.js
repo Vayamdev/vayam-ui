@@ -4,10 +4,13 @@ rootModule.directive('imageBanner', function(){
         templateUrl: '/shared/imagebanner/imageBannerTemplate.html',
         scope: true,
         controller: ['$scope', '$route', function($scope, $route) {
-            $scope.bradecrume = $route.current.activepage;
-            $scope.activepage = $route.current.activetab;
-            if ($scope.bradecrume.indexOf( $scope.activepage) === -1) {
-                $scope.bradecrume = $scope.activepage + " / " + $scope.bradecrume;
+            $scope.activepage = $route.current.activepage;
+            $scope.activetab = $route.current.activetab;
+            if ($scope.activetab.indexOf( $scope.activepage) === -1) {
+                $scope.bradecrume = $scope.activetab + " / " + $scope.activepage;
+            }
+            else {
+                $scope.bradecrume = $scope.activetab;
             }
         }]
     };

@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-rootModule.controller('whatweareController', ['$scope', 'teamService','globalFactory', function($scope, teamService, globalFactory) {
-=======
 rootModule.controller('whatweareController', ['$scope', 'teamService', 'globalFactory', function($scope, teamService, globalFactory) {
->>>>>>> 2ebca1781fdcb6ffb69a5b316b1720b955ff1358
     $scope.bannerUrl = 'http://placehold.it/1146x400';
     $scope.bannertext = '';
     $scope.vision = '';

@@ -43,6 +43,21 @@ rootModule.factory('globalFactory', ['$uibModal', '$http', function($uibModal, $
             else {
                 callback(staticData);
             }
+        },
+
+        // return static data for application.
+        sortGalleryData: function(data) {
+            var sorteddata = {};
+            for (var i=0; i< data.length; i++) {
+                if (sorteddata[data[i]['category']]) {
+                    sorteddata[data[i]['category']].push(data[i]);
+                }
+                else {
+                    sorteddata[data[i]['category']] = [];
+                }
+            }
+
+            return sorteddata;
         }
    };
 }]);

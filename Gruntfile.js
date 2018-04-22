@@ -46,7 +46,7 @@ module.exports = function (grunt) {
                     },
                     {
                         expand: true,
-                        cwd: 'bower_components/lightgallery/',
+                        cwd: 'bower_components/lightgallery.js/',
                         src: ['**/*.js', '**/*.map'],
                         dest: 'scripts/lightgallery/'
                     },
@@ -87,14 +87,7 @@ module.exports = function (grunt) {
                         cwd: 'bower_components/bootstrap-sass/assets/stylesheets/',
                         src: ['**/*.scss'],
                         dest: 'scss/'
-                    },
-                    {
-                        expand: true,
-                        cwd: 'bower_components/lightgallery.js/',
-                        src: ['**/*.css'],
-                        dest: 'css/lightgallery.js'
-                    },
-
+                    }
                 ]
             },
         },
@@ -127,6 +120,8 @@ module.exports = function (grunt) {
                 'scripts/angular-bootstrap/ui-bootstrap-tpls.min.js',
                 'scripts/ng-simplePagination/simplePagination.js',
                 'scripts/plugins/jquery.bootstrap.newsbox.min.js',
+                'scripts/jquery.bootstrap.newsbox.min.js',
+                'scripts/lightgallery/dist/js/lightgallery.min.js'
             ],
             dest: 'scripts/vender.js',
           },

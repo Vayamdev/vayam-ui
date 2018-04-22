@@ -1,71 +1,59 @@
 <div class="contactustab">
 	<image-banner></image-banner>
 
-	<div class="row">
-		<div class="col-xs-12 col-md-5">
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<h3>Get in Touch</h3>
+	<div class="container">
+		<div class="col-xs-12 col-sm-6 col-lg-4">
+			<div class="box">							
+				<div class="icon">
+					<div class="image"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+					<div class="info">
+						<h3 class="title">MAIL</h3>
+						<p ng-repeat="location in locations" ng-if="location.email">
+							<i class="fa fa-envelope" aria-hidden="true"></i> {{location.email}}
+							<br>
+						</p>
+					
+					</div>
 				</div>
-				<div class="panel-body">
-					<contact-form></contact-form>
-				</div>
-			</div>
+				<div class="space"></div>
+			</div> 
 		</div>
-
-		<div class="col-xs-12 col-md-7">
-			<vayam-map id="googleMap" class="googleMap">My map will go here</vayam-map>
-		</div>		
+			
+		<div class="col-xs-12 col-sm-6 col-lg-4">
+			<div class="box">							
+				<div class="icon">
+					<div class="image"><i class="fa fa-mobile" aria-hidden="true"></i></div>
+					<div class="info">
+						<h3 class="title">CONTACT</h3>
+						<p ng-repeat="location in locations" ng-if="location.number">
+							<i class="fa fa-mobile" aria-hidden="true"></i> {{location.number}}
+							<br>
+						</p>
+					</div>
+				</div>
+				<div class="space"></div>
+			</div> 
+		</div>
+			
+		<div class="col-xs-12 col-sm-6 col-lg-4">
+			<div class="box">							
+				<div class="icon">
+					<div class="image"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+					<div class="info">
+						<h3 class="title">ADDRESS</h3>
+						<p ng-repeat="location in locations">
+							 <i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp; {{location.address}}{{location.pincode}}
+						</p>
+					</div>
+				</div>
+				<div class="space"></div>
+			</div> 
+		</div>
 	</div>
-
-	<div class="row">
-			<!-- Boxes de Acoes -->
-			<div class="col-xs-12 col-sm-6 col-lg-4">
-				<div class="box">							
-					<div class="icon">
-						<div class="image"><i class="fa fa-envelope" aria-hidden="true"></i></div>
-						<div class="info">
-							<h3 class="title">MAIL & WEBSITE</h3>
-							<p ng-repeat="location in locations" ng-if="location.email">
-								<i class="fa fa-envelope" aria-hidden="true"></i> {{location.email}}
-								<br>
-							</p>
-						
-						</div>
-					</div>
-					<div class="space"></div>
-				</div> 
-			</div>
-				
-			<div class="col-xs-12 col-sm-6 col-lg-4">
-				<div class="box">							
-					<div class="icon">
-						<div class="image"><i class="fa fa-mobile" aria-hidden="true"></i></div>
-						<div class="info">
-							<h3 class="title">CONTACT</h3>
-							<p ng-repeat="location in locations" ng-if="location.number">
-								<i class="fa fa-mobile" aria-hidden="true"></i> {{location.number}}
-								<br>
-							</p>
-						</div>
-					</div>
-					<div class="space"></div>
-				</div> 
-			</div>
-				
-			<div class="col-xs-12 col-sm-6 col-lg-4">
-				<div class="box">							
-					<div class="icon">
-						<div class="image"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
-						<div class="info">
-							<h3 class="title">ADDRESS</h3>
-							<p ng-repeat="location in locations">
-								 <i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp; {{location.address}}{{location.pincode}}
-							</p>
-						</div>
-					</div>
-					<div class="space"></div>
-				</div> 
-			</div>
+		
+	<vayam-map id="googleMap" class="googleMap">My map will go here</vayam-map>
 
 </div>
+
+
+

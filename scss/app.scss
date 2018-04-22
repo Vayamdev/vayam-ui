@@ -16,6 +16,7 @@
 @import "news";
 @import "gallery";
 @import "contactform";
+@import "tabs";
 
 html {
     height: 100%;
@@ -34,6 +35,12 @@ html {
                 font-weight: 400;
                 color: $fullwhite;
             }
+            
+            li > a:hover {
+                font-weight: 500;
+                color: $standoutcolor;
+                border-right: 0.3rem solid $standoutcolor;
+            }
         }
         .nav .dropdown:hover {
             cursor: pointer;
@@ -48,21 +55,20 @@ html {
             background-color: transparent;
         }
         
+        // donate link
         .donate-link {
             position: fixed;
-            z-index: 10;
+            z-index: 1000;
             right: 0;
-            bottom: 10rem;
-            padding: 0.5rem;
+            bottom: 5rem;
+            border-bottom: 0.5rem solid $night;
             cursor: pointer;
-            transform: rotate(-90deg) translate(50%, 75%);
+            transform: rotate(-90deg) translate(50%, 115%);
             letter-spacing: 0.1rem;
             a {
                 background-color: $secondarycolor;
                 color: $fullwhite;
-                &:hover {
-                    color: none;
-                }
+                border-radius: 0;
             }
         }
 

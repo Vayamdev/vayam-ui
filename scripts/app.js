@@ -102,7 +102,7 @@ rootModule.config(["$routeProvider", function($routeProvider) {
 
 rootModule.controller('homeController', ['$scope', 'homeService', 'globalFactory', function($scope, homeService, globalFactory) {
     var currIndex = 0;
-    $scope.myInterval = 5000;
+    $scope.myInterval = 4000;
     $scope.slides = [];
     $scope.crisis = [];
     $scope.conceptnote = [];
@@ -204,7 +204,7 @@ rootModule.controller('teamController', ['$scope', 'teamService', 'globalFactory
 
 
 
-rootModule.controller('whatweareController', ['$scope', 'teamService','globalFactory', function($scope, teamService, globalFactory) {
+rootModule.controller('whatweareController', ['$scope', 'teamService', 'globalFactory', function($scope, teamService, globalFactory) {
     $scope.bannerUrl = 'http://placehold.it/1146x400';
     $scope.bannertext = '';
     $scope.vision = '';
@@ -212,6 +212,7 @@ rootModule.controller('whatweareController', ['$scope', 'teamService','globalFac
 
     // fetch static data for this page. 
     globalFactory.getStaticData(function(response) {
+        $scope.bannerUrl = response.whatweare.bannerimage;
         $scope.bannertext = response.whatweare.bannertext;
         $scope.vision = response.whatweare.vision;
         $scope.mission = response.whatweare.mission;    
@@ -248,12 +249,12 @@ rootModule.controller('testimonialsController', ['$scope', 'testimonialsService'
 
 rootModule.controller('journeyController', ['$scope', 'journeyService', 'globalFactory', function($scope, journeyService, globalFactory) {
     $scope.milestones = [];
-    $scope.bannerUrl = 'http://placehold.it/1146x400';
     $scope.bannertext = '';
 
     // fetch static data for this page. 
     globalFactory.getStaticData(function(response) {
-        $scope.bannertext = response.journeybannertext;
+        $scope.bannertext = response.journey.bannertext;
+        $scope.bannerUrl = response.journey.bannerimage;
     });
 
     journeyService.getMilestone().then(function(response) {
@@ -265,9 +266,15 @@ rootModule.controller('journeyController', ['$scope', 'journeyService', 'globalF
 
 
 
-rootModule.controller('contactusController', ['$scope', 'contactUsService', function($scope, contactUsService) {
-    $scope.bannerUrl = "http://placehold.it/1146x400";
+rootModule.controller('contactusController', ['$scope', 'contactUsService', 'globalFactory', function($scope, contactUsService, globalFactory) {
     $scope.showaddress = false;
+
+    // fetch static data for this page. 
+    globalFactory.getStaticData(function(response) {
+        console.log(response);
+        $scope.bannerUrl = response.contactus.bannerimage;
+    });
+    
     contactUsService.getLocations().then(function(response) {
         var locations = response.data;
         $scope.locations = locations;
@@ -277,13 +284,11 @@ rootModule.controller('contactusController', ['$scope', 'contactUsService', func
 
 
 rootModule.controller('donateController', ['$scope', 'globalFactory', function($scope, globalFactory) {
-    $scope.bannertext = '';
-
-	// Fetch static data used for this page.
-	globalFactory.getStaticData(function(response){
-		$scope.bannertext = response.donatebannertext;
-	});
-
+	// fetch static data for this page. 
+    globalFactory.getStaticData(function(response) {
+        $scope.bannerUrl = response.donate.bannerimage;
+        $scope.bannertext = response.donate.bannertext;
+    });
 }]);
 
 
@@ -319,13 +324,17 @@ rootModule.controller('newsController', ['$scope', '$routeParams', 'newsService'
 
 
 
-rootModule.controller('projectController', ['$scope', '$routeParams', 'projectService', function($scope, $routeParams, projectService) {
+rootModule.controller('projectController', ['$scope', '$routeParams', 'projectService', 'globalFactory', function($scope, $routeParams, projectService, globalFactory) {
     $scope.bannerUrl = 'http://placehold.it/1146x400';
     $scope.project;
 
     // temporary variable.
     $scope.projects = [];
 
+    // fetch static data for this page. 
+    globalFactory.getStaticData(function(response) {
+        $scope.bannerUrl = response.project.bannerimage;
+    });    
 
     projectService.getProjects().then(function(response) {
         $scope.projects = response.data;
@@ -345,13 +354,24 @@ rootModule.controller('projectController', ['$scope', '$routeParams', 'projectSe
 
 
 
-rootModule.controller('galleryController', ['$scope', 'galleryService', '$timeout', function($scope, galleryService, $timeout) {
-    $scope.gallery = [];
+rootModule.controller('galleryController', ['$scope', 'galleryService', 'globalFactory', '$timeout', function($scope, galleryService, globalFactory, $timeout) {
+    
+    // fetch static data for this page. 
+    globalFactory.getStaticData(function(response) {
+        $scope.bannertext = response.gallery.bannertext;
+        $scope.bannerUrl = response.gallery.bannerimage;
+    });    
+    
     galleryService.getGallery().then(function(response) {
-        console.log(response);
-        $scope.gallery = response.data;
+        $scope.sorteddata = globalFactory.sortGalleryData(response.data);
+        $scope.categories = Object.keys($scope.sorteddata);
+
+        // Apply galary plugin
         setTimeout(function() {
-            lightGallery(document.getElementById('lightgallery'));
+            for (var i=0; i<= 5; i++) {
+                var pane = document.getElementById('gallary_' + i);
+                lightGallery(pane);
+            }
         }, 0);
     }, function() {
         console.log('Error during gallery data fetching!');
@@ -495,7 +515,7 @@ rootModule.directive('vayamFooter', function(){
 rootModule.directive('vayamMap', function(){
 	return {
 		restrict: 'E',
-		templateUrl: 'components/locationmap/locationmap.html',
+		templateUrl: '/shared/googlemap/locationmap.html',
 		replace: true,
 		transclude : true,
 		scope: true,
@@ -504,41 +524,21 @@ rootModule.directive('vayamMap', function(){
 				var locations = response.data;
 				$scope.locations = locations;
 
-				var bounds = new google.maps.LatLngBounds();
 				var canvas = document.getElementById('map');
-				var map = new google.maps.Map(canvas);
-				var infoWindow = new google.maps.InfoWindow(), marker, i, markers = [];
-				for ( i = 0; i < locations.length; i++) {
-					var position = new google.maps.LatLng(locations[i].coordinates.latitude, locations[i].coordinates.longitude);
-					bounds.extend(position);
-					marker = new google.maps.Marker({
-						position: position,
-						map: map,
-						title: locations[i][0],
-						animation: google.maps.Animation.BOUNCE
-					});
-
-					// Allow each marker to have an info window
-					google.maps.event.addListener(marker, 'click', (function(marker, i) {
-						return function() {
-							//infoWindow.setContent(infoWindowContent[i][0]);
-							infoWindow.setContent("<div><h4>" + locations[i].name + "</h4><address>" + locations[i].address + locations[i].pincode + "</address></div>");
-							infoWindow.open(map, marker);
-						}
-					})(marker, i));
-
-					// Automatically center the map fitting all markers on the screen
-					map.fitBounds(bounds);
-
-					// Push the marker to the 'markers' array
-					markers.push(marker);
+				var infoWindow = new google.maps.InfoWindow();
+				var mapProp= {
+					center: new google.maps.LatLng($scope.locations[0].coordinates.latitude, $scope.locations[0].coordinates.longitude),
+					zoom: 10,
 				};
-
-				$scope.openMapInfoWindow = function(markerindex) {
-					markers = markers || [];
-					google.maps.event.trigger(markers[markerindex], 'click');
-				}
-
+								
+				var map = new google.maps.Map(canvas, mapProp);
+				var position = new google.maps.LatLng(locations[0].coordinates.latitude, locations[0].coordinates.longitude);
+				marker = new google.maps.Marker({
+					position: position,
+					map: map,
+					title: locations[0].name,
+					animation: google.maps.Animation.BOUNCE
+				});
 			}, function() {
 				console.log('Error during location data fetching!');
 			});
@@ -612,6 +612,21 @@ rootModule.factory('globalFactory', ['$uibModal', '$http', function($uibModal, $
             else {
                 callback(staticData);
             }
+        },
+
+        // return static data for application.
+        sortGalleryData: function(data) {
+            var sorteddata = {};
+            for (var i=0; i< data.length; i++) {
+                if (sorteddata[data[i]['category']]) {
+                    sorteddata[data[i]['category']].push(data[i]);
+                }
+                else {
+                    sorteddata[data[i]['category']] = [];
+                }
+            }
+
+            return sorteddata;
         }
    };
 }]);

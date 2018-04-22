@@ -48,6 +48,12 @@
     "donate": {
         "bannerimage": "/assets/banners/donate.jpg",
         "bannertext": "The value of life is not in its duration, but in its donation. You are not important because of how long you live, you are important because of how effective you live."
+    },
+    "socialnetwork": {
+        "fb": "https://www.facebook.com/VayamIndia/",
+        "twitter": "",
+        "youtube": "https://www.youtube.com/user/VayamDramSoc/feed",
+        "wordpress": "https://vayamindia.wordpress.com/"
     }
     
 }

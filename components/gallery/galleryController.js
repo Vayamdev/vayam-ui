@@ -14,6 +14,7 @@ rootModule.controller('galleryController', ['$scope', 'galleryService', 'globalF
         setTimeout(function() {
             for (var i=0; i<= 5; i++) {
                 var pane = document.getElementById('gallary_' + i);
+                console.log();
                 lightGallery(pane);
             }
         }, 0);

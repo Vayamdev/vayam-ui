@@ -125,6 +125,7 @@ rootModule.controller('homeController', ['$scope', 'homeService', 'globalFactory
     homeService.getProjects().then(function(response) {
         globalFactory.truncateData(response.data, 'shortdescription', 250);
         $scope.projects = response.data;
+        console.log($scope.projects);
     }, function() {
         console.log('Error during projects data fetching!');
     });    
@@ -137,7 +138,6 @@ rootModule.controller('homeController', ['$scope', 'homeService', 'globalFactory
             temparr = events.splice(0, 3);
             $scope.displayeventgroup.push(temparr);
         }
-        console.log($scope.displayeventgroup);
     }, function() {
         console.log('Error during event data fetching!');
     });
@@ -370,6 +370,7 @@ rootModule.controller('galleryController', ['$scope', 'galleryService', 'globalF
         setTimeout(function() {
             for (var i=0; i<= 5; i++) {
                 var pane = document.getElementById('gallary_' + i);
+                console.log();
                 lightGallery(pane);
             }
         }, 0);
@@ -506,7 +507,16 @@ rootModule.directive('vayamFooter', function(){
     return {
         restrict: 'A',
         templateUrl: '/shared/footer/footerTemplate.html',
-        scope: true
+        scope: true,
+        controller: ['$scope', 'globalFactory', function($scope, globalFactory) {
+            // fetch static data for this page. 
+            globalFactory.getStaticData(function(response) {
+                $scope.fb = response.socialnetwork.fb;
+                // $scope.twitter = response.socialnetwork.twitter;
+                $scope.youtube = response.socialnetwork.youtube;
+                $scope.wordpress = response.socialnetwork.wordpress;
+            });
+        }]
     };
 });
 

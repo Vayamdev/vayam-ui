@@ -47,7 +47,7 @@ module.exports = function (grunt) {
                     {
                         expand: true,
                         cwd: 'bower_components/lightgallery.js/',
-                        src: ['**/*.js', '**/*.map'],
+                        src: ['**/*.js', '**/*.map', '**/*.css'],
                         dest: 'scripts/lightgallery/'
                     },
                     {
@@ -72,14 +72,6 @@ module.exports = function (grunt) {
                         cwd: 'bower_components/',
                         src: ['font-awesome/scss/**'],
                         dest: 'scss/font-awesome/'
-                    },
-                    {
-                        expand: true,
-                        filter: 'isFile',
-                        flatten: true,
-                        cwd: 'bower_components/',
-                        src: ['lightgallery.js/dist/fonts/**'],
-                        dest: 'fonts/'
                     },
                     // Stylesheets
                     {
@@ -161,7 +153,7 @@ module.exports = function (grunt) {
           },
           thirdpartycss: {
             src: [
-                'css/lightgallery.js/dist/css/lightgallery.css',
+                'scripts/lightgallery/dist/css/lightgallery.min.css',
                 'css/app.css'
             ],
             dest: 'css/app.css',

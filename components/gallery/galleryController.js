@@ -4,7 +4,7 @@ rootModule.controller('galleryController', ['$scope', 'galleryService', 'globalF
     globalFactory.getStaticData(function(response) {
         $scope.bannertext = response.gallery.bannertext;
         $scope.bannerUrl = response.gallery.bannerimage;
-    });    
+    });
     
     galleryService.getGallery().then(function(response) {
         $scope.sorteddata = globalFactory.sortGalleryData(response.data);
@@ -12,9 +12,8 @@ rootModule.controller('galleryController', ['$scope', 'galleryService', 'globalF
 
         // Apply galary plugin
         setTimeout(function() {
-            for (var i=0; i<= 5; i++) {
+            for (var i=0; i< $scope.categories.length; i++) {
                 var pane = document.getElementById('gallary_' + i);
-                console.log();
                 lightGallery(pane);
             }
         }, 0);

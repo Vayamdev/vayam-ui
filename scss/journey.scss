@@ -44,14 +44,17 @@ div.journeytab {
     }
 
     .timeline > li > .timeline-panel {
-    width: 46%;
+    width: 30%;
     float: left;
-    border: 1px solid #d4d4d4;
+    border: 1px solid #3f903f;
     border-radius: 2px;
     padding: 20px;
     position: relative;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
+    background-color: #cccccc2e;
+    margin-left: 15rem;
+    margin-right: 13rem
     }
 
     .timeline > li > .timeline-panel:hover {
@@ -61,11 +64,11 @@ div.journeytab {
     .timeline > li > .timeline-panel:before {
         position: absolute;
         top: 26px;
-        right: -15px;
+        right: -16px;
         display: inline-block;
         border-top: 15px solid transparent;
-        border-left: 15px solid #ccc;
-        border-right: 0 solid #ccc;
+        border-left: 15px solid #3f903f;
+        border-right: 0 solid #3f903f;
         border-bottom: 15px solid transparent;
         content: " ";
     }
@@ -80,6 +83,10 @@ div.journeytab {
         border-right: 0 solid #fff;
         border-bottom: 14px solid transparent;
         content: " ";
+    }
+
+    .timeline > li > .timeline-panel .timeline-heading img {
+        width: 100%;
     }
 
     .timeline > li > .timeline-badge {
@@ -99,6 +106,7 @@ div.journeytab {
         border-top-left-radius: 50%;
         border-bottom-right-radius: 50%;
         border-bottom-left-radius: 50%;
+        border: 2px solid #3f903f;
     }
 
     .timeline > li.timeline-inverted > .timeline-panel {
@@ -115,7 +123,7 @@ div.journeytab {
     .timeline > li.timeline-inverted > .timeline-panel:after {
         border-left-width: 0;
         border-right-width: 14px;
-        left: -14px;
+        left: -13px;
         right: auto;
     }
 
@@ -136,7 +144,7 @@ div.journeytab {
     }
 
     .timeline-badge.info {
-        background-color: #5bc0de !important;
+        background-color: #fff !important;
     }
 
     .timeline-title {
@@ -192,6 +200,110 @@ div.journeytab {
                 right: auto;
             }
     }
-    
+
+
     /* end of styles for timeline*/
+
+    /* styles for testimonial */
+
+    .testimonial {
+        h2 {
+            color: #333;
+            text-align: center;
+            text-transform: uppercase;
+            font-family: "Roboto", sans-serif;
+            font-weight: bold;
+            position: relative;
+            margin: 30px 0 60px;
+        }
+        h2::after {
+            content: "";
+            width: 100px;
+            position: absolute;
+            margin: 0 auto;
+            height: 3px;
+            background: #8fbc54;
+            left: 0;
+            right: 0;
+            bottom: -10px;
+        }
+        .col-center {
+            margin: 0 auto;
+            float: none !important;
+        }
+        .carousel {
+            margin: 50px auto;
+            padding: 0 70px;
+        }
+        .carousel .item {
+            color: #999;
+            font-size: 14px;
+            text-align: center;
+            overflow: hidden;
+            min-height: 290px;
+        }
+        .carousel .item .vl {
+            border-left: 1px solid #999999;
+            height: 20rem;
+            float: left;
+            margin-left: 3rem;
+            margin-right: 3rem;
+        }
+        .carousel .item .img-box {
+            width: 25%;
+            height: 20rem;
+            margin: 0 auto;
+            padding: 5px;
+            border: 1px solid #ddd;
+            float: left;
+        }
+        .carousel .img-box img {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+        .carousel .testimonial {
+            padding: 30px 0 10px;
+        }
+        .carousel .overview {
+            font-style: italic;
+        }
+        .carousel .overview b {
+            text-transform: uppercase;
+            color: #7AA641;
+        }
+        .carousel .carousel-control {
+            width: 40px;
+            height: 40px;
+            margin-top: -20px;
+            top: 50%;
+            background: none;
+        }
+        .carousel-control i {
+            font-size: 68px;
+            line-height: 42px;
+            position: absolute;
+            display: inline-block;
+            color: rgba(0, 0, 0, 0.8);
+            text-shadow: 0 3px 3px #e6e6e6, 0 0 0 #000;
+        }
+        .carousel .carousel-indicators {
+            bottom: -40px;
+        }
+        .carousel-indicators li, .carousel-indicators li.active {
+            width: 10px;
+            height: 10px;
+            margin: 1px 3px;
+            border-radius: 50%;
+        }
+        .carousel-indicators li {
+            background: #999;
+            border-color: transparent;
+            box-shadow: inset 0 2px 1px rgba(0,0,0,0.2);
+        }
+        .carousel-indicators li.active {
+            background: #555;
+            box-shadow: inset 0 2px 1px rgba(0,0,0,0.2);
+        }
+    }
 }

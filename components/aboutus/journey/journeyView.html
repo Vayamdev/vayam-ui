@@ -1,30 +1,130 @@
 <div class="journeytab">
-<image-banner></image-banner>
+    <div id="myCarousel" class="vayam-carousel">
+        <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+            <div uib-slide ng-repeat="slide in slides" index="$index">
+                <div class="slide" ng-style="{'background-image':'url({{slide.image}})'}">
+                    <div class="banner-text-container container col-xs-offset-2">
+                        <div class="banner-text">
+                            We are
+                        </div>
 
-<div class="row">
-    <div class="well well-lg col-xs-12">
-        <h2>Journey</h2>
-        <p class="text-justify">{{bannertext}}</p>
+                        <div class="banner-text">
+                            <span class="banner-text-highlight">Vayam </span>family
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-caption">
+                    <p>{{slide.text}}</p>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
 
-<div class="container">    
-    <ul class="timeline">
-        <li ng-repeat="milestone in milestones" ng-class="milestone.invert ? 'timeline-inverted' : ''">
-          <div class="timeline-badge info"><i class="fa fa-history"></i></div>
-          <div class="timeline-panel">
-            <div class="timeline-heading">
-                <img class="thumbnail-image" ng-src="{{milestone.imageurl}}">
+    <div class="container">
+        <ul class="timeline">
+            <li ng-repeat="milestone in milestones" ng-class="milestone.invert ? 'timeline-inverted' : ''">
+                <div class="timeline-badge info"></div>
+                <div class="timeline-panel">
+                    <div class="caption">
+                        <p><small class="text-muted date"><i class="glyphicon glyphicon-calendar"></i>{{milestone.date}}</small></p>
+                    </div>
+                    <div class="timeline-heading">
+                        <img class="thumbnail-image" ng-src="{{milestone.imageurl}}">
+                    </div>
+                    <div class="timeline-body">
+                        <h3 class="timeline-title">{{milestone.name}}</h3>
+                        <p>{{milestone.description}}</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Testimonials -->
+
+    <div class="container testimonial">
+        <h2>Testimonials</h2>
+        <div id="myCarousel" class="vayam-carousel">
+            <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+                <div class="carousel-inner">
+                <div uib-slide class="item carousel-item active" ng-repeat="slide in slides" index="$index">
+                    <div class="img-box"><img src="{{slide.image}}" alt=""></div>
+                    <div class="vl"></div>
+                    <p class="testimonial">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Idac bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet.</p>
+                    <p class="overview"><b>Paula Wilson</b>, Media Analyst</p>
+                </div>
+                </div>
             </div>
-            <div class="caption">
-                <p><small class="text-muted date"><i class="glyphicon glyphicon-time"></i>{{milestone.date}}</small></p>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="row">
+        <div class="col-md-8 col-center m-auto">
+            <h2>Testimonials</h2>
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Carousel indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
+                <!-- Wrapper for carousel items -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img src="images/slide1.png" alt="First Slide">
+                    </div>
+                    <div class="item">
+                        <img src="images/slide2.png" alt="Second Slide">
+                    </div>
+                    <div class="item">
+                        <img src="images/slide3.png" alt="Third Slide">
+                    </div>
+                </div>
+                <!-- Carousel controls -->
+                <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a class="carousel-control right" href="#myCarousel" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
             </div>
-            <div class="timeline-body">
-                <h3 class="timeline-title">{{milestone.name}}</h3>
-                <p>{{milestone.description}}</p>
-            </div>
-          </div>
-        </li>
-    </ul>
-</div>
+        </div>
+    </div>
+
+
+
+    <!--
+    <image-banner></image-banner>
+
+    <div class="row">
+        <div class="well well-lg col-xs-12">
+            <h2>Journey</h2>
+            <p class="text-justify">{{bannertext}}</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <ul class="timeline">
+            <li ng-repeat="milestone in milestones" ng-class="milestone.invert ? 'timeline-inverted' : ''">
+              <div class="timeline-badge info"><i class="fa fa-history"></i></div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <img class="thumbnail-image" ng-src="{{milestone.imageurl}}">
+                </div>
+                <div class="caption">
+                    <p><small class="text-muted date"><i class="glyphicon glyphicon-time"></i>{{milestone.date}}</small></p>
+                </div>
+                <div class="timeline-body">
+                    <h3 class="timeline-title">{{milestone.name}}</h3>
+                    <p>{{milestone.description}}</p>
+                </div>
+              </div>
+            </li>
+        </ul>
+    </div>
+    -->
 </div>

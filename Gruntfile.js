@@ -153,8 +153,8 @@ module.exports = function (grunt) {
           },
           thirdpartycss: {
             src: [
+                'css/app.css',
                 'scripts/lightgallery/dist/css/lightgallery.min.css',
-                'css/app.css'
             ],
             dest: 'css/app.css',
           }

@@ -1,30 +1,46 @@
 <div class="journeytab">
-<image-banner></image-banner>
-
-<div class="row">
-    <div class="well well-lg col-xs-12">
-        <h2>Journey</h2>
-        <p class="text-justify">{{bannertext}}</p>
+    <image-banner></image-banner>
+    
+    <div class="container">
+        <div class="row">
+                <div class="col-xs-12">
+                    <h3 class="page-heading">We're the people of Vayam</h3>
+                    <p class="text-justify">{{bannertext}}</p>
+                </div>
+        </div>
+        <ul class="timeline">
+            <li ng-repeat="milestone in milestones" ng-class="milestone.invert ? 'timeline-inverted' : ''">
+                <div class="timeline-badge info"></div>
+                <div class="timeline-panel">
+                    <div class="caption">
+                        <p><small class="text-muted date"><i class="glyphicon glyphicon-calendar"></i>{{milestone.date}}</small></p>
+                    </div>
+                    <div class="timeline-heading">
+                        <img class="thumbnail-image" ng-src="{{milestone.imageurl}}">
+                    </div>
+                    <div class="timeline-body">
+                        <h4 class="timeline-title">{{milestone.name}}</h4>
+                        <p>{{milestone.description}}</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
     </div>
-</div>
 
-<div class="container">    
-    <ul class="timeline">
-        <li ng-repeat="milestone in milestones" ng-class="milestone.invert ? 'timeline-inverted' : ''">
-          <div class="timeline-badge info"><i class="fa fa-history"></i></div>
-          <div class="timeline-panel">
-            <div class="timeline-heading">
-                <img class="thumbnail-image" ng-src="{{milestone.imageurl}}">
+    <!-- Testimonials -->
+    <div class="container-fluid testimonial">
+        <h2>Testimonials</h2>
+        <div id="myCarousel" class="vayam-carousel">
+            <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+                <div class="carousel-inner">
+                <div uib-slide class="item carousel-item active" ng-repeat="slide in slides" index="$index">
+                    <div class="img-box"><img src="{{slide.image}}" alt=""></div>
+                    <div class="vl"></div>
+                    <p class="testimonial">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Idac bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet.</p>
+                    <p class="overview"><b>Paula Wilson</b>, Media Analyst</p>
+                </div>
+                </div>
             </div>
-            <div class="caption">
-                <p><small class="text-muted date"><i class="glyphicon glyphicon-time"></i>{{milestone.date}}</small></p>
-            </div>
-            <div class="timeline-body">
-                <h3 class="timeline-title">{{milestone.name}}</h3>
-                <p>{{milestone.description}}</p>
-            </div>
-          </div>
-        </li>
-    </ul>
-</div>
+        </div>
+    </div>
 </div>

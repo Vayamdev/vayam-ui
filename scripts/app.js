@@ -248,6 +248,43 @@ rootModule.controller('testimonialsController', ['$scope', 'testimonialsService'
 
 
 rootModule.controller('journeyController', ['$scope', 'journeyService', 'globalFactory', function($scope, journeyService, globalFactory) {
+    var currIndex = 0;
+    $scope.myInterval = 5000;
+    $scope.slides = [];
+    $scope.crisis = [];
+    $scope.conceptnote = [];
+    $scope.projects = [];
+    $scope.displayeventgroup = [];
+
+    // fetch static data for this page. 
+    globalFactory.getStaticData(function(response) {
+        $scope.bannertext = response.journey.bannertext;
+        $scope.bannerUrl = response.journey.bannerimage;
+    });
+    // get other page details
+    journeyService.getSlides().then(function(response) {
+        $scope.slides = response.data;
+    }, function() {
+        console.log('Error during slide data fetching!');
+    });
+
+    journeyService.getMilestones().then(function(response) {
+        $scope.milestones = response.data;
+    }, function() {
+        console.log('Error during projects data fetching!');
+    });
+
+}]);
+
+
+
+
+
+
+
+
+/*
+rootModule.controller('journeyController', ['$scope', 'journeyService', 'globalFactory', function($scope, journeyService, globalFactory) {
     $scope.milestones = [];
     $scope.bannertext = '';
 
@@ -263,7 +300,7 @@ rootModule.controller('journeyController', ['$scope', 'journeyService', 'globalF
         console.log('Error during team data fetching!');
     })
 }]);
-
+*/
 
 
 rootModule.controller('contactusController', ['$scope', 'contactUsService', 'globalFactory', function($scope, contactUsService, globalFactory) {
@@ -334,15 +371,15 @@ rootModule.controller('projectController', ['$scope', '$routeParams', 'projectSe
     // fetch static data for this page. 
     globalFactory.getStaticData(function(response) {
         $scope.bannerUrl = response.project.bannerimage;
-    });    
+    });
 
     projectService.getProjects().then(function(response) {
         $scope.projects = response.data;
-        
+
         // temporary logic
         for(var i=0; i < $scope.projects.length; i++) {
             if ($scope.projects[i].id == parseInt($routeParams.projectid, 10)) {
-                $scope.project =  $scope.projects[i];
+                $scope.project = $scope.projects[i];
                 break;
             }
         }
@@ -360,7 +397,7 @@ rootModule.controller('galleryController', ['$scope', 'galleryService', 'globalF
     globalFactory.getStaticData(function(response) {
         $scope.bannertext = response.gallery.bannertext;
         $scope.bannerUrl = response.gallery.bannerimage;
-    });    
+    });
     
     galleryService.getGallery().then(function(response) {
         $scope.sorteddata = globalFactory.sortGalleryData(response.data);
@@ -368,9 +405,8 @@ rootModule.controller('galleryController', ['$scope', 'galleryService', 'globalF
 
         // Apply galary plugin
         setTimeout(function() {
-            for (var i=0; i<= 5; i++) {
+            for (var i=0; i< $scope.categories.length; i++) {
                 var pane = document.getElementById('gallary_' + i);
-                console.log();
                 lightGallery(pane);
             }
         }, 0);
@@ -441,6 +477,20 @@ rootModule.service('testimonialsService', ['$http', function($http) {
     
 
 
+rootModule.service('journeyService', ['$http', 'baseUrl', function($http, baseUrl) {
+
+    // get the event data from backend
+    this.getMilestones = function() {
+        return $http.get(baseUrl + '/milestones');
+    };
+
+    this.getSlides = function() {
+        return $http.get(baseUrl + '/slides');
+    }
+
+}]);
+
+/*
 rootModule.service('journeyService', ['$http', function($http) {
     
     // get the milestone data from backend
@@ -448,7 +498,7 @@ rootModule.service('journeyService', ['$http', function($http) {
         return $http.get('http://localhost:3000/milestone');
     };
 }]);
-    
+*/
 
 
 rootModule.service('projectService', ['$http', 'baseUrl', function($http, baseUrl) {

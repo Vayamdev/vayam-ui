@@ -1,5 +1,6 @@
 <div class="whatweare">
 	<image-banner></image-banner>
+
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12">
@@ -8,25 +9,23 @@
 			</div>
 		</div>
 
-		<div class="row row-eq-height">
-			<div class="col-xs-6 dark-bg">
+		<div class="row">
+			<div class="col-xs-12 col-md-6">
 				<div>
 					<div>
-						<div class="caption">	
+						<div class="caption dark-bg">	
 							<h2 class="page-heading">Vision</h2>
-							<hr>
 							<p>{{vision}}</p>
 						</div>
 					</div>
 				</div>
 			</div>
 
-			<div class="col-xs-6 dark-bg">
+			<div class="col-xs-12 col-md-6">
 				<div>
 					<div>
-						<div class="caption">
+						<div class="caption dark-bg">
 							<h2 class="page-heading"> Mission</h2>
-							<hr>
 							<p>{{mission}}</p>
 						</div>
 					</div>
@@ -35,27 +34,29 @@
 		</div>
 	</div>
 
-<div class="container teams text-center">
-	<h2>Our Team</h2>
-	<div class="row">
-		<!-- Team member -->
-		<div class="col-xs-12 col-sm-6 col-md-4" ng-repeat="candidate in teamdata">
-			<div class="image-flip" ontouchstart="this.classList.toggle('hover');">
-				<div class="mainflip">
-					<div class="frontside">
-						<div class="card">
-							<div class="card-body text-center">
-								<p><img class="img-fluid" src="{{candidate.avatar}}" alt="card image"></p>
-								<h4 class="card-title">{{candidate.name}}</h4>
-								<p class="card-text">{{candidate.post}}</p>
+	<div class="team-section text-center">
+		<h2>Our Team</h2>
+		<div class="container teams">
+			<div class="row">
+				<div class="col-xs-12 col-sm-6 col-md-4" ng-repeat="candidate in teamdata">
+					<div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+						<div class="mainflip">
+							<div class="frontside">
+								<div class="card">
+									<div class="card-body text-center">
+										<p><img class="img-fluid" src="{{candidate.avatar}}" alt="card image"></p>
+										<h4 class="card-title">{{candidate.name}}</h4>
+										<p class="card-text">{{candidate.post}}</p>
+									</div>
+								</div>
 							</div>
-						</div>
-					</div>
-					<div class="backside">
-						<div class="card">
-							<div class="card-body text-center mt-4">
-								<h4 class="card-title">{{candidate.name}}</h4>
-								<p class="card-text">{{candidate.details}}</p>
+							<div class="backside">
+								<div class="card">
+									<div class="card-body text-center mt-4">
+										<h4 class="card-title">{{candidate.name}}</h4>
+										<p class="card-text">{{candidate.details}}</p>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -63,5 +64,4 @@
 			</div>
 		</div>
 	</div>
-</div>
 </div>

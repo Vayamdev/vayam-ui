@@ -9,49 +9,4 @@ div.projecttab {
       margin: 0rem;
       padding: 0rem;
     }
-    
-    .tab-content {
-      margin-top: 3rem;
-    }
-     
-    .nav-tabs {
-      border: 0;
-      padding-top: 0.5rem;
-      padding-bottom: 0.5rem;
-      background-color: $secondarycolor;
-    }  
-  
-    .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover { 
-      border-width: 0; 
-    }
-  
-  .nav-tabs > li > a { 
-    border: none; 
-    color: $fullwhite;
-    font-weight: 600; 
-    margin: 0.5rem;
-  }
-  
-  .nav-tabs > li.active > a, .nav-tabs > li > a:hover { 
-    border: none;
-    color: $fullwhite;
-    background: transparent;
-    cursor: pointer; 
-  }
-  
-  .nav-tabs > li > a::after { 
-    content: ""; 
-    background: $standoutcolor; 
-    height: 2px; 
-    position: absolute; 
-    width: 100%; 
-    left: 0px; 
-    bottom: -1px; 
-    transition: all 250ms ease 0s; 
-    transform: scale(0); 
-  }
-  
-  .nav-tabs > li.active > a::after, .nav-tabs > li:hover > a::after { 
-    transform: scale(1); 
-  }      
 }

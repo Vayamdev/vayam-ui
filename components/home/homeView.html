@@ -62,10 +62,10 @@
 			</div>
 
 			<div class="row hover-effect">
-				<div class="col-xs-12 col-sm-12 col-md-4" ng-repeat="project in projects">
+				<div class="col-xs-12 col-sm-12 col-md-6" ng-repeat="project in projects">
 					<div class="thumbnail project-panel">
 						<div class="panel-heading project-icon">
-							<div class="{{project.icon}} icon"></div>
+							<div ng-style="{'background-image':'url({{project.icon}})'}" class="icon"></div>
 						</div>
 						<div class="panel-heading hover-div">
 							<span class="panel-title project-name">

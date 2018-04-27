@@ -1,5 +1,30 @@
-<div id="lightgallery" class="container">
-    <a ng-repeat="item in gallery" href="{{item.url}}.png" class="col-lg-3">
-        <img ng-src="{{item.url}}.png" alt="{{item.imagename}}" class="img-thumbnail">
-    </a>
+<div class="vayam-gallary">
+    <image-banner></image-banner>
+    <div class="container">
+        <div ng-if="categories.length" class="tab-pane">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h3 class="page-heading">Gallary</h3>
+                    <p class="text-justify">{{bannertext}}</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="tabbable">
+                    <ul class="nav nav-tabs">
+                        <li ng-repeat="category in categories" class="col-xs-12 col-md-2" ng-class="{active: $index === 0}">
+                            <a data-target="#gallary_{{$index}}" data-toggle="tab">{{category}}</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="gallary_{{$index}}" ng-repeat="category in categories" ng-class="{'tab-pane active': $index === 0, 'tab-pane': $index !== 0}">
+                            <a ng-repeat="item in sorteddata[category]" href="{{item.url}}.png" class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                                <img ng-src="{{item.url}}.png" alt="{{item.imagename}}" class="img-thumbnail">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

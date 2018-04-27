@@ -46,8 +46,8 @@ module.exports = function (grunt) {
                     },
                     {
                         expand: true,
-                        cwd: 'bower_components/lightgallery/',
-                        src: ['**/*.js', '**/*.map'],
+                        cwd: 'bower_components/lightgallery.js/',
+                        src: ['**/*.js', '**/*.map', '**/*.css'],
                         dest: 'scripts/lightgallery/'
                     },
                     {
@@ -73,28 +73,13 @@ module.exports = function (grunt) {
                         src: ['font-awesome/scss/**'],
                         dest: 'scss/font-awesome/'
                     },
-                    {
-                        expand: true,
-                        filter: 'isFile',
-                        flatten: true,
-                        cwd: 'bower_components/',
-                        src: ['lightgallery.js/dist/fonts/**'],
-                        dest: 'fonts/'
-                    },
                     // Stylesheets
                     {
                         expand: true,
                         cwd: 'bower_components/bootstrap-sass/assets/stylesheets/',
                         src: ['**/*.scss'],
                         dest: 'scss/'
-                    },
-                    {
-                        expand: true,
-                        cwd: 'bower_components/lightgallery.js/',
-                        src: ['**/*.css'],
-                        dest: 'css/lightgallery.js'
-                    },
-
+                    }
                 ]
             },
         },
@@ -127,6 +112,8 @@ module.exports = function (grunt) {
                 'scripts/angular-bootstrap/ui-bootstrap-tpls.min.js',
                 'scripts/ng-simplePagination/simplePagination.js',
                 'scripts/plugins/jquery.bootstrap.newsbox.min.js',
+                'scripts/jquery.bootstrap.newsbox.min.js',
+                'scripts/lightgallery/dist/js/lightgallery.min.js'
             ],
             dest: 'scripts/vender.js',
           },
@@ -166,7 +153,7 @@ module.exports = function (grunt) {
           },
           thirdpartycss: {
             src: [
-                'css/lightgallery.js/dist/css/lightgallery.css',
+                'scripts/lightgallery/dist/css/lightgallery.min.css',
                 'css/app.css'
             ],
             dest: 'css/app.css',

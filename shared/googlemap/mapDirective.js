@@ -1,7 +1,7 @@
 rootModule.directive('vayamMap', function(){
 	return {
 		restrict: 'E',
-		templateUrl: 'components/locationmap/locationmap.html',
+		templateUrl: '/shared/googlemap/locationmap.html',
 		replace: true,
 		transclude : true,
 		scope: true,
@@ -10,41 +10,21 @@ rootModule.directive('vayamMap', function(){
 				var locations = response.data;
 				$scope.locations = locations;
 
-				var bounds = new google.maps.LatLngBounds();
 				var canvas = document.getElementById('map');
-				var map = new google.maps.Map(canvas);
-				var infoWindow = new google.maps.InfoWindow(), marker, i, markers = [];
-				for ( i = 0; i < locations.length; i++) {
-					var position = new google.maps.LatLng(locations[i].coordinates.latitude, locations[i].coordinates.longitude);
-					bounds.extend(position);
-					marker = new google.maps.Marker({
-						position: position,
-						map: map,
-						title: locations[i][0],
-						animation: google.maps.Animation.BOUNCE
-					});
-
-					// Allow each marker to have an info window
-					google.maps.event.addListener(marker, 'click', (function(marker, i) {
-						return function() {
-							//infoWindow.setContent(infoWindowContent[i][0]);
-							infoWindow.setContent("<div><h4>" + locations[i].name + "</h4><address>" + locations[i].address + locations[i].pincode + "</address></div>");
-							infoWindow.open(map, marker);
-						}
-					})(marker, i));
-
-					// Automatically center the map fitting all markers on the screen
-					map.fitBounds(bounds);
-
-					// Push the marker to the 'markers' array
-					markers.push(marker);
+				var infoWindow = new google.maps.InfoWindow();
+				var mapProp= {
+					center: new google.maps.LatLng($scope.locations[0].coordinates.latitude, $scope.locations[0].coordinates.longitude),
+					zoom: 10,
 				};
-
-				$scope.openMapInfoWindow = function(markerindex) {
-					markers = markers || [];
-					google.maps.event.trigger(markers[markerindex], 'click');
-				}
-
+								
+				var map = new google.maps.Map(canvas, mapProp);
+				var position = new google.maps.LatLng(locations[0].coordinates.latitude, locations[0].coordinates.longitude);
+				marker = new google.maps.Marker({
+					position: position,
+					map: map,
+					title: locations[0].name,
+					animation: google.maps.Animation.BOUNCE
+				});
 			}, function() {
 				console.log('Error during location data fetching!');
 			});

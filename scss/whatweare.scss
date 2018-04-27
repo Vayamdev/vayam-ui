@@ -2,34 +2,140 @@ div.whatweare {
     .page-heading {
 		color: $secondarycolor;
     }
-    .vayam-img {
-        float: right;
-        height: 200px;
-        width: 200px;
-        border: 1px solid black;
-    }
-    .dark-bg {
-        background-color: $gray-lighter;
+    
+    .caption.dark-bg {
+        background-color: $standoutcolor;
+        padding: 3rem;
+        margin-top: 1rem;
         border-right: 1rem solid $secondarycolor;
+        min-height: 25rem;
     }
-    .row-eq-height {
-        display: flex;
-        .dark-bg:nth-child(2) {
-            margin-left: 25px;
-        }
-    }
-    .teams {
-        margin-top: 30px;
-        background-color: $milk;
-        width: 100%;
 
-        .row {
-            width: 85%;
-            margin: 0px auto;
-        }
+
+    // team
+    .team-section {
+        width: 100%;
+        background-color: $milk;
     }
+
+    .teams {
+        margin-top: 2rem;
+    }
+
     .frontside .card .card-title,
     .backside .card .card-title {
         color: $secondarycolor;
+    }
+
+    .row div {
+        justify-content:center;
+    }
+
+    .card {
+        background: #eee !important;
+        padding: 2rem;
+    }
+
+    .backside .card-text {
+        text-align: left;
+    }
+
+
+    section {
+        padding: 60px 0;
+    }
+
+
+    #team .card {
+        border: none;
+        background: #ffffff;
+    }
+
+    .image-flip:hover .backside,
+    .image-flip.hover .backside {
+        -webkit-transform: rotateY(0deg);
+        -moz-transform: rotateY(0deg);
+        -o-transform: rotateY(0deg);
+        -ms-transform: rotateY(0deg);
+        transform: rotateY(0deg);
+        border-radius: .25rem;
+    }
+
+    .image-flip:hover .frontside,
+    .image-flip.hover .frontside {
+        -webkit-transform: rotateY(180deg);
+        -moz-transform: rotateY(180deg);
+        -o-transform: rotateY(180deg);
+        transform: rotateY(180deg);
+    }
+
+    .mainflip {
+        -webkit-transition: 1s;
+        -webkit-transform-style: preserve-3d;
+        -ms-transition: 1s;
+        -moz-transition: 1s;
+        -moz-transform: perspective(1000px);
+        -moz-transform-style: preserve-3d;
+        -ms-transform-style: preserve-3d;
+        transition: 1s;
+        transform-style: preserve-3d;
+        position: relative;
+    }
+
+    .frontside {
+        position: relative;
+        -webkit-transform: rotateY(0deg);
+        -ms-transform: rotateY(0deg);
+        z-index: 2;
+        margin-bottom: 30px;
+    }
+
+    .backside {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: white;
+        -webkit-transform: rotateY(-180deg);
+        -moz-transform: rotateY(-180deg);
+        -o-transform: rotateY(-180deg);
+        -ms-transform: rotateY(-180deg);
+        transform: rotateY(-180deg);
+        -webkit-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+        -moz-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+        box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+    }
+
+    .frontside,
+    .backside {
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        -ms-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-transition: 1s;
+        -webkit-transform-style: preserve-3d;
+        -moz-transition: 1s;
+        -moz-transform-style: preserve-3d;
+        -o-transition: 1s;
+        -o-transform-style: preserve-3d;
+        -ms-transition: 1s;
+        -ms-transform-style: preserve-3d;
+        transition: 1s;
+        transform-style: preserve-3d;
+    }
+
+    .frontside .card,
+    .backside .card {
+        min-height: 230px;
+    }
+
+    .backside .card a {
+        font-size: 18px;
+        color: #007b5e !important;
+    }
+
+    .frontside .card .card-body img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
     }
 }

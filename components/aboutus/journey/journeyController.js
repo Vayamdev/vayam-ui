@@ -7,12 +7,11 @@ rootModule.controller('journeyController', ['$scope', 'journeyService', 'globalF
     $scope.projects = [];
     $scope.displayeventgroup = [];
 
-    // fetch static data for this page.
+    // fetch static data for this page. 
     globalFactory.getStaticData(function(response) {
-        $scope.crisis = response.crisis;
-        $scope.conceptnote = response.conceptnote;
+        $scope.bannertext = response.journey.bannertext;
+        $scope.bannerUrl = response.journey.bannerimage;
     });
-
     // get other page details
     journeyService.getSlides().then(function(response) {
         $scope.slides = response.data;

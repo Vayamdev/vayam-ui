@@ -266,7 +266,7 @@
 			"image": "http://placehold.it/600x400"
 		}
 	],
-	"milestone": [{
+	"milestones": [{
 			"name": "The Beginning of Vayam",
 			"description": "3 villages put a limited trust in this new movement that said you have the power to bring change. Youth here learnt how to implement NREGA, the employment guarantee law. 3 villages got work and wages without migrating in distress. Other villages watched with awe.",
 			"date": "2008",
@@ -522,6 +522,5 @@
 		"url": "http://placehold.it/300x300",
 		"caption": "Lorem, do eiusmod tempor incid Ut enim ad minim veniam",
 		"category": "Development"
-	}
-]
+	}]
 }

@@ -1,4 +1,4 @@
-rootModule.controller('projectController', ['$scope', '$routeParams', 'projectService', 'globalFactory', function($scope, $routeParams, projectService, globalFactory) {
+rootModule.controller('projectController', ['$scope', '$routeParams', 'homeService', 'globalFactory', function($scope, $routeParams, homeService, globalFactory) {
     $scope.bannerUrl = 'http://placehold.it/1146x400';
     $scope.project;
 
@@ -10,7 +10,7 @@ rootModule.controller('projectController', ['$scope', '$routeParams', 'projectSe
         $scope.bannerUrl = response.project.bannerimage;
     });
 
-    projectService.getProjects().then(function(response) {
+    homeService.getProjects().then(function(response) {
         $scope.projects = response.data;
 
         // temporary logic

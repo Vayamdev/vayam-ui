@@ -3,7 +3,6 @@ rootModule.controller('contactusController', ['$scope', 'contactUsService', 'glo
 
     // fetch static data for this page. 
     globalFactory.getStaticData(function(response) {
-        console.log(response);
         $scope.bannerUrl = response.contactus.bannerimage;
     });
     

@@ -1,8 +1,11 @@
 rootModule.service('galleryService', ['$http', 'baseUrl', function($http, baseUrl) {
-
+    var cachedData;
     // get the event data from backend
     this.getGallery = function() {
-        return $http.get(baseUrl + '/gallery');
+        if (!cachedData) {
+            cachedData = $http.get(baseUrl + '/gallery');
+        }
+        return cachedData;
     }
 }]);
     

@@ -47,7 +47,21 @@
     },
     "donate": {
         "bannerimage": "/assets/banners/donate.jpg",
-        "bannertext": "The value of life is not in its duration, but in its donation. You are not important because of how long you live, you are important because of how effective you live."
+        "bannertext": "The value of life is not in its duration, but in its donation. You are not important because of how long you live, you are important because of how effective you live.",
+        "donationdetails": {
+            "online": {
+                "beneficiary": "VAYAM",
+                "acn": "36321815708",
+                "actyoe": "CURRENT",
+                "IFSC": "SBIN0001050",
+                "MICR": "401002875",
+                "branch": "Jawhar(Bank: SBI)"
+            },
+            "mobile": {
+                "no": "7219220090"
+            },
+            "note": "Vayam is registered as a public charitable trust under BPT Act: E/5221/Pune. Donations to Vayam are eligible for tax exemption under section 80G of IT Act. Once you transfer funds, kindly write to vayamindia@gmail.com with donor’s name, PAN, and details of transfer( Cheque/NEFT). Your receipt will be sent on your email."
+        }
     },
     "socialnetwork": {
         "fb": "https://www.facebook.com/VayamIndia/",
@@ -58,6 +72,5 @@
     "journey": {
         "bannerimage": "/assets/banners/journey.jpg",
         "bannertext": "Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content. It's also called placeholder (or filler) text. It's a convenient tool for mock-ups. It helps to outline the visual elements of a document or presentation, eg typography, font, or layout. Lorem ipsum is mostly a part of a Latin text by the classical author and philosopher Cicero. Its words and letters have been changed by addition or removal, so to deliberately render its content nonsensical; it's not genuine, correct, or comprehensible Latin anymore."
-    },
-    "donatebannertext": "Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content. It's also called placeholder (or filler) text. It's a convenient tool for mock-ups. It helps to outline the visual elements of a document or presentation, eg typography, font, or layout. Lorem ipsum is mostly a part of a Latin text by the classical author and philosopher Cicero. Its words and letters have been changed by addition or removal, so to deliberately render its content nonsensical; it's not genuine, correct, or comprehensible Latin anymore."
+    }
 }

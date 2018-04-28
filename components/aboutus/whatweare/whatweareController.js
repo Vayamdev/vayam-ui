@@ -13,9 +13,9 @@ rootModule.controller('whatweareController', ['$scope', 'teamService', 'globalFa
     });
 
     teamService.getStaff().then(function(response) {
-        console.log(response.data);
         $scope.teamdata = response.data;
-        }, function() {
-            console.log('Error during team data fetching!');
+    }, 
+    function() {
+        console.log('Error during team data fetching!');
     });
 }]);

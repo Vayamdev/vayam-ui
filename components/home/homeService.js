@@ -1,15 +1,26 @@
 rootModule.service('homeService', ['$http', 'baseUrl', function($http, baseUrl) {
+    var cachedDataThumbnails;
+    var cachedDataSlides;
+    var cachedDataProjects;
 
-    // get the event data from backend
     this.getThumbnails = function() {
-        return $http.get(baseUrl + '/events');
-    };
+        if (!cachedDataThumbnails) {
+            cachedDataThumbnails =  $http.get(baseUrl + '/events');
+        }
+        return cachedDataThumbnails;
+    }
 
     this.getSlides = function() {
-        return $http.get(baseUrl + '/slides');
+        if (!cachedDataSlides) {
+            cachedDataSlides =  $http.get(baseUrl + '/slides');
+        }
+        return cachedDataSlides;
     }
     
     this.getProjects = function() {
-        return $http.get(baseUrl + '/projects');
+        if (!cachedDataProjects) {
+            cachedDataProjects =  $http.get(baseUrl + '/projects');
+        }
+        return cachedDataProjects;
     }
 }]);

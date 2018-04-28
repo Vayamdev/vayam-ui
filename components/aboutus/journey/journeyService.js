@@ -1,22 +1,20 @@
 rootModule.service('journeyService', ['$http', 'baseUrl', function($http, baseUrl) {
+    var cachedDataMilestones;
+    var cachedDataSlides;
 
     // get the event data from backend
     this.getMilestones = function() {
-        return $http.get(baseUrl + '/milestones');
+        if (!cachedDataMilestones) {
+            cachedDataMilestones = $http.get(baseUrl + '/milestones');
+        }
+        return cachedDataMilestones;
     };
 
     this.getSlides = function() {
-        return $http.get(baseUrl + '/slides');
+        if (!cachedDataSlides) {
+            cachedDataSlides = $http.get(baseUrl + '/slides');
+        }
+        return cachedDataSlides;
     }
 
 }]);
-
-/*
-rootModule.service('journeyService', ['$http', function($http) {
-    
-    // get the milestone data from backend
-    this.getMilestone = function() {
-        return $http.get('http://localhost:3000/milestone');
-    };
-}]);
-*/

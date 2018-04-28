@@ -1,7 +1,10 @@
 rootModule.service('impactService', ['$http', 'baseUrl', function($http, baseUrl) {
+    var cachedData;
 
-    // get the impact data from backend
     this.getImpactThumbnails = function() {
-        return $http.get(baseUrl + '/impacts');
-    };
+        if (!cachedData) {
+            cachedData =  $http.get(baseUrl + '/impacts');
+        }
+        return cachedData;
+    }
 }]);

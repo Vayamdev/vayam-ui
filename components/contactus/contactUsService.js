@@ -1,8 +1,10 @@
 rootModule.service('contactUsService', ['$http', 'baseUrl', function($http, baseUrl) {
+    var cachedData;
 
-    // get the event data from backend
     this.getLocations = function() {
-        return $http.get(baseUrl + '/locations');
-    };
-
+        if (!cachedData) {
+            cachedData =  $http.get(baseUrl + '/locations');
+        }
+        return cachedData;
+    }
 }]);

@@ -29,18 +29,6 @@ rootModule.config(["$routeProvider", function($routeProvider) {
         activetab: 'About Us',
         activepage: 'Journey'
     })
-    .when("/team", {
-        templateUrl: "components/aboutus/team/teamView.html",
-        controller: "teamController",
-        activetab: 'About Us',
-        activepage: 'home'
-    })
-    .when("/testimonials", {
-        templateUrl: "components/aboutus/testimonials/testimonialsView.html",
-        controller: "testimonialsController",
-        activetab: 'About Us',
-        activepage: 'Home'
-    })
     .when("/contactus", {
         templateUrl: "components/contactus/contactusView.html",
         controller: "contactusController",
@@ -59,23 +47,11 @@ rootModule.config(["$routeProvider", function($routeProvider) {
         activetab: 'Projects',
         activepage: 'Projects'
     })
-    .when("/news", {
-        templateUrl: "components/news/newsView.html",
-        controller: "newsController",
-        activetab: 'News',
-        activepage: 'News'
-    })
     .when("/gallery", {
-        templateUrl: "components/gallery/galleryView.html",
+        templateUrl: "components/aboutus/gallery/galleryView.html",
         controller: "galleryController",
         activetab: 'About Us',
         activepage: 'Gallery'
-    })
-    .when("/news/:newsid", {
-        templateUrl: "components/news/newsdetails/newsDetailsView.html",
-        controller: "newsController",
-        activetab: 'news',
-        activepage: 'Home'
     })
     .otherwise({
         redirectTo: "/home"

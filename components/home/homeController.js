@@ -23,7 +23,6 @@ rootModule.controller('homeController', ['$scope', 'homeService', 'globalFactory
     homeService.getProjects().then(function(response) {
         globalFactory.truncateData(response.data, 'shortdescription', 250);
         $scope.projects = response.data;
-        console.log($scope.projects);
     }, function() {
         console.log('Error during projects data fetching!');
     });    

@@ -45,18 +45,6 @@ rootModule.config(["$routeProvider", function($routeProvider) {
         activetab: 'About Us',
         activepage: 'Journey'
     })
-    .when("/team", {
-        templateUrl: "components/aboutus/team/teamView.html",
-        controller: "teamController",
-        activetab: 'About Us',
-        activepage: 'home'
-    })
-    .when("/testimonials", {
-        templateUrl: "components/aboutus/testimonials/testimonialsView.html",
-        controller: "testimonialsController",
-        activetab: 'About Us',
-        activepage: 'Home'
-    })
     .when("/contactus", {
         templateUrl: "components/contactus/contactusView.html",
         controller: "contactusController",
@@ -75,23 +63,11 @@ rootModule.config(["$routeProvider", function($routeProvider) {
         activetab: 'Projects',
         activepage: 'Projects'
     })
-    .when("/news", {
-        templateUrl: "components/news/newsView.html",
-        controller: "newsController",
-        activetab: 'News',
-        activepage: 'News'
-    })
     .when("/gallery", {
-        templateUrl: "components/gallery/galleryView.html",
+        templateUrl: "components/aboutus/gallery/galleryView.html",
         controller: "galleryController",
         activetab: 'About Us',
         activepage: 'Gallery'
-    })
-    .when("/news/:newsid", {
-        templateUrl: "components/news/newsdetails/newsDetailsView.html",
-        controller: "newsController",
-        activetab: 'news',
-        activepage: 'Home'
     })
     .otherwise({
         redirectTo: "/home"
@@ -125,7 +101,6 @@ rootModule.controller('homeController', ['$scope', 'homeService', 'globalFactory
     homeService.getProjects().then(function(response) {
         globalFactory.truncateData(response.data, 'shortdescription', 250);
         $scope.projects = response.data;
-        console.log($scope.projects);
     }, function() {
         console.log('Error during projects data fetching!');
     });    
@@ -184,26 +159,6 @@ rootModule.controller('impactController', ['$scope', 'impactService', 'globalFac
 
 
 
-rootModule.controller('teamController', ['$scope', 'teamService', 'globalFactory', function($scope, teamService, globalFactory) {    
-    $scope.teamdata = [];
-    $scope.bannerUrl = 'http://placehold.it/1146x400';
-    $scope.bannertext = '';
-
-    // fetch static data for this page. 
-    globalFactory.getStaticData(function(response) {
-        $scope.bannertext = response.teambannertext;  
-    });    
-    
-    teamService.getStaff().then(function(response) {
-        console.log(response.data);
-        $scope.teamdata = response.data;
-        }, function() {
-            console.log('Error during team data fetching!');
-    });
-}]);
-
-
-
 rootModule.controller('whatweareController', ['$scope', 'teamService', 'globalFactory', function($scope, teamService, globalFactory) {
     $scope.bannerUrl = 'http://placehold.it/1146x400';
     $scope.bannertext = '';
@@ -219,30 +174,11 @@ rootModule.controller('whatweareController', ['$scope', 'teamService', 'globalFa
     });
 
     teamService.getStaff().then(function(response) {
-        console.log(response.data);
         $scope.teamdata = response.data;
-        }, function() {
-            console.log('Error during team data fetching!');
+    }, 
+    function() {
+        console.log('Error during team data fetching!');
     });
-}]);
-
-
-
-rootModule.controller('testimonialsController', ['$scope', 'testimonialsService', 'globalFactory', function($scope, testimonials, globalFactory) {
-    $scope.testimonials;
-    $scope.bannerUrl = 'http://placehold.it/1146x400';
-    $scope.bannertext = '';
-
-    // fetch static data for this page. 
-    globalFactory.getStaticData(function(response) {
-        $scope.bannertext = response.testimonialsbannertext;
-    });    
-
-    testimonials.getTestimonials().then(function(response) {
-        $scope.testimonials = response.data;
-        }, function() {
-            console.log('Error during team data fetching!');
-        })
 }]);
 
 
@@ -308,7 +244,6 @@ rootModule.controller('contactusController', ['$scope', 'contactUsService', 'glo
 
     // fetch static data for this page. 
     globalFactory.getStaticData(function(response) {
-        console.log(response);
         $scope.bannerUrl = response.contactus.bannerimage;
     });
     
@@ -325,43 +260,14 @@ rootModule.controller('donateController', ['$scope', 'globalFactory', function($
     globalFactory.getStaticData(function(response) {
         $scope.bannerUrl = response.donate.bannerimage;
         $scope.bannertext = response.donate.bannertext;
+        $scope.online = response.donate.donationdetails.online;
+        $scope.mobile = response.donate.donationdetails.mobile;
+        $scope.note = response.donate.donationdetails.note;
     });
 }]);
 
 
-rootModule.controller('newsController', ['$scope', '$routeParams', 'newsService', '$timeout', 'Pagination', function($scope, $routeParams, newsService, $timeout, Pagination) {
-    $scope.bannerUrl = 'http://placehold.it/1146x400';
-    newsService.getNews().then(function(response) {
-        $scope.news = response.data;
-        $scope.pagination = Pagination.getNew(5);
-        $scope.pagination.numPages = Math.ceil($scope.news.length/$scope.pagination.perPage);
-        $timeout(function() {
-            $(".news-item-list").bootstrapNews({
-                newsPerPage: 11,
-                autoplay: true,
-                pauseOnHover:true,
-                direction: 'up',
-                newsTickerInterval: 4000,
-                onToDo: function () {
-                    //console.log(this);
-                }
-            });
-        }, 100);
-
-        if ($routeParams.newsid) {
-            $scope.selectedNews = $scope.news.find(function(item) {
-               return item.id == parseInt($routeParams.newsid, 10);
-            });
-        }
-    }, function() {
-        console.log('Error during event data fetching!');
-    });
-
-}]);
-
-
-
-rootModule.controller('projectController', ['$scope', '$routeParams', 'projectService', 'globalFactory', function($scope, $routeParams, projectService, globalFactory) {
+rootModule.controller('projectController', ['$scope', '$routeParams', 'homeService', 'globalFactory', function($scope, $routeParams, homeService, globalFactory) {
     $scope.bannerUrl = 'http://placehold.it/1146x400';
     $scope.project;
 
@@ -373,7 +279,7 @@ rootModule.controller('projectController', ['$scope', '$routeParams', 'projectSe
         $scope.bannerUrl = response.project.bannerimage;
     });
 
-    projectService.getProjects().then(function(response) {
+    homeService.getProjects().then(function(response) {
         $scope.projects = response.data;
 
         // temporary logic
@@ -417,106 +323,90 @@ rootModule.controller('galleryController', ['$scope', 'galleryService', 'globalF
 
 
 rootModule.service('homeService', ['$http', 'baseUrl', function($http, baseUrl) {
+    var cachedDataThumbnails;
+    var cachedDataSlides;
+    var cachedDataProjects;
 
-    // get the event data from backend
     this.getThumbnails = function() {
-        return $http.get(baseUrl + '/events');
-    };
+        if (!cachedDataThumbnails) {
+            cachedDataThumbnails =  $http.get(baseUrl + '/events');
+        }
+        return cachedDataThumbnails;
+    }
 
     this.getSlides = function() {
-        return $http.get(baseUrl + '/slides');
+        if (!cachedDataSlides) {
+            cachedDataSlides =  $http.get(baseUrl + '/slides');
+        }
+        return cachedDataSlides;
     }
     
     this.getProjects = function() {
-        return $http.get(baseUrl + '/projects');
+        if (!cachedDataProjects) {
+            cachedDataProjects =  $http.get(baseUrl + '/projects');
+        }
+        return cachedDataProjects;
     }
 }]);
 
 
 
 rootModule.service('impactService', ['$http', 'baseUrl', function($http, baseUrl) {
+    var cachedData;
 
-    // get the impact data from backend
     this.getImpactThumbnails = function() {
-        return $http.get(baseUrl + '/impacts');
-    };
+        if (!cachedData) {
+            cachedData =  $http.get(baseUrl + '/impacts');
+        }
+        return cachedData;
+    }
 }]);
 
 
 
-/**
- * Created by awaleg on 24/12/17.
- */
-rootModule.service('newsService', ['$http', 'baseUrl', function($http, baseUrl) {
+rootModule.service('teamService', ['$http', 'baseUrl', function($http, baseUrl) {
+    var cachedData;
 
-    // get the event data from backend
-    this.getNews = function() {
-        return $http.get(baseUrl + '/news');
-    };
-
-}]);
-
-
-rootModule.service('teamService', ['$http', function($http) {
-    
-    // get the event data from backend
     this.getStaff = function() {
-        return $http.get('http://localhost:3000/team');
-    };
-}]);
-    
-
-
-rootModule.service('testimonialsService', ['$http', function($http) {
-    
-    // get the event data from backend
-    this.getTestimonials = function() {
-        return $http.get('http://localhost:3000/testimonials');
-    };
+        if (!cachedData) {
+            cachedData =  $http.get(baseUrl + '/team');
+        }
+        return cachedData;
+    }
 }]);
     
 
 
 rootModule.service('journeyService', ['$http', 'baseUrl', function($http, baseUrl) {
+    var cachedDataMilestones;
+    var cachedDataSlides;
 
     // get the event data from backend
     this.getMilestones = function() {
-        return $http.get(baseUrl + '/milestones');
+        if (!cachedDataMilestones) {
+            cachedDataMilestones = $http.get(baseUrl + '/milestones');
+        }
+        return cachedDataMilestones;
     };
 
     this.getSlides = function() {
-        return $http.get(baseUrl + '/slides');
+        if (!cachedDataSlides) {
+            cachedDataSlides = $http.get(baseUrl + '/slides');
+        }
+        return cachedDataSlides;
     }
 
 }]);
-
-/*
-rootModule.service('journeyService', ['$http', function($http) {
-    
-    // get the milestone data from backend
-    this.getMilestone = function() {
-        return $http.get('http://localhost:3000/milestone');
-    };
-}]);
-*/
-
-
-rootModule.service('projectService', ['$http', 'baseUrl', function($http, baseUrl) {
-    
-    // This will get swap with just getProject when actual API
-    // is ready.
-    this.getProjects = function() {
-        return $http.get(baseUrl + '/projects');
-    }
-}]);
-
 
 
 rootModule.service('galleryService', ['$http', 'baseUrl', function($http, baseUrl) {
-
+    var cachedData;
     // get the event data from backend
     this.getGallery = function() {
-        return $http.get(baseUrl + '/gallery');
+        if (!cachedData) {
+            cachedData = $http.get(baseUrl + '/gallery');
+        }
+        return cachedData;
     }
 }]);
     
@@ -693,10 +583,12 @@ rootModule.factory('globalFactory', ['$uibModal', '$http', function($uibModal, $
 
 
 rootModule.service('contactUsService', ['$http', 'baseUrl', function($http, baseUrl) {
+    var cachedData;
 
-    // get the event data from backend
     this.getLocations = function() {
-        return $http.get(baseUrl + '/locations');
-    };
-
+        if (!cachedData) {
+            cachedData =  $http.get(baseUrl + '/locations');
+        }
+        return cachedData;
+    }
 }]);

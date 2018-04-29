@@ -12,8 +12,9 @@ rootModule.controller('journeyController', ['$scope', 'journeyService', 'globalF
         $scope.bannertext = response.journey.bannertext;
         $scope.bannerUrl = response.journey.bannerimage;
     });
+
     // get other page details
-    journeyService.getSlides().then(function(response) {
+    journeyService.getTestimonials().then(function(response) {
         $scope.slides = response.data;
     }, function() {
         console.log('Error during slide data fetching!');

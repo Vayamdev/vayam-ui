@@ -10,9 +10,9 @@ rootModule.service('journeyService', ['$http', 'baseUrl', function($http, baseUr
         return cachedDataMilestones;
     };
 
-    this.getSlides = function() {
+    this.getTestimonials = function() {
         if (!cachedDataSlides) {
-            cachedDataSlides = $http.get(baseUrl + '/slides');
+            cachedDataSlides = $http.get(baseUrl + '/testimonials');
         }
         return cachedDataSlides;
     }

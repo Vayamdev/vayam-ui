@@ -1,16 +1,17 @@
 rootModule.service('homeService', ['$http', 'baseUrl', function($http, baseUrl) {
-    var cachedDataThumbnails;
+    var cachedevents;
     var cachedDataSlides;
     var cachedDataProjects;
 
-    this.getThumbnails = function() {
-        if (!cachedDataThumbnails) {
-            cachedDataThumbnails =  $http.get(baseUrl + '/events');
+    this.getThumbnails = function() { 
+        if (!cachedevents) {
+            cachedevents =  $http.get(baseUrl + '/events');
         }
-        return cachedDataThumbnails;
+        return cachedevents;
     }
 
     this.getSlides = function() {
+
         if (!cachedDataSlides) {
             cachedDataSlides =  $http.get(baseUrl + '/slides');
         }

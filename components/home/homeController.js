@@ -1,13 +1,15 @@
 rootModule.controller('homeController', ['$scope', 'homeService', 'globalFactory', function($scope, homeService, globalFactory) {
     var currIndex = 0;
-    $scope.myInterval = 4000;
+    $scope.myInterval = 3000;
     $scope.slides = [];
+    $scope.displayeventgroup = [];
+    $scope.noWrapSlides = false;
+    $scope.noWrapEvents = false;
+       
+    // fetch static data for this page. 
     $scope.crisis = [];
     $scope.conceptnote = [];
     $scope.projects = [];
-    $scope.displayeventgroup = [];
-
-    // fetch static data for this page. 
     globalFactory.getStaticData(function(response) {
         $scope.crisis = response.crisis;
         $scope.conceptnote = response.conceptnote;      
@@ -29,11 +31,10 @@ rootModule.controller('homeController', ['$scope', 'homeService', 'globalFactory
 
     homeService.getThumbnails().then(function(response) {
         globalFactory.truncateData(response.data, 'shortdescription', 120);
-        var events = response.data;
+        var events = angular.copy(response.data)
         while (events.length) {
             var temparr = [];
-            temparr = events.splice(0, 3);
-            $scope.displayeventgroup.push(temparr);
+            $scope.displayeventgroup.push(events.splice(0, 3));
         }
     }, function() {
         console.log('Error during event data fetching!');
@@ -46,7 +47,4 @@ rootModule.controller('homeController', ['$scope', 'homeService', 'globalFactory
             image: event.image
         });
     }
-
-
-
 }]);

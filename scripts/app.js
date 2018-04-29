@@ -78,14 +78,16 @@ rootModule.config(["$routeProvider", function($routeProvider) {
 
 rootModule.controller('homeController', ['$scope', 'homeService', 'globalFactory', function($scope, homeService, globalFactory) {
     var currIndex = 0;
-    $scope.myInterval = 4000;
+    $scope.myInterval = 3000;
     $scope.slides = [];
+    $scope.displayeventgroup = [];
+    $scope.noWrapSlides = false;
+    $scope.noWrapEvents = false;
+       
+    // fetch static data for this page. 
     $scope.crisis = [];
     $scope.conceptnote = [];
     $scope.projects = [];
-    $scope.displayeventgroup = [];
-
-    // fetch static data for this page. 
     globalFactory.getStaticData(function(response) {
         $scope.crisis = response.crisis;
         $scope.conceptnote = response.conceptnote;      
@@ -107,11 +109,10 @@ rootModule.controller('homeController', ['$scope', 'homeService', 'globalFactory
 
     homeService.getThumbnails().then(function(response) {
         globalFactory.truncateData(response.data, 'shortdescription', 120);
-        var events = response.data;
+        var events = angular.copy(response.data)
         while (events.length) {
             var temparr = [];
-            temparr = events.splice(0, 3);
-            $scope.displayeventgroup.push(temparr);
+            $scope.displayeventgroup.push(events.splice(0, 3));
         }
     }, function() {
         console.log('Error during event data fetching!');
@@ -124,9 +125,6 @@ rootModule.controller('homeController', ['$scope', 'homeService', 'globalFactory
             image: event.image
         });
     }
-
-
-
 }]);
 
 
@@ -197,8 +195,9 @@ rootModule.controller('journeyController', ['$scope', 'journeyService', 'globalF
         $scope.bannertext = response.journey.bannertext;
         $scope.bannerUrl = response.journey.bannerimage;
     });
+
     // get other page details
-    journeyService.getSlides().then(function(response) {
+    journeyService.getTestimonials().then(function(response) {
         $scope.slides = response.data;
     }, function() {
         console.log('Error during slide data fetching!');
@@ -323,18 +322,19 @@ rootModule.controller('galleryController', ['$scope', 'galleryService', 'globalF
 
 
 rootModule.service('homeService', ['$http', 'baseUrl', function($http, baseUrl) {
-    var cachedDataThumbnails;
+    var cachedevents;
     var cachedDataSlides;
     var cachedDataProjects;
 
-    this.getThumbnails = function() {
-        if (!cachedDataThumbnails) {
-            cachedDataThumbnails =  $http.get(baseUrl + '/events');
+    this.getThumbnails = function() { 
+        if (!cachedevents) {
+            cachedevents =  $http.get(baseUrl + '/events');
         }
-        return cachedDataThumbnails;
+        return cachedevents;
     }
 
     this.getSlides = function() {
+
         if (!cachedDataSlides) {
             cachedDataSlides =  $http.get(baseUrl + '/slides');
         }
@@ -389,9 +389,9 @@ rootModule.service('journeyService', ['$http', 'baseUrl', function($http, baseUr
         return cachedDataMilestones;
     };
 
-    this.getSlides = function() {
+    this.getTestimonials = function() {
         if (!cachedDataSlides) {
-            cachedDataSlides = $http.get(baseUrl + '/slides');
+            cachedDataSlides = $http.get(baseUrl + '/testimonials');
         }
         return cachedDataSlides;
     }

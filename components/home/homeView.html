@@ -1,8 +1,8 @@
 <div class="hometab">
 
 	<div id="myCarousel" class="vayam-carousel">
-		<div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
-			<div uib-slide ng-repeat="slide in slides" index="$index">
+		<div uib-carousel active="slide.active" interval="myInterval" no-wrap="noWrapSlides">
+			<div uib-slide ng-repeat="slide in slides" index="$index" >
 				<div class="slide" ng-style="{'background-image':'url({{slide.image}})'}">
 					<div class="banner-text-container container col-xs-offset-2">
 						<div class="banner-text">
@@ -89,8 +89,8 @@
 				<h2>Events and Updates</h2>
 			</div>
 			
-			<div class="events-carousel">
-				<div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+			<div id="eventCarousel" class="events-carousel">
+				<div uib-carousel active="events.active" interval="myInterval" no-wrap="noWrapEvents">
 					<div uib-slide ng-repeat="events in displayeventgroup" index="$index">
 						<div class="events-updates-pane container">
 							<div class="row">

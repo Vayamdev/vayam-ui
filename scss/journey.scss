@@ -106,7 +106,6 @@ div.journeytab {
         width: 50px;
         height: 50px;
         line-height: 50px;
-        font-size: 1.4em;
         text-align: center;
         position: absolute;
         top: 16px;
@@ -119,6 +118,10 @@ div.journeytab {
         border-bottom-right-radius: 50%;
         border-bottom-left-radius: 50%;
         border: 2px solid #3f903f;
+        span {
+            color: $night;
+            font-weight: 800;
+        }
     }
 
     .timeline > li.timeline-inverted > .timeline-panel {
@@ -220,6 +223,15 @@ div.journeytab {
 
     .testimonial {
         background-color: $milk;
+        p.say {
+            color: black;
+            font-weight: 600;
+            text-align: justify;
+        }
+        .overview {
+            text-align: right;   
+        }
+
         h2 {
             color: #333;
             text-align: center;
@@ -237,6 +249,11 @@ div.journeytab {
         .carousel {
             margin: 50px auto;
             padding: 0 70px;
+            a.carousel-control {
+                padding: 1rem;
+                background-image: none;
+                color: $night;
+            }
         }
         .carousel .item {
             color: #999;

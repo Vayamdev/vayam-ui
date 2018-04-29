@@ -6,6 +6,7 @@ rootModule.controller('whatweareController', ['$scope', 'teamService', 'globalFa
 
     // fetch static data for this page. 
     globalFactory.getStaticData(function(response) {
+        $scope.title = response.whatweare.title;
         $scope.bannerUrl = response.whatweare.bannerimage;
         $scope.bannertext = response.whatweare.bannertext;
         $scope.vision = response.whatweare.vision;

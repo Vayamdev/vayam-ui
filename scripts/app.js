@@ -165,6 +165,7 @@ rootModule.controller('whatweareController', ['$scope', 'teamService', 'globalFa
 
     // fetch static data for this page. 
     globalFactory.getStaticData(function(response) {
+        $scope.title = response.whatweare.title;
         $scope.bannerUrl = response.whatweare.bannerimage;
         $scope.bannertext = response.whatweare.bannertext;
         $scope.vision = response.whatweare.vision;
@@ -191,7 +192,9 @@ rootModule.controller('journeyController', ['$scope', 'journeyService', 'globalF
     $scope.displayeventgroup = [];
 
     // fetch static data for this page. 
+    
     globalFactory.getStaticData(function(response) {
+        $scope.title = response.journey.title;
         $scope.bannertext = response.journey.bannertext;
         $scope.bannerUrl = response.journey.bannerimage;
     });
@@ -212,38 +215,14 @@ rootModule.controller('journeyController', ['$scope', 'journeyService', 'globalF
 }]);
 
 
-
-
-
-
-
-
-/*
-rootModule.controller('journeyController', ['$scope', 'journeyService', 'globalFactory', function($scope, journeyService, globalFactory) {
-    $scope.milestones = [];
-    $scope.bannertext = '';
-
-    // fetch static data for this page. 
-    globalFactory.getStaticData(function(response) {
-        $scope.bannertext = response.journey.bannertext;
-        $scope.bannerUrl = response.journey.bannerimage;
-    });
-
-    journeyService.getMilestone().then(function(response) {
-        $scope.milestones = response.data;
-    }, function() {
-        console.log('Error during team data fetching!');
-    })
-}]);
-*/
-
-
 rootModule.controller('contactusController', ['$scope', 'contactUsService', 'globalFactory', function($scope, contactUsService, globalFactory) {
     $scope.showaddress = false;
 
     // fetch static data for this page. 
     globalFactory.getStaticData(function(response) {
         $scope.bannerUrl = response.contactus.bannerimage;
+        $scope.title = response.contactus.title;
+        $scope.bannertext = response.contactus.bannertext;
     });
     
     contactUsService.getLocations().then(function(response) {
@@ -455,6 +434,8 @@ rootModule.directive('vayamFooter', function(){
                 // $scope.twitter = response.socialnetwork.twitter;
                 $scope.youtube = response.socialnetwork.youtube;
                 $scope.wordpress = response.socialnetwork.wordpress;
+
+                $scope.footernote =  response.footernote;
             });
         }]
     };
@@ -502,7 +483,7 @@ rootModule.directive('imageBanner', function(){
     return {
         restrict: 'E',
         templateUrl: '/shared/imagebanner/imageBannerTemplate.html',
-        scope: true,
+        scope: false,
         controller: ['$scope', '$route', function($scope, $route) {
             $scope.activepage = $route.current.activepage;
             $scope.activetab = $route.current.activetab;

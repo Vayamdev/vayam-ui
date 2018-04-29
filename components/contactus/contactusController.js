@@ -4,6 +4,8 @@ rootModule.controller('contactusController', ['$scope', 'contactUsService', 'glo
     // fetch static data for this page. 
     globalFactory.getStaticData(function(response) {
         $scope.bannerUrl = response.contactus.bannerimage;
+        $scope.title = response.contactus.title;
+        $scope.bannertext = response.contactus.bannertext;
     });
     
     contactUsService.getLocations().then(function(response) {

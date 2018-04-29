@@ -1,16 +1,16 @@
 {
 	"slides": [
 		{
+			"image": "/assets/banners/project.jpg",
+			"text": "This is your democracy. Make it. Protect it. Pass it on."
+		},		
+		{
 			"image": "/assets/home/slides/slide1.jpg",
-			"text": "Contrary to popular belief, Lorem Ipsum is not"
+			"text": "The roots of education are bitter, but still fruits can be sweet"
 		},
 		{
 			"image": "/assets/home/slides/slide2.jpg",
-			"text": "simply random text. It has roots in a piece of classical Latin literature from 45 BC, making "
-		},
-		{
-			"image": "/assets/home/slides/slide1.jpg",
-			"text": "Contrary to popular belief, Lorem Ipsum is not"
+			"text": "If you want something said, ask a man; if you want something done, ask a woman."
 		}
 	],
 	"projects": [

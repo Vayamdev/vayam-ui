@@ -22,6 +22,7 @@
             }
     ],
     "whatweare": {
+        "title": "We're Vayam",
         "bannerimage": "/assets/banners/whatweare.jpg",
         "bannertext": "Vayam is a voluntary movement aimed at strengthening the roots of democracy. We work with people who are deprived of their democratic rights and train them to fight for and achieve their rights in a democratic way. Vayam does this by empowering the people, especially tribal youth and women, with legal know how. Vayam regards people as participants not beneficiaries. It endeavours to develop community institutions for self-rule and governance of land, water, and forest. Village assembly (Gram Sabha), women’s SHG (self-help-groups) and of course youth leaders are some of the channels through which Vayam hopes to usher in change. At Vayam, people decide the priorities . Team Vayam evolves tools and techniques to bring the agenda to fruition. Work together: We believe that democracy is not only about electing representatives but by being actively involved in governance. We train our people to work with the government officials to bring about all benefitting changes. Vayam’s tools and techniques of building democratic strength is a freeware. It is freely shared with other organisations and active citizens. Many organisations have used Vayam’s methods to ensure a benefit far beyond Vayam’s reach. This ripple effect is our pride.",
         "vision": "Empowering Indian citizens – beginning with the most backward – to govern their natural resources and prosper through decentralized democratic systems",
@@ -32,11 +33,9 @@
         "bannertext": "A life is not important except in the impact it has on other lives. Leadership is not about a title or a designation. It's about impact, influence and inspiration. Impact involves getting results."
     },
     "contactus": {
+        "title": "Contact to involve",
+        "bannertext": "Believe in something larger than yourself... get involved in the big ideas of your time.",
         "bannerimage": "/assets/banners/contactus.jpg"
-    },
-    "journey": {
-        "bannertext": "Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content. It's also called placeholder (or filler) text. It's a convenient tool for mock-ups. It helps to outline the visual elements of a document or presentation, eg typography, font, or layout. Lorem ipsum is mostly a part of a Latin text by the classical author and philosopher Cicero. Its words and letters have been changed by addition or removal, so to deliberately render its content nonsensical; it's not genuine, correct, or comprehensible Latin anymore.",
-        "bannerimage": "/assets/banners/journey.jpg"
     },
     "gallery": {
         "bannertext": "A picture's worth a thousand words",
@@ -70,7 +69,14 @@
         "wordpress": "https://vayamindia.wordpress.com/"
     },
     "journey": {
-        "bannerimage": "/assets/banners/journey.jpg",
-        "bannertext": "Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content. It's also called placeholder (or filler) text. It's a convenient tool for mock-ups. It helps to outline the visual elements of a document or presentation, eg typography, font, or layout. Lorem ipsum is mostly a part of a Latin text by the classical author and philosopher Cicero. Its words and letters have been changed by addition or removal, so to deliberately render its content nonsensical; it's not genuine, correct, or comprehensible Latin anymore."
+        "title": "Success is a journey, not a destination",
+        "bannertext": "A journey of a thousand miles must begin with a single step. It is is never ending. There's always gonna be growth, improvement, adversity; you just gotta take it all in and do what's right, continue to grow, continue to live in the moment.",
+        "bannerimage": "/assets/banners/journey.jpg"
+    },
+    "footernote": {
+        "aboutus": "We work with people who are deprived of their democratic rights and train them to fight for and achieve their rights in a democratic way",
+        "impact": "It's about impact, influence and inspiration and we've methods to ensure a benefit far beyond.",
+        "journy": "Our graph from very beginning till the date",
+        "involve": "You can get attached with Vayam"
     }
 }

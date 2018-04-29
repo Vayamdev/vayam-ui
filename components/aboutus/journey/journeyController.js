@@ -10,6 +10,7 @@ rootModule.controller('journeyController', ['$scope', 'journeyService', 'globalF
     // fetch static data for this page. 
     
     globalFactory.getStaticData(function(response) {
+        $scope.title = response.journey.title;
         $scope.bannertext = response.journey.bannertext;
         $scope.bannerUrl = response.journey.bannerimage;
     });

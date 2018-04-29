@@ -10,6 +10,8 @@ rootModule.directive('vayamFooter', function(){
                 // $scope.twitter = response.socialnetwork.twitter;
                 $scope.youtube = response.socialnetwork.youtube;
                 $scope.wordpress = response.socialnetwork.wordpress;
+
+                $scope.footernote =  response.footernote;
             });
         }]
     };

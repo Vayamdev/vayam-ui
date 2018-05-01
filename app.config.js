@@ -53,6 +53,12 @@ rootModule.config(["$routeProvider", function($routeProvider) {
         activetab: 'About Us',
         activepage: 'Gallery'
     })
+    .when("/download", {
+        templateUrl: "components/download/downloadView.html",
+        controller: "downloadController",
+        activetab: 'Download',
+        activepage: 'Download'
+    })
     .otherwise({
         redirectTo: "/home"
     });

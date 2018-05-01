@@ -576,5 +576,91 @@
 		"url": "http://placehold.it/300x300",
 		"caption": "Lorem, do eiusmod tempor incid Ut enim ad minim veniam",
 		"category": "Development"
-	}]
+	}],
+	"download": [
+		{
+			"name": "An integrated Programme for older persons - 2018 ",
+			"type": "Scheme Document",
+			"description": "Contrary to popular belief, Lorem Ipsum is not simply random text",
+			"link": "http://www.socialjustice.nic.in/writereaddata/UploadFile/IPSrC_English_version.pdf"
+		},
+		{
+			"name": "NGO wise Grants in Aid released during 2015-16",
+			"type": "IPOP",
+			"description": "Contrary to popular belief, Lorem Ipsum is not simply random text",
+			"link": "http://www.socialjustice.nic.in/writereaddata/UploadFile/Annexure-VIII.pdf"
+		},
+		{
+			"name": "Procedure for Online Application for GIA",
+			"type": "Under IPOP Scheme",
+			"description": "Contrary to popular belief, Lorem Ipsum is not simply random text",
+			"link": "http://www.socialjustice.nic.in/writereaddata/UploadFile/Annexure-VIII.pdf"
+		},
+		{
+			"name": "Gramsabha Notice",
+			"type": "Notice",
+			"description": "Contrary to popular belief, Lorem Ipsum is not simply random text",
+			"link": "/assets/download/gramsabha_notice.pdf"
+		},
+		{
+			"name": "Pesa Act Marathi",
+			"type": "Act",
+			"description": "Contrary to popular belief, Lorem Ipsum is not simply random text",
+			"link": "/assets/download/pesa_act_marathi.pdf"
+		},
+		{
+			"name": "Pesa short Note",
+			"type": "Notice",
+			"description": "Contrary to popular belief, Lorem Ipsum is not simply random text",
+			"link": "/assets/download/pesa_shortnote.pdf"
+		},
+		{
+			"name": "Vayam Village Leaders Guide",
+			"type": "Document",
+			"description": "Contrary to popular belief, Lorem Ipsum is not simply random text",
+			"link": "/assets/download/vayam_villageleaders_guide.pdf"
+		},
+		{
+			"name": "Lorem, do eiusmod tempor incid",
+			"type": "eiusmod",
+			"description": "Contrary to popular belief, Lorem Ipsum is not simply random text",
+			"link": "http://www.socialjustice.nic.in/writereaddata/UploadFile/IPOP%202016%20pdf%20document.pdf"
+		},
+		{
+			"name": "Lorem, do eiusmod tempor incid",
+			"type": "eiusmod",
+			"description": "Contrary to popular belief, Lorem Ipsum is not simply random text",
+			"link": "http://placehold.it/300x300"
+		},
+		{
+			"name": "An integrated Programme for older persons - 2018 ",
+			"type": "Scheme Document",
+			"description": "Contrary to popular belief, Lorem Ipsum is not simply random text",
+			"link": "http://www.socialjustice.nic.in/writereaddata/UploadFile/IPSrC_English_version.pdf"
+		},
+		{
+			"name": "NGO wise Grants in Aid released during 2015-16",
+			"type": "IPOP",
+			"description": "Contrary to popular belief, Lorem Ipsum is not simply random text",
+			"link": "http://www.socialjustice.nic.in/writereaddata/UploadFile/Annexure-VIII.pdf"
+		},
+		{
+			"name": "Procedure for Online Application for GIA",
+			"type": "Under IPOP Scheme",
+			"description": "Contrary to popular belief, Lorem Ipsum is not simply random text",
+			"link": "http://www.socialjustice.nic.in/writereaddata/UploadFile/Annexure-VIII.pdf"
+		},
+		{
+			"name": "Lorem, do eiusmod tempor incid",
+			"type": "eiusmod",
+			"description": "Contrary to popular belief, Lorem Ipsum is not simply random text",
+			"link": "http://www.socialjustice.nic.in/writereaddata/UploadFile/Annexure-VIII.pdf"
+		},
+		{
+			"name": "Lorem, do eiusmod tempor incid",
+			"type": "eiusmod",
+			"description": "Contrary to popular belief, Lorem Ipsum is not simply random text",
+			"link": "http://www.socialjustice.nic.in/writereaddata/UploadFile/IPOP%202016%20pdf%20document.pdf"
+		}
+	]
 }

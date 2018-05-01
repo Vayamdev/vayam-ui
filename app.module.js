@@ -7,7 +7,8 @@ var rootModule = angular.module('rootModule', [
     'ngRoute',
     'ngAnimate',
     'ui.bootstrap',
-    'simplePagination'
+    'simplePagination',
+    'datatables'
 ]);
 
 // constant for base URL. Change this on production server

@@ -7,7 +7,8 @@ var rootModule = angular.module('rootModule', [
     'ngRoute',
     'ngAnimate',
     'ui.bootstrap',
-    'simplePagination'
+    'simplePagination',
+    'datatables'
 ]);
 
 // constant for base URL. Change this on production server
@@ -68,6 +69,12 @@ rootModule.config(["$routeProvider", function($routeProvider) {
         controller: "galleryController",
         activetab: 'About Us',
         activepage: 'Gallery'
+    })
+    .when("/download", {
+        templateUrl: "components/download/downloadView.html",
+        controller: "downloadController",
+        activetab: 'Download',
+        activepage: 'Download'
     })
     .otherwise({
         redirectTo: "/home"
@@ -276,6 +283,23 @@ rootModule.controller('projectController', ['$scope', '$routeParams', 'homeServi
 
 
 
+rootModule.controller('downloadController', ['$scope', 'downloadService', 'globalFactory', function($scope, downloadService, globalFactory) {
+        $scope.gridData = [];
+        // fetch static data for this page. 
+        globalFactory.getStaticData(function(response) {
+            $scope.bannerUrl = response.download.bannerimage;
+            $scope.bannertext = response.download.bannertext;
+        });
+
+        downloadService.getDownloadData().then(function(response) {
+            $scope.gridData = response.data;
+        }, function() {
+            console.log('Error during downloads data fetching!');
+        });
+}]);
+
+
+
 rootModule.controller('galleryController', ['$scope', 'galleryService', 'globalFactory', '$timeout', function($scope, galleryService, globalFactory, $timeout) {
     
     // fetch static data for this page. 
@@ -390,6 +414,20 @@ rootModule.service('galleryService', ['$http', 'baseUrl', function($http, baseUr
     }
 }]);
     
+
+
+rootModule.service('downloadService', ['$http', 'baseUrl', function($http, baseUrl) {
+    var cachedData;
+
+    this.getDownloadData = function() {
+        console.log(cachedData);
+        if (!cachedData) {
+            cachedData =  $http.get(baseUrl + '/download');
+        }
+        return cachedData;
+    }
+}]);
+
 
 
 rootModule.directive('donateLink', function(){

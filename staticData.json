@@ -78,5 +78,10 @@
         "impact": "It's about impact, influence and inspiration and we've methods to ensure a benefit far beyond.",
         "journy": "Our graph from very beginning till the date",
         "involve": "You can get attached with Vayam"
+    },
+    "download": {
+        "title": "Get your Form",
+        "bannertext": "Here are the common forms that you would need",
+        "bannerimage": "/assets/banners/journey.jpg"
     }
 }

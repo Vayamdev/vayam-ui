@@ -1,0 +1,32 @@
+<div class="downloadtab">
+		<image-banner></image-banner>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<h3 class="page-heading">{{bannertitle}}</h3>
+					<p class="text-justify">{{bannertext}}</p>
+				</div>
+			</div>
+
+			<div class="row">
+				<table datatable="ng" class="row-border hover">
+						<thead>
+						<tr>
+							<th>Name</th>
+							<th>Type</th>
+							<th>Description</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr ng-repeat="form in gridData">
+							<td><a href='{{form.link}}'>{{ form.name }}</a></td>
+							<td>{{ form.type }}</td>
+							<td>{{ form.description }}</td>
+						</tr>
+						</tbody>
+					</table>
+			</div>
+		</div>
+
+</div>

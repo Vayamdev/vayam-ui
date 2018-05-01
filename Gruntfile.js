@@ -21,6 +21,18 @@ module.exports = function (grunt) {
                     },
                     {
                         expand: true,
+                        cwd: 'bower_components/angular-datatables/dist/',
+                        src: ['**/*.js', '**/*.map'],
+                        dest: 'scripts/datatable/'
+                    },
+                    {
+                        expand: true,
+                        cwd: 'bower_components/datatables.net/js/',
+                        src: ['**/*.js', '**/*.map'],
+                        dest: 'scripts/datatable.net/'
+                    },
+                    {
+                        expand: true,
                         cwd: 'bower_components/angular/',
                         src: ['**/*.js', '**/*.map'],
                         dest: 'scripts/angular/'
@@ -79,6 +91,12 @@ module.exports = function (grunt) {
                         cwd: 'bower_components/bootstrap-sass/assets/stylesheets/',
                         src: ['**/*.scss'],
                         dest: 'scss/'
+                    },
+                    {
+                        expand: true,
+                        cwd: 'bower_components/datatables.net-dt/css/',
+                        src: ['**/*.css'],
+                        dest: 'css/datatables.net-dt'
                     }
                 ]
             },
@@ -106,6 +124,7 @@ module.exports = function (grunt) {
           venderscripts: {
             src: [
                 'scripts/jquery/jquery.min.js',
+                'scripts/datatable.net/jquery.dataTables.min.js',
                 'scripts/bootstrap-sass/bootstrap.min.js',
                 'scripts/angular/angular.min.js',
                 'scripts/angular-route/angular-route.min.js',
@@ -113,7 +132,8 @@ module.exports = function (grunt) {
                 'scripts/ng-simplePagination/simplePagination.js',
                 'scripts/plugins/jquery.bootstrap.newsbox.min.js',
                 'scripts/jquery.bootstrap.newsbox.min.js',
-                'scripts/lightgallery/dist/js/lightgallery.min.js'
+                'scripts/lightgallery/dist/js/lightgallery.min.js',
+                'scripts/datatable/angular-datatables.min.js',
             ],
             dest: 'scripts/vender.js',
           },
@@ -128,6 +148,7 @@ module.exports = function (grunt) {
                 'components/contactus/contactusController.js',
                 'components/donate/donateController.js',
                 'components/project/projectController.js',
+                'components/download/downloadController.js',
                 'components/aboutus/gallery/galleryController.js',
                 'components/home/homeService.js',
                 'components/impact/impactService.js',
@@ -135,6 +156,7 @@ module.exports = function (grunt) {
                 'components/aboutus/testimonials/testimonialsService.js',
                 'components/aboutus/journey/journeyService.js',
                 'components/aboutus/gallery/galleryService.js',
+                'components/download/downloadService.js',
                 'shared/donatelink/donatelinkDirective.js',
                 'shared/contactform/contactformDirective.js',
                 'shared/header/headerDirective.js',
@@ -150,6 +172,7 @@ module.exports = function (grunt) {
             src: [
                 'css/app.css',
                 'scripts/lightgallery/dist/css/lightgallery.min.css',
+                'css/datatables.net-dt/jquery.dataTables.min.css',
             ],
             dest: 'css/app.css',
           }

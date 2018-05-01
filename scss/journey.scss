@@ -225,101 +225,56 @@ div.journeytab {
         background-color: $milk;
         p.say {
             color: black;
-            font-weight: 600;
-            text-align: justify;
+            text-align: left;
+            margin: 0rem;
         }
         .overview {
-            text-align: right;   
+            text-align: right;
         }
 
         h2 {
             color: #333;
             text-align: center;
-            text-transform: uppercase;
-            font-family: "Roboto", sans-serif;
-            font-weight: bold;
             position: relative;
             margin: 30px 0 60px;
         }
 
-        .col-center {
-            margin: 0 auto;
-            float: none !important;
+        .img-box {
+            margin-bottom: 3rem;
+            img {
+                width: 100%;
+                height: 20rem;
+            }
         }
+
         .carousel {
-            margin: 50px auto;
-            padding: 0 70px;
+            padding-bottom: 2rem;
             a.carousel-control {
-                padding: 1rem;
                 background-image: none;
                 color: $night;
             }
         }
-        .carousel .item {
-            color: #999;
-            font-size: 14px;
-            text-align: center;
-            overflow: hidden;
-            min-height: 290px;
-        }
+
+
         .carousel .item .vl {
-            border-left: 1px solid #999999;
-            height: 20rem;
-            float: left;
-            margin-left: 3rem;
-            margin-right: 3rem;
+            border-left: 1px solid $night;
         }
-        .carousel .item .img-box {
-            width: 25%;
-            height: 20rem;
-            margin: 0 auto;
-            padding: 5px;
-            border: 1px solid #ddd;
-            float: left;
-        }
-        .carousel .img-box img {
-            width: 100%;
-            height: 100%;
-            display: block;
-        }
-
-        @media all and (max-width: 767px) {
-            .carousel .item .vl {
-                display: none;
-            }
-            .carousel .item .img-box {
-                float: none;
-                width: 50%;
-            }
-        }
-
-        .carousel .testimonial {
-            padding: 30px 0 10px;
-        }
-        .carousel .overview {
-            font-style: italic;
-        }
+        
         .carousel .overview b {
-            text-transform: uppercase;
-            color: #7AA641;
+            color: $secondarycolor;
         }
+
+        // arrows
         .carousel .carousel-control {
             width: 40px;
             height: 40px;
-            margin-top: -20px;
-            top: 50%;
+            margin-top: 5rem;
             background: none;
         }
-        .carousel-control i {
-            font-size: 68px;
-            line-height: 42px;
-            position: absolute;
-            display: inline-block;
-            color: rgba(0, 0, 0, 0.8);
-            text-shadow: 0 3px 3px #e6e6e6, 0 0 0 #000;
-        }
-        .carousel .carousel-indicators {
-            bottom: -40px;
+
+        // indicators
+        .carousel-indicators {
+            bottom: -5px;
         }
         .carousel-indicators li, .carousel-indicators li.active {
             width: 10px;
@@ -335,6 +290,6 @@ div.journeytab {
         .carousel-indicators li.active {
             background: #555;
             box-shadow: inset 0 2px 1px rgba(0,0,0,0.2);
-        }
+        }        
     }
 }

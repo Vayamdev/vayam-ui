@@ -101,15 +101,16 @@ rootModule.controller('homeController', ['$scope', 'homeService', 'globalFactory
     });
 
     homeService.getProjects().then(function(response) {
-        globalFactory.truncateData(response.data, 'shortdescription', 250);
-        $scope.projects = response.data;
+        var projectData = angular.copy(response.data);
+        globalFactory.truncateData(projectData, 'shortdescription', 250);
+        $scope.projects = projectData;
     }, function() {
         console.log('Error during projects data fetching!');
     });    
 
     homeService.getThumbnails().then(function(response) {
-        globalFactory.truncateData(response.data, 'shortdescription', 120);
-        var events = angular.copy(response.data)
+        var events = angular.copy(response.data);
+        globalFactory.truncateData(events, 'shortdescription', 120);
         while (events.length) {
             var temparr = [];
             $scope.displayeventgroup.push(events.splice(0, 3));
@@ -431,7 +432,7 @@ rootModule.directive('vayamFooter', function(){
             // fetch static data for this page. 
             globalFactory.getStaticData(function(response) {
                 $scope.fb = response.socialnetwork.fb;
-                // $scope.twitter = response.socialnetwork.twitter;
+                $scope.twitter = response.socialnetwork.twitter;
                 $scope.youtube = response.socialnetwork.youtube;
                 $scope.wordpress = response.socialnetwork.wordpress;
 

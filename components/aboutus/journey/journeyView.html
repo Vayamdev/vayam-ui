@@ -32,12 +32,16 @@
         <h2>Testimonials</h2>
         <div id="myCarousel" class="vayam-carousel container">
             <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
-                <div class="carousel-inner">
-                    <div uib-slide class="item carousel-item active" ng-repeat="slide in slides" index="$index">
-                        <div class="img-box"><img src="{{slide.avatar}}" alt=""></div>
-                        <div class="vl"></div>
-                        <p class="say">{{slide.say}}</p>
-                        <p class="overview"><b>{{slide.name}}</b>, {{slide.designation}}</p>
+                <div class="carousel-inner container">
+                    <div uib-slide class="col-xs-12 item carousel-item active" ng-repeat="slide in slides" index="$index">
+                        <div class="img-box col-xs-12 col-md-4">
+                            <img src="{{slide.avatar}}" alt="">
+                        </div>
+                        <div class="vl col-xs-12 col-md-8">
+                            <p class="say">{{slide.say}}</p>
+                            <p class="overview"><b>{{slide.name}}</b></p>
+                            <p class="overview">{{slide.designation}}</p>
+                        </div>
                     </div>
                 </div>
             </div>

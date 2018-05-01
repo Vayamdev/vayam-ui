@@ -70,7 +70,7 @@
 		{
 			"name": "Strengthening democracy roots",
 			"id": "1",
-			"icon": "/assets/project/icons/demo_roots.png",
+			"icon": "/assets/project/icons/swaraj.jpg",
 			"shortdescription": "The constitution of India in its Schedule VI has given special rights to scheduled tribe areas. The Panchayats Extension to Scheduled Areas (PESA) Act has brought democracy to the remotest tribal hamlets. It has converged the traditional tribal practices of self-governance and the democratic rights bestowed by the constitution. But this empowerment has not percolated to the bottom of pyramid. Vayam is actively empowering tribal village assemblies in this mode of self-government – by constant training and hand-holding. These villages shall be self-reliant in terms of governance of natural resources (viz. water, forest, minor minerals). This will result in sustainable management of resources and also in mitigation of exploitation through control over resources.",
 			"childprojects": [{
 					"name": "Youth leaders’ training in democratic rights",
@@ -425,28 +425,28 @@
 	],
 	"testimonials": [
 		{
-			"name": "Rahul Bajaj",
-			"designation": "Gotham, United Kingdom",
-			"say": "Pleased him another was settled for. Moreover end horrible endeavor entrance any families. Income appear extent on of thrown in admire. Stanhill on we if vicinity material in. Saw him smallest you provided ecstatic supplied. Garret wanted expect remain as mr. Covered parlors concern we express in visited to do. Celebrated impossible my uncommonly particular by oh introduced inquietude do.",
+			"name": "Bharat Patara",
+			"designation": "Village Mahalepada",
+			"say": "We got employment and timely wages because of Vayam. The government scheme of EGS existed since last many years, but bureaucracy’s apathy and our ignorance did not get us any work. Vayam enlightened us and we could achieve this feat",
 			"avatar": "http://placehold.it/400x400"
 		
 		},
 		{
-			"name": "Nikhil Sane",
-			"designation": "Z, India",
-			"say": "Pleased him another was settled for. Moreover end horrible endeavor entrance any families. Income appear extent on of thrown in admire. Stanhill on we if vicinity material in. Saw him smallest you provided ecstatic supplied. Garret wanted expect remain as mr. Covered parlors concern we express in visited to do. Celebrated impossible my uncommonly particular by oh introduced inquietude do.",
+			"name": "Harichandra Jhurde",
+			"designation": "Village Bhokarhatti",
+			"say": "Some politicians ask us, ‘what does Vayam give you? It does not distribute any thing. Why do you cling to Vayam?’ We proudly tell them – Vayam gives us knowledge. It empowers us to make the government system work. Things do not last forever, knowledge does.",
 			"avatar": "http://placehold.it/400x400"
 		},
 		{
-			"name": "Prakash Ambedkar",
-			"designation": "Athena, US",
-			"say": "Pleased him another was settled for. Moreover end horrible endeavor entrance any families. Income appear extent on of thrown in admire. Stanhill on we if vicinity material in. Saw him smallest you provided ecstatic supplied. Garret wanted expect remain as mr. Covered parlors concern we express in visited to do. Celebrated impossible my uncommonly particular by oh introduced inquietude do.",
+			"name": "Devendra Thodga",
+			"designation": "Village Ukshipada",
+			"say": "We assert our rights, we demand transparency, we get what is due to us. We face resistance from government servants, but we do not insult them. They are not our enemies, they are our brothers. Gradually they become our friends. Democracy becomes better like this. This is what Vayam has taught us.",
 			"avatar": "http://placehold.it/400x400"
 		},
 		{
-			"name": "Surya Shinde",
-			"designation": "TC, China",
-			"say": "Pleased him another was settled for. Moreover end horrible endeavor entrance any families. Income appear extent on of thrown in admire. Stanhill on we if vicinity material in. Saw him smallest you provided ecstatic supplied. Garret wanted expect remain as mr. Covered parlors concern we express in visited to do. Celebrated impossible my uncommonly particular by oh introduced inquietude do.",
+			"name": "Mathura Kharpade",
+			"designation": "Village Kharpadpada",
+			"say": "Our village is surrounded by river. In rains, we cannot cross it. Our village has no road. No ambulance comes here. Snake bites patients cannot be saved. I am sure we will get forest department and other department sanction for this road. There are too many procedure hurdles. But we have faith in Vayam. They have made us believe in ourselves. My neighbour is pregnant. I am sure we will get a road before she delivers. She can reach the hospital then.",
 			"avatar": "http://placehold.it/400x400"
 		}
 	],

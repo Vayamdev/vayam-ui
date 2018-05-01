@@ -7,7 +7,7 @@ rootModule.directive('vayamFooter', function(){
             // fetch static data for this page. 
             globalFactory.getStaticData(function(response) {
                 $scope.fb = response.socialnetwork.fb;
-                // $scope.twitter = response.socialnetwork.twitter;
+                $scope.twitter = response.socialnetwork.twitter;
                 $scope.youtube = response.socialnetwork.youtube;
                 $scope.wordpress = response.socialnetwork.wordpress;
 

@@ -10,4 +10,11 @@ div.impacttab {
 		-webkit-filter: contrast(100%);
 		filter: contrast(100%);
 	}
+
+	div.read-more {
+        text-align: right;
+        a {
+            color: $secondarycolor;
+        }
+    }
 }

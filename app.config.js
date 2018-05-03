@@ -47,6 +47,12 @@ rootModule.config(["$routeProvider", function($routeProvider) {
         activetab: 'Projects',
         activepage: 'Projects'
     })
+    .when("/impact/:impactid", {
+        templateUrl: "components/project/projectView.html",
+        controller: "impactController",
+        activetab: 'Impact',
+        activepage: 'Impact'
+    })
     .when("/gallery", {
         templateUrl: "components/aboutus/gallery/galleryView.html",
         controller: "galleryController",

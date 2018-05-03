@@ -4,7 +4,7 @@
 	<div class="row">
 		<div class="container">
 			<div class="col-xs-12 ">
-				<h3 class="page-heading">{{project.name}}</h3>
+				<h3 class="page-heading">{{project.name || impact.name}}</h3>
 				<p class="text-justify">{{project.shortdescription}}</p>
 			</div>
 		</div>
@@ -14,6 +14,17 @@
 		<div class="container detail">
 			<div class="col-md-6">
 				<p>{{project.projectdetail}}</p>
+			</div>
+		</div>
+	</div>
+
+	<div ng-if="impact" class="container-fluid">
+		<div class="container detail">
+			<div class="col-md-6 text-justify">
+				<p ng-repeat="para in impact.longdescription">{{para}}</p>
+			</div>
+			<div class="col-md-6">
+				<img src="{{impact.image}}" class="img-responsive" alt="image" />
 			</div>
 		</div>
 	</div>

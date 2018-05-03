@@ -233,34 +233,55 @@
 			"name": "The Hunger Project",
 			"id": 1,
 			"oneliner": "impart them and understand their interaction with their",
-			"longdescription": "Vayam has been executing The Hunger Project in development block Takula, district Almora (Uttarakhand). The Hunger Project is a global, non-profit, strategic organization committed to the sustainable end of world hunger. Our vision is a world where every woman, man and child leads a healthy, fulfilling life of self-reliance and dignity. The Hunger Project builds leadership skills among women who have been systematically denied information, freedom of motion and voice in decision making.",
+			"longdescription": [
+				"Vayam has been executing The Hunger Project in development block Takula, district Almora (Uttarakhand). The Hunger Project is a global, non-profit, strategic organization committed to the sustainable end of world hunger.",
+				"Our vision is a world where every woman, man and child leads a healthy, fulfilling life of self-reliance and dignity. The Hunger Project builds leadership skills among women who have been systematically denied information, freedom of motion and voice in decision making."
+			],
 			"image": "http://placehold.it/600x400"
 		},
 		{
 			"name": "Green Livelihood",
 			"id": 2,
 			"oneliner": "impart them and understand their interaction with their",
-			"longdescription": "Green Livelihood programme is supported by CBM India Trust. CBM eV located in Germany is an International disability and development organization whose primary purpose to improve the quality of life of world’s poorest person with disability and those at risk of disability, CBM works in the most disadvantaged societies, irrespective of race, gender or religion. CBM seeks to reduce the prevalence of disease which causes impairment; minimize the condition which leads to disability and promoted equal opportunity for economic empowerment, livelihood security and full inclusion in all aspects of society for person with disability.Green Livelihood project is to implement disability inclusive sustainable green livelihood for persons with disabilities including women in the state of Uttarakhand in India. More than 200 persons with disabilities will be covered under skill development on farm and non-farm income generation activities like horticulture, apiculture, Mushroom production, diary, floriculture, medicinal and aromatic plantation, spice production and processing. Financial inclusion and local self-governance, Disability Producer Organisations development and linkage with government programmes for sustainability will be major part of the project proposal.",
+			"longdescription": [
+				"Green Livelihood programme is supported by CBM India Trust. CBM eV located in Germany is an International disability and development organization whose primary purpose to improve the quality of life of world’s poorest person with disability and those at risk of disability, CBM works in the most disadvantaged societies, irrespective of race, gender or religion.",
+				"CBM seeks to reduce the prevalence of disease which causes impairment; minimize the condition which leads to disability and promoted equal opportunity for economic empowerment, livelihood security and full inclusion in all aspects of society for person with disability.",
+				"Green Livelihood project is to implement disability inclusive sustainable green livelihood for persons with disabilities including women in the state of Uttarakhand in India.",
+				"More than 200 persons with disabilities will be covered under skill development on farm and non-farm income generation activities like horticulture, apiculture, Mushroom production, diary, floriculture, medicinal and aromatic plantation, spice production and processing.",
+				"Financial inclusion and local self-governance, Disability Producer Organisations development and linkage with government programmes for sustainability will be major part of the project proposal."
+			],
 			"image": "http://placehold.it/600x400"
 		},
 		{
 			"name": "Financial Literacy",
 			"id": 3,
 			"oneliner": "impart them and understand their interaction with their",
-			"longdescription": "We tried our best to impart them and understand their interaction with their world in which they are living. Our primary objectives were to make them aware of financial literacy which is the initial step of financial comprehension and strengthen their way of earning and spending patterns. We also tried to enlighten them about the convenient services/ products that will help them further in taking sagacious and profound decision about their fiscal related problems. Almost every programme delivered in folk language because they could feel some problem to understand hindi so it was a better way to use folk language.",
+			"longdescription": [
+				"We tried our best to impart them and understand their interaction with their world in which they are living. Our primary objectives were to make them aware of financial literacy which is the initial step of financial comprehension and strengthen their way of earning and spending patterns.",
+				"We also tried to enlighten them about the convenient services/ products that will help them further in taking sagacious and profound decision about their fiscal related problems. Almost every programme delivered in folk language because they could feel some problem to understand hindi so it was a better way to use folk language."
+			],
 			"image": "http://placehold.it/600x400"
 		},
 		{
 			"name": "The Hunger Project",
 			"id": 1,
 			"oneliner": "impart them and understand their interaction with their",
-			"longdescription": "Vayam has been executing The Hunger Project in development block Takula, district Almora (Uttarakhand). The Hunger Project is a global, non-profit, strategic organization committed to the sustainable end of world hunger. Our vision is a world where every woman, man and child leads a healthy, fulfilling life of self-reliance and dignity. The Hunger Project builds leadership skills among women who have been systematically denied information, freedom of motion and voice in decision making.",
+			"longdescription": [
+				"Vayam has been executing The Hunger Project in development block Takula, district Almora (Uttarakhand). The Hunger Project is a global, non-profit, strategic organization committed to the sustainable end of world hunger.",
+				"Our vision is a world where every woman, man and child leads a healthy, fulfilling life of self-reliance and dignity. The Hunger Project builds leadership skills among women who have been systematically denied information, freedom of motion and voice in decision making."
+			],
 			"image": "http://placehold.it/600x400"
 		},
 		{
 			"name": "Green Livelihood",
 			"id": 2,
-			"longdescription": "Green Livelihood programme is supported by CBM India Trust. CBM eV located in Germany is an International disability and development organization whose primary purpose to improve the quality of life of world’s poorest person with disability and those at risk of disability, CBM works in the most disadvantaged societies, irrespective of race, gender or religion. CBM seeks to reduce the prevalence of disease which causes impairment; minimize the condition which leads to disability and promoted equal opportunity for economic empowerment, livelihood security and full inclusion in all aspects of society for person with disability.Green Livelihood project is to implement disability inclusive sustainable green livelihood for persons with disabilities including women in the state of Uttarakhand in India. More than 200 persons with disabilities will be covered under skill development on farm and non-farm income generation activities like horticulture, apiculture, Mushroom production, diary, floriculture, medicinal and aromatic plantation, spice production and processing. Financial inclusion and local self-governance, Disability Producer Organisations development and linkage with government programmes for sustainability will be major part of the project proposal.",
+			"longdescription": [
+				"Green Livelihood programme is supported by CBM India Trust. CBM eV located in Germany is an International disability and development organization whose primary purpose to improve the quality of life of world’s poorest person with disability and those at risk of disability, CBM works in the most disadvantaged societies, irrespective of race, gender or religion.",
+				"CBM seeks to reduce the prevalence of disease which causes impairment; minimize the condition which leads to disability and promoted equal opportunity for economic empowerment, livelihood security and full inclusion in all aspects of society for person with disability.",
+				"Green Livelihood project is to implement disability inclusive sustainable green livelihood for persons with disabilities including women in the state of Uttarakhand in India.",
+				"More than 200 persons with disabilities will be covered under skill development on farm and non-farm income generation activities like horticulture, apiculture, Mushroom production, diary, floriculture, medicinal and aromatic plantation, spice production and processing.",
+				"Financial inclusion and local self-governance, Disability Producer Organisations development and linkage with government programmes for sustainability will be major part of the project proposal."
+			],
 			"image": "http://placehold.it/600x400",
 			"oneliner": "impart them and understand their interaction with their"
 		},
@@ -268,49 +289,76 @@
 			"name": "Financial Literacy",
 			"oneliner": "impart them and understand their interaction with their",
 			"id": 3,
-			"longdescription": "We tried our best to impart them and understand their interaction with their world in which they are living. Our primary objectives were to make them aware of financial literacy which is the initial step of financial comprehension and strengthen their way of earning and spending patterns. We also tried to enlighten them about the convenient services/ products that will help them further in taking sagacious and profound decision about their fiscal related problems. Almost every programme delivered in folk language because they could feel some problem to understand hindi so it was a better way to use folk language.",
+			"longdescription": [
+				"We tried our best to impart them and understand their interaction with their world in which they are living. Our primary objectives were to make them aware of financial literacy which is the initial step of financial comprehension and strengthen their way of earning and spending patterns.",
+				"We also tried to enlighten them about the convenient services/ products that will help them further in taking sagacious and profound decision about their fiscal related problems. Almost every programme delivered in folk language because they could feel some problem to understand hindi so it was a better way to use folk language."
+			],
 			"image": "http://placehold.it/600x400"
 		},
 		{
 			"name": "The Hunger Project",
 			"oneliner": "impart them and understand their interaction with their",
 			"id": 1,
-			"longdescription": "Vayam has been executing The Hunger Project in development block Takula, district Almora (Uttarakhand). The Hunger Project is a global, non-profit, strategic organization committed to the sustainable end of world hunger. Our vision is a world where every woman, man and child leads a healthy, fulfilling life of self-reliance and dignity. The Hunger Project builds leadership skills among women who have been systematically denied information, freedom of motion and voice in decision making.",
+			"longdescription": [
+				"Vayam has been executing The Hunger Project in development block Takula, district Almora (Uttarakhand). The Hunger Project is a global, non-profit, strategic organization committed to the sustainable end of world hunger.",
+				"Our vision is a world where every woman, man and child leads a healthy, fulfilling life of self-reliance and dignity. The Hunger Project builds leadership skills among women who have been systematically denied information, freedom of motion and voice in decision making."
+			],
 			"image": "http://placehold.it/600x400"
 		},
 		{
 			"name": "Green Livelihood",
 			"id": 2,
 			"oneliner": "impart them and understand their interaction with their",
-			"longdescription": "Green Livelihood programme is supported by CBM India Trust. CBM eV located in Germany is an International disability and development organization whose primary purpose to improve the quality of life of world’s poorest person with disability and those at risk of disability, CBM works in the most disadvantaged societies, irrespective of race, gender or religion. CBM seeks to reduce the prevalence of disease which causes impairment; minimize the condition which leads to disability and promoted equal opportunity for economic empowerment, livelihood security and full inclusion in all aspects of society for person with disability.Green Livelihood project is to implement disability inclusive sustainable green livelihood for persons with disabilities including women in the state of Uttarakhand in India. More than 200 persons with disabilities will be covered under skill development on farm and non-farm income generation activities like horticulture, apiculture, Mushroom production, diary, floriculture, medicinal and aromatic plantation, spice production and processing. Financial inclusion and local self-governance, Disability Producer Organisations development and linkage with government programmes for sustainability will be major part of the project proposal.",
+			"longdescription": [
+				"Green Livelihood programme is supported by CBM India Trust. CBM eV located in Germany is an International disability and development organization whose primary purpose to improve the quality of life of world’s poorest person with disability and those at risk of disability, CBM works in the most disadvantaged societies, irrespective of race, gender or religion.",
+				"CBM seeks to reduce the prevalence of disease which causes impairment; minimize the condition which leads to disability and promoted equal opportunity for economic empowerment, livelihood security and full inclusion in all aspects of society for person with disability.",
+				"Green Livelihood project is to implement disability inclusive sustainable green livelihood for persons with disabilities including women in the state of Uttarakhand in India.",
+				"More than 200 persons with disabilities will be covered under skill development on farm and non-farm income generation activities like horticulture, apiculture, Mushroom production, diary, floriculture, medicinal and aromatic plantation, spice production and processing.",
+				"Financial inclusion and local self-governance, Disability Producer Organisations development and linkage with government programmes for sustainability will be major part of the project proposal."
+			],
 			"image": "http://placehold.it/600x400"
 		},
 		{
 			"name": "Financial Literacy",
 			"id": 3,
 			"oneliner": "impart them and understand their interaction with their",
-			"longdescription": "We tried our best to impart them and understand their interaction with their world in which they are living. Our primary objectives were to make them aware of financial literacy which is the initial step of financial comprehension and strengthen their way of earning and spending patterns. We also tried to enlighten them about the convenient services/ products that will help them further in taking sagacious and profound decision about their fiscal related problems. Almost every programme delivered in folk language because they could feel some problem to understand hindi so it was a better way to use folk language.",
+			"longdescription": [
+				"We tried our best to impart them and understand their interaction with their world in which they are living. Our primary objectives were to make them aware of financial literacy which is the initial step of financial comprehension and strengthen their way of earning and spending patterns.",
+				"We also tried to enlighten them about the convenient services/ products that will help them further in taking sagacious and profound decision about their fiscal related problems. Almost every programme delivered in folk language because they could feel some problem to understand hindi so it was a better way to use folk language."
+			],
 			"image": "http://placehold.it/600x400"
 		},
 		{
 			"name": "The Hunger Project",
 			"id": 1,
 			"oneliner": "impart them and understand their interaction with their",
-			"longdescription": "Vayam has been executing The Hunger Project in development block Takula, district Almora (Uttarakhand). The Hunger Project is a global, non-profit, strategic organization committed to the sustainable end of world hunger. Our vision is a world where every woman, man and child leads a healthy, fulfilling life of self-reliance and dignity. The Hunger Project builds leadership skills among women who have been systematically denied information, freedom of motion and voice in decision making.",
+			"longdescription": [
+				"Vayam has been executing The Hunger Project in development block Takula, district Almora (Uttarakhand). The Hunger Project is a global, non-profit, strategic organization committed to the sustainable end of world hunger.",
+				"Our vision is a world where every woman, man and child leads a healthy, fulfilling life of self-reliance and dignity. The Hunger Project builds leadership skills among women who have been systematically denied information, freedom of motion and voice in decision making."
+			],
 			"image": "http://placehold.it/600x400"
 		},
 		{
 			"name": "Green Livelihood",
 			"id": 2,
 			"oneliner": "impart them and understand their interaction with their",
-			"longdescription": "Green Livelihood programme is supported by CBM India Trust. CBM eV located in Germany is an International disability and development organization whose primary purpose to improve the quality of life of world’s poorest person with disability and those at risk of disability, CBM works in the most disadvantaged societies, irrespective of race, gender or religion. CBM seeks to reduce the prevalence of disease which causes impairment; minimize the condition which leads to disability and promoted equal opportunity for economic empowerment, livelihood security and full inclusion in all aspects of society for person with disability.Green Livelihood project is to implement disability inclusive sustainable green livelihood for persons with disabilities including women in the state of Uttarakhand in India. More than 200 persons with disabilities will be covered under skill development on farm and non-farm income generation activities like horticulture, apiculture, Mushroom production, diary, floriculture, medicinal and aromatic plantation, spice production and processing. Financial inclusion and local self-governance, Disability Producer Organisations development and linkage with government programmes for sustainability will be major part of the project proposal.",
+			"longdescription": [
+				"Green Livelihood programme is supported by CBM India Trust. CBM eV located in Germany is an International disability and development organization whose primary purpose to improve the quality of life of world’s poorest person with disability and those at risk of disability, CBM works in the most disadvantaged societies, irrespective of race, gender or religion.",
+				"CBM seeks to reduce the prevalence of disease which causes impairment; minimize the condition which leads to disability and promoted equal opportunity for economic empowerment, livelihood security and full inclusion in all aspects of society for person with disability.",
+				"Green Livelihood project is to implement disability inclusive sustainable green livelihood for persons with disabilities including women in the state of Uttarakhand in India.",
+				"More than 200 persons with disabilities will be covered under skill development on farm and non-farm income generation activities like horticulture, apiculture, Mushroom production, diary, floriculture, medicinal and aromatic plantation, spice production and processing.",
+				"Financial inclusion and local self-governance, Disability Producer Organisations development and linkage with government programmes for sustainability will be major part of the project proposal."
+			],
 			"image": "http://placehold.it/600x400"
 		},
 		{
 			"name": "Financial Literacy",
 			"id": 3,
 			"oneliner": "impart them and understand their interaction with their",
-			"longdescription": "We tried our best to impart them and understand their interaction with their world in which they are living. Our primary objectives were to make them aware of financial literacy which is the initial step of financial comprehension and strengthen their way of earning and spending patterns. We also tried to enlighten them about the convenient services/ products that will help them further in taking sagacious and profound decision about their fiscal related problems. Almost every programme delivered in folk language because they could feel some problem to understand hindi so it was a better way to use folk language.",
+			"longdescription": [
+				"We tried our best to impart them and understand their interaction with their world in which they are living. Our primary objectives were to make them aware of financial literacy which is the initial step of financial comprehension and strengthen their way of earning and spending patterns.",
+				"We also tried to enlighten them about the convenient services/ products that will help them further in taking sagacious and profound decision about their fiscal related problems. Almost every programme delivered in folk language because they could feel some problem to understand hindi so it was a better way to use folk language."
+			],
 			"image": "http://placehold.it/600x400"
 		}
 	],

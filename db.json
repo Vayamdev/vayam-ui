@@ -18,22 +18,22 @@
 			"name": "Forest Conservation",
 			"id": "3",
 			"icon": "/assets/project/icons/forest.jpg",
-			"shortdescription": "The forest plays vital role in tribal culture. It not only provides food with rich variety of nutritious tubers, fruits, mushrooms, roots, and leaves but also generates ample forest produce like fruits, medicine, fodder, honey, gum etc. throughout the year. Hence forest is an indivisible part of tribal community’s living and its conservation ultimately helps them create new livelihood opportunities",
+			"shortDescription": "The forest plays vital role in tribal culture. It not only provides food with rich variety of nutritious tubers, fruits, mushrooms, roots, and leaves but also generates ample forest produce like fruits, medicine, fodder, honey, gum etc. throughout the year. Hence forest is an indivisible part of tribal community’s living and its conservation ultimately helps them create new livelihood opportunities",
 			"childprojects": [{
 					"name": "Legal recognition and conservation of community forest",
-					"shortdescription": [
+					"shortDescription": [
 						"Tribal people have been dependent on forest resources since centuries, but they had no right over it and consequently no responsibility for conserving it. Their forced alienation from the forest had disastrous effects for both forest and tribals. The new law in 2008 changed this and sought to end the ‘historical injustice’ of deprivation from forest rights. The enactment of law alone did not ensure the people exercising the rights. Vayam – after a hard struggle of 3 years – won the first CFR (Community Forest Rights) for four villages; viz. Kokanpada (22 ha.), Doyachapada (150 ha.), Dhadhri (284 ha.), and Ambyachapada (60 ha.). There are about 100 more villages in this tribal belt that are yet to get these rights. Vayam’s four have humbly paved the way",
 						"Villagers from these four villages have initiated their drives towards community forest conservation. Villagers are abided by  Kulhadi-bandh and charai-bandh under CFRMC ( village committee). They designed their own watershed plan for village, built trenches, check dams etc."
 					],
-					"displayimageUrl": "http://placehold.it/500x300"
+					"displayimage": "http://placehold.it/500x300"
 				},
 				{
 					"name": "Conservation and Livelihood",
-					"shortdescription": [
+					"shortDescription": [
 						"The conservation has opened door to enough livelihood opportunities. The community is getting mobilized and has formulated its rules of judicious extraction from the forest. The extraction when coupled with processing will fetch a better value and income for the people. Commonly seen phenomenon is that of destruction being profitable than conservation. The idea of processing centre is to reverse this scene. People conserving the forest must prosper along with it.",
 						"The processing centre coming up in village doyapada has oil expeller (for Mahua seed edible oil), solar conduction dryers (for forest fruit, leafs, and flowers), pulveriser for making powder of dried products, leaf-plate and leaf-bowl making machine , an eco-friendly low-carbon-footprint building to house all machines, solar energy for powering all machines. Farmers also adopted Treadle Pump technology. This has saved people’s money, diesel, and water. The JFMC has bought 10 solar conduction dryers. The dryers are being utilized to dry farm and forest produce."
 					],
-					"displayimageUrl": "http://placehold.it/500x300"
+					"displayimage": "http://placehold.it/500x300"
 				}
 			]
 		},
@@ -41,29 +41,29 @@
 			"name": "Educating beyond books",
 			"id": "4",
 			"icon": "/assets/project/icons/beyond-book.jpg",
-			"shortdescription": "Learning is a very substantial and natural process. A child learns so many things from very beginning of her life. Same way it happens later in her life. Every child learns her own way to deal with the outside world.  In practice on the contrary we think that learning happens in schools. Schools and teachers  might accelerate the process but can’t be responsible for it.This natural process of learning ends when they are asked to write and read. Their self-earned knowledge has no value in schooling system. Hence Vayam has come up with education solutions that are beyond books and framed schools.",
+			"shortDescription": "Learning is a very substantial and natural process. A child learns so many things from very beginning of her life. Same way it happens later in her life. Every child learns her own way to deal with the outside world.  In practice on the contrary we think that learning happens in schools. Schools and teachers  might accelerate the process but can’t be responsible for it.This natural process of learning ends when they are asked to write and read. Their self-earned knowledge has no value in schooling system. Hence Vayam has come up with education solutions that are beyond books and framed schools.",
 			"childprojects": [{
 					"name": "Jeevan Shikshan – Life skills for 9th Std",
-					"shortdescription": [
+					"shortDescription": [
 						"This program includes learning about: banking and basic bank transactions, Gram Panchayat and its services, seed selection and processing, making organic insect repellents, preventing and treating animal diseases, about calculating cubic meters of a labour’s work and so on. These are the things the village young need to know for improving daily life. Vayam’s Life Skills Curriculum is ensuring that 9th standard students from the remote villages acquire these life skills at the right age."
 					],
-					"displayimageUrl": "http://placehold.it/500x300"
+					"displayimage": "http://placehold.it/500x300"
 				},
 				{
 					"name": "Bin-booka Ya-shika – Self learning for children",
-					"shortdescription": [
+					"shortDescription": [
 						"Bin booka Ya Shika has 10 centres in the villages of Jawhar. Each centre has kit of toys. The children govern this kit as a common resource; they elect their representatives, and form rules of use. These children – who have never seen expensive toys, successfully keep this kit in a good condition. We believe if the children learn to govern a community resource, they will surely govern and conserve their forests and rivers in future",
 						"Along with this toys kit; a  local youth conducts an hour long activity at BIBUYASHI centre for five days in a week.  An yearly syllabus contains various modules .These modules have been designed which will cater to different aspects of learning through drawing, reading, craft, sculpture, theatre, painting, songs etc. "
 					],
-					"displayimageUrl": "http://placehold.it/500x300"
+					"displayimage": "http://placehold.it/500x300"
 				},
 				{
 					"name": "Dhadpad Prayogshala",
-					"shortdescription": [
+					"shortDescription": [
 						"The objective of this project is to ensure that the children understand science while experimenting with their hands. They can touch the microscope and they care for the test tubes, because they own these labs. The Lab is a mix of market-produced and self-produced apparatus which is assembled from scratch.  ",
 						"The lab kit is in sync with syllabus of science textbooks. This would help children understand the fundamental concepts of science as in their curriculum."
 					],
-					"displayimageUrl": "http://placehold.it/500x300"
+					"displayimage": "http://placehold.it/500x300"
 				}
 			]
 		},		
@@ -71,28 +71,28 @@
 			"name": "Strengthening democracy roots",
 			"id": "1",
 			"icon": "/assets/project/icons/swaraj.jpg",
-			"shortdescription": "The constitution of India in its Schedule VI has given special rights to scheduled tribe areas. The Panchayats Extension to Scheduled Areas (PESA) Act has brought democracy to the remotest tribal hamlets. It has converged the traditional tribal practices of self-governance and the democratic rights bestowed by the constitution. But this empowerment has not percolated to the bottom of pyramid. Vayam is actively empowering tribal village assemblies in this mode of self-government – by constant training and hand-holding. These villages shall be self-reliant in terms of governance of natural resources (viz. water, forest, minor minerals). This will result in sustainable management of resources and also in mitigation of exploitation through control over resources.",
+			"shortDescription": "The constitution of India in its Schedule VI has given special rights to scheduled tribe areas. The Panchayats Extension to Scheduled Areas (PESA) Act has brought democracy to the remotest tribal hamlets. It has converged the traditional tribal practices of self-governance and the democratic rights bestowed by the constitution. But this empowerment has not percolated to the bottom of pyramid. Vayam is actively empowering tribal village assemblies in this mode of self-government – by constant training and hand-holding. These villages shall be self-reliant in terms of governance of natural resources (viz. water, forest, minor minerals). This will result in sustainable management of resources and also in mitigation of exploitation through control over resources.",
 			"childprojects": [{
 					"name": "Youth leaders’ training in democratic rights",
-					"shortdescription": [
+					"shortDescription": [
 						"Vayam’s leadership initiative focuses on developing strong-informed-sensitive leaders in tribal villages.  We conduct ‘Youth leadership development camps’. The youth learn laws important for empowerment and development planning at village level; e.g. FRA, NREGA, GP Act, RTI, and PESA. They chart out development priorities for their community. The youth leaders are also empowered to lobby and elicit cooperation from the local government administration."
 					],
-					"displayimageUrl": "http://placehold.it/500x300"
+					"displayimage": "http://placehold.it/500x300"
 				},
 				{
 					"name": "Capacity building of village assemblies",
-					"shortdescription": [
+					"shortDescription": [
 						"The Panchayat Raj envisioned by the constitution can become effective only if there are funds, functions, and functionaries at the village Panchayat level. The central government initiated a program called GPDP (Gram Panchayat Development Plan) insisting on participatory planning at village level using the funds from Finance Commission. The percolation is a real challenge in our country with bureaucratic and socio-political bottlenecks.Vayam conducts training for village Panchayat members, village youth and women, and the local government staff.  Youth from Vayam team served as master trainers in GPDP reaching out to Gram Panchayats."
 					],
-					"displayimageUrl": "http://placehold.it/500x300"
+					"displayimage": "http://placehold.it/500x300"
 				},
 				{
 					"name": "Zero migration through NREGA",
-					"shortdescription": [
+					"shortDescription": [
 						"The tribal areas are known for seasonal distress migration. The lack of irrigation and absence of job opportunities result in majority of young people migrating in search of unskilled labour work. NREGA (National Rural Employment Guarantee Act) has on one hand assured the villages of unskilled employment in the village and on the other hand it holds huge potential for improving the natural resources. If NREGA is implemented in its true spirit, the lands, the water, the forest shall improve and in the long run – villagers will neither migrate nor ask government to provide work. For their rivers and ponds will have enough water to irrigate the farms throughout the year. This will provide self-reliant and sustainable employment to all the people skilled in farming (mistakenly called unskilled).",
 						"Vayam has worked consistently on NREGA educating villagers and empowering them to get things done from the bureaucracy. Villagers in Dhadhri and Hateri have done wonders with this empowering support. Both villages had migration reduced by 80%. Vayam team is currently working on replicating this in 100 villages."
 					],
-					"displayimageUrl": "http://placehold.it/500x300"
+					"displayimage": "http://placehold.it/500x300"
 				}
 			]
 		},
@@ -100,140 +100,140 @@
 			"name": "Women Empowerment",
 			"id": "2",
 			"icon": "/assets/project/icons/women.png",
-			"shortdescription": "The government has introduced 50% reservation for women in all local government bodies.Maharashtra has about 3,000 Gram Panchayats in tribal areas. The low literacy levels, disguised un-education, poor road and internet connectivity, and degradation of natural resources (water and forest) are major destabilizing factors. Considering these challenges, utilizing government funds effectively at local level becomes ultra-crucial. This is in the hands of persons elected as Gram Panchayat members and Sarpanch and 50% of these are women.",
+			"shortDescription": "The government has introduced 50% reservation for women in all local government bodies.Maharashtra has about 3,000 Gram Panchayats in tribal areas. The low literacy levels, disguised un-education, poor road and internet connectivity, and degradation of natural resources (water and forest) are major destabilizing factors. Considering these challenges, utilizing government funds effectively at local level becomes ultra-crucial. This is in the hands of persons elected as Gram Panchayat members and Sarpanch and 50% of these are women.",
 			"childprojects": [{
 					"name": "Gram Lakshmi",
-					"shortdescription": [
+					"shortDescription": [
 						"This has created windows of opportunity for women to enter the arena of governance and politics. On the flip side, the opportunity is also a challenge for women to make their place in this male-dominated sector. The challenge is even bigger in the tribal areas of the state. The tribal women are new in the arena of running a local government. Given adequate training and handholding support, they can make a mark in governance at village level.",
 						"This change in the confidence and knowledge base of women in governance will bring about a positive change in the villages. The prosperity of villages will get a positive flip. Hence we have named this project – Gram Lakshmi.",
 						"This project focuses on training the tribal women from Jawhar and Vikramgad blocks. This includes training on Gram Panchayat Law, PESA (Panchayats Extension to Scheduled Areas), Finance Commission grants, tax collection, Development planning, communication skills, public speaking, community mobilisation, expenditure management etc"
 					],
-					"displayimageUrl": "http://placehold.it/500x300"
+					"displayimage": "http://placehold.it/500x300"
 				},
 				{
 					"name": "Training SHGs about citizen’s rights",
-					"shortdescription": [
+					"shortDescription": [
 						"Aspiring women in tribal villages need both: capacity building inputs as well as peer support.  In tribal context SHGs being self-governed can play an efficient role for planning the development areas of village; based on the resources.",
 						"Vayam conducts these training programs  on RTI, NREGA, FRA etc. for SHGs. Women in SHGs learn how to get right to work and how to file complaints."
 					],
-					"displayimageUrl": "http://placehold.it/500x300"
+					"displayimage": "http://placehold.it/500x300"
 				},
 				{
 					"name": "Using used clothes as seed capital",
-					"shortdescription": [
+					"shortDescription": [
 						"A dollar gets a dollar but how to earn the first dollar?. Vayam started an initiative for SHGs in 2016 where civic population give used clothes in a good condition; SHGs (Jawhar) buy those clothes and sell in their respective villages and make profit out of it. This profit  becomes their seed capital for future endeavours"
 					],
-					"displayimageUrl": "http://placehold.it/500x300"
+					"displayimage": "http://placehold.it/500x300"
 				},
 				{
 					"name": "Forest food festival",
-					"shortdescription": [
+					"shortDescription": [
 						"Tribal women from villages of Jawhar are supported by Vayam to organise a ‘Ranbhaji Mahotsav’ (forest food festival) bringing rich delicacies made from wild vegetable species. Government officers and our friends-wellwishers from cities grace the occasion relishing the taste of these rare forest foods. Women earn a sense of honour by organising this ‘big event’ and by being the cynosure. The forest dwelling tribes have rich and independent sources of nutrition. The key to reducing the modern problem of malnutrition is within the forest not in charities from government and NGOs – this feeling rises through the program"
 					],
-					"displayimageUrl": "http://placehold.it/500x300"
+					"displayimage": "http://placehold.it/500x300"
 				},
 				{
 					"name": "Reaching markets",
-					"shortdescription": [
+					"shortDescription": [
 						"SHGs from Jawhar and Vikramgad blocks participate in various exhibitions selling products made of farm and forest; e.g. honey, dried fruit, Nagli/Ragi flour, dried vegetables, salted forest fruit etc",
 						"More than two hundred women from SHGs were represented under Aadi Shakti banner in Bhimthadi Jatra, Pune. ( Year 2016). These stalls had thirty one products made from farm and forest food  which are exclusive to tribal"
 					],
-					"displayimageUrl": "http://placehold.it/500x300"
+					"displayimage": "http://placehold.it/500x300"
 				}
 			]
 		}
 	],
 	"events": [
 		{
-			"eventname": "Sculpture Workshop",
+			"name": "Sculpture Workshop",
 			"id": 1,
-			"shortdescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
-			"longdescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.",
+			"shortDescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+			"longDescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.",
 			"image": "/assets/home/events/event1.jpg"
 		},
 		{
-			"eventname": "Holi celebrations",
+			"name": "Holi celebrations",
 			"id": 2,
-			"shortdescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus",
-			"longdescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt",
+			"shortDescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus",
+			"longDescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt",
 			"image": "/assets/home/events/event2.jpg"
 		},
 		{
-			"eventname": "Skill development",
+			"name": "Skill development",
 			"id": 3,
-			"shortdescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies",
-			"longdescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt",
+			"shortDescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies",
+			"longDescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt",
 			"image": "/assets/home/events/event3.jpg"
 		},
 		{
-			"eventname": "Sculpture Workshop",
+			"name": "Sculpture Workshop",
 			"id": 1,
-			"shortdescription": "sdfsdfsdfs sdfsdfsdf Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
-			"longdescription": "sdfsdfsdfdsfsd sdfsdf  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.",
+			"shortDescription": "sdfsdfsdfs sdfsdfsdf Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+			"longDescription": "sdfsdfsdfdsfsd sdfsdf  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.",
 			"image": "/assets/home/events/event4.jpg"
 		},
 		{
-			"eventname": "Holi celebrations",
+			"name": "Holi celebrations",
 			"id": 2,
-			"shortdescription": "sdfsdfsdfs sdfsdfsdfLorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus",
-			"longdescription": "sdfsdfsdfs sdfsdfsdf  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt",
+			"shortDescription": "sdfsdfsdfs sdfsdfsdfLorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus",
+			"longDescription": "sdfsdfsdfs sdfsdfsdf  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt",
 			"image": "/assets/home/events/event5.jpg"
 		},
 		{
-			"eventname": "Skill development",
+			"name": "Skill development",
 			"id": 3,
-			"shortdescription": "sdfsdfsdfs sdfsdfsdf Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies",
-			"longdescription": "sdfsdf sdfsdfsd sdfsdf sdfsdf Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt",
+			"shortDescription": "sdfsdfsdfs sdfsdfsdf Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies",
+			"longDescription": "sdfsdf sdfsdfsd sdfsdf sdfsdf Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt",
 			"image": "/assets/home/events/event6.jpg"
 		},
 		{
-			"eventname": "Sculpture Workshop",
+			"name": "Sculpture Workshop",
 			"id": 1,
-			"shortdescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
-			"longdescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.",
+			"shortDescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+			"longDescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.",
 			"image": "/assets/home/events/event1.jpg"
 		},
 		{
-			"eventname": "Holi celebrations",
+			"name": "Holi celebrations",
 			"id": 2,
-			"shortdescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus",
-			"longdescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt",
+			"shortDescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus",
+			"longDescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt",
 			"image": "/assets/home/events/event2.jpg"
 		},
 		{
-			"eventname": "Skill development",
+			"name": "Skill development",
 			"id": 3,
-			"shortdescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies",
-			"longdescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt",
+			"shortDescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies",
+			"longDescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt",
 			"image": "/assets/home/events/event3.jpg"
 		},
 		{
-			"eventname": "Sculpture Workshop",
+			"name": "Sculpture Workshop",
 			"id": 1,
-			"shortdescription": "sdfsdfsdfs sdfsdfsdf Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
-			"longdescription": "sdfsdfsdfdsfsd sdfsdf  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.",
+			"shortDescription": "sdfsdfsdfs sdfsdfsdf Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+			"longDescription": "sdfsdfsdfdsfsd sdfsdf  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.",
 			"image": "/assets/home/events/event4.jpg"
 		},
 		{
-			"eventname": "Holi celebrations",
+			"name": "Holi celebrations",
 			"id": 2,
-			"shortdescription": "sdfsdfsdfs sdfsdfsdfLorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus",
-			"longdescription": "sdfsdfsdfs sdfsdfsdf  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt",
+			"shortDescription": "sdfsdfsdfs sdfsdfsdfLorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus",
+			"longDescription": "sdfsdfsdfs sdfsdfsdf  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt",
 			"image": "/assets/home/events/event5.jpg"
 		},
 		{
-			"eventname": "Skill development",
+			"name": "Skill development",
 			"id": 3,
-			"shortdescription": "sdfsdfsdfs sdfsdfsdf Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies",
-			"longdescription": "sdfsdf sdfsdfsd sdfsdf sdfsdf Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt",
+			"shortDescription": "sdfsdfsdfs sdfsdfsdf Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies",
+			"longDescription": "sdfsdf sdfsdfsd sdfsdf sdfsdf Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt",
 			"image": "/assets/home/events/event6.jpg"
 		}
 	],
 	"impacts": [{
 			"name": "The Hunger Project",
 			"id": 1,
-			"oneliner": "impart them and understand their interaction with their",
-			"longdescription": [
+			"oneLine": "impart them and understand their interaction with their",
+			"longDescription": [
 				"Vayam has been executing The Hunger Project in development block Takula, district Almora (Uttarakhand). The Hunger Project is a global, non-profit, strategic organization committed to the sustainable end of world hunger.",
 				"Our vision is a world where every woman, man and child leads a healthy, fulfilling life of self-reliance and dignity. The Hunger Project builds leadership skills among women who have been systematically denied information, freedom of motion and voice in decision making."
 			],
@@ -242,8 +242,8 @@
 		{
 			"name": "Green Livelihood",
 			"id": 2,
-			"oneliner": "impart them and understand their interaction with their",
-			"longdescription": [
+			"oneLine": "impart them and understand their interaction with their",
+			"longDescription": [
 				"Green Livelihood programme is supported by CBM India Trust. CBM eV located in Germany is an International disability and development organization whose primary purpose to improve the quality of life of world’s poorest person with disability and those at risk of disability, CBM works in the most disadvantaged societies, irrespective of race, gender or religion.",
 				"CBM seeks to reduce the prevalence of disease which causes impairment; minimize the condition which leads to disability and promoted equal opportunity for economic empowerment, livelihood security and full inclusion in all aspects of society for person with disability.",
 				"Green Livelihood project is to implement disability inclusive sustainable green livelihood for persons with disabilities including women in the state of Uttarakhand in India.",
@@ -255,8 +255,8 @@
 		{
 			"name": "Financial Literacy",
 			"id": 3,
-			"oneliner": "impart them and understand their interaction with their",
-			"longdescription": [
+			"oneLine": "impart them and understand their interaction with their",
+			"longDescription": [
 				"We tried our best to impart them and understand their interaction with their world in which they are living. Our primary objectives were to make them aware of financial literacy which is the initial step of financial comprehension and strengthen their way of earning and spending patterns.",
 				"We also tried to enlighten them about the convenient services/ products that will help them further in taking sagacious and profound decision about their fiscal related problems. Almost every programme delivered in folk language because they could feel some problem to understand hindi so it was a better way to use folk language."
 			],
@@ -265,8 +265,8 @@
 		{
 			"name": "The Hunger Project",
 			"id": 1,
-			"oneliner": "impart them and understand their interaction with their",
-			"longdescription": [
+			"oneLine": "impart them and understand their interaction with their",
+			"longDescription": [
 				"Vayam has been executing The Hunger Project in development block Takula, district Almora (Uttarakhand). The Hunger Project is a global, non-profit, strategic organization committed to the sustainable end of world hunger.",
 				"Our vision is a world where every woman, man and child leads a healthy, fulfilling life of self-reliance and dignity. The Hunger Project builds leadership skills among women who have been systematically denied information, freedom of motion and voice in decision making."
 			],
@@ -275,7 +275,7 @@
 		{
 			"name": "Green Livelihood",
 			"id": 2,
-			"longdescription": [
+			"longDescription": [
 				"Green Livelihood programme is supported by CBM India Trust. CBM eV located in Germany is an International disability and development organization whose primary purpose to improve the quality of life of world’s poorest person with disability and those at risk of disability, CBM works in the most disadvantaged societies, irrespective of race, gender or religion.",
 				"CBM seeks to reduce the prevalence of disease which causes impairment; minimize the condition which leads to disability and promoted equal opportunity for economic empowerment, livelihood security and full inclusion in all aspects of society for person with disability.",
 				"Green Livelihood project is to implement disability inclusive sustainable green livelihood for persons with disabilities including women in the state of Uttarakhand in India.",
@@ -283,13 +283,13 @@
 				"Financial inclusion and local self-governance, Disability Producer Organisations development and linkage with government programmes for sustainability will be major part of the project proposal."
 			],
 			"image": "http://placehold.it/600x400",
-			"oneliner": "impart them and understand their interaction with their"
+			"oneLine": "impart them and understand their interaction with their"
 		},
 		{
 			"name": "Financial Literacy",
-			"oneliner": "impart them and understand their interaction with their",
+			"oneLine": "impart them and understand their interaction with their",
 			"id": 3,
-			"longdescription": [
+			"longDescription": [
 				"We tried our best to impart them and understand their interaction with their world in which they are living. Our primary objectives were to make them aware of financial literacy which is the initial step of financial comprehension and strengthen their way of earning and spending patterns.",
 				"We also tried to enlighten them about the convenient services/ products that will help them further in taking sagacious and profound decision about their fiscal related problems. Almost every programme delivered in folk language because they could feel some problem to understand hindi so it was a better way to use folk language."
 			],
@@ -297,9 +297,9 @@
 		},
 		{
 			"name": "The Hunger Project",
-			"oneliner": "impart them and understand their interaction with their",
+			"oneLine": "impart them and understand their interaction with their",
 			"id": 1,
-			"longdescription": [
+			"longDescription": [
 				"Vayam has been executing The Hunger Project in development block Takula, district Almora (Uttarakhand). The Hunger Project is a global, non-profit, strategic organization committed to the sustainable end of world hunger.",
 				"Our vision is a world where every woman, man and child leads a healthy, fulfilling life of self-reliance and dignity. The Hunger Project builds leadership skills among women who have been systematically denied information, freedom of motion and voice in decision making."
 			],
@@ -308,8 +308,8 @@
 		{
 			"name": "Green Livelihood",
 			"id": 2,
-			"oneliner": "impart them and understand their interaction with their",
-			"longdescription": [
+			"oneLine": "impart them and understand their interaction with their",
+			"longDescription": [
 				"Green Livelihood programme is supported by CBM India Trust. CBM eV located in Germany is an International disability and development organization whose primary purpose to improve the quality of life of world’s poorest person with disability and those at risk of disability, CBM works in the most disadvantaged societies, irrespective of race, gender or religion.",
 				"CBM seeks to reduce the prevalence of disease which causes impairment; minimize the condition which leads to disability and promoted equal opportunity for economic empowerment, livelihood security and full inclusion in all aspects of society for person with disability.",
 				"Green Livelihood project is to implement disability inclusive sustainable green livelihood for persons with disabilities including women in the state of Uttarakhand in India.",
@@ -321,8 +321,8 @@
 		{
 			"name": "Financial Literacy",
 			"id": 3,
-			"oneliner": "impart them and understand their interaction with their",
-			"longdescription": [
+			"oneLine": "impart them and understand their interaction with their",
+			"longDescription": [
 				"We tried our best to impart them and understand their interaction with their world in which they are living. Our primary objectives were to make them aware of financial literacy which is the initial step of financial comprehension and strengthen their way of earning and spending patterns.",
 				"We also tried to enlighten them about the convenient services/ products that will help them further in taking sagacious and profound decision about their fiscal related problems. Almost every programme delivered in folk language because they could feel some problem to understand hindi so it was a better way to use folk language."
 			],
@@ -331,8 +331,8 @@
 		{
 			"name": "The Hunger Project",
 			"id": 1,
-			"oneliner": "impart them and understand their interaction with their",
-			"longdescription": [
+			"oneLine": "impart them and understand their interaction with their",
+			"longDescription": [
 				"Vayam has been executing The Hunger Project in development block Takula, district Almora (Uttarakhand). The Hunger Project is a global, non-profit, strategic organization committed to the sustainable end of world hunger.",
 				"Our vision is a world where every woman, man and child leads a healthy, fulfilling life of self-reliance and dignity. The Hunger Project builds leadership skills among women who have been systematically denied information, freedom of motion and voice in decision making."
 			],
@@ -341,8 +341,8 @@
 		{
 			"name": "Green Livelihood",
 			"id": 2,
-			"oneliner": "impart them and understand their interaction with their",
-			"longdescription": [
+			"oneLine": "impart them and understand their interaction with their",
+			"longDescription": [
 				"Green Livelihood programme is supported by CBM India Trust. CBM eV located in Germany is an International disability and development organization whose primary purpose to improve the quality of life of world’s poorest person with disability and those at risk of disability, CBM works in the most disadvantaged societies, irrespective of race, gender or religion.",
 				"CBM seeks to reduce the prevalence of disease which causes impairment; minimize the condition which leads to disability and promoted equal opportunity for economic empowerment, livelihood security and full inclusion in all aspects of society for person with disability.",
 				"Green Livelihood project is to implement disability inclusive sustainable green livelihood for persons with disabilities including women in the state of Uttarakhand in India.",
@@ -354,8 +354,8 @@
 		{
 			"name": "Financial Literacy",
 			"id": 3,
-			"oneliner": "impart them and understand their interaction with their",
-			"longdescription": [
+			"oneLine": "impart them and understand their interaction with their",
+			"longDescription": [
 				"We tried our best to impart them and understand their interaction with their world in which they are living. Our primary objectives were to make them aware of financial literacy which is the initial step of financial comprehension and strengthen their way of earning and spending patterns.",
 				"We also tried to enlighten them about the convenient services/ products that will help them further in taking sagacious and profound decision about their fiscal related problems. Almost every programme delivered in folk language because they could feel some problem to understand hindi so it was a better way to use folk language."
 			],
@@ -365,71 +365,71 @@
 	"milestones": [{
 			"name": "The Beginning of Vayam",
 			"description": "3 villages put a limited trust in this new movement that said you have the power to bring change. Youth here learnt how to implement NREGA, the employment guarantee law. 3 villages got work and wages without migrating in distress. Other villages watched with awe.",
-			"date": "2008",
-			"imageurl": "http://placehold.it/470x200",
+			"year": "2008",
+			"image": "http://placehold.it/470x200",
 			"invert": false
 		},
 		{
 			"name": "More Villages Join Vayam",
 			"description": "Three villages campaigned in nearby villages with conviction of a doer. Many other villages joined Vayam movement. Natural growth began.",
-			"date": "2009",
-			"imageurl": "http://placehold.it/470x200",
+			"year": "2009",
+			"image": "http://placehold.it/470x200",
 			"invert": true
 		},
 		{
 			"name": "Beginning of Forest Rights Campaign",
 			"description": "Forest dwellers came forward with their woes. Forest Rights Act was passed, but rights were not recognized. Injustice prevailed. Vayam trained people in the relevant laws. People filed claims for rights.",
-			"date": "2010",
-			"imageurl": "http://placehold.it/470x200",
+			"year": "2010",
+			"image": "http://placehold.it/470x200",
 			"invert": false
 		},
 		{
 			"name": "Pioneering Conservation",
 			"description": "Two Villages pioneered community conservation. They prepared People’s Biodiversity Registers recording hundreds of plant and animal species and identifying the actions for conservation. Two more villages followed their steps. Some declared Kulhadi-bandh, some put a stop to chemical fishing. ",
-			"date": "2011",
-			"imageurl": "http://placehold.it/470x200",
+			"year": "2011",
+			"image": "http://placehold.it/470x200",
 			"invert": true
 		},
 		{
 			"name": "Expansion of Forest Rights Campaign",
 			"description": "Three villages filed claims and eventually earned recognition for Community Forest Rights. The community got its usage, management, conservation and rejuvenation rights over forest… after a century of alienation from forest rights. ",
-			"date": "2012",
-			"imageurl": "http://placehold.it/470x200",
+			"year": "2012",
+			"image": "http://placehold.it/470x200",
 			"invert": false
 		},
 		{
 			"name": "RTI Satyagraha",
 			"description": "Rights to till the ancestral lands were not recognized. Despite approval by Gramsabha, the administration partially or fully rejected the forest land rights. No reasons were disclosed. 1272 tribal citizens participated in the historic RTI Satyagraha and finally succeeded in exposing the information for the entire state.",
 			"date": "2013",
-			"imageurl": "http://placehold.it/470x200",
+			"year": "http://placehold.it/470x200",
 			"invert": true
 		},
 		{
 			"name": "Tree Plantation",
 			"description": "Government invited Vayam to support the 2-crore plantation drive. Vayam motivated many villages, farmers, and students to participate. We all planted 50,000 trees.",
 			"date": "2015",
-			"imageurl": "http://placehold.it/470x200",
+			"image": "http://placehold.it/470x200",
 			"invert": false
 		},
 		{
 			"name": "Rainwater Harvesting",
 			"description": "Heavy rainfall yet no water for irrigation – that is common scene. Vayam took a squirrel share drive. We and farmers built small rainwater tanks (Jalkund) in 250 places. Farmers could water 10-15 trees for 6-7 months.",
 			"date": "2016",
-			"imageurl": "http://placehold.it/470x200",
+			"image": "http://placehold.it/470x200",
 			"invert": true
 		},
 		{
 			"name": "RTI Appeals",
 			"description": "Forest rights were not fully recognized despite the RTI exposure. Forest right holders from 77 villages launched a Queue Satyagraha. 2051 people filed appeals in a single day. The constant dialogue and rapport that Vayam built with government helped. The review of those 2051 appeals began immediately.",
 			"date": "2017",
-			"imageurl": "http://placehold.it/470x200",
+			"image": "http://placehold.it/470x200",
 			"invert": false
 		},
 		{
 			"name": "Gramsabha Jagran rally",
 			"description": "People from 45 villages came on streets in a ‘Gramsabha Jagran’ rally. The gathering had a dialogue with the tribal minister and the assistant collector. The villages shall soon be declared as Gramsabhas under PESA law. Democracy shall be stronger at its roots.",
 			"date": "2018",
-			"imageurl": "http://placehold.it/470x200",
+			"image": "http://placehold.it/470x200",
 			"invert": true
 		}
 
@@ -438,77 +438,77 @@
 			"name": "Milind Thatte",
 			"post": "Founder",
 			"details": "Writer, activist, political scientist, nominated as Expert Member onthe State Tribal Advisory Council by the Governor of Maharashtra State",
-			"avatar": "http://placehold.it/400x400"
+			"image": "http://placehold.it/400x400"
 		},
 		{
 			"name": "Deepali Gogate",
 			"post": "Founder",
 			"details": "Educationist, writer, expert in innovative schooling, lives in a tribal village",
-			"avatar": "http://placehold.it/400x400"
+			"image": "http://placehold.it/400x400"
 		},
 		{
 			"name": "Prakash Bhide",
 			"post": "Trustee",
 			"details": "Entrepreneur based in Nashik, Involved in many social initiatives",
-			"avatar": "http://placehold.it/400x400"
+			"image": "http://placehold.it/400x400"
 		},
 		{
 			"name": "Vinayak Thalkar",
 			"post": "President",
 			"details": "Born and brought up in a tribal labourer family, now a Government certified master trainer in Gram Panchayat Development Plans",
-			"avatar": "http://placehold.it/400x400"
+			"image": "http://placehold.it/400x400"
 		},
 		{
 			"name": "Prakash Baraf",
 			"post": "Secretary",
 			"details": "Born and brought up in a tribal farmer family, now an entrepreneur and president of village biodiversity committee",
-			"avatar": "http://placehold.it/400x400"
+			"image": "http://placehold.it/400x400"
 		},
 		{
 			"name": "Amit Tillu",
 			"post": "Member",
 			"details": "Farmer and science teacher, based in a village in Nashik district",
-			"avatar": "http://placehold.it/400x400"
+			"image": "http://placehold.it/400x400"
 		}
 	],
 	"testimonials": [
 		{
 			"name": "Bharat Patara",
 			"designation": "Village Mahalepada",
-			"say": "We got employment and timely wages because of Vayam. The government scheme of EGS existed since last many years, but bureaucracy’s apathy and our ignorance did not get us any work. Vayam enlightened us and we could achieve this feat",
-			"avatar": "http://placehold.it/400x400"
+			"appreciation": "We got employment and timely wages because of Vayam. The government scheme of EGS existed since last many years, but bureaucracy’s apathy and our ignorance did not get us any work. Vayam enlightened us and we could achieve this feat",
+			"image": "http://placehold.it/400x400"
 		
 		},
 		{
 			"name": "Harichandra Jhurde",
 			"designation": "Village Bhokarhatti",
-			"say": "Some politicians ask us, ‘what does Vayam give you? It does not distribute any thing. Why do you cling to Vayam?’ We proudly tell them – Vayam gives us knowledge. It empowers us to make the government system work. Things do not last forever, knowledge does.",
-			"avatar": "http://placehold.it/400x400"
+			"appreciation": "Some politicians ask us, ‘what does Vayam give you? It does not distribute any thing. Why do you cling to Vayam?’ We proudly tell them – Vayam gives us knowledge. It empowers us to make the government system work. Things do not last forever, knowledge does.",
+			"image": "http://placehold.it/400x400"
 		},
 		{
 			"name": "Devendra Thodga",
 			"designation": "Village Ukshipada",
-			"say": "We assert our rights, we demand transparency, we get what is due to us. We face resistance from government servants, but we do not insult them. They are not our enemies, they are our brothers. Gradually they become our friends. Democracy becomes better like this. This is what Vayam has taught us.",
-			"avatar": "http://placehold.it/400x400"
+			"appreciation": "We assert our rights, we demand transparency, we get what is due to us. We face resistance from government servants, but we do not insult them. They are not our enemies, they are our brothers. Gradually they become our friends. Democracy becomes better like this. This is what Vayam has taught us.",
+			"image": "http://placehold.it/400x400"
 		},
 		{
 			"name": "Mathura Kharpade",
 			"designation": "Village Kharpadpada",
-			"say": "Our village is surrounded by river. In rains, we cannot cross it. Our village has no road. No ambulance comes here. Snake bites patients cannot be saved. I am sure we will get forest department and other department sanction for this road. There are too many procedure hurdles. But we have faith in Vayam. They have made us believe in ourselves. My neighbour is pregnant. I am sure we will get a road before she delivers. She can reach the hospital then.",
-			"avatar": "http://placehold.it/400x400"
+			"appreciation": "Our village is surrounded by river. In rains, we cannot cross it. Our village has no road. No ambulance comes here. Snake bites patients cannot be saved. I am sure we will get forest department and other department sanction for this road. There are too many procedure hurdles. But we have faith in Vayam. They have made us believe in ourselves. My neighbour is pregnant. I am sure we will get a road before she delivers. She can reach the hospital then.",
+			"image": "http://placehold.it/400x400"
 		}
 	],
 	"locations": [{
 		"name": "Vayam movement",
 		"address": "Vayam movement, Yusuf ashiyana, Behind, St Stand Rd, Jawhar, Maharashtra 401603, India",
-		"pincode": "411014",
+		"pinCode": "411014",
 		"state": "Maharashtra",
 		"country": "India",
 		"number": "+91 94215 64330",
 		"email": "vayamindia@gmail.com",
 		"coordinates": {
-			"latitude": 19.909773,
-			"longitude": 73.227902
+			"lat": 19.909773,
+			"lon": 73.227902
 		}
 	}],
 	"gallery": [{

@@ -8,11 +8,30 @@ var rootModule = angular.module('rootModule', [
     'ngAnimate',
     'ui.bootstrap',
     'simplePagination',
-    'datatables'
+    'datatables',
+    'contentful'
 ]);
+
+var appConfig = {
+    'useContentFul': true,
+    'apiURL': 'http://localhost:3000'
+};
 
 // constant for base URL. Change this on production server
 rootModule.constant('baseUrl', 'http://localhost:3000');
+rootModule.constant('appConfig', appConfig);
+
+if (appConfig.useContentFul) {
+    rootModule.config(function (contentfulProvider) {
+        contentfulProvider.setOptions({
+            space: '60in3qh11j2f',
+            accessToken: '73d398d77bebd3ffc71f78863345d842222fb5f7621088969da02d5b186011da'
+        });
+    });
+}
+
+
+
 
 
 /* 
@@ -64,6 +83,12 @@ rootModule.config(["$routeProvider", function($routeProvider) {
         activetab: 'Projects',
         activepage: 'Projects'
     })
+    .when("/impact/:impactid", {
+        templateUrl: "components/project/projectView.html",
+        controller: "impactController",
+        activetab: 'Impact',
+        activepage: 'Impact'
+    })
     .when("/gallery", {
         templateUrl: "components/aboutus/gallery/galleryView.html",
         controller: "galleryController",
@@ -83,63 +108,71 @@ rootModule.config(["$routeProvider", function($routeProvider) {
 
 
 
-rootModule.controller('homeController', ['$scope', 'homeService', 'globalFactory', function($scope, homeService, globalFactory) {
-    var currIndex = 0;
-    $scope.myInterval = 3000;
-    $scope.slides = [];
-    $scope.displayeventgroup = [];
-    $scope.noWrapSlides = false;
-    $scope.noWrapEvents = false;
-       
-    // fetch static data for this page. 
-    $scope.crisis = [];
-    $scope.conceptnote = [];
-    $scope.projects = [];
-    globalFactory.getStaticData(function(response) {
-        $scope.crisis = response.crisis;
-        $scope.conceptnote = response.conceptnote;      
-    });
-   
-    // get other page details
-    homeService.getSlides().then(function(response) {
-        $scope.slides = response.data;
-    }, function() {
-        console.log('Error during slide data fetching!');
-    });
-
-    homeService.getProjects().then(function(response) {
-        var projectData = angular.copy(response.data);
-        globalFactory.truncateData(projectData, 'shortdescription', 250);
-        $scope.projects = projectData;
-    }, function() {
-        console.log('Error during projects data fetching!');
-    });    
-
-    homeService.getThumbnails().then(function(response) {
-        var events = angular.copy(response.data);
-        globalFactory.truncateData(events, 'shortdescription', 120);
-        while (events.length) {
-            var temparr = [];
-            $scope.displayeventgroup.push(events.splice(0, 3));
-        }
-    }, function() {
-        console.log('Error during event data fetching!');
-    });
-
-    $scope.open = function (event) {
-        globalFactory.modalOpen({
-            header: event.eventname,
-            description: event.longdescription,
-            image: event.image
+rootModule.controller('homeController', [
+    '$scope',
+    'homeService', 
+    'globalFactory', 
+    function($scope, homeService, globalFactory) {
+        $scope.myInterval = 3000;
+        $scope.slides = [];
+        $scope.displayeventgroup = [];
+        $scope.noWrapSlides = false;
+        $scope.noWrapEvents = false;
+        
+        // fetch static data for this page. 
+        $scope.crisis = [];
+        $scope.conceptnote = [];
+        $scope.projects = [];
+        globalFactory.getStaticData(function(response) {
+            $scope.crisis = response.crisis;
+            $scope.conceptnote = response.conceptnote;      
         });
+    
+        // get slides data
+        homeService.getSlides().then(function(response) {
+            $scope.slides = globalFactory.resolvedImageIfContentFul(response.data);
+        }, function() {
+            console.log('Error during slide data fetching!');
+        });
+
+        homeService.getProjects().then(function(response) {
+            var projectData = angular.copy(response.data);
+            globalFactory.truncateData(projectData, 'shortDescription', 250);
+            $scope.projects = projectData;
+            console.log($scope.projects );
+        }, function() {
+            console.log('Error during projects data fetching!');
+        });    
+
+        // get events data
+        homeService.getThumbnails().then(function(response) {
+            var events = angular.copy(response.data);
+            events = globalFactory.resolvedImageIfContentFul(events);
+            globalFactory.truncateData(events, 'shortDescription', 120);
+            var sortedEvents = globalFactory.sortObjectsByDates(events, 'date');
+            while (sortedEvents.length) {
+                $scope.displayeventgroup.push(sortedEvents.splice(0, 3));
+            }
+        }, function() {
+            console.log('Error during event data fetching!');
+        });
+
+        $scope.open = function (event) {
+            globalFactory.modalOpen({
+                header: event.name,
+                description: event.longDescription,
+                image: event.image
+            });
+        }
     }
-}]);
+]);
 
 
 
-rootModule.controller('impactController', ['$scope', 'impactService', 'globalFactory', function($scope, impactService, globalFactory) {
+rootModule.controller('impactController', ['$scope', '$routeParams', 'impactService', 'globalFactory', function($scope, $routeParams, impactService, globalFactory) {
     $scope.bannerUrl;
     $scope.bannertext;
+    $scope.project;
 
     // fetch static data for this page. 
     globalFactory.getStaticData(function(response) {
@@ -148,19 +181,19 @@ rootModule.controller('impactController', ['$scope', 'impactService', 'globalFac
     });
 
     impactService.getImpactThumbnails().then(function(response) {
-        globalFactory.truncateData(response.data, 'oneliner', 120);
-        $scope.impacts = response.data;
+        var impacts = globalFactory.resolvedImageIfContentFul(response.data);
+        globalFactory.truncateData(impacts, 'oneLine', 120);
+        $scope.impacts = impacts;
+
+        for(var i=0; i < $scope.impacts.length; i++) {
+            if ($scope.impacts[i].id == parseInt($routeParams.impactid, 10)) {
+                $scope.impact = $scope.impacts[i];
+                break;
+            }
+        }
     }, function() {
         console.log('Error during event data fetching!');
     });
-
-    $scope.open = function (impact) {
-        globalFactory.modalOpen({
-            header: impact.name,
-            description: impact.longdescription,
-            image: impact.image
-        });
-    }
 }]);
 
 
@@ -181,7 +214,7 @@ rootModule.controller('whatweareController', ['$scope', 'teamService', 'globalFa
     });
 
     teamService.getStaff().then(function(response) {
-        $scope.teamdata = response.data;
+        $scope.teamdata = globalFactory.resolvedImageIfContentFul(response.data);
     }, 
     function() {
         console.log('Error during team data fetching!');
@@ -190,37 +223,41 @@ rootModule.controller('whatweareController', ['$scope', 'teamService', 'globalFa
 
 
 
-rootModule.controller('journeyController', ['$scope', 'journeyService', 'globalFactory', function($scope, journeyService, globalFactory) {
-    var currIndex = 0;
-    $scope.myInterval = 5000;
-    $scope.slides = [];
-    $scope.crisis = [];
-    $scope.conceptnote = [];
-    $scope.projects = [];
-    $scope.displayeventgroup = [];
+rootModule.controller('journeyController',[
+    '$scope',
+    'journeyService',
+    'globalFactory',
+    function($scope, journeyService, globalFactory) {
+        var isContentFul = appConfig.useContentFul;
+        $scope.myInterval = 5000;
+        $scope.slides = [];
+        $scope.crisis = [];
+        $scope.conceptnote = [];
+        $scope.projects = [];
+        $scope.displayeventgroup = [];
 
-    // fetch static data for this page. 
-    
-    globalFactory.getStaticData(function(response) {
-        $scope.title = response.journey.title;
-        $scope.bannertext = response.journey.bannertext;
-        $scope.bannerUrl = response.journey.bannerimage;
-    });
+        // fetch static data for this page. 
+        globalFactory.getStaticData(function(response) {
+            $scope.title = response.journey.title;
+            $scope.bannertext = response.journey.bannertext;
+            $scope.bannerUrl = response.journey.bannerimage;
+        });
 
-    // get other page details
-    journeyService.getTestimonials().then(function(response) {
-        $scope.slides = response.data;
-    }, function() {
-        console.log('Error during slide data fetching!');
-    });
+        // get other page details
+        journeyService.getTestimonials().then(function(response) {
+            $scope.slides = globalFactory.resolvedImageIfContentFul(response.data);
+            console.log($scope.slides);
+        }, function() {
+            console.log('Error during slide data fetching!');
+        });
 
-    journeyService.getMilestones().then(function(response) {
-        $scope.milestones = response.data;
-    }, function() {
-        console.log('Error during projects data fetching!');
-    });
-
-}]);
+        journeyService.getMilestones().then(function(response) {
+            $scope.milestones = globalFactory.resolvedImageIfContentFul(response.data);
+        }, function() {
+            console.log('Error during projects data fetching!');
+        });
+    }
+]);
 
 
 rootModule.controller('contactusController', ['$scope', 'contactUsService', 'globalFactory', function($scope, contactUsService, globalFactory) {
@@ -234,8 +271,7 @@ rootModule.controller('contactusController', ['$scope', 'contactUsService', 'glo
     });
     
     contactUsService.getLocations().then(function(response) {
-        var locations = response.data;
-        $scope.locations = locations;
+        $scope.locations = response.data.items;
     }); 
 }]);
 
@@ -292,7 +328,7 @@ rootModule.controller('downloadController', ['$scope', 'downloadService', 'globa
         });
 
         downloadService.getDownloadData().then(function(response) {
-            $scope.gridData = response.data;
+            $scope.gridData = globalFactory.resolvedImageIfContentFul(response.data, 'downloadFile');
         }, function() {
             console.log('Error during downloads data fetching!');
         });
@@ -309,7 +345,9 @@ rootModule.controller('galleryController', ['$scope', 'galleryService', 'globalF
     });
     
     galleryService.getGallery().then(function(response) {
-        $scope.sorteddata = globalFactory.sortGalleryData(response.data);
+       var resolvedData = globalFactory.resolvedImageIfContentFul(response.data);
+       console.log(resolvedData);
+        $scope.sorteddata = globalFactory.sortGalleryData(resolvedData);
         $scope.categories = Object.keys($scope.sorteddata);
 
         // Apply galary plugin
@@ -325,42 +363,46 @@ rootModule.controller('galleryController', ['$scope', 'galleryService', 'globalF
 }]);
 
 
-rootModule.service('homeService', ['$http', 'baseUrl', function($http, baseUrl) {
-    var cachedevents;
-    var cachedDataSlides;
-    var cachedDataProjects;
+rootModule.service('homeService', [
+    '$http',
+    'globalFactory',
+    function($http, globalFactory) {
+        var cachedevents;
+        var cachedDataSlides;
+        var cachedDataProjects;
 
-    this.getThumbnails = function() { 
-        if (!cachedevents) {
-            cachedevents =  $http.get(baseUrl + '/events');
+        this.getThumbnails = function() { 
+            if (!cachedevents) {
+                cachedevents = globalFactory.getStandardGetRequest('events');
+            }
+            return cachedevents;
         }
-        return cachedevents;
-    }
 
-    this.getSlides = function() {
 
-        if (!cachedDataSlides) {
-            cachedDataSlides =  $http.get(baseUrl + '/slides');
+        this.getSlides = function() {
+            if (!cachedDataSlides) {
+                cachedDataSlides = globalFactory.getStandardGetRequest('slides')
+            }
+            return cachedDataSlides;
         }
-        return cachedDataSlides;
-    }
-    
-    this.getProjects = function() {
-        if (!cachedDataProjects) {
-            cachedDataProjects =  $http.get(baseUrl + '/projects');
+        
+        this.getProjects = function() {
+            if (!cachedDataProjects) {
+                cachedDataProjects =  $http.get(appConfig.apiURL + '/projects');
+            }
+            return cachedDataProjects;
         }
-        return cachedDataProjects;
     }
-}]);
+]);
 
 
 
-rootModule.service('impactService', ['$http', 'baseUrl', function($http, baseUrl) {
+rootModule.service('impactService', ['globalFactory', function(globalFactory) {
     var cachedData;
 
     this.getImpactThumbnails = function() {
         if (!cachedData) {
-            cachedData =  $http.get(baseUrl + '/impacts');
+            cachedData =  globalFactory.getStandardGetRequest('impacts');
         }
         return cachedData;
     }
@@ -368,12 +410,12 @@ rootModule.service('impactService', ['$http', 'baseUrl', function($http, baseUrl
 
 
 
-rootModule.service('teamService', ['$http', 'baseUrl', function($http, baseUrl) {
+rootModule.service('teamService', ['globalFactory', function(globalFactory) {
     var cachedData;
 
     this.getStaff = function() {
         if (!cachedData) {
-            cachedData =  $http.get(baseUrl + '/team');
+            cachedData =  globalFactory.getStandardGetRequest('team');
         }
         return cachedData;
     }
@@ -381,34 +423,35 @@ rootModule.service('teamService', ['$http', 'baseUrl', function($http, baseUrl) 
     
 
 
-rootModule.service('journeyService', ['$http', 'baseUrl', function($http, baseUrl) {
+rootModule.service('journeyService', [
+    'globalFactory',
+    function(globalFactory) {
     var cachedDataMilestones;
     var cachedDataSlides;
 
     // get the event data from backend
     this.getMilestones = function() {
         if (!cachedDataMilestones) {
-            cachedDataMilestones = $http.get(baseUrl + '/milestones');
+            cachedDataMilestones = globalFactory.getStandardGetRequest('milestones');
         }
         return cachedDataMilestones;
     };
 
     this.getTestimonials = function() {
         if (!cachedDataSlides) {
-            cachedDataSlides = $http.get(baseUrl + '/testimonials');
+            cachedDataSlides = globalFactory.getStandardGetRequest('testimonials');
         }
         return cachedDataSlides;
     }
-
 }]);
 
 
-rootModule.service('galleryService', ['$http', 'baseUrl', function($http, baseUrl) {
+rootModule.service('galleryService', ['globalFactory', function(globalFactory) {
     var cachedData;
     // get the event data from backend
     this.getGallery = function() {
         if (!cachedData) {
-            cachedData = $http.get(baseUrl + '/gallery');
+            cachedData = globalFactory.getStandardGetRequest('gallery');
         }
         return cachedData;
     }
@@ -416,13 +459,12 @@ rootModule.service('galleryService', ['$http', 'baseUrl', function($http, baseUr
     
 
 
-rootModule.service('downloadService', ['$http', 'baseUrl', function($http, baseUrl) {
+rootModule.service('downloadService', ['globalFactory', function(globalFactory) {
     var cachedData;
 
     this.getDownloadData = function() {
-        console.log(cachedData);
         if (!cachedData) {
-            cachedData =  $http.get(baseUrl + '/download');
+            cachedData =  globalFactory.getStandardGetRequest('downloads');
         }
         return cachedData;
     }
@@ -491,22 +533,21 @@ rootModule.directive('vayamMap', function(){
 		scope: true,
 		controller: ['$scope', 'contactUsService', function ($scope, contactUsService) {
 			contactUsService.getLocations().then(function(response) {
-				var locations = response.data;
-				$scope.locations = locations;
+				var locations = response.data.items[0].fields;
 
 				var canvas = document.getElementById('map');
 				var infoWindow = new google.maps.InfoWindow();
 				var mapProp= {
-					center: new google.maps.LatLng($scope.locations[0].coordinates.latitude, $scope.locations[0].coordinates.longitude),
+					center: new google.maps.LatLng(locations.coordinates.lat, locations.coordinates.lon),
 					zoom: 10,
 				};
 								
 				var map = new google.maps.Map(canvas, mapProp);
-				var position = new google.maps.LatLng(locations[0].coordinates.latitude, locations[0].coordinates.longitude);
+				var position = new google.maps.LatLng(locations.coordinates.lat, locations.coordinates.lon);
 				marker = new google.maps.Marker({
 					position: position,
 					map: map,
-					title: locations[0].name,
+					title: locations.name,
 					animation: google.maps.Animation.BOUNCE
 				});
 			}, function() {
@@ -537,77 +578,138 @@ rootModule.directive('imageBanner', function(){
 });
 
 
-rootModule.factory('globalFactory', ['$uibModal', '$http', function($uibModal, $http) {
-
-   var staticData = null;
-   
-   return { 
-        modalOpen: function(options) {
-            let modalInstance = $uibModal.open({
-                animation: true,
-                controller: ['$scope', function($scope){
-                    $scope.header = options.header;
-                    $scope.description = options.description;
-                    $scope.image = options.image;
-                    $scope.canceltext = options.canceltext ? options.canceltext : 'Cancel';
-                    $scope.cancel = function() {
-                        modalInstance.close();
-                    };
-                }],
-                size: 'lg',
-                backdrop: 'static',
-                templateUrl: options.templateurl ? options.templateUrl : 'shared/globalfactory/templates/ModalView.html'
-            });
-        },
+rootModule.factory('globalFactory', [
+    '$uibModal',
+    '$http',
+    'appConfig',
+    'contentful',
+    'contentfulFactory',
+    function($uibModal, $http, appConfig, contentful, contentfulFactory) {
+        var staticData = null;
+        var isContentFul = appConfig.useContentFul;
         
-        // if description is too long this function will take care of truncation.
-        truncateData: function(data, trunckey, charlen) {
-            for (var i=0; i< data.length; i++) {
-                if (data[i][trunckey].length > charlen) {
-                    data[i][trunckey] = data[i][trunckey].slice(0, charlen) + ' ...';
-                }
-            }
-        },
+        return { 
+                modalOpen: function(options) {
+                    let modalInstance = $uibModal.open({
+                        animation: true,
+                        controller: ['$scope', function($scope){
+                            $scope.header = options.header;
+                            $scope.description = options.description;
+                            $scope.image = options.image;
+                            $scope.canceltext = options.canceltext ? options.canceltext : 'Cancel';
+                            $scope.cancel = function() {
+                                modalInstance.close();
+                            };
+                        }],
+                        size: 'lg',
+                        backdrop: 'static',
+                        templateUrl: options.templateurl ? options.templateUrl : 'shared/globalfactory/templates/ModalView.html'
+                    });
+                },
+                
+                // if description is too long this function will take care of truncation.
+                truncateData: function(data, trunckey, charlen) {
+                    for (var i=0; i< data.length; i++) {
+                        if (data[i][trunckey].length > charlen) {
+                            data[i][trunckey] = data[i][trunckey].slice(0, charlen) + ' ...';
+                        }
+                    }
+                },
 
-        // return static data for application.
-        getStaticData: function(callback) {
-            if (!staticData) {
-                $http.get('staticData.json').then(function(response) {
-                    staticData = response.data;
-                    callback(staticData);
-                }, function() {
-                    console.log('Error during static data fetching!');
-                });
-            }
-            else {
-                callback(staticData);
-            }
-        },
+                // return static data for application.
+                getStaticData: function(callback) {
+                    if (!staticData) {
+                        $http.get('staticData.json').then(function(response) {
+                            staticData = response.data;
+                            callback(staticData);
+                        }, function() {
+                            console.log('Error during static data fetching!');
+                        });
+                    }
+                    else {
+                        callback(staticData);
+                    }
+                },
 
-        // return static data for application.
-        sortGalleryData: function(data) {
-            var sorteddata = {};
-            for (var i=0; i< data.length; i++) {
-                if (sorteddata[data[i]['category']]) {
-                    sorteddata[data[i]['category']].push(data[i]);
-                }
-                else {
-                    sorteddata[data[i]['category']] = [];
-                }
-            }
+                // return static data for application.
+                sortGalleryData: function(data) {
+                    var sorteddata = {};
+                    for (var i=0; i< data.length; i++) {
+                        var currentElement = data[i];
+                        var currentCategory = currentElement['category'];
+                        if (!sorteddata[currentCategory]) {
+                            sorteddata[currentCategory] = [];
+                            sorteddata[currentCategory].push(currentElement);
+                        } else {
+                            sorteddata[currentCategory].push(currentElement);
+                        }
+                    }
 
-            return sorteddata;
+                    console.log(sorteddata);
+                    return sorteddata;
+                },
+
+                // Returns standard get request with fall back
+                // to optional backend. Default bakend for now
+                // is contentful.
+                getStandardGetRequest: function(endpoint) {
+                    var request;
+                    if (isContentFul) {
+                        request = contentful.entries('content_type=' + endpoint);
+                    } else {
+                        request =  $http.get(appConfig.apiURL + '/' + endpoint);
+                    }
+                    return request;
+                },
+
+                // Returns sorted list of objects by date.
+                sortObjectsByDates: function(listOfObjects, datePropertyName) {
+                    var tempObjectList = [...listOfObjects];
+                    tempObjectList.sort(function(a, b) {
+                        return Date.parse(b[datePropertyName]) - Date.parse(a[datePropertyName]);
+                    });
+                    return tempObjectList;
+                },
+
+                // Resolved images if we are using contentful
+                resolvedImageIfContentFul: function(data, type) {
+                   return isContentFul 
+                        ? contentfulFactory.getLinkedUrls(data, type) 
+                        : data
+                    ;
+                } 
+        };
+    }
+]);
+
+
+rootModule.factory('contentfulFactory', [function() {
+    return { 
+        getLinkedUrls: function(data, type) {
+            var dataToUse = JSON.parse(JSON.stringify(data));
+            var linkedType = type ? type : 'image';
+            var resultSet = [];
+            var dataLength = dataToUse.items.length;
+            var items = dataToUse.items;
+            for (var k = 0; k < dataLength; k++) {
+                var currentField = dataToUse.items[k].fields;
+                var linkUrl = items[k].fields[linkedType].fields.file.url;
+                currentField[linkedType] = linkUrl;
+                resultSet.push(currentField);
+            }
+            
+            return resultSet;
         }
-   };
-}]);
+    };
+ }]);
 
 
-rootModule.service('contactUsService', ['$http', 'baseUrl', function($http, baseUrl) {
+rootModule.service('contactUsService', ['globalFactory', function(globalFactory) {
     var cachedData;
 
     this.getLocations = function() {
         if (!cachedData) {
-            cachedData =  $http.get(baseUrl + '/locations');
+            cachedData = globalFactory.getStandardGetRequest('location');
         }
         return cachedData;
     }

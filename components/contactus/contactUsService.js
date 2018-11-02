@@ -1,9 +1,9 @@
-rootModule.service('contactUsService', ['$http', 'baseUrl', function($http, baseUrl) {
+rootModule.service('contactUsService', ['globalFactory', function(globalFactory) {
     var cachedData;
 
     this.getLocations = function() {
         if (!cachedData) {
-            cachedData =  $http.get(baseUrl + '/locations');
+            cachedData = globalFactory.getStandardGetRequest('location');
         }
         return cachedData;
     }

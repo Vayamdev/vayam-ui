@@ -9,7 +9,6 @@ rootModule.controller('contactusController', ['$scope', 'contactUsService', 'glo
     });
     
     contactUsService.getLocations().then(function(response) {
-        var locations = response.data;
-        $scope.locations = locations;
+        $scope.locations = response.data.items;
     }); 
 }]);

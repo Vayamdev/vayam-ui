@@ -1,9 +1,9 @@
-rootModule.service('galleryService', ['$http', 'baseUrl', function($http, baseUrl) {
+rootModule.service('galleryService', ['globalFactory', function(globalFactory) {
     var cachedData;
     // get the event data from backend
     this.getGallery = function() {
         if (!cachedData) {
-            cachedData = $http.get(baseUrl + '/gallery');
+            cachedData = globalFactory.getStandardGetRequest('gallery');
         }
         return cachedData;
     }

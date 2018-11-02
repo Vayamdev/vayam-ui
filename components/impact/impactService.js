@@ -1,9 +1,9 @@
-rootModule.service('impactService', ['$http', 'baseUrl', function($http, baseUrl) {
+rootModule.service('impactService', ['globalFactory', function(globalFactory) {
     var cachedData;
 
     this.getImpactThumbnails = function() {
         if (!cachedData) {
-            cachedData =  $http.get(baseUrl + '/impacts');
+            cachedData =  globalFactory.getStandardGetRequest('impacts');
         }
         return cachedData;
     }

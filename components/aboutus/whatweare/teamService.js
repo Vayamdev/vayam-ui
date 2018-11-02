@@ -1,9 +1,9 @@
-rootModule.service('teamService', ['$http', 'baseUrl', function($http, baseUrl) {
+rootModule.service('teamService', ['globalFactory', function(globalFactory) {
     var cachedData;
 
     this.getStaff = function() {
         if (!cachedData) {
-            cachedData =  $http.get(baseUrl + '/team');
+            cachedData =  globalFactory.getStandardGetRequest('team');
         }
         return cachedData;
     }

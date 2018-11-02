@@ -7,22 +7,21 @@ rootModule.directive('vayamMap', function(){
 		scope: true,
 		controller: ['$scope', 'contactUsService', function ($scope, contactUsService) {
 			contactUsService.getLocations().then(function(response) {
-				var locations = response.data;
-				$scope.locations = locations;
+				var locations = response.data.items[0].fields;
 
 				var canvas = document.getElementById('map');
 				var infoWindow = new google.maps.InfoWindow();
 				var mapProp= {
-					center: new google.maps.LatLng($scope.locations[0].coordinates.latitude, $scope.locations[0].coordinates.longitude),
+					center: new google.maps.LatLng(locations.coordinates.lat, locations.coordinates.lon),
 					zoom: 10,
 				};
 								
 				var map = new google.maps.Map(canvas, mapProp);
-				var position = new google.maps.LatLng(locations[0].coordinates.latitude, locations[0].coordinates.longitude);
+				var position = new google.maps.LatLng(locations.coordinates.lat, locations.coordinates.lon);
 				marker = new google.maps.Marker({
 					position: position,
 					map: map,
-					title: locations[0].name,
+					title: locations.name,
 					animation: google.maps.Animation.BOUNCE
 				});
 			}, function() {

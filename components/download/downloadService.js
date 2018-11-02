@@ -1,10 +1,9 @@
-rootModule.service('downloadService', ['$http', 'baseUrl', function($http, baseUrl) {
+rootModule.service('downloadService', ['globalFactory', function(globalFactory) {
     var cachedData;
 
     this.getDownloadData = function() {
-        console.log(cachedData);
         if (!cachedData) {
-            cachedData =  $http.get(baseUrl + '/download');
+            cachedData =  globalFactory.getStandardGetRequest('downloads');
         }
         return cachedData;
     }

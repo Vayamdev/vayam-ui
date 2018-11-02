@@ -68,6 +68,12 @@ module.exports = function (grunt) {
                         src: ['**/*.js', '**/*.map'],
                         dest: 'scripts/angular-animate/'
                     },
+                    {
+                        expand: true,
+                        cwd: 'bower_components/angular-contentful/',
+                        src: ['**/*.js', '**/*.map'],
+                        dest: 'scripts/angular-contentful/'
+                    },
                     // Fonts.
                     {
                         expand: true,
@@ -134,6 +140,7 @@ module.exports = function (grunt) {
                 'scripts/jquery.bootstrap.newsbox.min.js',
                 'scripts/lightgallery/dist/js/lightgallery.min.js',
                 'scripts/datatable/angular-datatables.min.js',
+                'scripts/angular-contentful/dist/angular-contentful.min.js'
             ],
             dest: 'scripts/vender.js',
           },
@@ -164,6 +171,7 @@ module.exports = function (grunt) {
                 'shared/googlemap/mapDirective.js',
                 'shared/imagebanner/imagebannerDirective.js',
                 'shared/globalfactory/globalFactory.js',
+                'shared/services/contentfulParserService.js',
                 'components/contactus/contactUsService.js'
             ],
             dest: 'scripts/app.js',

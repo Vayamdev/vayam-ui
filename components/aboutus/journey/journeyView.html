@@ -10,13 +10,13 @@
         </div>
         <ul class="timeline">
             <li ng-repeat="milestone in milestones" ng-class="milestone.invert ? 'timeline-inverted' : ''">
-                <div class="timeline-badge info"><span>{{milestone.date}}</span></div>
+                <div class="timeline-badge info"><span>{{milestone.year}}</span></div>
                 <div class="timeline-panel">
                     <div class="caption">
-                        <p><small class="text-muted date"><i class="glyphicon glyphicon-calendar"></i>{{milestone.date}}</small></p>
+                        <p><small class="text-muted date"><i class="glyphicon glyphicon-calendar"></i>{{milestone.year}}</small></p>
                     </div>
                     <div class="timeline-heading">
-                        <img class="thumbnail-image" ng-src="{{milestone.imageurl}}">
+                        <img class="thumbnail-image" ng-src="{{milestone.image}}">
                     </div>
                     <div class="timeline-body">
                         <h4 class="timeline-title">{{milestone.name}}</h4>
@@ -35,10 +35,10 @@
                 <div class="carousel-inner container">
                     <div uib-slide class="col-xs-12 item carousel-item active" ng-repeat="slide in slides" index="$index">
                         <div class="img-box col-xs-12 col-md-4">
-                            <img src="{{slide.avatar}}" alt="">
+                            <img src="{{slide.image}}" alt="">
                         </div>
                         <div class="vl col-xs-12 col-md-8">
-                            <p class="say">{{slide.say}}</p>
+                            <p class="say">{{slide.appreciation}}</p>
                             <p class="overview"><b>{{slide.name}}</b></p>
                             <p class="overview">{{slide.designation}}</p>
                         </div>

@@ -7,7 +7,9 @@ rootModule.controller('galleryController', ['$scope', 'galleryService', 'globalF
     });
     
     galleryService.getGallery().then(function(response) {
-        $scope.sorteddata = globalFactory.sortGalleryData(response.data);
+       var resolvedData = globalFactory.resolvedImageIfContentFul(response.data);
+       console.log(resolvedData);
+        $scope.sorteddata = globalFactory.sortGalleryData(resolvedData);
         $scope.categories = Object.keys($scope.sorteddata);
 
         // Apply galary plugin

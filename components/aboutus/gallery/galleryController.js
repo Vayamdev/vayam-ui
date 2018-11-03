@@ -7,7 +7,9 @@ rootModule.controller('galleryController', ['$scope', 'galleryService', 'globalF
     });
     
     galleryService.getGallery().then(function(response) {
-       var resolvedData = globalFactory.resolveLinksIfContentFul(response.data.items);
+       var resolvedData = globalFactory.resolveLinksIfContentFul(
+            response.data.items ? response.data.items : response.data
+        );
         $scope.sorteddata = globalFactory.sortGalleryData(resolvedData);
         $scope.categories = Object.keys($scope.sorteddata);
 

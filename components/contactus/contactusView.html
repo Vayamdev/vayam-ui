@@ -15,8 +15,8 @@
 					<div class="image"><i class="fa fa-envelope" aria-hidden="true"></i></div>
 					<div class="info">
 						<h3 class="title">MAIL</h3>
-						<p ng-repeat="location in locations" ng-if="location.fields.email">
-							<i class="fa fa-envelope" aria-hidden="true"></i> {{location.fields.email}}
+						<p ng-repeat="location in locations" ng-if="location.email">
+							<i class="fa fa-envelope" aria-hidden="true"></i> {{location.email}}
 							<br>
 						</p>
 					
@@ -32,8 +32,8 @@
 					<div class="image"><i class="fa fa-mobile" aria-hidden="true"></i></div>
 					<div class="info">
 						<h3 class="title">CONTACT</h3>
-						<p ng-repeat="location in locations" ng-if="location.fields.contactNumber">
-							<i class="fa fa-mobile" aria-hidden="true"></i> {{location.fields.contactNumber}}
+						<p ng-repeat="location in locations" ng-if="location.contactNumber">
+							<i class="fa fa-mobile" aria-hidden="true"></i> {{location.contactNumber}}
 							<br>
 						</p>
 					</div>
@@ -49,7 +49,7 @@
 					<div class="info">
 						<h3 class="title">ADDRESS</h3>
 						<p ng-repeat="location in locations">
-							 <i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp; {{location.fields.address}}{{location.fields.pinCode}}
+							 <i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp; {{location.address}}{{location.pinCode}}
 						</p>
 					</div>
 				</div>

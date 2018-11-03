@@ -9,6 +9,8 @@ rootModule.controller('contactusController', ['$scope', 'contactUsService', 'glo
     });
     
     contactUsService.getLocations().then(function(response) {
-        $scope.locations = response.data.items;
+        $scope.locations = globalFactory.resolveLinksIfContentFul(
+            response.data.items ? response.data.items : response.data
+        );
     }); 
 }]);

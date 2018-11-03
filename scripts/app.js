@@ -131,7 +131,9 @@ rootModule.controller('homeController', [
     
         // get slides data
         homeService.getSlides().then(function(response) {
-            $scope.slides = globalFactory.resolveLinksIfContentFul(response.data.items);
+            $scope.slides = globalFactory.resolveLinksIfContentFul(
+                response.data.items ? response.data.items : response.data
+            );
         }, function() {
             console.log('Error during slide data fetching!');
         });
@@ -139,7 +141,10 @@ rootModule.controller('homeController', [
         // get projects data
         homeService.getProjects().then(function(response) {
             var projectData = angular.copy(response.data);
-            projectData = globalFactory.resolveLinksIfContentFul(projectData.items, 'icon');
+            projectData = globalFactory.resolveLinksIfContentFul(
+                projectData.items ? projectData.items : projectData, 
+                'icon'
+            );
             globalFactory.truncateData(projectData, 'shortDescription', 250);
             $scope.projects = projectData;
         }, function() {
@@ -149,7 +154,7 @@ rootModule.controller('homeController', [
         // get events data
         homeService.getThumbnails().then(function(response) {
             var events = angular.copy(response.data);
-            events = globalFactory.resolveLinksIfContentFul(events.items);
+            events = globalFactory.resolveLinksIfContentFul(events.items ? events.items : events);
             events = globalFactory.resolveParasIfContentFul(events, 'longDescription');
             globalFactory.truncateData(events, 'shortDescription', 120);
             var sortedEvents = globalFactory.sortObjectsByDates(events, 'date');
@@ -184,7 +189,9 @@ rootModule.controller('impactController', ['$scope', '$routeParams', 'impactServ
     });
 
     impactService.getImpactThumbnails().then(function(response) {
-        var impacts = globalFactory.resolveLinksIfContentFul(response.data.items);
+        var impacts = globalFactory.resolveLinksIfContentFul(
+            response.data.items ? response.data.items : response.data
+        );
         impacts = globalFactory.resolveParasIfContentFul(impacts, 'longDescription');
         globalFactory.truncateData(impacts, 'oneLine', 120);
         $scope.impacts = impacts;
@@ -207,7 +214,9 @@ rootModule.controller('impactDetailsController', ['$scope', '$routeParams', 'imp
     });
 
     impactService.getImpactThumbnails().then(function(response) {
-        var impacts = globalFactory.resolveLinksIfContentFul(response.data.items);
+        var impacts = globalFactory.resolveLinksIfContentFul(
+            response.data.items ? response.data.items : response.data
+        );
         impacts = globalFactory.resolveParasIfContentFul(impacts, 'longDescription');
         globalFactory.truncateData(impacts, 'oneLine', 120);
         $scope.impacts = impacts;
@@ -243,7 +252,9 @@ rootModule.controller('whatweareController', ['$scope', 'teamService', 'globalFa
     });
 
     teamService.getStaff().then(function(response) {
-        $scope.teamdata = globalFactory.resolveLinksIfContentFul(response.data.items);
+        $scope.teamdata = globalFactory.resolveLinksIfContentFul(
+            response.data.items ? response.data.items : response.data
+        );
     }, 
     function() {
         console.log('Error during team data fetching!');
@@ -274,14 +285,18 @@ rootModule.controller('journeyController',[
 
         // get other page details
         journeyService.getTestimonials().then(function(response) {
-            $scope.slides = globalFactory.resolveLinksIfContentFul(response.data.items);
+            $scope.slides = globalFactory.resolveLinksIfContentFul(
+                response.data.items ? response.data.items : response.data
+            );
             console.log($scope.slides);
         }, function() {
             console.log('Error during slide data fetching!');
         });
 
         journeyService.getMilestones().then(function(response) {
-            $scope.milestones = globalFactory.resolveLinksIfContentFul(response.data.items);
+            $scope.milestones = globalFactory.resolveLinksIfContentFul(
+                response.data.items ? response.data.items : response.data
+            );
         }, function() {
             console.log('Error during projects data fetching!');
         });
@@ -300,7 +315,9 @@ rootModule.controller('contactusController', ['$scope', 'contactUsService', 'glo
     });
     
     contactUsService.getLocations().then(function(response) {
-        $scope.locations = response.data.items;
+        $scope.locations = globalFactory.resolveLinksIfContentFul(
+            response.data.items ? response.data.items : response.data
+        );
     }); 
 }]);
 
@@ -363,7 +380,11 @@ rootModule.controller('downloadController', ['$scope', 'downloadService', 'globa
         });
 
         downloadService.getDownloadData().then(function(response) {
-            $scope.gridData = globalFactory.resolveLinksIfContentFul(response.data.items, 'downloadFile');
+            console.log(response);
+            $scope.gridData = globalFactory.resolveLinksIfContentFul(
+                response.data.items ? response.data.items : response.data, 
+                'downloadFile'
+            );
         }, function() {
             console.log('Error during downloads data fetching!');
         });
@@ -380,7 +401,9 @@ rootModule.controller('galleryController', ['$scope', 'galleryService', 'globalF
     });
     
     galleryService.getGallery().then(function(response) {
-       var resolvedData = globalFactory.resolveLinksIfContentFul(response.data.items);
+       var resolvedData = globalFactory.resolveLinksIfContentFul(
+            response.data.items ? response.data.items : response.data
+        );
         $scope.sorteddata = globalFactory.sortGalleryData(resolvedData);
         $scope.categories = Object.keys($scope.sorteddata);
 
@@ -581,12 +604,10 @@ rootModule.directive('vayamMap', function(){
 		replace: true,
 		transclude : true,
 		scope: true,
-		controller: ['$scope', 'contactUsService', function ($scope, contactUsService) {
+		controller: ['contactUsService', function (contactUsService) {
 			contactUsService.getLocations().then(function(response) {
-				var locations = response.data.items[0].fields;
-
+				var locations = response.data.items ? response.data.items[0].fields : response.data[0];
 				var canvas = document.getElementById('map');
-				var infoWindow = new google.maps.InfoWindow();
 				var mapProp= {
 					center: new google.maps.LatLng(locations.coordinates.lat, locations.coordinates.lon),
 					zoom: 10,

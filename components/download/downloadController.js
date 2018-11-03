@@ -7,7 +7,11 @@ rootModule.controller('downloadController', ['$scope', 'downloadService', 'globa
         });
 
         downloadService.getDownloadData().then(function(response) {
-            $scope.gridData = globalFactory.resolveLinksIfContentFul(response.data.items, 'downloadFile');
+            console.log(response);
+            $scope.gridData = globalFactory.resolveLinksIfContentFul(
+                response.data.items ? response.data.items : response.data, 
+                'downloadFile'
+            );
         }, function() {
             console.log('Error during downloads data fetching!');
         });

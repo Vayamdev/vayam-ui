@@ -21,7 +21,9 @@ rootModule.controller('homeController', [
     
         // get slides data
         homeService.getSlides().then(function(response) {
-            $scope.slides = globalFactory.resolveLinksIfContentFul(response.data.items);
+            $scope.slides = globalFactory.resolveLinksIfContentFul(
+                response.data.items ? response.data.items : response.data
+            );
         }, function() {
             console.log('Error during slide data fetching!');
         });
@@ -29,7 +31,10 @@ rootModule.controller('homeController', [
         // get projects data
         homeService.getProjects().then(function(response) {
             var projectData = angular.copy(response.data);
-            projectData = globalFactory.resolveLinksIfContentFul(projectData.items, 'icon');
+            projectData = globalFactory.resolveLinksIfContentFul(
+                projectData.items ? projectData.items : projectData, 
+                'icon'
+            );
             globalFactory.truncateData(projectData, 'shortDescription', 250);
             $scope.projects = projectData;
         }, function() {
@@ -39,7 +44,7 @@ rootModule.controller('homeController', [
         // get events data
         homeService.getThumbnails().then(function(response) {
             var events = angular.copy(response.data);
-            events = globalFactory.resolveLinksIfContentFul(events.items);
+            events = globalFactory.resolveLinksIfContentFul(events.items ? events.items : events);
             events = globalFactory.resolveParasIfContentFul(events, 'longDescription');
             globalFactory.truncateData(events, 'shortDescription', 120);
             var sortedEvents = globalFactory.sortObjectsByDates(events, 'date');

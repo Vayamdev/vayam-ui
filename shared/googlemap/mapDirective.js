@@ -5,12 +5,10 @@ rootModule.directive('vayamMap', function(){
 		replace: true,
 		transclude : true,
 		scope: true,
-		controller: ['$scope', 'contactUsService', function ($scope, contactUsService) {
+		controller: ['contactUsService', function (contactUsService) {
 			contactUsService.getLocations().then(function(response) {
-				var locations = response.data.items[0].fields;
-
+				var locations = response.data.items ? response.data.items[0].fields : response.data[0];
 				var canvas = document.getElementById('map');
-				var infoWindow = new google.maps.InfoWindow();
 				var mapProp= {
 					center: new google.maps.LatLng(locations.coordinates.lat, locations.coordinates.lon),
 					zoom: 10,

@@ -10,7 +10,9 @@ rootModule.controller('impactController', ['$scope', '$routeParams', 'impactServ
     });
 
     impactService.getImpactThumbnails().then(function(response) {
-        var impacts = globalFactory.resolveLinksIfContentFul(response.data.items);
+        var impacts = globalFactory.resolveLinksIfContentFul(
+            response.data.items ? response.data.items : response.data
+        );
         impacts = globalFactory.resolveParasIfContentFul(impacts, 'longDescription');
         globalFactory.truncateData(impacts, 'oneLine', 120);
         $scope.impacts = impacts;

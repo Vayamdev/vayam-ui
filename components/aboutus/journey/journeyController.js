@@ -20,14 +20,18 @@ rootModule.controller('journeyController',[
 
         // get other page details
         journeyService.getTestimonials().then(function(response) {
-            $scope.slides = globalFactory.resolveLinksIfContentFul(response.data.items);
+            $scope.slides = globalFactory.resolveLinksIfContentFul(
+                response.data.items ? response.data.items : response.data
+            );
             console.log($scope.slides);
         }, function() {
             console.log('Error during slide data fetching!');
         });
 
         journeyService.getMilestones().then(function(response) {
-            $scope.milestones = globalFactory.resolveLinksIfContentFul(response.data.items);
+            $scope.milestones = globalFactory.resolveLinksIfContentFul(
+                response.data.items ? response.data.items : response.data
+            );
         }, function() {
             console.log('Error during projects data fetching!');
         });

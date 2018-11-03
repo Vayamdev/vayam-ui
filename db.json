@@ -498,13 +498,13 @@
 			"image": "http://placehold.it/400x400"
 		}
 	],
-	"locations": [{
+	"location": [{
 		"name": "Vayam movement",
 		"address": "Vayam movement, Yusuf ashiyana, Behind, St Stand Rd, Jawhar, Maharashtra 401603, India",
 		"pinCode": "411014",
 		"state": "Maharashtra",
 		"country": "India",
-		"number": "+91 94215 64330",
+		"contactNumber": "+91 94215 64330",
 		"email": "vayamindia@gmail.com",
 		"coordinates": {
 			"lat": 19.909773,
@@ -512,203 +512,203 @@
 		}
 	}],
 	"gallery": [{
-		"imagename": "Rocking the night away",
-		"url": "http://placehold.it/300x300",
+		"imageName": "Rocking the night away",
+		"image": "http://placehold.it/300x300",
 		"caption": "Contrary to popular belief, Lorem Ipsum is not",
 		"category": "Development"
 	},
 	{
-		"imagename": "Yellow sign",
-		"url": "http://placehold.it/300x300",
+		"imageName": "Yellow sign",
+		"image": "http://placehold.it/300x300",
 		"caption": "simply random text. It has roots in a piece of classical Latin literature from 45 BC, making",
 		"category": "Environment "
 	},
 	{
-		"imagename": "Colors",
-		"url": "http://placehold.it/300x300",
+		"imageName": "Colors",
+		"image": "http://placehold.it/300x300",
 		"caption": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",
 		"category": "Democracy"
 	},
 	{
-		"imagename": "Retro party",
-		"url": "http://placehold.it/300x300",
+		"imageName": "Retro party",
+		"image": "http://placehold.it/300x300",
 		"caption": "Lorem, do eiusmod tempor incid Ut enim ad minim veniam",
 		"category": "At Vayam"
 	},
 	{
-		"imagename": "Rocking the night away",
-		"url": "http://placehold.it/300x300",
+		"imageName": "Rocking the night away",
+		"image": "http://placehold.it/300x300",
 		"caption": "Contrary to popular belief, Lorem Ipsum is not",
 		"category": "Other"
 	},
 	{
-		"imagename": "Yellow sign",
-		"url": "http://placehold.it/300x300",
+		"imageName": "Yellow sign",
+		"image": "http://placehold.it/300x300",
 		"caption": "simply random text. It has roots in a piece of classical Latin literature from 45 BC, making",
 		"category": "Development"
 	},
 	{
-		"imagename": "Colors",
-		"url": "http://placehold.it/300x300",
+		"imageName": "Colors",
+		"image": "http://placehold.it/300x300",
 		"caption": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",
 		"category": "Environment "
 	},
 	{
-		"imagename": "Retro party",
-		"url": "http://placehold.it/300x300",
+		"imageName": "Retro party",
+		"image": "http://placehold.it/300x300",
 		"caption": "Lorem, do eiusmod tempor incid Ut enim ad minim veniam",
 		"category": "Democracy"
 	},
 	{
-		"imagename": "Rocking the night away",
-		"url": "http://placehold.it/300x300",
+		"imageName": "Rocking the night away",
+		"image": "http://placehold.it/300x300",
 		"caption": "Contrary to popular belief, Lorem Ipsum is not",
 		"category": "At Vayam"
 	},
 	{
-		"imagename": "Yellow sign",
-		"url": "http://placehold.it/300x300",
+		"imageName": "Yellow sign",
+		"image": "http://placehold.it/300x300",
 		"caption": "simply random text. It has roots in a piece of classical Latin literature from 45 BC, making",
 		"category": "Other"
 	},
 	{
-		"imagename": "Colors",
-		"url": "http://placehold.it/300x300",
+		"imageName": "Colors",
+		"image": "http://placehold.it/300x300",
 		"caption": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",
 		"category": "Development"
 	},
 	{
-		"imagename": "Retro party",
-		"url": "http://placehold.it/300x300",
+		"imageName": "Retro party",
+		"image": "http://placehold.it/300x300",
 		"caption": "Lorem, do eiusmod tempor incid Ut enim ad minim veniam",
 		"category": "Environment "
 	},
 	{
-		"imagename": "Rocking the night away",
-		"url": "http://placehold.it/300x300",
+		"imageName": "Rocking the night away",
+		"image": "http://placehold.it/300x300",
 		"caption": "Contrary to popular belief, Lorem Ipsum is not",
 		"category": "Democracy"
 	},
 	{
-		"imagename": "Yellow sign",
-		"url": "http://placehold.it/300x300",
+		"imageName": "Yellow sign",
+		"image": "http://placehold.it/300x300",
 		"caption": "simply random text. It has roots in a piece of classical Latin literature from 45 BC, making",
 		"category": "At Vayam"
 	},
 	{
-		"imagename": "Colors",
-		"url": "http://placehold.it/300x300",
+		"imageName": "Colors",
+		"image": "http://placehold.it/300x300",
 		"caption": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",
 		"category": "Other"
 	},
 	{
-		"imagename": "Retro party",
-		"url": "http://placehold.it/300x300",
+		"imageName": "Retro party",
+		"image": "http://placehold.it/300x300",
 		"caption": "Lorem, do eiusmod tempor incid Ut enim ad minim veniam",
 		"category": "Development"
 	},
 	{
-		"imagename": "Retro party",
-		"url": "http://placehold.it/300x300",
+		"imageName": "Retro party",
+		"image": "http://placehold.it/300x300",
 		"caption": "Lorem, do eiusmod tempor incid Ut enim ad minim veniam",
 		"category": "Development"
 	},
 	{
-		"imagename": "Retro party",
-		"url": "http://placehold.it/300x300",
+		"imageName": "Retro party",
+		"image": "http://placehold.it/300x300",
 		"caption": "Lorem, do eiusmod tempor incid Ut enim ad minim veniam",
 		"category": "Development"
 	},
 	{
-		"imagename": "Retro party",
-		"url": "http://placehold.it/300x300",
+		"imageName": "Retro party",
+		"image": "http://placehold.it/300x300",
 		"caption": "Lorem, do eiusmod tempor incid Ut enim ad minim veniam",
 		"category": "Development"
 	}],
-	"download": [
+	"downloads": [
 		{
 			"name": "An integrated Programme for older persons - 2018 ",
 			"type": "Scheme Document",
 			"description": "Contrary to popular belief, Lorem Ipsum is not simply random text",
-			"link": "http://www.socialjustice.nic.in/writereaddata/UploadFile/IPSrC_English_version.pdf"
+			"downloadFile": "http://www.socialjustice.nic.in/writereaddata/UploadFile/IPSrC_English_version.pdf"
 		},
 		{
 			"name": "NGO wise Grants in Aid released during 2015-16",
 			"type": "IPOP",
 			"description": "Contrary to popular belief, Lorem Ipsum is not simply random text",
-			"link": "http://www.socialjustice.nic.in/writereaddata/UploadFile/Annexure-VIII.pdf"
+			"downloadFile": "http://www.socialjustice.nic.in/writereaddata/UploadFile/Annexure-VIII.pdf"
 		},
 		{
 			"name": "Procedure for Online Application for GIA",
 			"type": "Under IPOP Scheme",
 			"description": "Contrary to popular belief, Lorem Ipsum is not simply random text",
-			"link": "http://www.socialjustice.nic.in/writereaddata/UploadFile/Annexure-VIII.pdf"
+			"downloadFile": "http://www.socialjustice.nic.in/writereaddata/UploadFile/Annexure-VIII.pdf"
 		},
 		{
 			"name": "Gramsabha Notice",
 			"type": "Notice",
 			"description": "Contrary to popular belief, Lorem Ipsum is not simply random text",
-			"link": "/assets/download/gramsabha_notice.pdf"
+			"downloadFile": "/assets/download/gramsabha_notice.pdf"
 		},
 		{
 			"name": "Pesa Act Marathi",
 			"type": "Act",
 			"description": "Contrary to popular belief, Lorem Ipsum is not simply random text",
-			"link": "/assets/download/pesa_act_marathi.pdf"
+			"downloadFile": "/assets/download/pesa_act_marathi.pdf"
 		},
 		{
 			"name": "Pesa short Note",
 			"type": "Notice",
 			"description": "Contrary to popular belief, Lorem Ipsum is not simply random text",
-			"link": "/assets/download/pesa_shortnote.pdf"
+			"downloadFile": "/assets/download/pesa_shortnote.pdf"
 		},
 		{
 			"name": "Vayam Village Leaders Guide",
 			"type": "Document",
 			"description": "Contrary to popular belief, Lorem Ipsum is not simply random text",
-			"link": "/assets/download/vayam_villageleaders_guide.pdf"
+			"downloadFile": "/assets/download/vayam_villageleaders_guide.pdf"
 		},
 		{
 			"name": "Lorem, do eiusmod tempor incid",
 			"type": "eiusmod",
 			"description": "Contrary to popular belief, Lorem Ipsum is not simply random text",
-			"link": "http://www.socialjustice.nic.in/writereaddata/UploadFile/IPOP%202016%20pdf%20document.pdf"
+			"downloadFile": "http://www.socialjustice.nic.in/writereaddata/UploadFile/IPOP%202016%20pdf%20document.pdf"
 		},
 		{
 			"name": "Lorem, do eiusmod tempor incid",
 			"type": "eiusmod",
 			"description": "Contrary to popular belief, Lorem Ipsum is not simply random text",
-			"link": "http://placehold.it/300x300"
+			"downloadFile": "http://placehold.it/300x300"
 		},
 		{
 			"name": "An integrated Programme for older persons - 2018 ",
 			"type": "Scheme Document",
 			"description": "Contrary to popular belief, Lorem Ipsum is not simply random text",
-			"link": "http://www.socialjustice.nic.in/writereaddata/UploadFile/IPSrC_English_version.pdf"
+			"downloadFile": "http://www.socialjustice.nic.in/writereaddata/UploadFile/IPSrC_English_version.pdf"
 		},
 		{
 			"name": "NGO wise Grants in Aid released during 2015-16",
 			"type": "IPOP",
 			"description": "Contrary to popular belief, Lorem Ipsum is not simply random text",
-			"link": "http://www.socialjustice.nic.in/writereaddata/UploadFile/Annexure-VIII.pdf"
+			"downloadFile": "http://www.socialjustice.nic.in/writereaddata/UploadFile/Annexure-VIII.pdf"
 		},
 		{
 			"name": "Procedure for Online Application for GIA",
 			"type": "Under IPOP Scheme",
 			"description": "Contrary to popular belief, Lorem Ipsum is not simply random text",
-			"link": "http://www.socialjustice.nic.in/writereaddata/UploadFile/Annexure-VIII.pdf"
+			"downloadFile": "http://www.socialjustice.nic.in/writereaddata/UploadFile/Annexure-VIII.pdf"
 		},
 		{
 			"name": "Lorem, do eiusmod tempor incid",
 			"type": "eiusmod",
 			"description": "Contrary to popular belief, Lorem Ipsum is not simply random text",
-			"link": "http://www.socialjustice.nic.in/writereaddata/UploadFile/Annexure-VIII.pdf"
+			"downloadFile": "http://www.socialjustice.nic.in/writereaddata/UploadFile/Annexure-VIII.pdf"
 		},
 		{
 			"name": "Lorem, do eiusmod tempor incid",
 			"type": "eiusmod",
 			"description": "Contrary to popular belief, Lorem Ipsum is not simply random text",
-			"link": "http://www.socialjustice.nic.in/writereaddata/UploadFile/IPOP%202016%20pdf%20document.pdf"
+			"downloadFile": "http://www.socialjustice.nic.in/writereaddata/UploadFile/IPOP%202016%20pdf%20document.pdf"
 		}
 	]
 }

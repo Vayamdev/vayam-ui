@@ -42,14 +42,14 @@ rootModule.config(["$routeProvider", function($routeProvider) {
         activepage: 'Donate'
     })
     .when("/project/:projectid", {
-        templateUrl: "components/project/projectView.html",
-        controller: "projectController",
+        templateUrl: "components/projectDetails/projectDetailsView.html",
+        controller: "projectDetailsController",
         activetab: 'Projects',
         activepage: 'Projects'
     })
     .when("/impact/:impactid", {
-        templateUrl: "components/project/projectView.html",
-        controller: "impactController",
+        templateUrl: "components/impactDetails/impactDetailsView.html",
+        controller: "impactDetailsController",
         activetab: 'Impact',
         activepage: 'Impact'
     })

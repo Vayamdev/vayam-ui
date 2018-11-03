@@ -1,4 +1,4 @@
-rootModule.controller('projectController', [
+rootModule.controller('projectDetailsController', [
     '$scope',
     '$routeParams',
     'homeService',

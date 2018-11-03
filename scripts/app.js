@@ -78,14 +78,14 @@ rootModule.config(["$routeProvider", function($routeProvider) {
         activepage: 'Donate'
     })
     .when("/project/:projectid", {
-        templateUrl: "components/project/projectView.html",
-        controller: "projectController",
+        templateUrl: "components/projectDetails/projectDetailsView.html",
+        controller: "projectDetailsController",
         activetab: 'Projects',
         activepage: 'Projects'
     })
     .when("/impact/:impactid", {
-        templateUrl: "components/project/projectView.html",
-        controller: "impactController",
+        templateUrl: "components/impactDetails/impactDetailsView.html",
+        controller: "impactDetailsController",
         activetab: 'Impact',
         activepage: 'Impact'
     })
@@ -173,6 +173,29 @@ rootModule.controller('homeController', [
 
 
 rootModule.controller('impactController', ['$scope', '$routeParams', 'impactService', 'globalFactory', function($scope, $routeParams, impactService, globalFactory) {
+    $scope.bannerUrl;
+    $scope.bannertext;
+    $scope.project;
+
+    // fetch static data for this page. 
+    globalFactory.getStaticData(function(response) {
+        $scope.bannerUrl = response.impact.bannerimage;
+        $scope.bannertext = response.impact.bannertext;
+    });
+
+    impactService.getImpactThumbnails().then(function(response) {
+        var impacts = globalFactory.resolveLinksIfContentFul(response.data.items);
+        impacts = globalFactory.resolveParasIfContentFul(impacts, 'longDescription');
+        globalFactory.truncateData(impacts, 'oneLine', 120);
+        $scope.impacts = impacts;
+    }, function() {
+        console.log('Error during event data fetching!');
+    });
+}]);
+
+
+
+rootModule.controller('impactDetailsController', ['$scope', '$routeParams', 'impactService', 'globalFactory', function($scope, $routeParams, impactService, globalFactory) {
     $scope.bannerUrl;
     $scope.bannertext;
     $scope.project;
@@ -295,7 +318,7 @@ rootModule.controller('donateController', ['$scope', 'globalFactory', function($
 }]);
 
 
-rootModule.controller('projectController', [
+rootModule.controller('projectDetailsController', [
     '$scope',
     '$routeParams',
     'homeService',

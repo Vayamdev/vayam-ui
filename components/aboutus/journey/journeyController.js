@@ -23,7 +23,6 @@ rootModule.controller('journeyController',[
             $scope.slides = globalFactory.resolveLinksIfContentFul(
                 response.data.items ? response.data.items : response.data
             );
-            console.log($scope.slides);
         }, function() {
             console.log('Error during slide data fetching!');
         });

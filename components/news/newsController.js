@@ -12,7 +12,6 @@ rootModule.controller('newsController', ['$scope', '$routeParams', 'newsService'
                 direction: 'up',
                 newsTickerInterval: 4000,
                 onToDo: function () {
-                    //console.log(this);
                 }
             });
         }, 100);

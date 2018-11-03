@@ -288,7 +288,6 @@ rootModule.controller('journeyController',[
             $scope.slides = globalFactory.resolveLinksIfContentFul(
                 response.data.items ? response.data.items : response.data
             );
-            console.log($scope.slides);
         }, function() {
             console.log('Error during slide data fetching!');
         });
@@ -380,7 +379,6 @@ rootModule.controller('downloadController', ['$scope', 'downloadService', 'globa
         });
 
         downloadService.getDownloadData().then(function(response) {
-            console.log(response);
             $scope.gridData = globalFactory.resolveLinksIfContentFul(
                 response.data.items ? response.data.items : response.data, 
                 'downloadFile'
@@ -767,7 +765,6 @@ rootModule.factory('contentfulFactory', [function() {
 
         getParagraphsListFromText: function(data, fieldName) {
             var dataToUse = JSON.parse(JSON.stringify(data));
-            console.log(dataToUse);
             var dataLength = dataToUse.length;
             for (var k = 0; k < dataLength; k++) {
                 // Ensure to have single \n for new line

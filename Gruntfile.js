@@ -140,7 +140,8 @@ module.exports = function (grunt) {
                 'scripts/jquery.bootstrap.newsbox.min.js',
                 'scripts/lightgallery/dist/js/lightgallery.min.js',
                 'scripts/datatable/angular-datatables.min.js',
-                'scripts/angular-contentful/dist/angular-contentful.min.js'
+                'scripts/angular-contentful/dist/angular-contentful.min.js',
+                'scripts/angular-animate/angular-animate.min.js'
             ],
             dest: 'scripts/vender.js',
           },

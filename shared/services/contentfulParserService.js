@@ -21,7 +21,6 @@ rootModule.factory('contentfulFactory', [function() {
 
         getParagraphsListFromText: function(data, fieldName) {
             var dataToUse = JSON.parse(JSON.stringify(data));
-            console.log(dataToUse);
             var dataLength = dataToUse.length;
             for (var k = 0; k < dataLength; k++) {
                 // Ensure to have single \n for new line

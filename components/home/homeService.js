@@ -16,14 +16,14 @@ rootModule.service('homeService', [
 
         this.getSlides = function() {
             if (!cachedDataSlides) {
-                cachedDataSlides = globalFactory.getStandardGetRequest('slides')
+                cachedDataSlides = globalFactory.getStandardGetRequest('slides');
             }
             return cachedDataSlides;
         }
         
         this.getProjects = function() {
             if (!cachedDataProjects) {
-                cachedDataProjects =  $http.get(appConfig.apiURL + '/projects');
+                cachedDataProjects =  globalFactory.getStandardGetRequest('projects', '&fields.childProjects[exists]=true');
             }
             return cachedDataProjects;
         }

@@ -6,7 +6,7 @@
         <div class="modal-core thumbnail">
             <img class="modal-image thumbnail-image" ng-src="{{image}}">
             <div class="caption">
-                <p>{{description}}</p>
+                <p ng-repeat="para in description">{{para}}</p>
             </div>
         </div>
     </div>

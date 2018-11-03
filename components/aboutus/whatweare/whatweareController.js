@@ -14,7 +14,7 @@ rootModule.controller('whatweareController', ['$scope', 'teamService', 'globalFa
     });
 
     teamService.getStaff().then(function(response) {
-        $scope.teamdata = globalFactory.resolvedImageIfContentFul(response.data);
+        $scope.teamdata = globalFactory.resolveLinksIfContentFul(response.data.items);
     }, 
     function() {
         console.log('Error during team data fetching!');

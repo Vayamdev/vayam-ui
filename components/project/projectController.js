@@ -1,4 +1,10 @@
-rootModule.controller('projectController', ['$scope', '$routeParams', 'homeService', 'globalFactory', function($scope, $routeParams, homeService, globalFactory) {
+rootModule.controller('projectController', [
+    '$scope',
+    '$routeParams',
+    'homeService',
+    'globalFactory',
+    'projectDetailsService',
+     function($scope, $routeParams, homeService, globalFactory, projectDetailsService) {
     $scope.bannerUrl = 'http://placehold.it/1146x400';
     $scope.project;
 
@@ -11,12 +17,12 @@ rootModule.controller('projectController', ['$scope', '$routeParams', 'homeServi
     });
 
     homeService.getProjects().then(function(response) {
-        $scope.projects = response.data;
-
+        $scope.projects = globalFactory.resolveLinksIfContentFul(response.data.items, 'icon');
         // temporary logic
         for(var i=0; i < $scope.projects.length; i++) {
-            if ($scope.projects[i].id == parseInt($routeParams.projectid, 10)) {
-                $scope.project = $scope.projects[i];
+            if ($scope.projects[i].id == $routeParams.projectid) {
+                $scope.project = projectDetailsService.resolvedChildProject($scope.projects[i]);
+                console.log($scope.project);
                 break;
             }
         }

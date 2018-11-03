@@ -1,8 +1,9 @@
 rootModule.controller('homeController', [
     '$scope',
     'homeService', 
-    'globalFactory', 
-    function($scope, homeService, globalFactory) {
+    'globalFactory',
+    'modalFactory', 
+    function($scope, homeService, globalFactory, modalFactory) {
         $scope.myInterval = 3000;
         $scope.slides = [];
         $scope.displayeventgroup = [];
@@ -20,16 +21,17 @@ rootModule.controller('homeController', [
     
         // get slides data
         homeService.getSlides().then(function(response) {
-            $scope.slides = globalFactory.resolvedImageIfContentFul(response.data);
+            $scope.slides = globalFactory.resolveLinksIfContentFul(response.data.items);
         }, function() {
             console.log('Error during slide data fetching!');
         });
 
+        // get projects data
         homeService.getProjects().then(function(response) {
             var projectData = angular.copy(response.data);
+            projectData = globalFactory.resolveLinksIfContentFul(projectData.items, 'icon');
             globalFactory.truncateData(projectData, 'shortDescription', 250);
             $scope.projects = projectData;
-            console.log($scope.projects );
         }, function() {
             console.log('Error during projects data fetching!');
         });    
@@ -37,7 +39,8 @@ rootModule.controller('homeController', [
         // get events data
         homeService.getThumbnails().then(function(response) {
             var events = angular.copy(response.data);
-            events = globalFactory.resolvedImageIfContentFul(events);
+            events = globalFactory.resolveLinksIfContentFul(events.items);
+            events = globalFactory.resolveParasIfContentFul(events, 'longDescription');
             globalFactory.truncateData(events, 'shortDescription', 120);
             var sortedEvents = globalFactory.sortObjectsByDates(events, 'date');
             while (sortedEvents.length) {
@@ -48,7 +51,7 @@ rootModule.controller('homeController', [
         });
 
         $scope.open = function (event) {
-            globalFactory.modalOpen({
+            modalFactory.modalOpen({
                 header: event.name,
                 description: event.longDescription,
                 image: event.image

@@ -7,7 +7,7 @@ rootModule.controller('downloadController', ['$scope', 'downloadService', 'globa
         });
 
         downloadService.getDownloadData().then(function(response) {
-            $scope.gridData = globalFactory.resolvedImageIfContentFul(response.data, 'downloadFile');
+            $scope.gridData = globalFactory.resolveLinksIfContentFul(response.data.items, 'downloadFile');
         }, function() {
             console.log('Error during downloads data fetching!');
         });

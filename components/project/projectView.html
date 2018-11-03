@@ -4,7 +4,7 @@
 	<div class="row">
 		<div class="container">
 			<div class="col-xs-12 ">
-				<h3 class="page-heading">{{project.name || impact.name}}</h3>
+				<h3 class="page-heading">{{project.projectName || impact.name}}</h3>
 				<p class="text-justify">{{project.shortDescription}}</p>
 			</div>
 		</div>
@@ -21,7 +21,7 @@
 	<div ng-if="impact" class="container-fluid">
 		<div class="container detail">
 			<div class="col-md-6 text-justify">
-				<p ng-repeat="para in impact.longdescription">{{para}}</p>
+				<p ng-repeat="para in impact.longDescription">{{para}}</p>
 			</div>
 			<div class="col-md-6">
 				<img src="{{impact.image}}" class="img-responsive" alt="image" />
@@ -29,23 +29,23 @@
 		</div>
 	</div>
 
-	<div ng-if="project.childprojects.length" class="tab-pane container sub-projects">
+	<div ng-if="project.childProjects.length" class="tab-pane container sub-projects">
 		<div class="row">
 			<div class="col-xs-12 tabbable">
 				<ul class="nav nav-tabs">
-					<li ng-repeat="subproject in project.childprojects" ng-class="{active: $index === 0}">
-						<a  data-target="#subproject_{{$index}}" data-toggle="tab">{{subproject.name}}</a>
+					<li ng-repeat="subproject in project.childProjects" ng-class="{active: $index === 0}">
+						<a  data-target="#subproject_{{$index}}" data-toggle="tab">{{subproject.projectName}}</a>
 					</li>
 				</ul>
 				<div class="tab-content">
-					<div ng-repeat="subprojectdetail in project.childprojects" id="subproject_{{$index}}" ng-class="{'tab-pane active': $index === 0, 'tab-pane': $index !== 0}">
+					<div ng-repeat="subprojectdetail in project.childProjects" id="subproject_{{$index}}" ng-class="{'tab-pane active': $index === 0, 'tab-pane': $index !== 0}">
 						<div class="detail">
 							<div class="col-md-6">
-								<h3>{{subprojectdetail.name}}</h3>
+								<h3>{{subprojectdetail.projectName}}</h3>
 								<p ng-repeat="para in subprojectdetail.shortDescription">{{para}}</p>
 							</div>
 							<div class="col-md-6">
-								<img src="{{subprojectdetail.displayimageUrl}}" class="img-responsive" alt="image" />
+								<img src="{{subprojectdetail.displayImage}}" class="img-responsive" alt="image" />
 							</div>
 						</div>
 					</div>

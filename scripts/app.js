@@ -111,8 +111,9 @@ rootModule.config(["$routeProvider", function($routeProvider) {
 rootModule.controller('homeController', [
     '$scope',
     'homeService', 
-    'globalFactory', 
-    function($scope, homeService, globalFactory) {
+    'globalFactory',
+    'modalFactory', 
+    function($scope, homeService, globalFactory, modalFactory) {
         $scope.myInterval = 3000;
         $scope.slides = [];
         $scope.displayeventgroup = [];
@@ -130,16 +131,17 @@ rootModule.controller('homeController', [
     
         // get slides data
         homeService.getSlides().then(function(response) {
-            $scope.slides = globalFactory.resolvedImageIfContentFul(response.data);
+            $scope.slides = globalFactory.resolveLinksIfContentFul(response.data.items);
         }, function() {
             console.log('Error during slide data fetching!');
         });
 
+        // get projects data
         homeService.getProjects().then(function(response) {
             var projectData = angular.copy(response.data);
+            projectData = globalFactory.resolveLinksIfContentFul(projectData.items, 'icon');
             globalFactory.truncateData(projectData, 'shortDescription', 250);
             $scope.projects = projectData;
-            console.log($scope.projects );
         }, function() {
             console.log('Error during projects data fetching!');
         });    
@@ -147,7 +149,8 @@ rootModule.controller('homeController', [
         // get events data
         homeService.getThumbnails().then(function(response) {
             var events = angular.copy(response.data);
-            events = globalFactory.resolvedImageIfContentFul(events);
+            events = globalFactory.resolveLinksIfContentFul(events.items);
+            events = globalFactory.resolveParasIfContentFul(events, 'longDescription');
             globalFactory.truncateData(events, 'shortDescription', 120);
             var sortedEvents = globalFactory.sortObjectsByDates(events, 'date');
             while (sortedEvents.length) {
@@ -158,7 +161,7 @@ rootModule.controller('homeController', [
         });
 
         $scope.open = function (event) {
-            globalFactory.modalOpen({
+            modalFactory.modalOpen({
                 header: event.name,
                 description: event.longDescription,
                 image: event.image
@@ -181,14 +184,17 @@ rootModule.controller('impactController', ['$scope', '$routeParams', 'impactServ
     });
 
     impactService.getImpactThumbnails().then(function(response) {
-        var impacts = globalFactory.resolvedImageIfContentFul(response.data);
+        var impacts = globalFactory.resolveLinksIfContentFul(response.data.items);
+        impacts = globalFactory.resolveParasIfContentFul(impacts, 'longDescription');
         globalFactory.truncateData(impacts, 'oneLine', 120);
         $scope.impacts = impacts;
 
-        for(var i=0; i < $scope.impacts.length; i++) {
-            if ($scope.impacts[i].id == parseInt($routeParams.impactid, 10)) {
-                $scope.impact = $scope.impacts[i];
-                break;
+        if ($routeParams.impactid) {
+            for(var i=0; i < $scope.impacts.length; i++) {
+                if ($scope.impacts[i].id == $routeParams.impactid) {
+                    $scope.impact = $scope.impacts[i];
+                    break;
+                }
             }
         }
     }, function() {
@@ -214,7 +220,7 @@ rootModule.controller('whatweareController', ['$scope', 'teamService', 'globalFa
     });
 
     teamService.getStaff().then(function(response) {
-        $scope.teamdata = globalFactory.resolvedImageIfContentFul(response.data);
+        $scope.teamdata = globalFactory.resolveLinksIfContentFul(response.data.items);
     }, 
     function() {
         console.log('Error during team data fetching!');
@@ -245,14 +251,14 @@ rootModule.controller('journeyController',[
 
         // get other page details
         journeyService.getTestimonials().then(function(response) {
-            $scope.slides = globalFactory.resolvedImageIfContentFul(response.data);
+            $scope.slides = globalFactory.resolveLinksIfContentFul(response.data.items);
             console.log($scope.slides);
         }, function() {
             console.log('Error during slide data fetching!');
         });
 
         journeyService.getMilestones().then(function(response) {
-            $scope.milestones = globalFactory.resolvedImageIfContentFul(response.data);
+            $scope.milestones = globalFactory.resolveLinksIfContentFul(response.data.items);
         }, function() {
             console.log('Error during projects data fetching!');
         });
@@ -289,7 +295,13 @@ rootModule.controller('donateController', ['$scope', 'globalFactory', function($
 }]);
 
 
-rootModule.controller('projectController', ['$scope', '$routeParams', 'homeService', 'globalFactory', function($scope, $routeParams, homeService, globalFactory) {
+rootModule.controller('projectController', [
+    '$scope',
+    '$routeParams',
+    'homeService',
+    'globalFactory',
+    'projectDetailsService',
+     function($scope, $routeParams, homeService, globalFactory, projectDetailsService) {
     $scope.bannerUrl = 'http://placehold.it/1146x400';
     $scope.project;
 
@@ -302,12 +314,12 @@ rootModule.controller('projectController', ['$scope', '$routeParams', 'homeServi
     });
 
     homeService.getProjects().then(function(response) {
-        $scope.projects = response.data;
-
+        $scope.projects = globalFactory.resolveLinksIfContentFul(response.data.items, 'icon');
         // temporary logic
         for(var i=0; i < $scope.projects.length; i++) {
-            if ($scope.projects[i].id == parseInt($routeParams.projectid, 10)) {
-                $scope.project = $scope.projects[i];
+            if ($scope.projects[i].id == $routeParams.projectid) {
+                $scope.project = projectDetailsService.resolvedChildProject($scope.projects[i]);
+                console.log($scope.project);
                 break;
             }
         }
@@ -328,7 +340,7 @@ rootModule.controller('downloadController', ['$scope', 'downloadService', 'globa
         });
 
         downloadService.getDownloadData().then(function(response) {
-            $scope.gridData = globalFactory.resolvedImageIfContentFul(response.data, 'downloadFile');
+            $scope.gridData = globalFactory.resolveLinksIfContentFul(response.data.items, 'downloadFile');
         }, function() {
             console.log('Error during downloads data fetching!');
         });
@@ -345,8 +357,7 @@ rootModule.controller('galleryController', ['$scope', 'galleryService', 'globalF
     });
     
     galleryService.getGallery().then(function(response) {
-       var resolvedData = globalFactory.resolvedImageIfContentFul(response.data);
-       console.log(resolvedData);
+       var resolvedData = globalFactory.resolveLinksIfContentFul(response.data.items);
         $scope.sorteddata = globalFactory.sortGalleryData(resolvedData);
         $scope.categories = Object.keys($scope.sorteddata);
 
@@ -381,14 +392,14 @@ rootModule.service('homeService', [
 
         this.getSlides = function() {
             if (!cachedDataSlides) {
-                cachedDataSlides = globalFactory.getStandardGetRequest('slides')
+                cachedDataSlides = globalFactory.getStandardGetRequest('slides');
             }
             return cachedDataSlides;
         }
         
         this.getProjects = function() {
             if (!cachedDataProjects) {
-                cachedDataProjects =  $http.get(appConfig.apiURL + '/projects');
+                cachedDataProjects =  globalFactory.getStandardGetRequest('projects', '&fields.childProjects[exists]=true');
             }
             return cachedDataProjects;
         }
@@ -469,6 +480,22 @@ rootModule.service('downloadService', ['globalFactory', function(globalFactory) 
         return cachedData;
     }
 }]);
+
+
+
+rootModule.service('projectDetailsService', [
+    'globalFactory',
+    function(globalFactory) {
+        this.resolvedChildProject = function(parentProject) { 
+            var parentProjectData = JSON.parse(JSON.stringify(parentProject));
+            var childData = parentProjectData.childProjects;
+            childData = globalFactory.resolveLinksIfContentFul(childData, 'displayImage');
+            childData = globalFactory.resolveParasIfContentFul(childData, 'shortDescription');
+            parentProjectData.childProjects = childData;
+            return parentProjectData;
+        }
+    }
+]);
 
 
 
@@ -579,34 +606,15 @@ rootModule.directive('imageBanner', function(){
 
 
 rootModule.factory('globalFactory', [
-    '$uibModal',
     '$http',
     'appConfig',
     'contentful',
     'contentfulFactory',
-    function($uibModal, $http, appConfig, contentful, contentfulFactory) {
+    function($http, appConfig, contentful, contentfulFactory) {
         var staticData = null;
         var isContentFul = appConfig.useContentFul;
         
         return { 
-                modalOpen: function(options) {
-                    let modalInstance = $uibModal.open({
-                        animation: true,
-                        controller: ['$scope', function($scope){
-                            $scope.header = options.header;
-                            $scope.description = options.description;
-                            $scope.image = options.image;
-                            $scope.canceltext = options.canceltext ? options.canceltext : 'Cancel';
-                            $scope.cancel = function() {
-                                modalInstance.close();
-                            };
-                        }],
-                        size: 'lg',
-                        backdrop: 'static',
-                        templateUrl: options.templateurl ? options.templateUrl : 'shared/globalfactory/templates/ModalView.html'
-                    });
-                },
-                
                 // if description is too long this function will take care of truncation.
                 truncateData: function(data, trunckey, charlen) {
                     for (var i=0; i< data.length; i++) {
@@ -645,17 +653,18 @@ rootModule.factory('globalFactory', [
                         }
                     }
 
-                    console.log(sorteddata);
-                    return sorteddata;
+                   return sorteddata;
                 },
 
                 // Returns standard get request with fall back
                 // to optional backend. Default bakend for now
                 // is contentful.
-                getStandardGetRequest: function(endpoint) {
+                getStandardGetRequest: function(endpoint, additionalquery) {
                     var request;
                     if (isContentFul) {
-                        request = contentful.entries('content_type=' + endpoint);
+                        var apiQuery =  'content_type='+ endpoint;
+                        apiQuery += additionalquery ? additionalquery : '';
+                        request = contentful.entries(apiQuery);
                     } else {
                         request =  $http.get(appConfig.apiURL + '/' + endpoint);
                     }
@@ -672,12 +681,20 @@ rootModule.factory('globalFactory', [
                 },
 
                 // Resolved images if we are using contentful
-                resolvedImageIfContentFul: function(data, type) {
+                resolveLinksIfContentFul: function(data, type) {
                    return isContentFul 
                         ? contentfulFactory.getLinkedUrls(data, type) 
                         : data
                     ;
-                } 
+                },
+
+                // Seperate outs paras in elements of an array
+                resolveParasIfContentFul: function(data, fieldName) {
+                    return isContentFul 
+                        ? contentfulFactory.getParagraphsListFromText(data, fieldName) 
+                        : data
+                    ;
+                }
         };
     }
 ]);
@@ -689,19 +706,62 @@ rootModule.factory('contentfulFactory', [function() {
             var dataToUse = JSON.parse(JSON.stringify(data));
             var linkedType = type ? type : 'image';
             var resultSet = [];
-            var dataLength = dataToUse.items.length;
-            var items = dataToUse.items;
+            var dataLength = dataToUse ? dataToUse.length : 0;
             for (var k = 0; k < dataLength; k++) {
-                var currentField = dataToUse.items[k].fields;
-                var linkUrl = items[k].fields[linkedType].fields.file.url;
-                currentField[linkedType] = linkUrl;
+                var currentField =dataToUse[k].fields;
+                var linkUrl;
+                if (dataToUse[k].fields[linkedType]) {
+                    linkUrl = dataToUse[k].fields[linkedType].fields.file.url;
+                    currentField[linkedType] = linkUrl;
+                }
+                currentField['id'] = dataToUse[k].sys.id;;
                 resultSet.push(currentField);
             }
             
-            return resultSet;
+            return resultSet.length ? resultSet : dataToUse;
+        },
+
+        getParagraphsListFromText: function(data, fieldName) {
+            var dataToUse = JSON.parse(JSON.stringify(data));
+            console.log(dataToUse);
+            var dataLength = dataToUse.length;
+            for (var k = 0; k < dataLength; k++) {
+                // Ensure to have single \n for new line
+                var text = dataToUse[k][fieldName];
+                var paraList = text.replace(/\n+/g, '\n').split('\n');
+                dataToUse[k][fieldName] = paraList;
+            }
+
+            return dataToUse;
         }
     };
  }]);
+
+
+rootModule.factory('modalFactory', [
+    '$uibModal',
+    function($uibModal) {
+        return { 
+                modalOpen: function(options) {
+                    let modalInstance = $uibModal.open({
+                        animation: true,
+                        controller: ['$scope', function($scope){
+                            $scope.header = options.header;
+                            $scope.description = options.description;
+                            $scope.image = options.image;
+                            $scope.canceltext = options.canceltext ? options.canceltext : 'Cancel';
+                            $scope.cancel = function() {
+                                modalInstance.close();
+                            };
+                        }],
+                        size: 'lg',
+                        backdrop: 'static',
+                        templateUrl: options.templateurl ? options.templateUrl : 'shared/templates/ModalView.html'
+                    });
+                },
+        };
+    }
+]);
 
 
 rootModule.service('contactUsService', ['globalFactory', function(globalFactory) {

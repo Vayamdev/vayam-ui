@@ -10,14 +10,17 @@ rootModule.controller('impactController', ['$scope', '$routeParams', 'impactServ
     });
 
     impactService.getImpactThumbnails().then(function(response) {
-        var impacts = globalFactory.resolvedImageIfContentFul(response.data);
+        var impacts = globalFactory.resolveLinksIfContentFul(response.data.items);
+        impacts = globalFactory.resolveParasIfContentFul(impacts, 'longDescription');
         globalFactory.truncateData(impacts, 'oneLine', 120);
         $scope.impacts = impacts;
 
-        for(var i=0; i < $scope.impacts.length; i++) {
-            if ($scope.impacts[i].id == parseInt($routeParams.impactid, 10)) {
-                $scope.impact = $scope.impacts[i];
-                break;
+        if ($routeParams.impactid) {
+            for(var i=0; i < $scope.impacts.length; i++) {
+                if ($scope.impacts[i].id == $routeParams.impactid) {
+                    $scope.impact = $scope.impacts[i];
+                    break;
+                }
             }
         }
     }, function() {

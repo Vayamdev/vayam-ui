@@ -1,32 +1,13 @@
 rootModule.factory('globalFactory', [
-    '$uibModal',
     '$http',
     'appConfig',
     'contentful',
     'contentfulFactory',
-    function($uibModal, $http, appConfig, contentful, contentfulFactory) {
+    function($http, appConfig, contentful, contentfulFactory) {
         var staticData = null;
         var isContentFul = appConfig.useContentFul;
         
         return { 
-                modalOpen: function(options) {
-                    let modalInstance = $uibModal.open({
-                        animation: true,
-                        controller: ['$scope', function($scope){
-                            $scope.header = options.header;
-                            $scope.description = options.description;
-                            $scope.image = options.image;
-                            $scope.canceltext = options.canceltext ? options.canceltext : 'Cancel';
-                            $scope.cancel = function() {
-                                modalInstance.close();
-                            };
-                        }],
-                        size: 'lg',
-                        backdrop: 'static',
-                        templateUrl: options.templateurl ? options.templateUrl : 'shared/globalfactory/templates/ModalView.html'
-                    });
-                },
-                
                 // if description is too long this function will take care of truncation.
                 truncateData: function(data, trunckey, charlen) {
                     for (var i=0; i< data.length; i++) {
@@ -65,17 +46,18 @@ rootModule.factory('globalFactory', [
                         }
                     }
 
-                    console.log(sorteddata);
-                    return sorteddata;
+                   return sorteddata;
                 },
 
                 // Returns standard get request with fall back
                 // to optional backend. Default bakend for now
                 // is contentful.
-                getStandardGetRequest: function(endpoint) {
+                getStandardGetRequest: function(endpoint, additionalquery) {
                     var request;
                     if (isContentFul) {
-                        request = contentful.entries('content_type=' + endpoint);
+                        var apiQuery =  'content_type='+ endpoint;
+                        apiQuery += additionalquery ? additionalquery : '';
+                        request = contentful.entries(apiQuery);
                     } else {
                         request =  $http.get(appConfig.apiURL + '/' + endpoint);
                     }
@@ -92,12 +74,20 @@ rootModule.factory('globalFactory', [
                 },
 
                 // Resolved images if we are using contentful
-                resolvedImageIfContentFul: function(data, type) {
+                resolveLinksIfContentFul: function(data, type) {
                    return isContentFul 
                         ? contentfulFactory.getLinkedUrls(data, type) 
                         : data
                     ;
-                } 
+                },
+
+                // Seperate outs paras in elements of an array
+                resolveParasIfContentFul: function(data, fieldName) {
+                    return isContentFul 
+                        ? contentfulFactory.getParagraphsListFromText(data, fieldName) 
+                        : data
+                    ;
+                }
         };
     }
 ]);

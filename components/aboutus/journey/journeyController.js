@@ -20,14 +20,14 @@ rootModule.controller('journeyController',[
 
         // get other page details
         journeyService.getTestimonials().then(function(response) {
-            $scope.slides = globalFactory.resolvedImageIfContentFul(response.data);
+            $scope.slides = globalFactory.resolveLinksIfContentFul(response.data.items);
             console.log($scope.slides);
         }, function() {
             console.log('Error during slide data fetching!');
         });
 
         journeyService.getMilestones().then(function(response) {
-            $scope.milestones = globalFactory.resolvedImageIfContentFul(response.data);
+            $scope.milestones = globalFactory.resolveLinksIfContentFul(response.data.items);
         }, function() {
             console.log('Error during projects data fetching!');
         });

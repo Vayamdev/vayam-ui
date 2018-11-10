@@ -18,7 +18,6 @@ var appConfig = {
 };
 
 // constant for base URL. Change this on production server
-rootModule.constant('baseUrl', 'http://localhost:3000');
 rootModule.constant('appConfig', appConfig);
 
 if (appConfig.useContentFul) {

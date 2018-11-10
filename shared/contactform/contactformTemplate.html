@@ -1,4 +1,4 @@
-<form  name="contactUsForm" novalidate >
+<form  name="contactUsForm" novalidate action="https://formspree.io/vayamdevindia@gmail.com" method="POST">
 	<div class="contactUsForm">		
         <div class="col-xs-12 col-md-12">
                 <div class="col-xs-12 col-md-2">Name<span class="text-danger">*</span></div>
@@ -43,7 +43,7 @@
         </div>
 
         <div class="col-xs-12 col-md-12 text-center">
-            <button href="" class="send-button btn btn-primary" type="submit">
+            <button href="" class="send-button btn btn-primary" type="submit" ng-disabled="contactUsForm.$invalid">
                 <span class="glyphicon glyphicon-send"></span>
                 Send
             </button>

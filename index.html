@@ -1,29 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel='stylesheet' href='/css/app.css'></link>
-        <title>Vayam India</title>
-	</head>
 
-    <body ng-app="rootModule">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <link rel='stylesheet' href='/css/app.css'>
+    <title>Vayam India</title>
+</head>
 
-        <div class="fluid-container">
-            <div vayam-header></div>
-            <div donate-link></div>
-            <div class="vayamviews container-fluid" ng-view autoscroll="true"></div>
-            <div vayam-footer></div>
-        </div>
+<body ng-app="rootModule">
 
-        <script src="https://smtpjs.com/v2/smtp.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvEdya0Ms-p3F-nryuU1OoFFMyQHmDf8k"></script>
+    <div class="fluid-container">
+        <div vayam-header></div>
+        <div donate-link></div>
+        <div class="vayamviews container-fluid" ng-view autoscroll="true"></div>
+        <div vayam-footer></div>
+    </div>
 
-        <script src='/scripts/vender.js'></script>
-        <!-- 
+    <script src="https://smtpjs.com/v2/smtp.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvEdya0Ms-p3F-nryuU1OoFFMyQHmDf8k"></script>
+
+    <script src='/scripts/vender.js'></script>
+    <!-- 
             There is problem while combining the angular inside vender script so adding it separately
             <script src='/scripts/angular-animate/angular-animate.min.js'></script>
         -->
-        <script src='/scripts/app.js'></script>
-        
-	</body>
+    <script src='/scripts/app.js'></script>
+
+</body>
+
 </html>

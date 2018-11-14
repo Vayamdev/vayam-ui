@@ -292,9 +292,10 @@ rootModule.controller('journeyController',[
         });
 
         journeyService.getMilestones().then(function(response) {
-            $scope.milestones = globalFactory.resolveLinksIfContentFul(
+            var milestones = globalFactory.resolveLinksIfContentFul(
                 response.data.items ? response.data.items : response.data
             );
+            $scope.milestones = globalFactory.sortObjectsByValues(milestones, 'year', 'asc');
         }, function() {
             console.log('Error during projects data fetching!');
         });
@@ -668,12 +669,20 @@ rootModule.factory('globalFactory', [
                 // return static data for application.
                 getStaticData: function(callback) {
                     if (!staticData) {
-                        $http.get('staticData.json').then(function(response) {
-                            staticData = response.data;
-                            callback(staticData);
-                        }, function() {
-                            console.log('Error during static data fetching!');
-                        });
+                        if (isContentFul) {
+                            var apiQuery =  'content_type='+ 'staticData';
+                            request = contentful.entries(apiQuery).then(function(response) {
+                                staticData = response.data.items[0].fields.data;
+                                callback(staticData);
+                            });
+                        } else {
+                            $http.get('staticData.json').then(function(response) {
+                                staticData = response.data;
+                                callback(staticData);
+                            }, function() {
+                                console.log('Error during static data fetching!');
+                            });
+                        }
                     }
                     else {
                         callback(staticData);
@@ -712,11 +721,20 @@ rootModule.factory('globalFactory', [
                     return request;
                 },
 
-                // Returns sorted list of objects by date.
+                // Returns sorted list of objects by date. Latest first
                 sortObjectsByDates: function(listOfObjects, datePropertyName) {
                     var tempObjectList = [...listOfObjects];
                     tempObjectList.sort(function(a, b) {
                         return Date.parse(b[datePropertyName]) - Date.parse(a[datePropertyName]);
+                    });
+                    return tempObjectList;
+                },
+
+                // Returns sorted list of objects by value (number).
+                sortObjectsByValues: function(listOfObjects, propertyName, sorting) {
+                    var tempObjectList = [...listOfObjects];
+                    tempObjectList.sort(function(a, b) {
+                        return (sorting === 'asc') ? a[propertyName] - b[propertyName] : b[propertyName] - a[propertyName];
                     });
                     return tempObjectList;
                 },

@@ -28,9 +28,10 @@ rootModule.controller('journeyController',[
         });
 
         journeyService.getMilestones().then(function(response) {
-            $scope.milestones = globalFactory.resolveLinksIfContentFul(
+            var milestones = globalFactory.resolveLinksIfContentFul(
                 response.data.items ? response.data.items : response.data
             );
+            $scope.milestones = globalFactory.sortObjectsByValues(milestones, 'year', 'asc');
         }, function() {
             console.log('Error during projects data fetching!');
         });

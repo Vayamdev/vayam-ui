@@ -1,7 +1,7 @@
 rootModule.directive('imageBanner', function(){
     return {
         restrict: 'E',
-        templateUrl: '/shared/imagebanner/imageBannerTemplate.html',
+        templateUrl: '/shared/imagebanner/imagebannerTemplate.html',
         scope: false,
         controller: ['$scope', '$route', function($scope, $route) {
             $scope.activepage = $route.current.activepage;

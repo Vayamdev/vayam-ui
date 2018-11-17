@@ -582,11 +582,6 @@ rootModule.directive('vayamFooter', function(){
         controller: ['$scope', 'globalFactory', function($scope, globalFactory) {
             // fetch static data for this page. 
             globalFactory.getStaticData(function(response) {
-                $scope.fb = response.socialnetwork.fb;
-                $scope.twitter = response.socialnetwork.twitter;
-                $scope.youtube = response.socialnetwork.youtube;
-                $scope.wordpress = response.socialnetwork.wordpress;
-
                 $scope.footernote =  response.footernote;
             });
         }]
@@ -631,7 +626,7 @@ rootModule.directive('vayamMap', function(){
 rootModule.directive('imageBanner', function(){
     return {
         restrict: 'E',
-        templateUrl: '/shared/imagebanner/imageBannerTemplate.html',
+        templateUrl: '/shared/imagebanner/imagebannerTemplate.html',
         scope: false,
         controller: ['$scope', '$route', function($scope, $route) {
             $scope.activepage = $route.current.activepage;

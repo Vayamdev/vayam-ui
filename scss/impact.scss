@@ -1,9 +1,14 @@
 div.impacttab {
 
-	div.thumbnail .thumbnail-image {
-		-webkit-filter: contrast(50%);
-		filter: contrast(65%);
-		transition: filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);
+	div.thumbnail {
+		
+		.thumbnail-image {
+			height: 250px;
+		}
+
+		.caption {
+			height: 200px;
+		}
 	}
 
 	div.thumbnail:hover .thumbnail-image {

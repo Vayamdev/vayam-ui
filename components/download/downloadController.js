@@ -2,8 +2,9 @@ rootModule.controller('downloadController', ['$scope', 'downloadService', 'globa
         $scope.gridData = [];
         // fetch static data for this page. 
         globalFactory.getStaticData(function(response) {
-            $scope.bannerUrl = response.download.bannerimage;
-            $scope.bannertext = response.download.bannertext;
+            var data = globalFactory.resolveLinksIfContentFul(response).filter(data => data.pageName === 'download')[0];
+            $scope.bannerUrl = data.image;
+            $scope.bannertext = data.text;
         });
 
         downloadService.getDownloadData().then(function(response) {

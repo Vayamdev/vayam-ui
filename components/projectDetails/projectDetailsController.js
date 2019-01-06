@@ -13,7 +13,9 @@ rootModule.controller('projectDetailsController', [
 
     // fetch static data for this page. 
     globalFactory.getStaticData(function(response) {
-        $scope.bannerUrl = response.project.bannerimage;
+        var data;
+        data = globalFactory.resolveLinksIfContentFul(response).filter(data => data.pageName === 'project')[0];
+        $scope.bannerUrl = data.image;
     });
 
     homeService.getProjects().then(function(response) {

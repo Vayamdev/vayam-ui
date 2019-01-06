@@ -176,25 +176,28 @@ rootModule.controller('homeController', [
 
 
 
-rootModule.controller('impactController', ['$scope', '$routeParams', 'impactService', 'globalFactory', function($scope, $routeParams, impactService, globalFactory) {
+rootModule.controller('impactController', ['$scope', '$routeParams', 'impactService', 'globalFactory', function ($scope, $routeParams, impactService, globalFactory) {
     $scope.bannerUrl;
     $scope.bannertext;
     $scope.project;
 
     // fetch static data for this page. 
-    globalFactory.getStaticData(function(response) {
-        $scope.bannerUrl = response.impact.bannerimage;
-        $scope.bannertext = response.impact.bannertext;
+    globalFactory.getStaticData(function (response) {
+        var data;
+        data = globalFactory.resolveLinksIfContentFul(response).filter(data => data.pageName === 'impact')[0];
+
+        $scope.bannerUrl = data.image;
+        $scope.bannertext = data.text;
     });
 
-    impactService.getImpactThumbnails().then(function(response) {
+    impactService.getImpactThumbnails().then(function (response) {
         var impacts = globalFactory.resolveLinksIfContentFul(
             response.data.items ? response.data.items : response.data
         );
         impacts = globalFactory.resolveParasIfContentFul(impacts, 'longDescription');
         globalFactory.truncateData(impacts, 'oneLine', 120);
         $scope.impacts = impacts;
-    }, function() {
+    }, function () {
         console.log('Error during event data fetching!');
     });
 }]);
@@ -235,29 +238,32 @@ rootModule.controller('impactDetailsController', ['$scope', '$routeParams', 'imp
 
 
 
-rootModule.controller('whatweareController', ['$scope', 'teamService', 'globalFactory', function($scope, teamService, globalFactory) {
+rootModule.controller('whatweareController', ['$scope', 'teamService', 'globalFactory', function ($scope, teamService, globalFactory) {
     $scope.bannerUrl = 'http://placehold.it/1146x400';
     $scope.bannertext = '';
     $scope.vision = '';
     $scope.mission = '';
 
     // fetch static data for this page. 
-    globalFactory.getStaticData(function(response) {
-        $scope.title = response.whatweare.title;
-        $scope.bannerUrl = response.whatweare.bannerimage;
-        $scope.bannertext = response.whatweare.bannertext;
-        $scope.vision = response.whatweare.vision;
-        $scope.mission = response.whatweare.mission;    
+    globalFactory.getStaticData(function (response) {
+        var data;
+        data = globalFactory.resolveLinksIfContentFul(response).filter(data => data.pageName === 'whatweare')[0];
+
+        $scope.title = data.title;
+        $scope.bannerUrl = data.image;
+        $scope.bannertext = data.text;
+        $scope.vision = data.meta.vision;
+        $scope.mission = data.meta.mission;
     });
 
-    teamService.getStaff().then(function(response) {
+    teamService.getStaff().then(function (response) {
         $scope.teamdata = globalFactory.resolveLinksIfContentFul(
             response.data.items ? response.data.items : response.data
         );
-    }, 
-    function() {
-        console.log('Error during team data fetching!');
-    });
+    },
+        function () {
+            console.log('Error during team data fetching!');
+        });
 }]);
 
 
@@ -277,9 +283,12 @@ rootModule.controller('journeyController',[
 
         // fetch static data for this page. 
         globalFactory.getStaticData(function(response) {
-            $scope.title = response.journey.title;
-            $scope.bannertext = response.journey.bannertext;
-            $scope.bannerUrl = response.journey.bannerimage;
+            var data;
+            data = globalFactory.resolveLinksIfContentFul(response).filter(data => data.pageName === 'journey')[0];
+    
+            $scope.title = data.title;
+            $scope.bannertext =data.text;
+            $scope.bannerUrl =data.image;
         });
 
         // get other page details
@@ -308,9 +317,12 @@ rootModule.controller('contactusController', ['$scope', 'contactUsService', 'glo
 
     // fetch static data for this page. 
     globalFactory.getStaticData(function(response) {
-        $scope.bannerUrl = response.contactus.bannerimage;
-        $scope.title = response.contactus.title;
-        $scope.bannertext = response.contactus.bannertext;
+        var data;
+        data = globalFactory.resolveLinksIfContentFul(response).filter(data => data.pageName === 'contactus')[0];
+
+        $scope.bannerUrl = data.image;
+        $scope.title = data.title;
+        $scope.bannertext = data.text;
     });
     
     contactUsService.getLocations().then(function(response) {
@@ -325,11 +337,15 @@ rootModule.controller('contactusController', ['$scope', 'contactUsService', 'glo
 rootModule.controller('donateController', ['$scope', 'globalFactory', function($scope, globalFactory) {
 	// fetch static data for this page. 
     globalFactory.getStaticData(function(response) {
-        $scope.bannerUrl = response.donate.bannerimage;
-        $scope.bannertext = response.donate.bannertext;
-        $scope.online = response.donate.donationdetails.online;
-        $scope.mobile = response.donate.donationdetails.mobile;
-        $scope.note = response.donate.donationdetails.note;
+        var data;
+        data = globalFactory.resolveLinksIfContentFul(response).filter(data => data.pageName === 'donate')[0];
+        data = globalFactory.resolveParasIfContentFul(data, 'text');
+        console.log(data);
+        $scope.bannerUrl = data.image;
+        $scope.bannertext = data.text;
+        $scope.online = data.meta.online;
+        $scope.mobile = data.meta.mobile;
+        $scope.note = data.meta.note;
     });
 }]);
 
@@ -349,7 +365,9 @@ rootModule.controller('projectDetailsController', [
 
     // fetch static data for this page. 
     globalFactory.getStaticData(function(response) {
-        $scope.bannerUrl = response.project.bannerimage;
+        var data;
+        data = globalFactory.resolveLinksIfContentFul(response).filter(data => data.pageName === 'project')[0];
+        $scope.bannerUrl = data.image;
     });
 
     homeService.getProjects().then(function(response) {
@@ -374,8 +392,9 @@ rootModule.controller('downloadController', ['$scope', 'downloadService', 'globa
         $scope.gridData = [];
         // fetch static data for this page. 
         globalFactory.getStaticData(function(response) {
-            $scope.bannerUrl = response.download.bannerimage;
-            $scope.bannertext = response.download.bannertext;
+            var data = globalFactory.resolveLinksIfContentFul(response).filter(data => data.pageName === 'download')[0];
+            $scope.bannerUrl = data.image;
+            $scope.bannertext = data.text;
         });
 
         downloadService.getDownloadData().then(function(response) {
@@ -394,8 +413,10 @@ rootModule.controller('galleryController', ['$scope', 'galleryService', 'globalF
     
     // fetch static data for this page. 
     globalFactory.getStaticData(function(response) {
-        $scope.bannertext = response.gallery.bannertext;
-        $scope.bannerUrl = response.gallery.bannerimage;
+        var data;
+        data = globalFactory.resolveLinksIfContentFul(response).filter(data => data.pageName === 'gallery')[0];
+        $scope.bannertext = data.text;
+        $scope.bannerUrl = data.image;
     });
     
     galleryService.getGallery().then(function(response) {
@@ -647,108 +668,108 @@ rootModule.factory('globalFactory', [
     'appConfig',
     'contentful',
     'contentfulFactory',
-    function($http, appConfig, contentful, contentfulFactory) {
+    function ($http, appConfig, contentful, contentfulFactory) {
         var staticData = null;
         var isContentFul = appConfig.useContentFul;
-        
-        return { 
-                // if description is too long this function will take care of truncation.
-                truncateData: function(data, trunckey, charlen) {
-                    for (var i=0; i< data.length; i++) {
-                        if (data[i][trunckey].length > charlen) {
-                            data[i][trunckey] = data[i][trunckey].slice(0, charlen) + ' ...';
-                        }
+
+        return {
+            // if description is too long this function will take care of truncation.
+            truncateData: function (data, trunckey, charlen) {
+                for (var i = 0; i < data.length; i++) {
+                    if (data[i][trunckey].length > charlen) {
+                        data[i][trunckey] = data[i][trunckey].slice(0, charlen) + ' ...';
                     }
-                },
-
-                // return static data for application.
-                getStaticData: function(callback) {
-                    if (!staticData) {
-                        if (isContentFul) {
-                            var apiQuery =  'content_type='+ 'staticData';
-                            request = contentful.entries(apiQuery).then(function(response) {
-                                staticData = response.data.items[0].fields.data;
-                                callback(staticData);
-                            });
-                        } else {
-                            $http.get('staticData.json').then(function(response) {
-                                staticData = response.data;
-                                callback(staticData);
-                            }, function() {
-                                console.log('Error during static data fetching!');
-                            });
-                        }
-                    }
-                    else {
-                        callback(staticData);
-                    }
-                },
-
-                // return static data for application.
-                sortGalleryData: function(data) {
-                    var sorteddata = {};
-                    for (var i=0; i< data.length; i++) {
-                        var currentElement = data[i];
-                        var currentCategory = currentElement['category'];
-                        if (!sorteddata[currentCategory]) {
-                            sorteddata[currentCategory] = [];
-                            sorteddata[currentCategory].push(currentElement);
-                        } else {
-                            sorteddata[currentCategory].push(currentElement);
-                        }
-                    }
-
-                   return sorteddata;
-                },
-
-                // Returns standard get request with fall back
-                // to optional backend. Default bakend for now
-                // is contentful.
-                getStandardGetRequest: function(endpoint, additionalquery) {
-                    var request;
-                    if (isContentFul) {
-                        var apiQuery =  'content_type='+ endpoint;
-                        apiQuery += additionalquery ? additionalquery : '';
-                        request = contentful.entries(apiQuery);
-                    } else {
-                        request =  $http.get(appConfig.apiURL + '/' + endpoint);
-                    }
-                    return request;
-                },
-
-                // Returns sorted list of objects by date. Latest first
-                sortObjectsByDates: function(listOfObjects, datePropertyName) {
-                    var tempObjectList = [...listOfObjects];
-                    tempObjectList.sort(function(a, b) {
-                        return Date.parse(b[datePropertyName]) - Date.parse(a[datePropertyName]);
-                    });
-                    return tempObjectList;
-                },
-
-                // Returns sorted list of objects by value (number).
-                sortObjectsByValues: function(listOfObjects, propertyName, sorting) {
-                    var tempObjectList = [...listOfObjects];
-                    tempObjectList.sort(function(a, b) {
-                        return (sorting === 'asc') ? a[propertyName] - b[propertyName] : b[propertyName] - a[propertyName];
-                    });
-                    return tempObjectList;
-                },
-
-                // Resolved images if we are using contentful
-                resolveLinksIfContentFul: function(data, type) {
-                   return isContentFul 
-                        ? contentfulFactory.getLinkedUrls(data, type) 
-                        : data
-                    ;
-                },
-
-                // Seperate outs paras in elements of an array
-                resolveParasIfContentFul: function(data, fieldName) {
-                    return isContentFul 
-                        ? contentfulFactory.getParagraphsListFromText(data, fieldName) 
-                        : data
-                    ;
                 }
+            },
+
+            // return static data for application.
+            sortGalleryData: function (data) {
+                var sorteddata = {};
+                for (var i = 0; i < data.length; i++) {
+                    var currentElement = data[i];
+                    var currentCategory = currentElement['category'];
+                    if (!sorteddata[currentCategory]) {
+                        sorteddata[currentCategory] = [];
+                        sorteddata[currentCategory].push(currentElement);
+                    } else {
+                        sorteddata[currentCategory].push(currentElement);
+                    }
+                }
+
+                return sorteddata;
+            },
+
+            // return static data for application.
+            getStaticData: function (callback) {
+                if (!staticData) {
+                    if (isContentFul) {
+                        var apiQuery = 'content_type=' + 'page';
+                        request = contentful.entries(apiQuery).then(function (response) {
+                            staticData = response.data.items;
+                            callback(staticData);
+                        });
+                    } else {
+                        $http.get('staticData.json').then(function (response) {
+                            staticData = response.data;
+                            callback(staticData);
+                        }, function () {
+                            console.log('Error during static data fetching!');
+                        });
+                    }
+                }
+                else {
+                    callback(staticData);
+                }
+            },
+
+            // Returns standard get request with fall back
+            // to optional backend. Default bakend for now
+            // is contentful.
+            getStandardGetRequest: function (endpoint, additionalquery) {
+                var request;
+                if (isContentFul) {
+                    var apiQuery = 'content_type=' + endpoint;
+                    apiQuery += additionalquery ? additionalquery : '';
+                    request = contentful.entries(apiQuery);
+                } else {
+                    request = $http.get(appConfig.apiURL + '/' + endpoint);
+                }
+                return request;
+            },
+
+            // Returns sorted list of objects by date. Latest first
+            sortObjectsByDates: function (listOfObjects, datePropertyName) {
+                var tempObjectList = [...listOfObjects];
+                tempObjectList.sort(function (a, b) {
+                    return Date.parse(b[datePropertyName]) - Date.parse(a[datePropertyName]);
+                });
+                return tempObjectList;
+            },
+
+            // Returns sorted list of objects by value (number).
+            sortObjectsByValues: function (listOfObjects, propertyName, sorting) {
+                var tempObjectList = [...listOfObjects];
+                tempObjectList.sort(function (a, b) {
+                    return (sorting === 'asc') ? a[propertyName] - b[propertyName] : b[propertyName] - a[propertyName];
+                });
+                return tempObjectList;
+            },
+
+            // Resolved images if we are using contentful
+            resolveLinksIfContentFul: function (data, type) {
+                return isContentFul
+                    ? contentfulFactory.getLinkedUrls(data, type)
+                    : data
+                    ;
+            },
+
+            // Seperate outs paras in elements of an array
+            resolveParasIfContentFul: function (data, fieldName) {
+                return isContentFul
+                    ? contentfulFactory.getParagraphsListFromText(data, fieldName)
+                    : data
+                    ;
+            }
         };
     }
 ]);

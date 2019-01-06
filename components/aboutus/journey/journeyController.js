@@ -13,9 +13,12 @@ rootModule.controller('journeyController',[
 
         // fetch static data for this page. 
         globalFactory.getStaticData(function(response) {
-            $scope.title = response.journey.title;
-            $scope.bannertext = response.journey.bannertext;
-            $scope.bannerUrl = response.journey.bannerimage;
+            var data;
+            data = globalFactory.resolveLinksIfContentFul(response).filter(data => data.pageName === 'journey')[0];
+    
+            $scope.title = data.title;
+            $scope.bannertext =data.text;
+            $scope.bannerUrl =data.image;
         });
 
         // get other page details

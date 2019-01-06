@@ -1,53 +1,39 @@
-{
-    "crisis": [
-            {
-                "name": "Contrary to popular belief.",
-                "percentage": "77",
-                "positioncss": "firstload"
-            },
-            {
-                "name": "Lorem Ipsum is not simplyf.",
-                "percentage": "60",
-                "positioncss": "secondload"
-            },
-            {
-                "name": "Lorem Ipsum is not simply random text.",
-                "percentage": "90",
-                "positioncss": "thirdload"
-            }
-    ],
-    "conceptnote": [
-            {
-                "para": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source."
-            }
-    ],
-    "whatweare": {
+[
+    {
+        "pageName": "whatweare",
         "title": "We're Vayam",
-        "bannerimage": "/assets/banners/whatweare.jpg",
-        "bannertext": "Vayam is a voluntary movement aimed at strengthening the roots of democracy. We work with people who are deprived of their democratic rights and train them to fight for and achieve their rights in a democratic way. Vayam does this by empowering the people, especially tribal youth and women, with legal know how. Vayam regards people as participants not beneficiaries. It endeavours to develop community institutions for self-rule and governance of land, water, and forest. Village assembly (Gram Sabha), women’s SHG (self-help-groups) and of course youth leaders are some of the channels through which Vayam hopes to usher in change. At Vayam, people decide the priorities . Team Vayam evolves tools and techniques to bring the agenda to fruition. Work together: We believe that democracy is not only about electing representatives but by being actively involved in governance. We train our people to work with the government officials to bring about all benefitting changes. Vayam’s tools and techniques of building democratic strength is a freeware. It is freely shared with other organisations and active citizens. Many organisations have used Vayam’s methods to ensure a benefit far beyond Vayam’s reach. This ripple effect is our pride.",
-        "vision": "Empowering Indian citizens – beginning with the most backward – to govern their natural resources and prosper through decentralized democratic systems",
-        "mission": "Making leaders at roots – for democracy and environment – through activities of capacity building and institution building at village level raising a community system of conservation and management of common natural resources; viz. water and forest."
+        "image": "/assets/banners/whatweare.jpg",
+        "text": "Vayam is a voluntary movement aimed at strengthening the roots of democracy. We work with people who are deprived of their democratic rights and train them to fight for and achieve their rights in a democratic way. Vayam does this by empowering the people, especially tribal youth and women, with legal know how. Vayam regards people as participants not beneficiaries. It endeavours to develop community institutions for self-rule and governance of land, water, and forest. Village assembly (Gram Sabha), women’s SHG (self-help-groups) and of course youth leaders are some of the channels through which Vayam hopes to usher in change. At Vayam, people decide the priorities . Team Vayam evolves tools and techniques to bring the agenda to fruition. Work together: We believe that democracy is not only about electing representatives but by being actively involved in governance. We train our people to work with the government officials to bring about all benefitting changes. Vayam’s tools and techniques of building democratic strength is a freeware. It is freely shared with other organisations and active citizens. Many organisations have used Vayam’s methods to ensure a benefit far beyond Vayam’s reach. This ripple effect is our pride.",
+        "meta": {
+            "vision": "Empowering Indian citizens – beginning with the most backward – to govern their natural resources and prosper through decentralized democratic systems",
+            "mission": "Making leaders at roots – for democracy and environment – through activities of capacity building and institution building at village level raising a community system of conservation and management of common natural resources; viz. water and forest."
+        }
     },
-    "impact": {
-        "bannerimage": "/assets/banners/impact.jpg",
-        "bannertext": "A life is not important except in the impact it has on other lives. Leadership is not about a title or a designation. It's about impact, influence and inspiration. Impact involves getting results."
+    {
+        "pageName": "impact",
+        "image": "/assets/banners/impact.jpg",
+        "text": "A life is not important except in the impact it has on other lives. Leadership is not about a title or a designation. It's about impact, influence and inspiration. Impact involves getting results."
     },
-    "contactus": {
+   {
+        "pageName": "contactus",
         "title": "Contact to involve",
-        "bannertext": "Believe in something larger than yourself... get involved in the big ideas of your time.",
-        "bannerimage": "/assets/banners/contactus.jpg"
+        "text": "Believe in something larger than yourself... get involved in the big ideas of your time.",
+        "image": "/assets/banners/contactus.jpg"
     },
-    "gallery": {
-        "bannertext": "A picture's worth a thousand words",
-        "bannerimage": "/assets/banners/gallery.jpg"
+    {
+        "pageName": "gallery",
+        "text": "A picture's worth a thousand words",
+        "image": "/assets/banners/gallery.jpg"
     },
-    "project": {
-        "bannerimage": "/assets/banners/project.jpg" 
+   {
+        "pageName": "project",
+        "image": "/assets/banners/project.jpg"
     },
-    "donate": {
-        "bannerimage": "/assets/banners/donate.jpg",
-        "bannertext": "The value of life is not in its duration, but in its donation. You are not important because of how long you live, you are important because of how effective you live.",
-        "donationdetails": {
+    {
+        "pageName": "donate",
+        "image": "/assets/banners/donate.jpg",
+        "text": "The value of life is not in its duration, but in its donation. You are not important because of how long you live, you are important because of how effective you live.",
+        "meta": {
             "online": {
                 "beneficiary": "VAYAM",
                 "acn": "36321815708",
@@ -62,20 +48,16 @@
             "note": "Vayam is registered as a public charitable trust under BPT Act: E/5221/Pune. Donations to Vayam are eligible for tax exemption under section 80G of IT Act. Once you transfer funds, kindly write to vayamindia@gmail.com with donor’s name, PAN, and details of transfer( Cheque/NEFT). Your receipt will be sent on your email."
         }
     },
-    "journey": {
+   {
+        "pageName": "journey",
         "title": "Success is a journey, not a destination",
-        "bannertext": "A journey of a thousand miles must begin with a single step. It is is never ending. There's always gonna be growth, improvement, adversity; you just gotta take it all in and do what's right, continue to grow, continue to live in the moment.",
-        "bannerimage": "/assets/banners/journey.jpg"
+        "text": "A journey of a thousand miles must begin with a single step. It is is never ending. There's always gonna be growth, improvement, adversity; you just gotta take it all in and do what's right, continue to grow, continue to live in the moment.",
+        "image": "/assets/banners/journey.jpg"
     },
-    "footernote": {
-        "aboutus": "We work with people who are deprived of their democratic rights and train them to fight for and achieve their rights in a democratic way",
-        "impact": "It's about impact, influence and inspiration and we've methods to ensure a benefit far beyond.",
-        "journy": "Our graph from very beginning till the date",
-        "involve": "You can get attached with Vayam"
-    },
-    "download": {
+    {
+        "pageName": "download",
         "title": "Get your Form",
-        "bannertext": "Here are the common forms that you would need",
-        "bannerimage": "/assets/banners/journey.jpg"
+        "text": "Here are the common forms that you would need",
+        "image": "/assets/banners/journey.jpg"
     }
-}
+]

@@ -3,9 +3,12 @@ rootModule.controller('contactusController', ['$scope', 'contactUsService', 'glo
 
     // fetch static data for this page. 
     globalFactory.getStaticData(function(response) {
-        $scope.bannerUrl = response.contactus.bannerimage;
-        $scope.title = response.contactus.title;
-        $scope.bannertext = response.contactus.bannertext;
+        var data;
+        data = globalFactory.resolveLinksIfContentFul(response).filter(data => data.pageName === 'contactus')[0];
+
+        $scope.bannerUrl = data.image;
+        $scope.title = data.title;
+        $scope.bannertext = data.text;
     });
     
     contactUsService.getLocations().then(function(response) {

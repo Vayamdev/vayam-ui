@@ -2,8 +2,10 @@ rootModule.controller('galleryController', ['$scope', 'galleryService', 'globalF
     
     // fetch static data for this page. 
     globalFactory.getStaticData(function(response) {
-        $scope.bannertext = response.gallery.bannertext;
-        $scope.bannerUrl = response.gallery.bannerimage;
+        var data;
+        data = globalFactory.resolveLinksIfContentFul(response).filter(data => data.pageName === 'gallery')[0];
+        $scope.bannertext = data.text;
+        $scope.bannerUrl = data.image;
     });
     
     galleryService.getGallery().then(function(response) {

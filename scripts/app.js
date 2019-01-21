@@ -123,9 +123,15 @@ rootModule.controller('homeController', [
         $scope.crisis = [];
         $scope.conceptnote = [];
         $scope.projects = [];
+        $scope.highlights = [];
         globalFactory.getStaticData(function(response) {
-            $scope.crisis = response.crisis;
-            $scope.conceptnote = response.conceptnote;      
+            var data;
+            data = globalFactory.resolveLinksIfContentFul(response).filter(data => data.pageName === 'home')[0];
+            data = globalFactory.resolveParasIfContentFul([data], 'text');
+            console.log(data[0].meta);
+            $scope.highlights = data[0].meta.highlights;
+            $scope.conceptnote = data[0].text;
+            $scope.crisis = data.crisis;   
         });
     
         // get slides data
@@ -211,8 +217,11 @@ rootModule.controller('impactDetailsController', ['$scope', '$routeParams', 'imp
 
     // fetch static data for this page. 
     globalFactory.getStaticData(function(response) {
-        $scope.bannerUrl = response.impact.bannerimage;
-        $scope.bannertext = response.impact.bannertext;
+        var data;
+        data = globalFactory.resolveLinksIfContentFul(response).filter(data => data.pageName === 'impact')[0];
+
+        $scope.bannerUrl = data.image;
+        $scope.bannertext = data.text;
     });
 
     impactService.getImpactThumbnails().then(function(response) {

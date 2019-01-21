@@ -14,9 +14,15 @@ rootModule.controller('homeController', [
         $scope.crisis = [];
         $scope.conceptnote = [];
         $scope.projects = [];
+        $scope.highlights = [];
         globalFactory.getStaticData(function(response) {
-            $scope.crisis = response.crisis;
-            $scope.conceptnote = response.conceptnote;      
+            var data;
+            data = globalFactory.resolveLinksIfContentFul(response).filter(data => data.pageName === 'home')[0];
+            data = globalFactory.resolveParasIfContentFul([data], 'text');
+            console.log(data[0].meta);
+            $scope.highlights = data[0].meta.highlights;
+            $scope.conceptnote = data[0].text;
+            $scope.crisis = data.crisis;   
         });
     
         // get slides data

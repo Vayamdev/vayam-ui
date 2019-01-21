@@ -5,8 +5,11 @@ rootModule.controller('impactDetailsController', ['$scope', '$routeParams', 'imp
 
     // fetch static data for this page. 
     globalFactory.getStaticData(function(response) {
-        $scope.bannerUrl = response.impact.bannerimage;
-        $scope.bannertext = response.impact.bannertext;
+        var data;
+        data = globalFactory.resolveLinksIfContentFul(response).filter(data => data.pageName === 'impact')[0];
+
+        $scope.bannerUrl = data.image;
+        $scope.bannertext = data.text;
     });
 
     impactService.getImpactThumbnails().then(function(response) {

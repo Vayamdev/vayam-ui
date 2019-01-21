@@ -2,13 +2,13 @@
 
 	<div id="myCarousel" class="vayam-carousel">
 		<div uib-carousel active="slide.active" interval="myInterval" no-wrap="noWrapSlides">
-			<div uib-slide ng-repeat="slide in slides" index="$index" >
+			<div uib-slide ng-repeat="slide in slides" index="$index">
 				<div class="slide" ng-style="{'background-image':'url({{slide.image}})'}">
 					<div class="banner-text-container container col-xs-offset-2">
 						<div class="banner-text">
 							We are
 						</div>
-				
+
 						<div class="banner-text">
 							<span class="banner-text-highlight">Vayam </span>family
 						</div>
@@ -28,26 +28,30 @@
 				<div class="row">
 					<div class="col-xs-12 col-md-12">
 						<h2>
-							a movement for <span class="highlight-on-yellow">D</span>evelopment, <span class="highlight-on-yellow">E</span>nvironment and <span class="highlight-on-yellow">D</span>emocracy
+							a movement for <span class="highlight-on-yellow">D</span>evelopment, <span class="highlight-on-yellow">E</span>nvironment
+							and <span class="highlight-on-yellow">D</span>emocracy
 						</h2>
+
 					</div>
 
 					<div class="row">
-						<div class="col-xs-12 note" ng-repeat="note in conceptnote">{{note.para}}</div>
+						<div class="col-xs-12 note" ng-repeat="note in conceptnote">{{ note }}</div>
 					</div>
 
-					<div class="row">
-						<div class="col-xs-12 col-md-4" ng-repeat="item in crisis">
-							<div class="progress" ng-class="item.positioncss">
-								<span class="progress-left">
-									<span class="progress-bar"></span>
-								</span>
-								<span class="progress-right">
-									<span class="progress-bar"></span>
-								</span>
-								<div class="progress-value">{{item.percentage}}%</div>
+					<div class="row highlights">
+						<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" ng-repeat="item in highlights">
+							<div class="box-part text-center">
+								<div class="logo">
+									<img src="/assets/{{item.icon}}"></a>
+								</div>
+								<div class="title">
+									<h4> {{ item.name }} </h4>
+								</div>
+
+								<ul style="text-align: left;">
+									<li ng-repeat="bullet in item.bullets">{{ bullet }}</li>
+								</ul>
 							</div>
-							<div class="text-center">{{item.name}}.</div>
 						</div>
 					</div>
 				</div>
@@ -88,7 +92,7 @@
 			<div class="text-center col-xs-12 col-md-4 col-md-offset-4">
 				<h2>Events and Updates</h2>
 			</div>
-			
+
 			<div id="eventCarousel" class="events-carousel">
 				<div uib-carousel active="events.active" interval="myInterval" no-wrap="noWrapEvents">
 					<div uib-slide ng-repeat="events in displayeventgroup" index="$index">
